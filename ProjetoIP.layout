@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="avaliador.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="113" topLine="0" />
+	</File>
+	<File name="avaliador.h" open="0" top="0" tabpos="6">
+		<Cursor position="42" topLine="0" />
+	</File>
+	<File name="avaliador_acuracia.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="926" topLine="0" />
+	</File>
+	<File name="avaliador_acuracia.h" open="0" top="0" tabpos="7">
+		<Cursor position="329" topLine="0" />
+	</File>
+	<File name="classificador.cpp" open="0" top="0" tabpos="12">
+		<Cursor position="60" topLine="0" />
+	</File>
+	<File name="classificador.h" open="0" top="0" tabpos="7">
+		<Cursor position="94" topLine="0" />
+	</File>
+	<File name="classificador_maisprovavel.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="1920" topLine="27" />
+	</File>
+	<File name="classificador_maisprovavel.h" open="0" top="0" tabpos="9">
+		<Cursor position="272" topLine="0" />
+	</File>
+	<File name="classificadorhmm.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1504" topLine="3" />
+	</File>
+	<File name="classificadorhmm.h" open="1" top="0" tabpos="1">
+		<Cursor position="272" topLine="0" />
+	</File>
+	<File name="corpus.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="279" topLine="0" />
+	</File>
+	<File name="corpus.h" open="0" top="0" tabpos="5">
+		<Cursor position="400" topLine="0" />
+	</File>
+	<File name="corpusmatriz.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="1515" topLine="0" />
+	</File>
+	<File name="corpusmatriz.h" open="0" top="0" tabpos="3">
+		<Cursor position="115" topLine="0" />
+	</File>
+	<File name="hmm.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="1813" topLine="29" />
+	</File>
+	<File name="hmm.h" open="0" top="0" tabpos="2">
+		<Cursor position="133" topLine="0" />
+	</File>
+	<File name="main.cpp" open="1" top="1" tabpos="2">
+		<Cursor position="1720" topLine="27" />
+	</File>
+	<File name="maisprovavel.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="3264" topLine="0" />
+	</File>
+	<File name="maisprovavel.h" open="0" top="0" tabpos="3">
+		<Cursor position="312" topLine="0" />
+	</File>
+	<File name="treinador.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="92" topLine="0" />
+	</File>
+	<File name="treinador.h" open="0" top="0" tabpos="4">
+		<Cursor position="91" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>
