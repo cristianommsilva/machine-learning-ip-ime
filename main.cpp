@@ -23,6 +23,7 @@ int main()
     atributos.push_back("pos");
     atributos.push_back("adpos");
 
+    // cria um objeto corpus
     CorpusMatriz objCorpus( atributos );
     //objCorpus.carregarArquivo( "inputs/Corpus_Saude_EtiquetadoPOSx.txt" );// CORPUS ANTIGO COMPLETO
     objCorpus.carregarArquivo( "inputs/train.txt" );// NOVO CORPUS (professor)
