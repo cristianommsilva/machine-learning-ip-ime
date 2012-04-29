@@ -5,7 +5,7 @@ HMM::~HMM()
     //dtor
 }
 
-ClassificadorHMM *HMM::executarTreinamento( Corpus &corpus, int atributo )
+Classificador *HMM::executarTreinamento( Corpus &corpus, int atributo )
 {
     ClassificadorHMM *objClassificador = new ClassificadorHMM();
     map< string, map< string, double > > matrizTransicao;

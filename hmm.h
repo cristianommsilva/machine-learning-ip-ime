@@ -8,7 +8,7 @@ class HMM : public Treinador
 {
     public:
         virtual ~HMM();
-        virtual ClassificadorHMM *executarTreinamento( Corpus &corpus, int atributo );
+        virtual Classificador *executarTreinamento( Corpus &corpus, int atributo );
 };
 
 #endif // HMM_H
