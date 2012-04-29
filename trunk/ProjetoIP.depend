@@ -380,7 +380,7 @@
 	<fstream>
 	"corpus.h"
 
-1330458677 source:c:\users\zapdos\desktop\repository\main.cpp
+1335657308 source:c:\users\zapdos\desktop\repository\main.cpp
 	<iostream>
 	<vector>
 	<cstdio>
@@ -392,11 +392,11 @@
 	"classificador_maisprovavel.h"
 	"classificadorhmm.h"
 
-1329853768 c:\users\zapdos\desktop\repository\maisprovavel.h
+1335657366 c:\users\zapdos\desktop\repository\maisprovavel.h
 	"treinador.h"
 	"classificador_maisprovavel.h"
 
-1329852782 c:\users\zapdos\desktop\repository\treinador.h
+1335657308 c:\users\zapdos\desktop\repository\treinador.h
 	"corpus.h"
 	"classificador.h"
 
@@ -477,10 +477,10 @@
 1329690046 source:c:\users\zapdos\desktop\repository2\treinador.cpp
 	"treinador.h"
 
-1330431364 source:c:\users\zapdos\desktop\repository\hmm.cpp
+1335656218 source:c:\users\zapdos\desktop\repository\hmm.cpp
 	"hmm.h"
 
-1330022412 c:\users\zapdos\desktop\repository\hmm.h
+1335657366 c:\users\zapdos\desktop\repository\hmm.h
 	"treinador.h"
 	"classificadorhmm.h"
 

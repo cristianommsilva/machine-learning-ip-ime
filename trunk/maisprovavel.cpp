@@ -10,7 +10,7 @@ MaisProvavel::~MaisProvavel()
     //dtor
 }
 
-ClassificadorMaisProvavel *MaisProvavel::executarTreinamento( Corpus &corpus, int atributo )
+Classificador *MaisProvavel::executarTreinamento( Corpus &corpus, int atributo )
 {
     ///Faz classificação com base na probabilidade associada a determinada palavra
     ///(int) atributo eh o numero associado a palavra que ele vai aprender a classificar

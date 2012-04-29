@@ -11,7 +11,7 @@ class MaisProvavel : public Treinador
     public:
         MaisProvavel( int toleranciaUnknow );
         virtual ~MaisProvavel();
-        virtual ClassificadorMaisProvavel *executarTreinamento( Corpus &corpus, int atributo );
+        virtual Classificador *executarTreinamento( Corpus &corpus, int atributo );
 };
 
 #endif // MAISPROVAVEL_H
