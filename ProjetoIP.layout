@@ -16,19 +16,19 @@
 	<File name="classificador.cpp" open="0" top="0" tabpos="12">
 		<Cursor position="60" topLine="0" />
 	</File>
-	<File name="classificador.h" open="1" top="0" tabpos="2">
+	<File name="classificador.h" open="0" top="0" tabpos="2">
 		<Cursor position="94" topLine="0" />
 	</File>
 	<File name="classificador_maisprovavel.cpp" open="0" top="0" tabpos="5">
 		<Cursor position="1920" topLine="27" />
 	</File>
-	<File name="classificador_maisprovavel.h" open="1" top="0" tabpos="3">
+	<File name="classificador_maisprovavel.h" open="0" top="0" tabpos="3">
 		<Cursor position="249" topLine="0" />
 	</File>
 	<File name="classificadorhmm.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="1504" topLine="3" />
 	</File>
-	<File name="classificadorhmm.h" open="1" top="1" tabpos="4">
+	<File name="classificadorhmm.h" open="0" top="0" tabpos="4">
 		<Cursor position="259" topLine="0" />
 	</File>
 	<File name="corpus.cpp" open="0" top="0" tabpos="4">
@@ -43,17 +43,17 @@
 	<File name="corpusmatriz.h" open="0" top="0" tabpos="3">
 		<Cursor position="115" topLine="0" />
 	</File>
-	<File name="hmm.cpp" open="0" top="0" tabpos="5">
+	<File name="hmm.cpp" open="1" top="0" tabpos="3">
 		<Cursor position="683" topLine="0" />
 	</File>
 	<File name="hmm.h" open="0" top="0" tabpos="2">
 		<Cursor position="189" topLine="0" />
 	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="834" topLine="22" />
+	<File name="main.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="1878" topLine="29" />
 	</File>
-	<File name="maisprovavel.cpp" open="0" top="0" tabpos="4">
-		<Cursor position="201" topLine="10" />
+	<File name="maisprovavel.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="844" topLine="7" />
 	</File>
 	<File name="maisprovavel.h" open="0" top="0" tabpos="3">
 		<Cursor position="315" topLine="0" />
