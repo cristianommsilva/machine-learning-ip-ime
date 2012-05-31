@@ -41,6 +41,8 @@
 		<Unit filename="classificador_maisprovavel.h" />
 		<Unit filename="classificadorhmm.cpp" />
 		<Unit filename="classificadorhmm.h" />
+		<Unit filename="classificadortbl.cpp" />
+		<Unit filename="classificadortbl.h" />
 		<Unit filename="corpus.cpp" />
 		<Unit filename="corpus.h" />
 		<Unit filename="corpusmatriz.cpp" />
@@ -50,6 +52,8 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="maisprovavel.cpp" />
 		<Unit filename="maisprovavel.h" />
+		<Unit filename="tbl.cpp" />
+		<Unit filename="tbl.h" />
 		<Unit filename="treinador.cpp" />
 		<Unit filename="treinador.h" />
 		<Extensions>
