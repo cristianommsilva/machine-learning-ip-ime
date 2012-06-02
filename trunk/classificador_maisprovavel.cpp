@@ -37,7 +37,7 @@ bool ClassificadorMaisProvavel::executarClassificacao( Corpus &corpusProva, int 
     {
         column = corpusProva.pegarQtdTokens( i );
         for ( register int j = 0; j < column; j++ )
-            if( ( aux = vetorControlePal[ corpusProva.pegarValor( i, j, 0 ) ] ) != 0 )
+            if( ( aux = vetorControlePal[ corpusProva.pegarValor( i, j, atributo ) ] ) != 0 )
                 corpusProva.ajustarValor( i, j, tam_atributos - 1, aux );
             else
                 corpusProva.ajustarValor( i, j, tam_atributos - 1, valorUnknow );

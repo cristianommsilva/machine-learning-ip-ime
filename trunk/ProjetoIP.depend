@@ -571,7 +571,7 @@
 1329852927 c:\users\zapdos\desktop\google code ip\avaliador.h
 	"corpus.h"
 
-1330394387 c:\users\zapdos\desktop\google code ip\corpus.h
+1338469633 c:\users\zapdos\desktop\google code ip\corpus.h
 	<iostream>
 	<vector>
 	<map>
@@ -588,14 +588,14 @@
 1329838158 c:\users\zapdos\desktop\google code ip\classificador.h
 	"corpus.h"
 
-1329879200 source:c:\users\zapdos\desktop\google code ip\classificador_maisprovavel.cpp
+1338466240 source:c:\users\zapdos\desktop\google code ip\classificador_maisprovavel.cpp
 	"classificador_maisprovavel.h"
 
 1329838158 c:\users\zapdos\desktop\google code ip\classificador_maisprovavel.h
 	"classificador.h"
 	<fstream>
 
-1330647724 source:c:\users\zapdos\desktop\google code ip\classificadorhmm.cpp
+1338466367 source:c:\users\zapdos\desktop\google code ip\classificadorhmm.cpp
 	"classificadorhmm.h"
 	<stdlib.h>
 
@@ -604,7 +604,7 @@
 	<fstream>
 	<cmath>
 
-1329838158 source:c:\users\zapdos\desktop\google code ip\corpus.cpp
+1338469633 source:c:\users\zapdos\desktop\google code ip\corpus.cpp
 	"corpus.h"
 
 1329852966 source:c:\users\zapdos\desktop\google code ip\corpusmatriz.cpp
@@ -635,7 +635,7 @@
 1329838161 source:c:\users\zapdos\desktop\google code ip\treinador.cpp
 	"treinador.h"
 
-1338147483 source:c:\users\zapdos\desktop\google code ip\main.cpp
+1338466508 source:c:\users\zapdos\desktop\google code ip\main.cpp
 	<iostream>
 	<vector>
 	<cstdio>
@@ -647,16 +647,18 @@
 	"classificador_maisprovavel.h"
 	"classificadorhmm.h"
 
-1338436958 source:c:\users\zapdos\desktop\google code ip\classificadortbl.cpp
+1338551552 source:c:\users\zapdos\desktop\google code ip\classificadortbl.cpp
 	"classificadortbl.h"
 
-1338437038 c:\users\zapdos\desktop\google code ip\classificadortbl.h
+1338481073 c:\users\zapdos\desktop\google code ip\classificadortbl.h
 	"classificador.h"
+	<fstream>
 
-1338436986 source:c:\users\zapdos\desktop\google code ip\tbl.cpp
+1338473803 source:c:\users\zapdos\desktop\google code ip\tbl.cpp
 	"tbl.h"
 
-1338437146 c:\users\zapdos\desktop\google code ip\tbl.h
+1338467389 c:\users\zapdos\desktop\google code ip\tbl.h
 	"treinador.h"
 	"classificadortbl.h"
+	"maisprovavel.h"
 
