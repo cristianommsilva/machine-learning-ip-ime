@@ -22,7 +22,8 @@ class Corpus
         int pegarQtdAtributos();
         int pegarQtdTokens( int i );
         int pegarQtdSimbolos();
-        void ajustarValor( int sentenca, int token, int atributo, int valor );
+        bool ajustarValor( int sentenca, int token, int atributo, int valor );
+        //string pegarAtributo( int indice );
     protected:
         vector<string> simbolos;
         vector< vector< vector<int> > > frases;

@@ -120,7 +120,7 @@ bool ClassificadorHMM::executarClassificacao( Corpus &corpusProva, int atributo 
         for( register int j = 1; j < column; j++ )
         {
             //varre os estados
-            if ( tabFreqObservacoesInt.find( aux = corpusProva.pegarValor(i,j,0) ) != tabFreqObservacoesInt.end() )
+            if ( tabFreqObservacoesInt.find( aux = corpusProva.pegarValor(i,j,atributo) ) != tabFreqObservacoesInt.end() )
                 for( register int k = 0; k < qtdPos; k++ )
                 {
                     maiorValor = 0.0;

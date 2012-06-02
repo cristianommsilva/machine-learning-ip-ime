@@ -136,15 +136,25 @@ int Corpus::pegarQtdSimbolos()
     return qtd_simbolos;
 }
 
-void Corpus::ajustarValor( int sentenca, int token, int atributo, int valor )
+bool Corpus::ajustarValor( int sentenca, int token, int atributo, int valor )
 {
     if ( sentenca < 0 || sentenca >= ( int )qtd_sentencas ||
          token < 0 || token >= ( int )frases[sentenca].size() ||
          atributo < 0 || atributo >= ( int )qtd_atributos )
     {
         cout << "Erro: ajustarValor!\nInsercao cancelada: posicao inexistente!" << endl;
-        return;
+        return false;
     }
     frases[ sentenca ][ token ][ atributo ] = valor;
-    return;
+    return true;
 }
+
+//string Corpus::pegarAtributo( int indice )
+//{
+//    if( indice < 0 || indice >= qtd_atributos )
+//    {
+//        cout << "Erro: pegarAtributo!\nBusca fora dos limites!" << endl;
+//        return NULL;
+//    }
+//    return atributos[indice];
+//}

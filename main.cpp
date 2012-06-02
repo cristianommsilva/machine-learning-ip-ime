@@ -12,6 +12,7 @@
 
 #define LIM_FREQ_UNKNOWN 3
 #define ATRBT_ANALISADO 1
+#define ATRBT_CLASSIFICADO 0
 #define ATRBT_NOVO 3
 
 using namespace std;
@@ -19,7 +20,7 @@ using namespace std;
 int main()
 {
     vector<string> atributos;
-    atributos.push_back("palavra");
+    atributos.push_back("word");
     atributos.push_back("pos");
     atributos.push_back("adpos");
 
@@ -42,7 +43,7 @@ int main()
     //objCorpusProva.carregarArquivo( "Corpus_Saude_EtiquetadoPOSx.txt" );
     //objCorpusProva.gravarArquivo( "corpusGravado.txt" );
 
-    objClass->executarClassificacao( objCorpusProva, ATRBT_ANALISADO );
+    objClass->executarClassificacao( objCorpusProva, ATRBT_CLASSIFICADO );
     AvaliadorAcuracia objAvalAcur;
 
     printf( "Acuracia: %.2f%%\n", 100 * objAvalAcur.calcularDesempenho( objCorpusProva, ATRBT_ANALISADO, ATRBT_NOVO )[ 0 ] );
