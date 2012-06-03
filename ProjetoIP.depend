@@ -588,7 +588,7 @@
 1329838158 c:\users\zapdos\desktop\google code ip\classificador.h
 	"corpus.h"
 
-1338466240 source:c:\users\zapdos\desktop\google code ip\classificador_maisprovavel.cpp
+1338759803 source:c:\users\zapdos\desktop\google code ip\classificador_maisprovavel.cpp
 	"classificador_maisprovavel.h"
 
 1329838158 c:\users\zapdos\desktop\google code ip\classificador_maisprovavel.h
@@ -649,14 +649,15 @@
 	"classificadorhmm.h"
 	"classificadortbl.h"
 
-1338753855 source:c:\users\zapdos\desktop\google code ip\classificadortbl.cpp
+1338759803 source:c:\users\zapdos\desktop\google code ip\classificadortbl.cpp
 	"classificadortbl.h"
 
-1338677764 c:\users\zapdos\desktop\google code ip\classificadortbl.h
+1338759445 c:\users\zapdos\desktop\google code ip\classificadortbl.h
 	"classificador.h"
+	"maisprovavel.h"
 	<fstream>
 
-1338753356 source:c:\users\zapdos\desktop\google code ip\tbl.cpp
+1338758919 source:c:\users\zapdos\desktop\google code ip\tbl.cpp
 	"tbl.h"
 
 1338751460 c:\users\zapdos\desktop\google code ip\tbl.h
