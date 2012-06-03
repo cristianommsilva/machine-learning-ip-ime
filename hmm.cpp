@@ -41,7 +41,7 @@ Classificador *HMM::executarTreinamento( Corpus &corpus, int atributo )
         for( coluna = linha->second.begin(); coluna != linha->second.end(); coluna++ )
             total += coluna->second;
         for( coluna = linha->second.begin(); coluna != linha->second.end(); coluna++ )
-            matrizTransicao[linha->first][coluna->first] = ( coluna->second )/total;
+            matrizTransicao[linha->first][coluna->first] = ( coluna->second )/total; //pode haver um erro carregado aqui
         total = 0.0;
     }
 
