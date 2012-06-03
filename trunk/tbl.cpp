@@ -28,7 +28,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
     //incializar molde de regras
     map< int, int > mprg;
     mprg[-1] = corpus.pegarPosAtributo( "pos" );
-    //mprg[0] = corpus.pegarPosAtributo( "word" );
+    //mprg[1] = corpus.pegarPosAtributo( "pos" );
     respMolde.push_back( corpus.pegarPosAtributo( "pos" ) );
     moldeRegras.push_back( mprg );
     numMoldeRegras = moldeRegras.size();
@@ -40,11 +40,11 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
 
     qtdAtributos = corpus.pegarQtdAtributos();
 
-    //int imprime = 0;
+    int imprime = 0;
 
     while( maxScore >= toleranciaScore && regras.size() > 0 )
     {
-        //cout << imprime << endl;
+        cout << imprime << endl;
         regras.clear();
         respRegras.clear();
         //varre corpus criando as regras
@@ -67,15 +67,18 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                                 break;
                             }
                             var[it->first][it->second] = corpus.pegarValor(i, aux2, it->second);
-                            numRegras = regras.size();
                         }
                         if( !moldeInvalido )
-                        {   //analisar possibilidade de criar regras iguais
+                        {
+                            numRegras = regras.size();
                             for( register int L = 0; L < numRegras; L++ )
                                 if( var == regras[L] )
                                 {
-                                    moldeInvalido = true;
-                                    break;
+                                    if( aux == respRegras[L] )
+                                    {
+                                        moldeInvalido = true;
+                                        break;
+                                    }
                                 }
                             if( !moldeInvalido )
                             {
@@ -93,22 +96,25 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
 //                if( *v2 == *v1 ){ v3=v2; v3++; regras.erase( v2 ); v2=v3;}
 //                else v2++;}
 
+
+
         numRegras = regras.size();
         good.resize( numRegras );
         bad.resize( numRegras );
-        //cout << numRegras << endl;
+        cout << numRegras << endl;
 
-        for( register int L = 0; L < numRegras; L++ )
-        {
-            linha_end = regras[L].end();
-            for( linha = regras[L].begin(); linha != linha_end; linha++ )
-            {
-                it_end = linha->second.end();
-                for( it = linha->second.begin(); it != it_end; it++ )
-                    cout << corpus.pegarAtributo(it->first) << ' ' << linha->first << ' ' << corpus.pegarSimbolo(it->second) << ' ';
-            }
-            cout << "=>" << ' ' << corpus.pegarSimbolo(respRegras[L]) << endl;
-        }
+
+//        for( register int L = 0; L < numRegras; L++ )
+//        {
+//            linha_end = regras[L].end();
+//            for( linha = regras[L].begin(); linha != linha_end; linha++ )
+//            {
+//                it_end = linha->second.end();
+//                for( it = linha->second.begin(); it != it_end; it++ )
+//                    cout << corpus.pegarAtributo(it->first) << ' ' << linha->first << ' ' << corpus.pegarSimbolo(it->second) << ' ';
+//            }
+//            cout << "=>" << ' ' << corpus.pegarSimbolo(respRegras[L]) << endl;
+//        }
         ///varre corpus aplicando as regras e computando o score
         //é melhor varrer o corpus para cada regra ou em cada palavra do corpus verificar todas as regras?
         /*for( register int L = 0; L < numMoldeRegras; L++ )
@@ -149,11 +155,14 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                     {
                         if( ( aux = corpus.pegarValor(i,j,atributo) ) == respRegras[L] && aux != corpus.pegarValor(i,j, qtdAtributos - 1) )
                             good[L]++;
-                        if( ( aux = corpus.pegarValor(i,j,atributo) ) != respRegras[L] && aux == corpus.pegarValor(i,j, qtdAtributos - 1) )
+                        if( aux != respRegras[L] && aux == corpus.pegarValor(i,j, qtdAtributos - 1) )
                             bad[L]++;
                     }
                 }
         }
+
+//        for( register int L = 0; L < numRegras; L++ )
+//            cout << good[L] << ' ' << bad[L] << endl;
 
         maxScore = -999999999;
 
@@ -163,7 +172,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                 maxScore = aux;
                 maxIndice = L;
             }
-        //cout << maxScore << endl;
+        cout << maxScore << endl;
 
         if( maxScore >= toleranciaScore )
         {
@@ -208,7 +217,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                 }
             }
         }
-        //cout << imprime++ << endl;
+        cout << imprime++ << endl;
     }
 
     return objClassificador;

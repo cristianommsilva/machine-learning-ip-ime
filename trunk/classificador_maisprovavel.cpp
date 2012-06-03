@@ -43,7 +43,7 @@ bool ClassificadorMaisProvavel::executarClassificacao( Corpus &corpusProva, int 
                 corpusProva.ajustarValor( i, j, tam_atributos - 1, valorUnknow );
     }
 
-    cout << "Classificacao executada" <<endl;
+    cout << "Classificacao MaisProvavel: executada" <<endl;
     return true;
 }
 

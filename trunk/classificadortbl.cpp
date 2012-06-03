@@ -18,7 +18,11 @@ void ClassificadorTBL::inserirRegra( map< int, map< string, string > > rule, str
 
 bool ClassificadorTBL::executarClassificacao( Corpus &corpusProva, int atributo )
 {
-    corpusProva.criarAtributo( "novo", "NOVO" );
+    //Classificação inicial
+    MaisProvavel objMProv( LIM_FREQ_UNKNOWN );
+    Classificador *objClass = objMProv.executarTreinamento( corpusProva, ATRBT_ANALISADO );
+    objClass->executarClassificacao( corpusProva, atributo );
+
     int qtdAtributos = corpusProva.pegarQtdAtributos();
     int row = corpusProva.pegarQtdSentencas(), column, numRegras = regras.size(), aux;
     bool regraInvalida;
@@ -57,6 +61,8 @@ bool ClassificadorTBL::executarClassificacao( Corpus &corpusProva, int atributo 
                 }
             }
     }
+
+    cout << "Classificacao TBL: executada" <<endl;
     return true;
 }
 

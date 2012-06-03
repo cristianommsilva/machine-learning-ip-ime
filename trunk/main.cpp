@@ -41,17 +41,17 @@ int main()
     TBL objTBL( 1 );
     objClass = objTBL.executarTreinamento( objCorpus, ATRBT_ANALISADO );
 
-    ///CorpusMatriz objCorpusProva( atributos );
+    CorpusMatriz objCorpusProva( atributos );
     //objCorpusProva.carregarArquivo( "inputs/CorpusProva.txt" );
-    ///objCorpusProva.carregarArquivo( "inputs/test.txt" );
+    objCorpusProva.carregarArquivo( "inputs/test.txt" );
     //objCorpusProva.carregarArquivo( "Corpus_Saude_EtiquetadoPOSx.txt" );
     //objCorpusProva.gravarArquivo( "corpusGravado.txt" );
 
-    ///objClass->executarClassificacao( objCorpusProva, ATRBT_CLASSIFICADO );
-    ///AvaliadorAcuracia objAvalAcur;
+    objClass->executarClassificacao( objCorpusProva, ATRBT_CLASSIFICADO );
+    AvaliadorAcuracia objAvalAcur;
 
-    ///printf( "Acuracia: %.2f%%\n", 100 * objAvalAcur.calcularDesempenho( objCorpusProva, ATRBT_ANALISADO, ATRBT_NOVO )[ 0 ] );
-    ///objCorpusProva.gravarArquivo( "outputs/corpusGravado.txt" );
+    printf( "Acuracia: %.2f%%\n", 100 * objAvalAcur.calcularDesempenho( objCorpusProva, ATRBT_ANALISADO, ATRBT_NOVO )[ 0 ] );
+    objCorpusProva.gravarArquivo( "outputs/corpusGravado.txt" );
     objClass->gravarConhecimento( "outputs/conhecimentoTBL.txt" );
     delete objClass;
 
