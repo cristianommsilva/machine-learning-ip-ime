@@ -649,18 +649,19 @@
 	"classificadorhmm.h"
 	"classificadortbl.h"
 
-1338680969 source:c:\users\zapdos\desktop\google code ip\classificadortbl.cpp
+1338699575 source:c:\users\zapdos\desktop\google code ip\classificadortbl.cpp
 	"classificadortbl.h"
 
 1338677764 c:\users\zapdos\desktop\google code ip\classificadortbl.h
 	"classificador.h"
 	<fstream>
 
-1338689348 source:c:\users\zapdos\desktop\google code ip\tbl.cpp
+1338747321 source:c:\users\zapdos\desktop\google code ip\tbl.cpp
 	"tbl.h"
 
-1338467389 c:\users\zapdos\desktop\google code ip\tbl.h
+1338746571 c:\users\zapdos\desktop\google code ip\tbl.h
 	"treinador.h"
 	"classificadortbl.h"
 	"maisprovavel.h"
+	<deque>
 
