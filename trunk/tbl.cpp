@@ -10,12 +10,6 @@ TBL::~TBL()
     //dtor
 }
 
-//{ word 0 pos 1 adpos 2 }
-//vector<string> at = corpus.atributo();
-
-#define POS 1
-#define WORD 0
-
 Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
 {
     ClassificadorTBL *objClassificador = new ClassificadorTBL();
@@ -26,17 +20,16 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
     map< int, map< int, int > > var;
     bool moldeInvalido;
     //vector< int > = new Vector corpus.pegarQtdAtributos();
-    deque< map< int, map< int, int > > > regras;
-    deque< int > respRegras;
-    vector< int > respMolde, good, bad;//se for feita mais de uma classificação simultanea respMolde tem que ser atualizado para map
+    vector< map< int, map< int, int > > > regras;
+    vector< int > respRegras, respMolde, good, bad;//se for feita mais de uma classificação simultanea respMolde tem que ser atualizado para map
     vector< map< int, int> > moldeRegras;
     regras.resize( 1 ); //testar pra ver se não da problema
 
     //incializar molde de regras
     map< int, int > mprg;
-    mprg[-1] = POS;
-    //mprg[0] = WORD;
-    respMolde.push_back( POS );
+    mprg[-1] = corpus.pegarPosAtributo( "pos" );
+    //mprg[0] = corpus.pegarPosAtributo( "word" );
+    respMolde.push_back( corpus.pegarPosAtributo( "pos" ) );
     moldeRegras.push_back( mprg );
     numMoldeRegras = moldeRegras.size();
 
@@ -47,11 +40,11 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
 
     qtdAtributos = corpus.pegarQtdAtributos();
 
-    int imprime = 0;
+    //int imprime = 0;
 
     while( maxScore >= toleranciaScore && regras.size() > 0 )
     {
-        cout << imprime << endl;
+        //cout << imprime << endl;
         regras.clear();
         respRegras.clear();
         //varre corpus criando as regras
@@ -103,19 +96,19 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
         numRegras = regras.size();
         good.resize( numRegras );
         bad.resize( numRegras );
-        cout << numRegras << endl;
+        //cout << numRegras << endl;
 
-//        for( register int L = 0; L < numRegras; L++ )
-//        {
-//            linha_end = regras[L].end();
-//            for( linha = regras[L].begin(); linha != linha_end; linha++ )
-//            {
-//                it_end = linha->second.end();
-//                for( it = linha->second.begin(); it != it_end; it++ )
-//                    cout << corpus.pegarAtributo(it->first) << ' ' << linha->first << ' ' << corpus.pegarSimbolo(it->second) << ' ';
-//            }
-//            cout << "=>" << ' ' << corpus.pegarSimbolo(respRegras[L]) << endl;
-//        }
+        for( register int L = 0; L < numRegras; L++ )
+        {
+            linha_end = regras[L].end();
+            for( linha = regras[L].begin(); linha != linha_end; linha++ )
+            {
+                it_end = linha->second.end();
+                for( it = linha->second.begin(); it != it_end; it++ )
+                    cout << corpus.pegarAtributo(it->first) << ' ' << linha->first << ' ' << corpus.pegarSimbolo(it->second) << ' ';
+            }
+            cout << "=>" << ' ' << corpus.pegarSimbolo(respRegras[L]) << endl;
+        }
         ///varre corpus aplicando as regras e computando o score
         //é melhor varrer o corpus para cada regra ou em cada palavra do corpus verificar todas as regras?
         /*for( register int L = 0; L < numMoldeRegras; L++ )
@@ -170,7 +163,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                 maxScore = aux;
                 maxIndice = L;
             }
-        cout << maxScore << endl;
+        //cout << maxScore << endl;
 
         if( maxScore >= toleranciaScore )
         {
@@ -208,14 +201,14 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                                 moldeInvalido = true;
                                 break;
                             }
-                        if( moldeInvalido ) break;
+                        if( moldeInvalido ) break; //break externo
                     }
                     if( !moldeInvalido )
                         corpus.ajustarValor(i,j,qtdAtributos - 1,respRegras[maxIndice]);
                 }
             }
         }
-        cout << imprime++ << endl;
+        //cout << imprime++ << endl;
     }
 
     return objClassificador;

@@ -24,11 +24,13 @@ class Corpus
         int pegarQtdSimbolos();
         bool ajustarValor( int sentenca, int token, int atributo, int valor );
         string pegarAtributo( int indice );
+        int pegarPosAtributo( string atributo );
     protected:
         vector<string> simbolos;
         vector< vector< vector<int> > > frases;
         map<string,int> dicionario;
         vector<string> atributos;
+        map<string,int> posAtributos;
         int qtd_sentencas;
         int qtd_atributos;
         int qtd_simbolos;

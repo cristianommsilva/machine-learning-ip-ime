@@ -9,6 +9,8 @@ Corpus::Corpus( vector<string> atributos )
     qtd_sentencas = 1;
     qtd_atributos = atributos.size();
     qtd_simbolos = 0;
+    for( register int i = 0; i < qtd_atributos; i++ )
+        posAtributos[atributos[i]] = i;
 }
 
 Corpus::~Corpus()
@@ -157,4 +159,16 @@ string Corpus::pegarAtributo( int indice )
         return NULL;
     }
     return atributos[indice];
+}
+
+int Corpus::pegarPosAtributo( string atributo )
+{
+    map< string, int >::iterator it;
+
+    if( ( it = posAtributos.find( atributo ) ) == posAtributos.end() )
+    {
+        cout << "Erro: pegarPosAtributo!\nAtributo inexistente!" << endl;
+        return -1;
+    }
+    return it->second;
 }

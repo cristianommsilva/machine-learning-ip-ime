@@ -38,7 +38,7 @@ int main()
     ///HMM objHMM;
     //objClass = objHMM.executarTreinamento( objCorpus, ATRBT_ANALISADO );
     //objClass->carregarConhecimento( "outputs/conhecimentoMProv.txt" );
-    TBL objTBL( 0 );
+    TBL objTBL( 1 );
     objClass = objTBL.executarTreinamento( objCorpus, ATRBT_ANALISADO );
 
     ///CorpusMatriz objCorpusProva( atributos );
