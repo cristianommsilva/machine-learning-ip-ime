@@ -45,8 +45,13 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
 
     qtdAtributos = corpus.pegarQtdAtributos();
 
+    int imprime = 0;
+
     while( maxScore >= toleranciaScore && regras.size() > 0 )
     {
+        cout << imprime << endl;
+        regras.clear();
+        respRegras.clear();
         //varre corpus criando as regras
         for( register int i = 0; i < row; i++ )
         {
@@ -80,7 +85,19 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
         numRegras = regras.size();
         good.resize( numRegras );
         bad.resize( numRegras );
+        cout << numRegras << endl;
 
+//        for( register int L = 0; L < numRegras; L++ )
+//        {
+//            linha_end = regras[L].end();
+//            for( linha = regras[L].begin(); linha != linha_end; linha++ )
+//            {
+//                it_end = linha->second.end();
+//                for( it = linha->second.begin(); it != it_end; it++ )
+//                    cout << corpus.pegarAtributo(it->first) << ' ' << linha->first << ' ' << corpus.pegarSimbolo(it->second) << ' ';
+//            }
+//            cout << "=>" << ' ' << corpus.pegarSimbolo(respRegras[L]) << endl;
+//        }
         ///varre corpus aplicando as regras e computando o score
         //é melhor varrer o corpus para cada regra ou em cada palavra do corpus verificar todas as regras?
         /*for( register int L = 0; L < numMoldeRegras; L++ )
@@ -135,6 +152,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                 maxScore = aux;
                 maxIndice = L;
             }
+        cout << imprime << endl;
 
         if( maxScore >= toleranciaScore )
         {
@@ -179,6 +197,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                 }
             }
         }
+        cout << imprime++ << endl;
     }
 
     return objClassificador;
