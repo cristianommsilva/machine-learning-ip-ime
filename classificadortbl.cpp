@@ -43,7 +43,7 @@ bool ClassificadorTBL::executarClassificacao( Corpus &corpusProva, int atributo 
                     }
                     it_end = linha->second.end();
                     for( it = linha->second.begin(); it != it_end; it++ )
-                        if( corpusProva.pegarValor(i,aux,1) != corpusProva.pegarIndice( it->second ) ) //mexer aqui
+                        if( corpusProva.pegarValor(i,aux,corpusProva.pegarPosAtributo( it->first )) != corpusProva.pegarIndice( it->second ) )
                         {
                             regraInvalida = true;
                             break;
@@ -53,7 +53,7 @@ bool ClassificadorTBL::executarClassificacao( Corpus &corpusProva, int atributo 
                 if( !regraInvalida )
                 {
                     corpusProva.ajustarValor(i,j,qtdAtributos - 1,corpusProva.pegarIndice( respRegras[L] ) );
-                    L = numRegras;
+                    L = numRegras; //break
                 }
             }
     }
@@ -76,7 +76,7 @@ bool ClassificadorTBL::gravarConhecimento( string arquivo )
     for( register int i = 0; i < numRegras; i++ )
     {
         linha_end = regras[i].end();
-        for( linha = regras[i].begin(); linha != linha_end; it++ )
+        for( linha = regras[i].begin(); linha != linha_end; linha++ )
         {
             it_end = linha->second.end();
             for( it = linha->second.begin(); it != it_end; it++ )
