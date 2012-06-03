@@ -22,18 +22,20 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
     int row = corpus.pegarQtdSentencas(), column, numMoldeRegras, numRegras, qtdAtributos, maxScore = toleranciaScore, maxIndice, aux, aux2;
     map<int, map< int, int > >::iterator linha, linha_end;
     map< int, int >::iterator it, it_end;
+    //deque< map< int, map< int, int > > >::iterator v1,v2,v3; //usado para filtrar regras
     map< int, map< int, int > > var;
     bool moldeInvalido;
     //vector< int > = new Vector corpus.pegarQtdAtributos();
-    vector< map< int, map< int, int > > > regras;
-    vector< int > respRegras, respMolde, good, bad;//se for feita mais de uma classificação simultanea respMolde tem que ser atualizado para map
+    deque< map< int, map< int, int > > > regras;
+    deque< int > respRegras;
+    vector< int > respMolde, good, bad;//se for feita mais de uma classificação simultanea respMolde tem que ser atualizado para map
     vector< map< int, int> > moldeRegras;
     regras.resize( 1 ); //testar pra ver se não da problema
 
     //incializar molde de regras
     map< int, int > mprg;
     mprg[-1] = POS;
-    mprg[0] = WORD;
+    //mprg[0] = WORD;
     respMolde.push_back( POS );
     moldeRegras.push_back( mprg );
     numMoldeRegras = moldeRegras.size();
@@ -72,16 +74,32 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                                 break;
                             }
                             var[it->first][it->second] = corpus.pegarValor(i, aux2, it->second);
+                            numRegras = regras.size();
                         }
                         if( !moldeInvalido )
                         {   //analisar possibilidade de criar regras iguais
-                            regras.push_back( var );
-                            respRegras.push_back( aux );
+                            for( register int L = 0; L < numRegras; L++ )
+                                if( var == regras[L] )
+                                {
+                                    moldeInvalido = true;
+                                    break;
+                                }
+                            if( !moldeInvalido )
+                            {
+                                regras.push_back( var );
+                                respRegras.push_back( aux );
+                            }
                         }
                         var.clear();
                     }
                 }
         }
+        //tira regras repetidas
+//        for( v1 = regras.begin(); v1 != regras.end() - 1; v1++ )
+//            for( v2 = v1 + 1; v2 != regras.end(); ){ cout << imprime++ << ' ' << regras.size() << endl;
+//                if( *v2 == *v1 ){ v3=v2; v3++; regras.erase( v2 ); v2=v3;}
+//                else v2++;}
+
         numRegras = regras.size();
         good.resize( numRegras );
         bad.resize( numRegras );
@@ -108,11 +126,11 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
 
             }*/
 
-        for( register int i = 0; i < row; i++ )
+        for( int i = 0; i < row; i++ )
         {
             column = corpus.pegarQtdTokens( i );
-            for( register int j = 0; j < column; j++ )
-                for( register int L = 0; L < numRegras; L++ )
+            for( int j = 0; j < column; j++ )
+                for( int L = 0; L < numRegras; L++ )
                 {
                     moldeInvalido = false;
 
@@ -152,7 +170,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                 maxScore = aux;
                 maxIndice = L;
             }
-        cout << imprime << endl;
+        cout << maxScore << endl;
 
         if( maxScore >= toleranciaScore )
         {

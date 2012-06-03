@@ -18,6 +18,45 @@ void ClassificadorTBL::inserirRegra( map< int, map< string, string > > rule, str
 
 bool ClassificadorTBL::executarClassificacao( Corpus &corpusProva, int atributo )
 {
+    corpusProva.criarAtributo( "novo", "NOVO" );
+    int qtdAtributos = corpusProva.pegarQtdAtributos();
+    int row = corpusProva.pegarQtdSentencas(), column, numRegras = regras.size(), aux;
+    bool regraInvalida;
+    map< int, map< string, string > >::iterator linha, linha_end;
+    map< string, string >::iterator it, it_end;
+
+    for( register int i = 0; i < row; i++ )
+    {
+        column = corpusProva.pegarQtdTokens( i );
+        for( register int j = 0; j < column; j++ )
+            for( register int L = 0; L < numRegras; L++ )
+            {
+                regraInvalida = false;
+
+                linha_end = regras[L].end();
+                for( linha = regras[L].begin(); linha != linha_end; linha++ )
+                {
+                    if( ( aux = j + linha->first ) >= column || aux < 0 )
+                    {
+                        regraInvalida = true;
+                        break;
+                    }
+                    it_end = linha->second.end();
+                    for( it = linha->second.begin(); it != it_end; it++ )
+                        if( corpusProva.pegarValor(i,aux,1) != corpusProva.pegarIndice( it->second ) ) //mexer aqui
+                        {
+                            regraInvalida = true;
+                            break;
+                        }
+                    if( regraInvalida ) break;
+                }
+                if( !regraInvalida )
+                {
+                    corpusProva.ajustarValor(i,j,qtdAtributos - 1,corpusProva.pegarIndice( respRegras[L] ) );
+                    L = numRegras;
+                }
+            }
+    }
     return true;
 }
 
