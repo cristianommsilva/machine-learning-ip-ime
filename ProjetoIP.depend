@@ -635,7 +635,7 @@
 1329838161 source:c:\users\zapdos\desktop\google code ip\treinador.cpp
 	"treinador.h"
 
-1338466508 source:c:\users\zapdos\desktop\google code ip\main.cpp
+1338685984 source:c:\users\zapdos\desktop\google code ip\main.cpp
 	<iostream>
 	<vector>
 	<cstdio>
@@ -643,9 +643,11 @@
 	"corpusmatriz.h"
 	"maisprovavel.h"
 	"hmm.h"
+	"tbl.h"
 	"avaliador_acuracia.h"
 	"classificador_maisprovavel.h"
 	"classificadorhmm.h"
+	"classificadortbl.h"
 
 1338680969 source:c:\users\zapdos\desktop\google code ip\classificadortbl.cpp
 	"classificadortbl.h"
@@ -654,7 +656,7 @@
 	"classificador.h"
 	<fstream>
 
-1338677764 source:c:\users\zapdos\desktop\google code ip\tbl.cpp
+1338689348 source:c:\users\zapdos\desktop\google code ip\tbl.cpp
 	"tbl.h"
 
 1338467389 c:\users\zapdos\desktop\google code ip\tbl.h

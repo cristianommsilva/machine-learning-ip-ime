@@ -6,9 +6,11 @@
 #include "corpusmatriz.h"
 #include "maisprovavel.h"
 #include "hmm.h"
+#include "tbl.h"
 #include "avaliador_acuracia.h"
 #include "classificador_maisprovavel.h"
 #include "classificadorhmm.h"
+#include "classificadortbl.h"
 
 #define LIM_FREQ_UNKNOWN 3
 #define ATRBT_ANALISADO 1
@@ -33,22 +35,24 @@ int main()
     Classificador *objClass;
     ///MaisProvavel objMProv( LIM_FREQ_UNKNOWN );
     ///objClass = objMProv.executarTreinamento( objCorpus, ATRBT_ANALISADO );
-    HMM objHMM;
-    objClass = objHMM.executarTreinamento( objCorpus, ATRBT_ANALISADO );
+    ///HMM objHMM;
+    //objClass = objHMM.executarTreinamento( objCorpus, ATRBT_ANALISADO );
     //objClass->carregarConhecimento( "outputs/conhecimentoMProv.txt" );
+    TBL objTBL( 0 );
+    objClass = objTBL.executarTreinamento( objCorpus, ATRBT_ANALISADO );
 
-    CorpusMatriz objCorpusProva( atributos );
+    ///CorpusMatriz objCorpusProva( atributos );
     //objCorpusProva.carregarArquivo( "inputs/CorpusProva.txt" );
-    objCorpusProva.carregarArquivo( "inputs/test.txt" );
+    ///objCorpusProva.carregarArquivo( "inputs/test.txt" );
     //objCorpusProva.carregarArquivo( "Corpus_Saude_EtiquetadoPOSx.txt" );
     //objCorpusProva.gravarArquivo( "corpusGravado.txt" );
 
-    objClass->executarClassificacao( objCorpusProva, ATRBT_CLASSIFICADO );
-    AvaliadorAcuracia objAvalAcur;
+    ///objClass->executarClassificacao( objCorpusProva, ATRBT_CLASSIFICADO );
+    ///AvaliadorAcuracia objAvalAcur;
 
-    printf( "Acuracia: %.2f%%\n", 100 * objAvalAcur.calcularDesempenho( objCorpusProva, ATRBT_ANALISADO, ATRBT_NOVO )[ 0 ] );
-    objCorpusProva.gravarArquivo( "outputs/corpusGravado.txt" );
-    objClass->gravarConhecimento( "outputs/conhecimentoHMM.txt" );
+    ///printf( "Acuracia: %.2f%%\n", 100 * objAvalAcur.calcularDesempenho( objCorpusProva, ATRBT_ANALISADO, ATRBT_NOVO )[ 0 ] );
+    ///objCorpusProva.gravarArquivo( "outputs/corpusGravado.txt" );
+    objClass->gravarConhecimento( "outputs/conhecimentoTBL.txt" );
     delete objClass;
 
 	return 0;
