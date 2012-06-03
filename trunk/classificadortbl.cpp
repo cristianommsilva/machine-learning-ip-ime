@@ -10,6 +10,12 @@ ClassificadorTBL::~ClassificadorTBL()
     //dtor
 }
 
+void ClassificadorTBL::inserirRegra( map< int, map< string, string > > rule, string resp )
+{
+    regras.push_back( rule );
+    respRegras.push_back( resp );
+}
+
 bool ClassificadorTBL::executarClassificacao( Corpus &corpusProva, int atributo )
 {
     return true;
@@ -25,15 +31,21 @@ bool ClassificadorTBL::gravarConhecimento( string arquivo )
     }
 
     int numRegras = regras.size();
-    map<string,string>::iterator it;
+    map< int, map< string, string > >::iterator linha, linha_end;
+    map< string, string >::iterator it, it_end;
 
     for( register int i = 0; i < numRegras; i++ )
     {
-        for( it = regras[i].begin(); it != regras[i].end(); it++ )
-            arqout << it->first << ' ' << it->second;
-        arqout << ' ' << "=>" << ' ';
-        for( it = respRegras[i].begin(); it != respRegras[i].end(); it++ )
-            arqout << it->first << ' ' << it->second;
+        linha_end = regras[i].end();
+        for( linha = regras[i].begin(); linha != linha_end; it++ )
+        {
+            it_end = linha->second.end();
+            for( it = linha->second.begin(); it != it_end; it++ )
+                arqout << it->first << ' ' << linha->first << ' ' << it->second << ' ';
+        }
+        arqout << "=>";
+        for( register int j = 0; j < numRegras; j++ )
+            arqout << ' ' << respRegras[j];
         arqout << endl;
     }
 
@@ -52,16 +64,19 @@ bool ClassificadorTBL::carregarConhecimento( string arquivo )
     }
 
     string palavra1, palavra2;
-    char ch = ' ';
-    map< string, string> atributoValor, atributoValor2;
+    int posicao;
+    char ch ;
+    map< int, map< string, string > > atributoValor;
 
     while( arqin.good() )
     {
+        arqin.get( ch );//caso inicial p/ diferenciar de \n
+        palavra1.push_back( ch );
         while( ch != '\n' )
         {
             for( arqin.get( ch ); ch != ' '; arqin.get( ch ) )
                 palavra1.push_back( ch );
-            if( palavra1.compare( "=>" ) )
+            /*if( palavra1.compare( "=>" ) )
             {
                 palavra1.clear();
                 while( ch != '\n' )
@@ -74,20 +89,27 @@ bool ClassificadorTBL::carregarConhecimento( string arquivo )
                     palavra1.clear();
                     palavra2.clear();
                 }
+            }*/
+            if( palavra1.compare( "=>" ) )
+            {
+                for( arqin.get( ch ); ch != ' ' && ch != '\n'; arqin.get( ch ) )
+                    palavra2.push_back( ch );
+                respRegras.push_back( palavra2 );
             }
             else
             {
+                arqin >> posicao;
                 for( arqin.get( ch ); ch != ' '; arqin.get( ch ) )
                     palavra2.push_back( ch );
-                atributoValor[palavra1] = palavra2;
-                palavra1.clear();
-                palavra2.clear();
+                atributoValor[posicao][palavra1] = palavra2;
+                //palavra1.clear();
+                //palavra2.clear();
             }
+            palavra1.clear();
+            palavra2.clear();
         }
         regras.push_back( atributoValor );
-        respRegras.push_back( atributoValor2 );
         atributoValor.clear();
-        atributoValor2.clear();
     }
 
     if( arqin.bad() && !arqin.eof() )    //caso de erro na leitura do arquivo

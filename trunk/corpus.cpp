@@ -149,12 +149,12 @@ bool Corpus::ajustarValor( int sentenca, int token, int atributo, int valor )
     return true;
 }
 
-//string Corpus::pegarAtributo( int indice )
-//{
-//    if( indice < 0 || indice >= qtd_atributos )
-//    {
-//        cout << "Erro: pegarAtributo!\nBusca fora dos limites!" << endl;
-//        return NULL;
-//    }
-//    return atributos[indice];
-//}
+string Corpus::pegarAtributo( int indice )
+{
+    if( indice < 0 || indice >= qtd_atributos )
+    {
+        cout << "Erro: pegarAtributo!\nBusca fora dos limites!" << endl;
+        return NULL;
+    }
+    return atributos[indice];
+}
