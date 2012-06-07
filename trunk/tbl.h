@@ -10,9 +10,10 @@
 
 class TBL : public Treinador
 {
+        Classificador *classInicial;
         int toleranciaScore;
     public:
-        TBL( int toleranciaScore );
+        TBL( Classificador* classInicial, string arqMoldeRegras, int toleranciaScore );
         virtual ~TBL();
         virtual Classificador *executarTreinamento( Corpus &corpus, int atributo );
 };

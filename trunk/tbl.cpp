@@ -1,7 +1,8 @@
 #include "tbl.h"
 
-TBL::TBL( int toleranciaScore )
+TBL::TBL( Classificador* classInicial, string arqMoldeRegras, int toleranciaScore )
 {
+    this->classInicial = classInicial;
     this->toleranciaScore = toleranciaScore;
 }
 
@@ -28,15 +29,13 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
     //incializar molde de regras
     map< int, int > mprg;
     mprg[-1] = corpus.pegarPosAtributo( "pos" );
-    //mprg[1] = corpus.pegarPosAtributo( "pos" );
+    mprg[1] = corpus.pegarPosAtributo( "pos" );
     respMolde.push_back( corpus.pegarPosAtributo( "pos" ) );
     moldeRegras.push_back( mprg );
     numMoldeRegras = moldeRegras.size();
 
     //Classificação inicial do corpus
-    MaisProvavel objMProv( LIM_FREQ_UNKNOWN );
-    Classificador *objClass = objMProv.executarTreinamento( corpus, atributo );
-    objClass->executarClassificacao( corpus, ATRBT_CLASSIFICADO );
+    classInicial->executarClassificacao( corpus, ATRBT_CLASSIFICADO );
 
     qtdAtributos = corpus.pegarQtdAtributos();
 

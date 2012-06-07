@@ -33,12 +33,12 @@ int main()
     //objCorpus.carregarArquivo( "corpusTeste.txt" );// EXTRATO DO CORPUS PARA TESTES
 
     Classificador *objClass;
-    ///MaisProvavel objMProv( LIM_FREQ_UNKNOWN );
+    MaisProvavel objMProv( LIM_FREQ_UNKNOWN );
     ///objClass = objMProv.executarTreinamento( objCorpus, ATRBT_ANALISADO );
     ///HMM objHMM;
     //objClass = objHMM.executarTreinamento( objCorpus, ATRBT_ANALISADO );
     //objClass->carregarConhecimento( "outputs/conhecimentoMProv.txt" );
-    TBL objTBL( 1 );
+    TBL objTBL( objMProv.executarTreinamento( objCorpus, ATRBT_ANALISADO ), "", 1 );
     objClass = objTBL.executarTreinamento( objCorpus, ATRBT_ANALISADO );
 
     CorpusMatriz objCorpusProva( atributos );
