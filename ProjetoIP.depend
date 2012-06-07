@@ -665,3 +665,102 @@
 	"classificadortbl.h"
 	"maisprovavel.h"
 
+1335659151 source:c:\users\joilson\desktop\google code ip\avaliador.cpp
+	"avaliador.h"
+
+1335659155 c:\users\joilson\desktop\google code ip\avaliador.h
+	"corpus.h"
+
+1338734042 c:\users\joilson\desktop\google code ip\corpus.h
+	<iostream>
+	<vector>
+	<map>
+
+1335659155 source:c:\users\joilson\desktop\google code ip\avaliador_acuracia.cpp
+	"avaliador_acuracia.h"
+
+1335659149 c:\users\joilson\desktop\google code ip\avaliador_acuracia.h
+	"avaliador.h"
+
+1335659155 source:c:\users\joilson\desktop\google code ip\classificador.cpp
+	"classificador.h"
+
+1335659152 c:\users\joilson\desktop\google code ip\classificador.h
+	"corpus.h"
+
+1338734042 source:c:\users\joilson\desktop\google code ip\classificador_maisprovavel.cpp
+	"classificador_maisprovavel.h"
+
+1335659151 c:\users\joilson\desktop\google code ip\classificador_maisprovavel.h
+	"classificador.h"
+	<fstream>
+
+1338734042 source:c:\users\joilson\desktop\google code ip\classificadorhmm.cpp
+	"classificadorhmm.h"
+	<stdlib.h>
+
+1335659152 c:\users\joilson\desktop\google code ip\classificadorhmm.h
+	"classificador.h"
+	<fstream>
+	<cmath>
+
+1338734040 source:c:\users\joilson\desktop\google code ip\classificadortbl.cpp
+	"classificadortbl.h"
+
+1338734042 c:\users\joilson\desktop\google code ip\classificadortbl.h
+	"classificador.h"
+	<fstream>
+
+1338734040 source:c:\users\joilson\desktop\google code ip\corpus.cpp
+	"corpus.h"
+
+1335659155 source:c:\users\joilson\desktop\google code ip\corpusmatriz.cpp
+	"corpusmatriz.h"
+
+1335659152 c:\users\joilson\desktop\google code ip\corpusmatriz.h
+	<fstream>
+	"corpus.h"
+
+1338734040 source:c:\users\joilson\desktop\google code ip\hmm.cpp
+	"hmm.h"
+
+1335659596 c:\users\joilson\desktop\google code ip\hmm.h
+	"treinador.h"
+	"classificadorhmm.h"
+
+1335659155 c:\users\joilson\desktop\google code ip\treinador.h
+	"corpus.h"
+	"classificador.h"
+
+1338734040 source:c:\users\joilson\desktop\google code ip\main.cpp
+	<iostream>
+	<vector>
+	<cstdio>
+	<cstdlib>
+	"corpusmatriz.h"
+	"maisprovavel.h"
+	"hmm.h"
+	"tbl.h"
+	"avaliador_acuracia.h"
+	"classificador_maisprovavel.h"
+	"classificadorhmm.h"
+	"classificadortbl.h"
+
+1335659596 c:\users\joilson\desktop\google code ip\maisprovavel.h
+	"treinador.h"
+	"classificador_maisprovavel.h"
+
+1338734040 c:\users\joilson\desktop\google code ip\tbl.h
+	"treinador.h"
+	"classificadortbl.h"
+	"maisprovavel.h"
+
+1335659596 source:c:\users\joilson\desktop\google code ip\maisprovavel.cpp
+	"maisprovavel.h"
+
+1338734042 source:c:\users\joilson\desktop\google code ip\tbl.cpp
+	"tbl.h"
+
+1335659155 source:c:\users\joilson\desktop\google code ip\treinador.cpp
+	"treinador.h"
+
