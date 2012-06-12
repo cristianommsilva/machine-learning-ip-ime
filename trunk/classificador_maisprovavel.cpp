@@ -2,7 +2,7 @@
 
 bool ClassificadorMaisProvavel::executarClassificacao( Corpus &corpusProva, int atributo )
 {
-    corpusProva.criarAtributo( "novo", "NOVO" );
+    corpusProva.criarAtributo( "npos", "N" );
     int tam_atributos = corpusProva.pegarQtdAtributos(), row = corpusProva.pegarQtdSentencas(), column;
     map< string, string >::iterator it;
     int valorUnknow = corpusProva.pegarIndice( unknown ); //otimização p/ corpus com mtos unknown

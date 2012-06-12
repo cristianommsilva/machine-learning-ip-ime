@@ -98,4 +98,6 @@ depois_PREP_+
 de_PREP_+
 a_ART_O
 colheita_N_O
+US$_CUR_O
+homem_N_O
 ._._O
