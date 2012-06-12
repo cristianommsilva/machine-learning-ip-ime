@@ -4,6 +4,7 @@ TBL::TBL( Classificador* classInicial, string arqMoldeRegras, int toleranciaScor
 {
     this->classInicial = classInicial;
     this->toleranciaScore = toleranciaScore;
+    carregarMolde( arqMoldeRegras );
 }
 
 TBL::~TBL()
@@ -14,25 +15,27 @@ TBL::~TBL()
 Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
 {
     ClassificadorTBL *objClassificador = new ClassificadorTBL();
-    int row = corpus.pegarQtdSentencas(), column, numMoldeRegras, numRegras, qtdAtributos, maxScore = toleranciaScore, maxIndice, aux, aux2;
+    int row = corpus.pegarQtdSentencas(), column, numMoldeRegras = this->moldeRegras.size(), numRegras, qtdAtributos, maxScore = toleranciaScore, maxIndice, aux, aux2;
     map<int, map< int, int > >::iterator linha, linha_end;
     map< int, int >::iterator it, it_end;
-    //deque< map< int, map< int, int > > >::iterator v1,v2,v3; //usado para filtrar regras
     map< int, map< int, int > > var;
+    //map< map< int, map< int, int > >, int >::iterator it_regras;
     bool moldeInvalido;
-    //vector< int > = new Vector corpus.pegarQtdAtributos();
-    vector< map< int, map< int, int > > > regras;
-    vector< int > respRegras, respMolde, good, bad;//se for feita mais de uma classificação simultanea respMolde tem que ser atualizado para map
-    vector< map< int, int> > moldeRegras;
-    regras.resize( 1 ); //testar pra ver se não da problema
 
-    //incializar molde de regras
-    map< int, int > mprg;
-    mprg[-1] = corpus.pegarPosAtributo( "pos" );
-    mprg[1] = corpus.pegarPosAtributo( "pos" );
-    respMolde.push_back( corpus.pegarPosAtributo( "pos" ) );
-    moldeRegras.push_back( mprg );
-    numMoldeRegras = moldeRegras.size();
+    //map< map< int, map< int, int > >, int > regrasTemporarias;
+    set< map< int, map< int, int > > > regrasArmazenadas;
+    vector< map< int, map< int, int > > > regras( 1 );
+    vector< int > respRegras, good, bad;//se for feita mais de uma classificação simultanea respRegras tem que ser atualizado para map e respMolde tem que ser criado
+    vector< map< int, int> > moldeRegras( numMoldeRegras );
+
+    //converter molde de regras
+    map< int, string >::iterator itMolde, itMolde_end;
+    for( register int i = 0; i < numMoldeRegras; i++ )
+    {
+        itMolde_end = this->moldeRegras[i].end();
+        for( itMolde = this->moldeRegras[i].begin(); itMolde != itMolde_end; itMolde++ )
+            moldeRegras[i][itMolde->first] = corpus.pegarPosAtributo( itMolde->second );
+    }
 
     //Classificação inicial do corpus
     classInicial->executarClassificacao( corpus, ATRBT_CLASSIFICADO );
@@ -46,6 +49,8 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
         cout << imprime << endl;
         regras.clear();
         respRegras.clear();
+        good.clear();
+        bad.clear();
         //varre corpus criando as regras
         for( register int i = 0; i < row; i++ )
         {
@@ -69,20 +74,37 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                         }
                         if( !moldeInvalido )
                         {
-                            numRegras = regras.size();
-                            for( register int L = 0; L < numRegras; L++ )
-                                if( var == regras[L] )
-                                {
-                                    if( aux == respRegras[L] )
-                                    {
-                                        moldeInvalido = true;
-                                        break;
-                                    }
-                                }
-                            if( !moldeInvalido )
+                            if( regrasArmazenadas.find( var ) == regrasArmazenadas.end() )
                             {
-                                regras.push_back( var );
-                                respRegras.push_back( aux );
+                                numRegras = regras.size();
+                                for( register int L = 0; L < numRegras; L++ )
+                                    if( var == regras[L] )
+                                        if( aux == respRegras[L] )
+                                        {
+                                            moldeInvalido = true;
+                                            break;
+                                        }
+                                if( !moldeInvalido )
+                                {
+                                    regras.push_back( var );
+                                    respRegras.push_back( aux );
+                                }
+//                                if( ( it_regras = regrasTemporarias.find( var ) ) != regrasTemporarias.end() )
+//                                    while( it_regras->first == var )
+//                                    {
+//                                        if( it_regras->second == aux )
+//                                        {
+//                                            moldeInvalido = true;
+//                                            break;
+//                                        }
+//                                        it_regras++;
+//                                    }
+//                                if( !moldeInvalido )
+//                                {
+//                                    regrasTemporarias[var] = aux;
+//                                    regras.push_back( var );
+//                                    respRegras.push_back( aux );
+//                                }
                             }
                         }
                         var.clear();
@@ -171,11 +193,21 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                 maxScore = aux;
                 maxIndice = L;
             }
+        //impressão da melhor regra
         cout << maxScore << endl;
+        linha_end = regras[maxIndice].end();
+        for( linha = regras[maxIndice].begin(); linha != linha_end; linha++ )
+        {
+            it_end = linha->second.end();
+            for( it = linha->second.begin(); it != it_end; it++ )
+                cout << corpus.pegarAtributo(it->first) << ' ' << linha->first << ' ' << corpus.pegarSimbolo(it->second) << ' ';
+        }
+        cout << "=>" << ' ' << corpus.pegarSimbolo(respRegras[maxIndice]) << endl;
 
         if( maxScore >= toleranciaScore )
         {
             //armazenar regra
+            regrasArmazenadas.insert( regras[maxIndice] );
             map< int, map< string, string > > rule;
             linha_end = regras[maxIndice].end();
             for( linha = regras[maxIndice].begin(); linha != linha_end; linha++ )
@@ -220,4 +252,47 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
     }
 
     return objClassificador;
+}
+
+bool TBL::carregarMolde( string arqMoldeRegras )
+{
+    ifstream arqin( arqMoldeRegras.c_str() );
+    if( !arqin.is_open() ) //verifica se arquivo conseguiu ser aberto
+    {
+        cout << "Erro:carregarMolde!\nFalha na abertura do arquivo!" << endl;
+        return false;
+    }
+
+    string palavra1;
+    int posicao;
+    char ch ;
+    map< int, string > indiceAtributo;
+
+    while( arqin.good() )
+    {
+        arqin.get( ch );//caso inicial p/ diferenciar de \n
+        palavra1.push_back( ch );
+        while( ch != '\n' && arqin.good() )
+        {
+            for( arqin.get( ch ); ch != ' '; arqin.get( ch ) )
+                palavra1.push_back( ch );
+            arqin >> posicao;
+            indiceAtributo[posicao] = palavra1;
+            palavra1.clear();
+            arqin.get( ch );
+        }
+        moldeRegras.push_back( indiceAtributo );
+        indiceAtributo.clear();
+    }
+
+    if( arqin.bad() && !arqin.eof() )    //caso de erro na leitura do arquivo
+    {
+        cout << "Erro:carregarMolde!\nErro na leitura do arquivo!" << endl;
+        arqin.close();
+        return false;
+    }
+
+    arqin.close();
+    cout << "Molde de Regras <" << arqMoldeRegras << "> carregado com sucesso!" << endl;
+    return true;
 }

@@ -50,14 +50,14 @@ bool Corpus::criarAtributo( string atributo, string valorAtributo )
     *   Verifica se o atributo já existe.
     *   Se não existe cria-se um novo atributo.
     */
-    for ( register int i = 0; i < qtd_atributos; i++ )
-        if ( atributo == atributos[ i ] )
-        {
-            cout << "Erro:criarAtributo!\nAtributo ja existe!" << endl;
-            return false;
-        }
+    if( posAtributos.find( atributo ) != posAtributos.end() )
+    {
+        cout << "Erro:criarAtributo!\nAtributo ja existe!" << endl;
+        return false;
+    }
 
     atributos.push_back( atributo );
+    posAtributos[atributo] = qtd_atributos++;
 
     /**
     *   verifica se valorAtributo já existe no dicionário.
@@ -83,18 +83,6 @@ bool Corpus::criarAtributo( string atributo, string valorAtributo )
         for( register int j = 0; j < column; j++ )
             frases[i][j].push_back( dicionario_valorAtributo );
     }
-
-    ++qtd_atributos; //como foi adicionado um novo atributo, sua qtd é incrementada
-
-/*    /// TESTE DE IMPRESSÃO DE "FRASES[][][]"
-    for ( register int i = 0; i < qtd_sentencas; i++ )
-    {
-    	for ( register int j = 0; j < frases[ i ].size(); j++ )
-    	{
-    		cout << frases[i][j][0] << "_" << frases[i][j][1] << "_" << frases[i][j][2] << endl;
-    	}
-    	cout << endl;
-    }*/
 
     cout << "Atributo <\"" << atributo << "\" -> " << "\"" << valorAtributo << "\"" << "> criado com sucesso!" << endl;
     return true;
