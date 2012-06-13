@@ -19,7 +19,7 @@
 	<File name="classificador.h" open="0" top="0" tabpos="2">
 		<Cursor position="94" topLine="0" />
 	</File>
-	<File name="classificador_maisprovavel.cpp" open="1" top="0" tabpos="9">
+	<File name="classificador_maisprovavel.cpp" open="0" top="0" tabpos="9">
 		<Cursor position="350" topLine="0" />
 	</File>
 	<File name="classificador_maisprovavel.h" open="0" top="0" tabpos="3">
@@ -31,41 +31,41 @@
 	<File name="classificadorhmm.h" open="0" top="0" tabpos="4">
 		<Cursor position="775" topLine="0" />
 	</File>
-	<File name="classificadortbl.cpp" open="1" top="0" tabpos="6">
-		<Cursor position="5746" topLine="6" />
+	<File name="classificadortbl.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="3231" topLine="3" />
 	</File>
-	<File name="classificadortbl.h" open="1" top="0" tabpos="5">
-		<Cursor position="186" topLine="0" />
+	<File name="classificadortbl.h" open="0" top="0" tabpos="5">
+		<Cursor position="350" topLine="0" />
 	</File>
-	<File name="corpus.cpp" open="1" top="0" tabpos="10">
+	<File name="corpus.cpp" open="0" top="0" tabpos="10">
 		<Cursor position="389" topLine="48" />
 	</File>
-	<File name="corpus.h" open="1" top="0" tabpos="11">
+	<File name="corpus.h" open="0" top="0" tabpos="11">
 		<Cursor position="1062" topLine="19" />
 	</File>
-	<File name="corpusmatriz.cpp" open="1" top="0" tabpos="7">
+	<File name="corpusmatriz.cpp" open="0" top="0" tabpos="7">
 		<Cursor position="1004" topLine="30" />
 	</File>
 	<File name="corpusmatriz.h" open="0" top="0" tabpos="3">
 		<Cursor position="115" topLine="0" />
 	</File>
-	<File name="hmm.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="1164" topLine="0" />
+	<File name="hmm.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="221" topLine="0" />
 	</File>
 	<File name="hmm.h" open="0" top="0" tabpos="2">
 		<Cursor position="243" topLine="0" />
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="2144" topLine="0" />
+		<Cursor position="1109" topLine="27" />
 	</File>
-	<File name="maisprovavel.cpp" open="1" top="0" tabpos="8">
+	<File name="maisprovavel.cpp" open="0" top="0" tabpos="8">
 		<Cursor position="289" topLine="16" />
 	</File>
 	<File name="maisprovavel.h" open="0" top="0" tabpos="3">
 		<Cursor position="315" topLine="0" />
 	</File>
 	<File name="tbl.cpp" open="1" top="1" tabpos="3">
-		<Cursor position="352" topLine="24" />
+		<Cursor position="3274" topLine="87" />
 	</File>
 	<File name="tbl.h" open="1" top="0" tabpos="2">
 		<Cursor position="128" topLine="0" />
