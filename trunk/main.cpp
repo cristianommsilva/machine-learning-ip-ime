@@ -46,7 +46,7 @@ int main()
     objCorpusProva.carregarArquivo( "inputs/test.txt" );
     //objCorpusProva.carregarArquivo( "Corpus_Saude_EtiquetadoPOSx.txt" );
     //objCorpusProva.gravarArquivo( "corpusGravado.txt" );
-
+    //objClass->carregarConhecimento("inputs/conhecimentoTeste.txt");
     objClass->executarClassificacao( objCorpusProva, ATRBT_CLASSIFICADO );
     AvaliadorAcuracia objAvalAcur;
 

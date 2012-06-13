@@ -88,10 +88,7 @@ bool ClassificadorTBL::gravarConhecimento( string arquivo )
             for( it = linha->second.begin(); it != it_end; it++ )
                 arqout << it->first << ' ' << linha->first << ' ' << it->second << ' ';
         }
-        arqout << "=>";
-        for( register int j = 0; j < numRegras; j++ )
-            arqout << ' ' << respRegras[j];
-        arqout << endl;
+        arqout << "=> " << respRegras[i] << endl;
     }
 
     arqout.close();
@@ -112,10 +109,10 @@ bool ClassificadorTBL::carregarConhecimento( string arquivo )
     int posicao;
     char ch ;
     map< int, map< string, string > > atributoValor;
+    arqin.get( ch );//caso inicial p/ diferenciar de \n
 
     while( arqin.good() )
     {
-        arqin.get( ch );//caso inicial p/ diferenciar de \n
         palavra1.push_back( ch );
         while( ch != '\n' )
         {
@@ -135,7 +132,7 @@ bool ClassificadorTBL::carregarConhecimento( string arquivo )
                     palavra2.clear();
                 }
             }*/
-            if( palavra1.compare( "=>" ) )
+            if( palavra1 == "=>" )
             {
                 for( arqin.get( ch ); ch != ' ' && ch != '\n'; arqin.get( ch ) )
                     palavra2.push_back( ch );
@@ -144,6 +141,7 @@ bool ClassificadorTBL::carregarConhecimento( string arquivo )
             else
             {
                 arqin >> posicao;
+                arqin.get( ch );
                 for( arqin.get( ch ); ch != ' '; arqin.get( ch ) )
                     palavra2.push_back( ch );
                 atributoValor[posicao][palavra1] = palavra2;
@@ -155,6 +153,7 @@ bool ClassificadorTBL::carregarConhecimento( string arquivo )
         }
         regras.push_back( atributoValor );
         atributoValor.clear();
+        arqin.get( ch );
     }
 
     if( arqin.bad() && !arqin.eof() )    //caso de erro na leitura do arquivo

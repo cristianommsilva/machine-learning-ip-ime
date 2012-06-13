@@ -19,10 +19,12 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
     map<int, map< int, int > >::iterator linha, linha_end;
     map< int, int >::iterator it, it_end;
     map< int, map< int, int > > var;
-    //map< map< int, map< int, int > >, int >::iterator it_regras;
+    //estrutura de multimap para busca otimizada de regras repetidas
+    multimap< map< int, map< int, int > >, int >:: iterator bp, bp_end;
+    pair< multimap< map< int, map< int, int > >, int >:: iterator, multimap< map< int, map< int, int > >, int >:: iterator > ret;
     bool moldeInvalido;
 
-    //map< map< int, map< int, int > >, int > regrasTemporarias;
+    multimap< map< int, map< int, int > >, int > regrasTemporarias;
     set< map< int, map< int, int > > > regrasArmazenadas;
     vector< map< int, map< int, int > > > regras( 1 );
     vector< int > respRegras, good, bad;//se for feita mais de uma classificação simultanea respRegras tem que ser atualizado para map e respMolde tem que ser criado
@@ -76,48 +78,39 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                         {
                             if( regrasArmazenadas.find( var ) == regrasArmazenadas.end() )
                             {
-                                numRegras = regras.size();
-                                for( register int L = 0; L < numRegras; L++ )
-                                    if( var == regras[L] )
-                                        if( aux == respRegras[L] )
-                                        {
-                                            moldeInvalido = true;
-                                            break;
-                                        }
-                                if( !moldeInvalido )
-                                {
-                                    regras.push_back( var );
-                                    respRegras.push_back( aux );
-                                }
-//                                if( ( it_regras = regrasTemporarias.find( var ) ) != regrasTemporarias.end() )
-//                                    while( it_regras->first == var )
-//                                    {
-//                                        if( it_regras->second == aux )
+//                                numRegras = regras.size();
+//                                for( register int L = 0; L < numRegras; L++ )
+//                                    if( var == regras[L] )
+//                                        if( aux == respRegras[L] )
 //                                        {
 //                                            moldeInvalido = true;
 //                                            break;
 //                                        }
-//                                        it_regras++;
-//                                    }
 //                                if( !moldeInvalido )
 //                                {
-//                                    regrasTemporarias[var] = aux;
 //                                    regras.push_back( var );
 //                                    respRegras.push_back( aux );
 //                                }
+                                ret = regrasTemporarias.equal_range( var );
+                                bp_end = ret.second;
+                                for( bp = ret.first; bp != bp_end; bp++ )
+                                    if( bp->second == aux )
+                                    {
+                                        moldeInvalido = true;
+                                        break;
+                                    }
+                                if( !moldeInvalido )
+                                {
+                                    regrasTemporarias.insert( pair< map< int, map< int, int > >, int >( var, aux ) );
+                                    regras.push_back( var );
+                                    respRegras.push_back( aux );
+                                }
                             }
                         }
                         var.clear();
                     }
                 }
         }
-        //tira regras repetidas
-//        for( v1 = regras.begin(); v1 != regras.end() - 1; v1++ )
-//            for( v2 = v1 + 1; v2 != regras.end(); ){ cout << imprime++ << ' ' << regras.size() << endl;
-//                if( *v2 == *v1 ){ v3=v2; v3++; regras.erase( v2 ); v2=v3;}
-//                else v2++;}
-
-
 
         numRegras = regras.size();
         good.resize( numRegras );
