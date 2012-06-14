@@ -1,0 +1,2 @@
+pos -1 " pos 1 NPROP => NPROP
+pos -1 NPROP pos 1 NPROP => NPROP

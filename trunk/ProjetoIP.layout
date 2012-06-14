@@ -26,13 +26,13 @@
 		<Cursor position="249" topLine="0" />
 	</File>
 	<File name="classificadorhmm.cpp" open="0" top="0" tabpos="7">
-		<Cursor position="682" topLine="129" />
+		<Cursor position="6245" topLine="0" />
 	</File>
 	<File name="classificadorhmm.h" open="0" top="0" tabpos="4">
 		<Cursor position="775" topLine="0" />
 	</File>
-	<File name="classificadortbl.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="3231" topLine="3" />
+	<File name="classificadortbl.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="138" topLine="0" />
 	</File>
 	<File name="classificadortbl.h" open="0" top="0" tabpos="5">
 		<Cursor position="350" topLine="0" />
@@ -65,7 +65,7 @@
 		<Cursor position="315" topLine="0" />
 	</File>
 	<File name="tbl.cpp" open="1" top="1" tabpos="3">
-		<Cursor position="3274" topLine="87" />
+		<Cursor position="3274" topLine="0" />
 	</File>
 	<File name="tbl.h" open="1" top="0" tabpos="2">
 		<Cursor position="128" topLine="0" />
