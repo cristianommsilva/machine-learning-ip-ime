@@ -18,7 +18,7 @@ void ClassificadorHMM::ajustarVetInicial( string pos )
 
 bool ClassificadorHMM::executarClassificacao( Corpus &corpusProva, int atributo )
 {
-    corpusProva.criarAtributo( "novo", "NOVO" );
+    corpusProva.criarAtributo( "adpos", "N" );
     int tam_atributos = corpusProva.pegarQtdAtributos();
     int row = corpusProva.pegarQtdSentencas(), column;
     vector< int > numPos; //vetor que contem valor dos POS
