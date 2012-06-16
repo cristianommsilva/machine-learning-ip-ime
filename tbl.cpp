@@ -14,29 +14,35 @@ TBL::~TBL()
 
 Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
 {
-    ClassificadorTBL *objClassificador = new ClassificadorTBL();
-    int row = corpus.pegarQtdSentencas(), column, numMoldeRegras = this->moldeRegras.size(), numRegras, qtdAtributos, maxScore = toleranciaScore, maxIndice, aux, aux2;
+    ClassificadorTBL *objClassificador = new ClassificadorTBL( classInicial );
+    int row = corpus.pegarQtdSentencas(), column, numMoldeRegras = this->moldeRegras.size(), numRegras, qtdAtributos, maxScore = toleranciaScore, maxIndice, aux, frases_ijReal, frases_ijAjuste;
+    int i,j,k,L;
     map<int, map< int, int > >::iterator linha, linha_end;
     map< int, int >::iterator it, it_end;
     map< int, map< int, int > > var;
     //estrutura de multimap para busca otimizada de regras repetidas
     multimap< map< int, map< int, int > >, int >:: iterator bp, bp_end;
     pair< multimap< map< int, map< int, int > >, int >:: iterator, multimap< map< int, map< int, int > >, int >:: iterator > ret;
-    bool moldeInvalido;
+    bool moldeInvalido, regraInvalida;
 
     multimap< map< int, map< int, int > >, int > regrasTemporarias;
     set< map< int, map< int, int > > > regrasArmazenadas;
-    vector< map< int, map< int, int > > > regras( 1 );
+    vector< map< int, map< int, int > > > regras;
     vector< int > respRegras, good, bad;//se for feita mais de uma classificação simultanea respRegras tem que ser atualizado para map e respMolde tem que ser criado
     vector< map< int, int> > moldeRegras( numMoldeRegras );
 
     //converter molde de regras
+    int tamMinMolde = 0, tamMaxMolde = 0;
     map< int, string >::iterator itMolde, itMolde_end;
     for( register int i = 0; i < numMoldeRegras; i++ )
     {
         itMolde_end = this->moldeRegras[i].end();
         for( itMolde = this->moldeRegras[i].begin(); itMolde != itMolde_end; itMolde++ )
+        {
             moldeRegras[i][itMolde->first] = corpus.pegarPosAtributo( itMolde->second );
+            if( itMolde->first < tamMinMolde ) tamMinMolde = itMolde->first;
+            if( itMolde->first > tamMaxMolde ) tamMaxMolde = itMolde->first;
+        }
     }
 
     //Classificação inicial do corpus
@@ -44,108 +50,300 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
 
     qtdAtributos = corpus.pegarQtdAtributos();
 
-    int imprime = 0;
-
-    while( maxScore >= toleranciaScore && regras.size() > 0 )
+    //cria primeiras regras
+    for( i = 0; i < row; i++ )
     {
-        cout << imprime << endl;
-        regras.clear();
-        respRegras.clear();
-        good.clear();
-        bad.clear();
-        //varre corpus criando as regras
-        for( register int i = 0; i < row; i++ )
-        {
-            column = corpus.pegarQtdTokens( i );
-            for( register int j = 0; j < column; j++ )
-                if( ( aux = corpus.pegarValor(i,j,atributo) ) != corpus.pegarValor(i,j, qtdAtributos - 1) )
+        column = corpus.pegarQtdTokens( i );
+        for( j = 0; j < column; j++ )
+            if( ( frases_ijReal = corpus.pegarValor(i,j,atributo) ) != corpus.pegarValor(i,j, qtdAtributos - 1) )
+            {
+                for( L = 0; L < numMoldeRegras; L++ )
                 {
-                    for( register int L = 0; L < numMoldeRegras; L++ )
-                    {
-                        moldeInvalido = false;
+                    moldeInvalido = false;
 
-                        it_end = moldeRegras[L].end();
-                        for( it = moldeRegras[L].begin(); it != it_end; it++ )
+                    it_end = moldeRegras[L].end();
+                    for( it = moldeRegras[L].begin(); it != it_end; it++ )
+                    {
+                        if( ( aux = j + it->first ) >= column || aux < 0 )
                         {
-                            if( ( aux2 = j + it->first ) >= column || aux2 < 0 )
+                            moldeInvalido = true;
+                            break;
+                        }
+                        var[it->first][it->second] = corpus.pegarValor(i, aux, it->second);
+                    }
+                    if( !moldeInvalido )
+                    {
+                        ret = regrasTemporarias.equal_range( var );
+                        bp_end = ret.second;
+                        for( bp = ret.first; bp != bp_end; bp++ )
+                            if( bp->second == frases_ijReal )
                             {
                                 moldeInvalido = true;
                                 break;
                             }
-                            var[it->first][it->second] = corpus.pegarValor(i, aux2, it->second);
-                        }
                         if( !moldeInvalido )
                         {
-                            if( regrasArmazenadas.find( var ) == regrasArmazenadas.end() )
+                            regrasTemporarias.insert( pair< map< int, map< int, int > >, int >( var, frases_ijReal ) );
+                            regras.push_back( var );
+                            respRegras.push_back( frases_ijReal );
+                        }
+                    }
+                    var.clear();
+                }
+            }
+    }
+
+    numRegras = regras.size();
+    good.resize( numRegras );
+    bad.resize( numRegras );
+    cout << "numRegras: " << numRegras << endl;
+
+    for( i = 0; i < row; i++ )
+    {
+        column = corpus.pegarQtdTokens( i );
+        for( j = 0; j < column; j++ )
+        {
+            frases_ijReal = corpus.pegarValor(i,j,atributo);
+            frases_ijAjuste = corpus.pegarValor(i,j,qtdAtributos-1);
+            for( L = 0; L < numRegras; L++ )
+            {
+                regraInvalida = false;
+
+                linha_end = regras[L].end();
+                for( linha = regras[L].begin(); linha != linha_end; linha++ )
+                {
+                    //tirar esse if em um loop individual?
+                    if( ( aux = j + linha->first ) >= column || aux < 0 )
+                    {
+                        regraInvalida = true;
+                        break;
+                    }
+                    it_end = linha->second.end();
+                    for( it = linha->second.begin(); it != it_end; it++ )
+                        if( corpus.pegarValor(i,aux,it->first) != it->second )
+                        {
+                            regraInvalida = true;
+                            break;
+                        }
+                    if( regraInvalida ) break;
+                }
+                if( !regraInvalida )
+                {
+                    if( frases_ijReal == respRegras[L] && frases_ijReal != frases_ijAjuste )
+                        good[L]++;
+                    if( frases_ijReal != respRegras[L] && frases_ijReal == frases_ijAjuste )
+                        bad[L]++;
+                }
+            }
+        }
+    }
+
+    maxScore = -999999999;
+    for( L = 0; L < numRegras; L++ )
+        if( ( aux = good[L] - bad[L] ) > maxScore )
+        {
+            maxScore = aux;
+            maxIndice = L;
+        }
+    //impressão da melhor regra
+    cout << "maxScore: " << maxScore << endl;
+    linha_end = regras[maxIndice].end();
+    for( linha = regras[maxIndice].begin(); linha != linha_end; linha++ )
+    {
+        it_end = linha->second.end();
+        for( it = linha->second.begin(); it != it_end; it++ )
+            cout << corpus.pegarAtributo(it->first) << ' ' << linha->first << ' ' << corpus.pegarSimbolo(it->second) << ' ';
+    }
+    cout << "=>" << ' ' << corpus.pegarSimbolo(respRegras[maxIndice]) << endl;
+
+
+    while( maxScore >= toleranciaScore && regras.size() > 0 )
+    {
+        //armazenar regra
+        regrasArmazenadas.insert( regras[maxIndice] );
+        map< int, map< string, string > > rule;
+        linha_end = regras[maxIndice].end();
+        for( linha = regras[maxIndice].begin(); linha != linha_end; linha++ )
+        {
+            it_end = linha->second.end();
+            for( it = linha->second.begin(); it != it_end; it++ )
+                rule[linha->first][corpus.pegarAtributo( it->first )] = corpus.pegarSimbolo( it->second );
+        }
+        objClassificador->inserirRegra( rule, corpus.pegarSimbolo( respRegras[maxIndice] ) );
+
+
+        //atualizar Corpus com a nova regra
+        for( i = 0; i < row; i++ )
+        {
+            column = corpus.pegarQtdTokens( i );
+            for( j = 0; j < column; j++ )
+            {
+                regraInvalida = false;
+
+                linha_end = regras[maxIndice].end();
+                for( linha = regras[maxIndice].begin(); linha != linha_end; linha++ )
+                {
+                    //tirar esse if em um loop individual?
+                    if( ( aux = j + linha->first ) >= column || aux < 0 )
+                    {
+                        regraInvalida = true;
+                        break;
+                    }
+                    it_end = linha->second.end();
+                    for( it = linha->second.begin(); it != it_end; it++ )
+                        if( corpus.pegarValor(i,aux,it->first) != it->second )
+                        {
+                            regraInvalida = true;
+                            break;
+                        }
+                    if( regraInvalida ) break; //break externo
+                }
+                if( !regraInvalida && corpus.pegarValor(i,j,qtdAtributos-1) != respRegras[maxIndice] )
+                {
+                    //decremento do bad e do good da vizinhança da palavra alterada
+                    ///trocar k com L é melhor?
+                    ///falta colocar otimização de quais regras realmente agir (filtrar mais)
+                    for( k = tamMinMolde; k <= tamMaxMolde; k++ )
+                    {
+                        if( j - k < 0 || j - k >= column ) break;
+                        frases_ijReal = corpus.pegarValor(i,j-k,atributo);
+                        frases_ijAjuste = corpus.pegarValor(i,j-k, qtdAtributos - 1);
+                        for( L = 0; L < numRegras; L++ )
+                        {
+                            //verifica se a regra realmente se encaixa na vizinhança
+                            if( regras[L].begin()->first > k || regras[L].rbegin()->first < k ) break;
+                            moldeInvalido = false;
+
+                            linha_end = regras[L].end();
+                            for( linha = regras[L].begin(); linha != linha_end; linha++ )
                             {
-//                                numRegras = regras.size();
-//                                for( register int L = 0; L < numRegras; L++ )
-//                                    if( var == regras[L] )
-//                                        if( aux == respRegras[L] )
-//                                        {
-//                                            moldeInvalido = true;
-//                                            break;
-//                                        }
-//                                if( !moldeInvalido )
-//                                {
-//                                    regras.push_back( var );
-//                                    respRegras.push_back( aux );
-//                                }
-                                ret = regrasTemporarias.equal_range( var );
-                                bp_end = ret.second;
-                                for( bp = ret.first; bp != bp_end; bp++ )
-                                    if( bp->second == aux )
+                                //tirar esse if em um loop individual?
+                                if( ( aux = j - k + linha->first ) >= column || aux < 0 )
+                                {
+                                    moldeInvalido = true;
+                                    break;
+                                }
+                                it_end = linha->second.end();
+                                for( it = linha->second.begin(); it != it_end; it++ )
+                                    if( corpus.pegarValor(i,aux,it->first) != it->second )
                                     {
                                         moldeInvalido = true;
                                         break;
                                     }
-                                if( !moldeInvalido )
-                                {
-                                    regrasTemporarias.insert( pair< map< int, map< int, int > >, int >( var, aux ) );
-                                    regras.push_back( var );
-                                    respRegras.push_back( aux );
-                                }
+                                if( moldeInvalido ) break;
+                            }
+                            if( !moldeInvalido )
+                            {
+                                if( frases_ijReal == respRegras[L] && frases_ijReal != frases_ijAjuste )
+                                    good[L]--;
+                                if( frases_ijReal != respRegras[L] && frases_ijReal == frases_ijReal )
+                                    bad[L]--;
                             }
                         }
-                        var.clear();
+                    }
+
+                    corpus.ajustarValor(i,j,qtdAtributos - 1,respRegras[maxIndice]);
+
+                    //criação das novas regras e incremento do good e do bad
+                    ///trocar k com L é melhor?
+                    for( k = tamMinMolde; k <= tamMaxMolde; k++ )
+                    {
+                        if( j - k < 0 || j - k >= column )break;
+                        if( ( frases_ijReal = corpus.pegarValor(i,j-k,atributo) ) != ( frases_ijAjuste = corpus.pegarValor(i,j-k,qtdAtributos-1) ) )
+                        {
+                            //aplicar molde de regras na vizinhança da palavra alterada
+                            for( L = 0; L < numMoldeRegras; L++ )
+                            {
+                                //verifica se a regra realmente se encaixa na vizinhança
+                                if( moldeRegras[L].begin()->first > k || moldeRegras[L].rbegin()->first < k ) break;
+                                moldeInvalido = false;
+
+                                it_end = moldeRegras[L].end();
+                                for( it = moldeRegras[L].begin(); it != it_end; it++ )
+                                {
+                                    if( ( aux = j - k + it->first ) >= column || aux < 0 )
+                                    {
+                                        moldeInvalido = true;
+                                        break;
+                                    }
+                                    var[it->first][it->second] = corpus.pegarValor(i, aux, it->second);
+                                }
+                                if( !moldeInvalido )
+                                {
+                                    if( regrasArmazenadas.find( var ) == regrasArmazenadas.end() )
+                                    {
+                                        ret = regrasTemporarias.equal_range( var );
+                                        bp_end = ret.second;
+                                        for( bp = ret.first; bp != bp_end; bp++ )
+                                            if( bp->second == frases_ijReal )
+                                            {
+                                                moldeInvalido = true;
+                                                break;
+                                            }
+                                        if( !moldeInvalido )
+                                        {
+                                            regrasTemporarias.insert( pair< map< int, map< int, int > >, int >( var, frases_ijReal ) );
+                                            regras.push_back( var );
+                                            respRegras.push_back( frases_ijReal );
+                                        }
+                                    }
+                                }
+                                var.clear();
+                            }
+                        }
+                        for( L = 0; L < numRegras; L++ )
+                        {
+                            //verifica se a regra realmente se encaixa na vizinhança
+                            if( regras[L].begin()->first > k || regras[L].rbegin()->first < k ) break;
+                            moldeInvalido = false;
+
+                            linha_end = regras[L].end();
+                            for( linha = regras[L].begin(); linha != linha_end; linha++ )
+                            {
+                                //tirar esse if em um loop individual?
+                                if( ( aux = j - k + linha->first ) >= column || aux < 0 )
+                                {
+                                    moldeInvalido = true;
+                                    break;
+                                }
+                                it_end = linha->second.end();
+                                for( it = linha->second.begin(); it != it_end; it++ )
+                                    if( corpus.pegarValor(i,aux,it->first) != it->second )
+                                    {
+                                        moldeInvalido = true;
+                                        break;
+                                    }
+                                if( moldeInvalido ) break;
+                            }
+                            if( !moldeInvalido )
+                            {
+                                if( frases_ijReal == respRegras[L] && frases_ijReal != frases_ijAjuste )
+                                    good[L]++;
+                                if( frases_ijReal != respRegras[L] && frases_ijReal == frases_ijReal )
+                                    bad[L]++;
+                            }
+                        }
                     }
                 }
+            }
         }
 
+        aux = numRegras;
         numRegras = regras.size();
         good.resize( numRegras );
         bad.resize( numRegras );
-        cout << numRegras << endl;
+        cout << "numRegras: " << numRegras << endl;
 
-
-//        for( register int L = 0; L < numRegras; L++ )
-//        {
-//            linha_end = regras[L].end();
-//            for( linha = regras[L].begin(); linha != linha_end; linha++ )
-//            {
-//                it_end = linha->second.end();
-//                for( it = linha->second.begin(); it != it_end; it++ )
-//                    cout << corpus.pegarAtributo(it->first) << ' ' << linha->first << ' ' << corpus.pegarSimbolo(it->second) << ' ';
-//            }
-//            cout << "=>" << ' ' << corpus.pegarSimbolo(respRegras[L]) << endl;
-//        }
-        ///varre corpus aplicando as regras e computando o score
-        //é melhor varrer o corpus para cada regra ou em cada palavra do corpus verificar todas as regras?
-        /*for( register int L = 0; L < numMoldeRegras; L++ )
-            for( register int i = 0; i < row; i++ )
-            {
-                column = corpus.pegarQtdTokens( i );
-                for( register int j = 0; j < column; j++ )
-
-            }*/
-
-        for( int i = 0; i < row; i++ )
+        for( i = 0; i < row; i++ )
         {
             column = corpus.pegarQtdTokens( i );
-            for( int j = 0; j < column; j++ )
-                for( int L = 0; L < numRegras; L++ )
+            for( j = 0; j < column; j++ )
+            {
+                frases_ijReal = corpus.pegarValor(i,j,atributo);
+                frases_ijAjuste = corpus.pegarValor(i,j,qtdAtributos-1);
+                for( L = aux; L < numRegras; L++ )
                 {
-                    moldeInvalido = false;
+                    regraInvalida = false;
 
                     linha_end = regras[L].end();
                     for( linha = regras[L].begin(); linha != linha_end; linha++ )
@@ -153,41 +351,39 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                         //tirar esse if em um loop individual?
                         if( ( aux = j + linha->first ) >= column || aux < 0 )
                         {
-                            moldeInvalido = true;
+                            regraInvalida = true;
                             break;
                         }
                         it_end = linha->second.end();
                         for( it = linha->second.begin(); it != it_end; it++ )
                             if( corpus.pegarValor(i,aux,it->first) != it->second )
                             {
-                                moldeInvalido = true;
+                                regraInvalida = true;
                                 break;
                             }
-                        if( moldeInvalido ) break;
+                        if( regraInvalida ) break;
                     }
-                    if( !moldeInvalido )
+                    if( !regraInvalida )
                     {
-                        if( ( aux = corpus.pegarValor(i,j,atributo) ) == respRegras[L] && aux != corpus.pegarValor(i,j, qtdAtributos - 1) )
+                        if( frases_ijReal == respRegras[L] && frases_ijReal != frases_ijAjuste )
                             good[L]++;
-                        if( aux != respRegras[L] && aux == corpus.pegarValor(i,j, qtdAtributos - 1) )
+                        if( frases_ijReal != respRegras[L] && frases_ijReal == frases_ijAjuste )
                             bad[L]++;
                     }
                 }
+            }
         }
-
-//        for( register int L = 0; L < numRegras; L++ )
-//            cout << good[L] << ' ' << bad[L] << endl;
-
+        bad[maxIndice] = 999999999;
+        ///remover regras cujo good virou zero?
         maxScore = -999999999;
-
-        for( register int L = 0; L < numRegras; L++ )
+        for( L = 0; L < numRegras; L++ )
             if( ( aux = good[L] - bad[L] ) > maxScore )
             {
                 maxScore = aux;
                 maxIndice = L;
             }
         //impressão da melhor regra
-        cout << maxScore << endl;
+        cout << "maxScore: " << maxScore << endl;
         linha_end = regras[maxIndice].end();
         for( linha = regras[maxIndice].begin(); linha != linha_end; linha++ )
         {
@@ -196,52 +392,6 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                 cout << corpus.pegarAtributo(it->first) << ' ' << linha->first << ' ' << corpus.pegarSimbolo(it->second) << ' ';
         }
         cout << "=>" << ' ' << corpus.pegarSimbolo(respRegras[maxIndice]) << endl;
-
-        if( maxScore >= toleranciaScore )
-        {
-            //armazenar regra
-            regrasArmazenadas.insert( regras[maxIndice] );
-            map< int, map< string, string > > rule;
-            linha_end = regras[maxIndice].end();
-            for( linha = regras[maxIndice].begin(); linha != linha_end; linha++ )
-            {
-                it_end = linha->second.end();
-                for( it = linha->second.begin(); it != it_end; it++ )
-                    rule[linha->first][corpus.pegarAtributo( it->first )] = corpus.pegarSimbolo( it->second );
-            }
-            objClassificador->inserirRegra( rule, corpus.pegarSimbolo( respRegras[maxIndice] ) );
-            //atualizar Corpus com a nova regra
-            for( register int i = 0; i < row; i++ )
-            {
-                column = corpus.pegarQtdTokens( i );
-                for( register int j = 0; j < column; j++ )
-                {
-                    moldeInvalido = false;
-
-                    linha_end = regras[maxIndice].end();
-                    for( linha = regras[maxIndice].begin(); linha != linha_end; linha++ )
-                    {
-                        //tirar esse if em um loop individual?
-                        if( ( aux = j + linha->first ) >= column || aux < 0 )
-                        {
-                            moldeInvalido = true;
-                            break;
-                        }
-                        it_end = linha->second.end();
-                        for( it = linha->second.begin(); it != it_end; it++ )
-                            if( corpus.pegarValor(i,aux,it->first) != it->second )
-                            {
-                                moldeInvalido = true;
-                                break;
-                            }
-                        if( moldeInvalido ) break; //break externo
-                    }
-                    if( !moldeInvalido )
-                        corpus.ajustarValor(i,j,qtdAtributos - 1,respRegras[maxIndice]);
-                }
-            }
-        }
-        cout << imprime++ << endl;
     }
 
     return objClassificador;
@@ -261,6 +411,7 @@ bool TBL::carregarMolde( string arqMoldeRegras )
     char ch ;
     map< int, string > indiceAtributo;
 
+
     while( arqin.good() )
     {
         arqin.get( ch );//caso inicial p/ diferenciar de \n
@@ -277,6 +428,7 @@ bool TBL::carregarMolde( string arqMoldeRegras )
         moldeRegras.push_back( indiceAtributo );
         indiceAtributo.clear();
     }
+
 
     if( arqin.bad() && !arqin.eof() )    //caso de erro na leitura do arquivo
     {

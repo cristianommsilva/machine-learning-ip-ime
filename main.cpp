@@ -36,9 +36,9 @@ int main()
     MaisProvavel objMProv( LIM_FREQ_UNKNOWN );
     ///objClass = objMProv.executarTreinamento( objCorpus, ATRBT_ANALISADO );
     ///HMM objHMM;
-    //objClass = objHMM.executarTreinamento( objCorpus, ATRBT_ANALISADO );
-    //objClass->carregarConhecimento( "outputs/conhecimentoMProv.txt" );
-    TBL objTBL( objMProv.executarTreinamento( objCorpus, ATRBT_ANALISADO ), "inputs/molde.txt", 1 );
+    ///objClass = objHMM.executarTreinamento( objCorpus, ATRBT_ANALISADO );
+    //objClass->carregarConhecimento( "inputs/conhecimentoTBL.txt" );
+    TBL objTBL( objMProv.executarTreinamento( objCorpus, ATRBT_ANALISADO ), "inputs/molde.txt", 20 );
     objClass = objTBL.executarTreinamento( objCorpus, ATRBT_ANALISADO );
 
     CorpusMatriz objCorpusProva( atributos );
