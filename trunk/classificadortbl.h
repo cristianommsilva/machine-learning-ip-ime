@@ -9,10 +9,12 @@
 
 class ClassificadorTBL : public Classificador
 {
+        ///pode ter este atributo aqui?
+        Classificador* classInicial;
         vector< map< int, map< string, string > > > regras;
         vector< string > respRegras;
     public:
-        ClassificadorTBL( );
+        ClassificadorTBL( Classificador* classInicial );
         virtual ~ClassificadorTBL();
         void inserirRegra( map< int, map< string, string > > rule, string resp );
         virtual bool executarClassificacao( Corpus &corpusProva, int atributo );

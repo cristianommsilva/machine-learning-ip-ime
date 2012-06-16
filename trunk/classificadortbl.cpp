@@ -1,8 +1,8 @@
 #include "classificadortbl.h"
 
-ClassificadorTBL::ClassificadorTBL()
+ClassificadorTBL::ClassificadorTBL( Classificador* classInicial )
 {
-
+    this->classInicial = classInicial;
 }
 
 ClassificadorTBL::~ClassificadorTBL()
@@ -19,21 +19,20 @@ void ClassificadorTBL::inserirRegra( map< int, map< string, string > > rule, str
 bool ClassificadorTBL::executarClassificacao( Corpus &corpusProva, int atributo )
 {
     //Classificação inicial
-    MaisProvavel objMProv( LIM_FREQ_UNKNOWN );
-    Classificador *objClass = objMProv.executarTreinamento( corpusProva, ATRBT_ANALISADO );
-    objClass->executarClassificacao( corpusProva, atributo );
+    classInicial->executarClassificacao( corpusProva, atributo );
 
     int qtdAtributos = corpusProva.pegarQtdAtributos();
     int row = corpusProva.pegarQtdSentencas(), column, numRegras = regras.size(), aux;
+    register int i, j, L;
     bool regraInvalida;
     map< int, map< string, string > >::iterator linha, linha_end;
     map< string, string >::iterator it, it_end;
 
-    for( register int i = 0; i < row; i++ )
+    for( i = 0; i < row; i++ )
     {
         column = corpusProva.pegarQtdTokens( i );
-        for( register int j = 0; j < column; j++ )
-            for( register int L = 0; L < numRegras; L++ )
+        for( j = 0; j < column; j++ )
+            for( L = 0; L < numRegras; L++ )
             {
                 regraInvalida = false;
 
@@ -114,7 +113,7 @@ bool ClassificadorTBL::carregarConhecimento( string arquivo )
     while( arqin.good() )
     {
         palavra1.push_back( ch );
-        while( ch != '\n' )
+        while( ch != '\n' && arqin.good() )
         {
             for( arqin.get( ch ); ch != ' '; arqin.get( ch ) )
                 palavra1.push_back( ch );
@@ -134,7 +133,7 @@ bool ClassificadorTBL::carregarConhecimento( string arquivo )
             }*/
             if( palavra1 == "=>" )
             {
-                for( arqin.get( ch ); ch != ' ' && ch != '\n'; arqin.get( ch ) )
+                for( arqin.get( ch ); ch != ' ' && ch != '\n' && arqin.good(); arqin.get( ch ) )
                     palavra2.push_back( ch );
                 respRegras.push_back( palavra2 );
             }
