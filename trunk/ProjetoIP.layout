@@ -19,23 +19,23 @@
 	<File name="classificador.h" open="0" top="0" tabpos="2">
 		<Cursor position="94" topLine="0" />
 	</File>
-	<File name="classificador_maisprovavel.cpp" open="0" top="0" tabpos="9">
-		<Cursor position="350" topLine="0" />
+	<File name="classificador_maisprovavel.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="144" topLine="0" />
 	</File>
 	<File name="classificador_maisprovavel.h" open="0" top="0" tabpos="3">
 		<Cursor position="249" topLine="0" />
 	</File>
 	<File name="classificadorhmm.cpp" open="0" top="0" tabpos="7">
-		<Cursor position="6245" topLine="0" />
+		<Cursor position="562" topLine="6" />
 	</File>
 	<File name="classificadorhmm.h" open="0" top="0" tabpos="4">
 		<Cursor position="775" topLine="0" />
 	</File>
 	<File name="classificadortbl.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="842" topLine="21" />
+		<Cursor position="2058" topLine="51" />
 	</File>
 	<File name="classificadortbl.h" open="1" top="0" tabpos="5">
-		<Cursor position="501" topLine="3" />
+		<Cursor position="501" topLine="2" />
 	</File>
 	<File name="corpus.cpp" open="0" top="0" tabpos="10">
 		<Cursor position="389" topLine="48" />
@@ -43,8 +43,8 @@
 	<File name="corpus.h" open="0" top="0" tabpos="11">
 		<Cursor position="1062" topLine="19" />
 	</File>
-	<File name="corpusmatriz.cpp" open="0" top="0" tabpos="7">
-		<Cursor position="1004" topLine="30" />
+	<File name="corpusmatriz.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="548" topLine="0" />
 	</File>
 	<File name="corpusmatriz.h" open="0" top="0" tabpos="3">
 		<Cursor position="115" topLine="0" />
@@ -56,16 +56,16 @@
 		<Cursor position="243" topLine="0" />
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="1368" topLine="26" />
+		<Cursor position="2898" topLine="87" />
 	</File>
 	<File name="maisprovavel.cpp" open="0" top="0" tabpos="8">
-		<Cursor position="289" topLine="16" />
+		<Cursor position="188" topLine="3" />
 	</File>
 	<File name="maisprovavel.h" open="0" top="0" tabpos="3">
 		<Cursor position="315" topLine="0" />
 	</File>
 	<File name="tbl.cpp" open="1" top="1" tabpos="3">
-		<Cursor position="397" topLine="0" />
+		<Cursor position="14566" topLine="194" />
 	</File>
 	<File name="tbl.h" open="1" top="0" tabpos="2">
 		<Cursor position="425" topLine="0" />

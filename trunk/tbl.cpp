@@ -15,10 +15,12 @@ TBL::~TBL()
 Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
 {
     ClassificadorTBL *objClassificador = new ClassificadorTBL( classInicial );
-    int row = corpus.pegarQtdSentencas(), column, numMoldeRegras = this->moldeRegras.size(), numRegras, qtdAtributos, maxScore = toleranciaScore, maxIndice, aux, frases_ijReal, frases_ijAjuste;
+    int row = corpus.pegarQtdSentencas(), column, numMoldeRegras = this->moldeRegras.size(), numRegras, numRegrasOld, qtdAtributos, maxScore = toleranciaScore, maxIndice, aux, frases_ijReal, frases_ijAjuste;
     int i,j,k,L;
     map<int, map< int, int > >::iterator linha, linha_end;
     map< int, int >::iterator it, it_end;
+    vector< map< int, map< int, int > > >::iterator it_regras;
+    vector< int >::iterator it_respRegras, it_good, it_bad;
     map< int, map< int, int > > var;
     //estrutura de multimap para busca otimizada de regras repetidas
     multimap< map< int, map< int, int > >, int >:: iterator bp, bp_end;
@@ -205,13 +207,13 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                     ///falta colocar otimização de quais regras realmente agir (filtrar mais)
                     for( k = tamMinMolde; k <= tamMaxMolde; k++ )
                     {
-                        if( j - k < 0 || j - k >= column ) break;
+                        if( j - k < 0 || j - k >= column ) continue;
                         frases_ijReal = corpus.pegarValor(i,j-k,atributo);
                         frases_ijAjuste = corpus.pegarValor(i,j-k, qtdAtributos - 1);
                         for( L = 0; L < numRegras; L++ )
                         {
                             //verifica se a regra realmente se encaixa na vizinhança
-                            if( regras[L].begin()->first > k || regras[L].rbegin()->first < k ) break;
+                            if( regras[L].begin()->first > k || regras[L].rbegin()->first < k ) continue;
                             moldeInvalido = false;
 
                             linha_end = regras[L].end();
@@ -248,14 +250,14 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                     ///trocar k com L é melhor?
                     for( k = tamMinMolde; k <= tamMaxMolde; k++ )
                     {
-                        if( j - k < 0 || j - k >= column )break;
+                        if( j - k < 0 || j - k >= column )continue;
                         if( ( frases_ijReal = corpus.pegarValor(i,j-k,atributo) ) != ( frases_ijAjuste = corpus.pegarValor(i,j-k,qtdAtributos-1) ) )
                         {
                             //aplicar molde de regras na vizinhança da palavra alterada
                             for( L = 0; L < numMoldeRegras; L++ )
                             {
                                 //verifica se a regra realmente se encaixa na vizinhança
-                                if( moldeRegras[L].begin()->first > k || moldeRegras[L].rbegin()->first < k ) break;
+                                if( moldeRegras[L].begin()->first > k || moldeRegras[L].rbegin()->first < k ) continue;
                                 moldeInvalido = false;
 
                                 it_end = moldeRegras[L].end();
@@ -294,7 +296,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                         for( L = 0; L < numRegras; L++ )
                         {
                             //verifica se a regra realmente se encaixa na vizinhança
-                            if( regras[L].begin()->first > k || regras[L].rbegin()->first < k ) break;
+                            if( regras[L].begin()->first > k || regras[L].rbegin()->first < k ) continue;
                             moldeInvalido = false;
 
                             linha_end = regras[L].end();
@@ -328,7 +330,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
             }
         }
 
-        aux = numRegras;
+        numRegrasOld = numRegras;
         numRegras = regras.size();
         good.resize( numRegras );
         bad.resize( numRegras );
@@ -341,7 +343,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
             {
                 frases_ijReal = corpus.pegarValor(i,j,atributo);
                 frases_ijAjuste = corpus.pegarValor(i,j,qtdAtributos-1);
-                for( L = aux; L < numRegras; L++ )
+                for( L = numRegrasOld; L < numRegras; L++ )
                 {
                     regraInvalida = false;
 
@@ -373,8 +375,33 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                 }
             }
         }
-        bad[maxIndice] = 999999999;
-        ///remover regras cujo good virou zero?
+
+
+        ///remover regras cujo good virou zero? remover regras com molde igual a melhor?
+        var = regras[maxIndice];
+        it_regras = regras.begin();
+        it_respRegras = respRegras.begin();
+        it_good = good.begin();
+        it_bad = bad.begin();
+        while( it_regras != regras.end() )
+            if( *it_good <= 0 || *it_regras == var  )
+            {
+                it_regras = regras.erase( it_regras );
+                it_respRegras = respRegras.erase( it_respRegras );
+                it_good = good.erase( it_good );
+                it_bad = bad.erase( it_bad );
+            }
+            else
+            {
+                it_regras++;
+                it_respRegras++;
+                it_good++;
+                it_bad++;
+            }
+        numRegras = regras.size();
+
+
+        //bad[maxIndice] = 999999999;
         maxScore = -999999999;
         for( L = 0; L < numRegras; L++ )
             if( ( aux = good[L] - bad[L] ) > maxScore )
