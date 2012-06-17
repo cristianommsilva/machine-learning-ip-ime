@@ -84,19 +84,19 @@ int main()
 {
     vector<string> atributos, atributosTeste;
     atributos.push_back("word");
-    atributos.push_back("pos");
+    atributos.push_back("tpos");
     atributos.push_back("np");
 
     CorpusMatriz objCorpus( atributos );
-    objCorpus.carregarArquivo( "inputs/train.txt" );
-    objCorpus.criarAtributo( "adpos", "N" );
+    objCorpus.carregarArquivo( "inputs/test.txt" );
+    objCorpus.criarAtributo( "pos", "N" );
 
     Classificador *objClassInicial;
     MaisProvavel objMProv( LIM_FREQ_UNKNOWN );
     objClassInicial = objMProv.executarTreinamento( objCorpus, ATRBT_ANALISADO );
 
     Classificador *objClass;
-    TBL objTBL( objClassInicial, "inputs/molde.txt", 5 );
+    TBL objTBL( objClassInicial, "inputs/molde.txt", 1 );
     objClass = objTBL.executarTreinamento( objCorpus, ATRBT_ANALISADO );
 
     //Classificador *objClass = new ClassificadorTBL( objClassInicial );
