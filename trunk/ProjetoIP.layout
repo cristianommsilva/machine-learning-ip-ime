@@ -31,8 +31,8 @@
 	<File name="classificadorhmm.h" open="0" top="0" tabpos="4">
 		<Cursor position="775" topLine="0" />
 	</File>
-	<File name="classificadortbl.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="2058" topLine="51" />
+	<File name="classificadortbl.cpp" open="1" top="1" tabpos="4">
+		<Cursor position="2058" topLine="39" />
 	</File>
 	<File name="classificadortbl.h" open="1" top="0" tabpos="5">
 		<Cursor position="501" topLine="2" />
@@ -56,7 +56,7 @@
 		<Cursor position="243" topLine="0" />
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="2898" topLine="87" />
+		<Cursor position="2898" topLine="99" />
 	</File>
 	<File name="maisprovavel.cpp" open="0" top="0" tabpos="8">
 		<Cursor position="188" topLine="3" />
@@ -64,8 +64,8 @@
 	<File name="maisprovavel.h" open="0" top="0" tabpos="3">
 		<Cursor position="315" topLine="0" />
 	</File>
-	<File name="tbl.cpp" open="1" top="1" tabpos="3">
-		<Cursor position="14566" topLine="194" />
+	<File name="tbl.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="7314" topLine="13" />
 	</File>
 	<File name="tbl.h" open="1" top="0" tabpos="2">
 		<Cursor position="425" topLine="0" />

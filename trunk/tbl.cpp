@@ -25,7 +25,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
     //estrutura de multimap para busca otimizada de regras repetidas
     multimap< map< int, map< int, int > >, int >:: iterator bp, bp_end;
     pair< multimap< map< int, map< int, int > >, int >:: iterator, multimap< map< int, map< int, int > >, int >:: iterator > ret;
-    bool moldeInvalido, regraInvalida;
+    bool moldeInvalido, regraInvalida, utilizaPos;
 
     multimap< map< int, map< int, int > >, int > regrasTemporarias;
     set< map< int, map< int, int > > > regrasArmazenadas;
@@ -212,9 +212,8 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                         frases_ijAjuste = corpus.pegarValor(i,j-k, qtdAtributos - 1);
                         for( L = 0; L < numRegras; L++ )
                         {
-                            //verifica se a regra realmente se encaixa na vizinhança
                             if( regras[L].begin()->first > k || regras[L].rbegin()->first < k ) continue;
-                            moldeInvalido = false;
+                            utilizaPos = moldeInvalido = false;
 
                             linha_end = regras[L].end();
                             for( linha = regras[L].begin(); linha != linha_end; linha++ )
@@ -232,9 +231,11 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                                         moldeInvalido = true;
                                         break;
                                     }
+                                    else//verifica se regra realmente é influenciada pela nova classificação
+                                        if( aux == j && it->first == qtdAtributos - 1 ) utilizaPos = true;
                                 if( moldeInvalido ) break;
                             }
-                            if( !moldeInvalido )
+                            if( !moldeInvalido && utilizaPos )
                             {
                                 if( frases_ijReal == respRegras[L] && frases_ijReal != frases_ijAjuste )
                                     good[L]--;
@@ -297,7 +298,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                         {
                             //verifica se a regra realmente se encaixa na vizinhança
                             if( regras[L].begin()->first > k || regras[L].rbegin()->first < k ) continue;
-                            moldeInvalido = false;
+                            utilizaPos = moldeInvalido = false;
 
                             linha_end = regras[L].end();
                             for( linha = regras[L].begin(); linha != linha_end; linha++ )
@@ -315,9 +316,11 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                                         moldeInvalido = true;
                                         break;
                                     }
+                                    else//verifica se regra realmente é influenciada pela nova classificação
+                                        if( aux == j && it->first == qtdAtributos - 1 ) utilizaPos = true;
                                 if( moldeInvalido ) break;
                             }
-                            if( !moldeInvalido )
+                            if( !moldeInvalido && utilizaPos )
                             {
                                 if( frases_ijReal == respRegras[L] && frases_ijReal != frases_ijAjuste )
                                     good[L]++;
