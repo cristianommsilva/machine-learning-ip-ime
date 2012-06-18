@@ -571,7 +571,7 @@
 1329852927 c:\users\zapdos\desktop\google code ip\avaliador.h
 	"corpus.h"
 
-1338750666 c:\users\zapdos\desktop\google code ip\corpus.h
+1340058516 c:\users\zapdos\desktop\google code ip\corpus.h
 	<iostream>
 	<vector>
 	<map>
@@ -599,7 +599,7 @@
 	"classificadorhmm.h"
 	<stdlib.h>
 
-1330393168 c:\users\zapdos\desktop\google code ip\classificadorhmm.h
+1340059062 c:\users\zapdos\desktop\google code ip\classificadorhmm.h
 	"classificador.h"
 	<fstream>
 	<cmath>
@@ -657,7 +657,7 @@
 	"maisprovavel.h"
 	<fstream>
 
-1339910250 source:c:\users\zapdos\desktop\google code ip\tbl.cpp
+1339984281 source:c:\users\zapdos\desktop\google code ip\tbl.cpp
 	"tbl.h"
 
 1339805616 c:\users\zapdos\desktop\google code ip\tbl.h
