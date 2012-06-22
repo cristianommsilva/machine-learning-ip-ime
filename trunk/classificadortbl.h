@@ -16,8 +16,8 @@ class ClassificadorTBL : public Classificador
     public:
         ClassificadorTBL( Classificador* classInicial );
         virtual ~ClassificadorTBL();
-        void inserirRegra( map< int, map< string, string > > rule, string resp );
         virtual bool executarClassificacao( Corpus &corpusProva, int atributo );
+        void inserirRegra( map< int, map< string, string > > rule, string resp );
         virtual bool gravarConhecimento( string arquivo );
         virtual bool carregarConhecimento( string arquivo );
 };

@@ -607,7 +607,7 @@
 1339252962 source:c:\users\zapdos\desktop\google code ip\corpus.cpp
 	"corpus.h"
 
-1339888131 source:c:\users\zapdos\desktop\google code ip\corpusmatriz.cpp
+1340252922 source:c:\users\zapdos\desktop\google code ip\corpusmatriz.cpp
 	"corpusmatriz.h"
 
 1329852966 c:\users\zapdos\desktop\google code ip\corpusmatriz.h
@@ -652,7 +652,7 @@
 1339901532 source:c:\users\zapdos\desktop\google code ip\classificadortbl.cpp
 	"classificadortbl.h"
 
-1339805616 c:\users\zapdos\desktop\google code ip\classificadortbl.h
+1340067033 c:\users\zapdos\desktop\google code ip\classificadortbl.h
 	"classificador.h"
 	"maisprovavel.h"
 	<fstream>

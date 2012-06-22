@@ -85,15 +85,6 @@ bool CorpusMatriz::carregarArquivo( string arquivo )
             arqin.get( ch );
         }
     }
-/*    /// TESTE DE IMPRESSÃO DE "FRASES[][][]"
-    for ( register int i = 0; i < qtd_sentencas; i++ )
-    {
-    	for ( register int j = 0; j < frases[ i ].size(); j++ )
-    	{
-    		cout << frases[i][j][0] << "_" << frases[i][j][1] << endl;
-    	}
-    	cout << endl;
-    }*/
 
     if( arqin.bad() && !arqin.eof() )    //caso de erro na leitura do arquivo
     {
