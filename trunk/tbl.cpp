@@ -16,22 +16,27 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
 {
     ClassificadorTBL *objClassificador = new ClassificadorTBL( classInicial );
     int row = corpus.pegarQtdSentencas(), column, numMoldeRegras = this->moldeRegras.size(), numRegras, numRegrasOld, qtdAtributos, maxScore = toleranciaScore, maxIndice, aux, frases_ijReal, frases_ijAjuste;
+    bool moldeInvalido, regraInvalida, utilizaPos;
+    map< int, map< int, int > > var;
+    //iterators
     int i,j,k,L;
     map<int, map< int, int > >::iterator linha, linha_end;
     map< int, int >::iterator it, it_end;
     vector< map< int, map< int, int > > >::iterator it_regras;
     vector< int >::iterator it_respRegras, it_good, it_bad;
-    map< int, map< int, int > > var;
-    //estrutura de multimap para busca otimizada de regras repetidas
     multimap< map< int, map< int, int > >, int >:: iterator bp, bp_end;
     pair< multimap< map< int, map< int, int > >, int >:: iterator, multimap< map< int, map< int, int > >, int >:: iterator > ret;
-    bool moldeInvalido, regraInvalida, utilizaPos;
 
+    //estrutura de multimap para busca otimizada de regras repetidas
     multimap< map< int, map< int, int > >, int > regrasTemporarias;
+
     set< map< int, map< int, int > > > regrasArmazenadas;
     vector< map< int, map< int, int > > > regras;
     vector< int > respRegras, good, bad;//se for feita mais de uma classificação simultanea respRegras tem que ser atualizado para map e respMolde tem que ser criado
     vector< map< int, int> > moldeRegras( numMoldeRegras );
+
+    //Classificação inicial do corpus
+    classInicial->executarClassificacao( corpus, ATRBT_CLASSIFICADO );
 
     //converter molde de regras
     int tamMinMolde = 0, tamMaxMolde = 0;
@@ -46,9 +51,6 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
             if( itMolde->first > tamMaxMolde ) tamMaxMolde = itMolde->first;
         }
     }
-
-    //Classificação inicial do corpus
-    classInicial->executarClassificacao( corpus, ATRBT_CLASSIFICADO );
 
     qtdAtributos = corpus.pegarQtdAtributos();
 
@@ -140,6 +142,9 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
         }
     }
 
+    //salvarEstado("outputs/saveScore.txt",good,bad);
+    //carregarEstado("inputs/saveScore.txt",good,bad);
+
     maxScore = -999999999;
     for( L = 0; L < numRegras; L++ )
         if( ( aux = good[L] - bad[L] ) > maxScore )
@@ -204,7 +209,6 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                 {
                     //decremento do bad e do good da vizinhança da palavra alterada
                     ///trocar k com L é melhor?
-                    ///falta colocar otimização de quais regras realmente agir (filtrar mais)
                     for( k = tamMinMolde; k <= tamMaxMolde; k++ )
                     {
                         if( j - k < 0 || j - k >= column ) continue;
@@ -232,7 +236,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                                         break;
                                     }
                                     else//verifica se regra realmente é influenciada pela nova classificação
-                                        if( aux == j && it->first == qtdAtributos - 1 ) utilizaPos = true;
+                                        if( aux == j ) utilizaPos = true;
                                 if( moldeInvalido ) break;
                             }
                             if( !moldeInvalido && utilizaPos )
@@ -257,9 +261,9 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                             //aplicar molde de regras na vizinhança da palavra alterada
                             for( L = 0; L < numMoldeRegras; L++ )
                             {
-                                //verifica se a regra realmente se encaixa na vizinhança
+                                //verifica se o molde realmente se encaixa na vizinhança
                                 if( moldeRegras[L].begin()->first > k || moldeRegras[L].rbegin()->first < k ) continue;
-                                moldeInvalido = false;
+                                utilizaPos = moldeInvalido = false;
 
                                 it_end = moldeRegras[L].end();
                                 for( it = moldeRegras[L].begin(); it != it_end; it++ )
@@ -269,9 +273,10 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                                         moldeInvalido = true;
                                         break;
                                     }
+                                    if( aux == j ) utilizaPos = true;
                                     var[it->first][it->second] = corpus.pegarValor(i, aux, it->second);
                                 }
-                                if( !moldeInvalido )
+                                if( !moldeInvalido && utilizaPos )
                                 {
                                     if( regrasArmazenadas.find( var ) == regrasArmazenadas.end() )
                                     {
@@ -317,7 +322,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                                         break;
                                     }
                                     else//verifica se regra realmente é influenciada pela nova classificação
-                                        if( aux == j && it->first == qtdAtributos - 1 ) utilizaPos = true;
+                                        if( aux == j) utilizaPos = true;
                                 if( moldeInvalido ) break;
                             }
                             if( !moldeInvalido && utilizaPos )
@@ -380,7 +385,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
         }
 
 
-        ///remover regras cujo good virou zero? remover regras com molde igual a melhor?
+        //remover regras cujo good virou zero e remover regras com molde igual a melhor regra
         var = regras[maxIndice];
         it_regras = regras.begin();
         it_respRegras = respRegras.begin();
@@ -469,5 +474,57 @@ bool TBL::carregarMolde( string arqMoldeRegras )
 
     arqin.close();
     cout << "Molde de Regras <" << arqMoldeRegras << "> carregado com sucesso!" << endl;
+    return true;
+}
+
+bool TBL::salvarEstado( string saveFile, vector<int> good, vector<int> bad )
+{
+    ofstream arqout( saveFile.c_str() );
+    if( !arqout.is_open() ) //verifica se arquivo conseguiu ser aberto
+    {
+        cout << "Erro:salvarEstado!\nFalha na abertura do arquivo!" << endl;
+        return false;
+    }
+
+    int numRegras = good.size();
+
+    for( register int i = 0; i < numRegras; i++ )
+    {
+        arqout << good[i] << ' ' << bad[i] << endl;
+    }
+
+    arqout.close();
+    cout << "Estado <" << saveFile << "> salvo com sucesso!" << endl;
+    return true;
+}
+
+bool TBL::carregarEstado( string saveFile, vector<int> &good, vector<int> &bad )
+{
+    ifstream arqin( saveFile.c_str() );
+    if( !arqin.is_open() ) //verifica se arquivo conseguiu ser aberto
+    {
+        cout << "Erro:carregarEstado!\nFalha na abertura do arquivo!" << endl;
+        return false;
+    }
+
+    int numRegras = good.size(), g, b;
+
+    for( register int i = 0; i < numRegras; i++ )
+    {
+        arqin >> g;
+        good[i] = g;
+        arqin >> b;
+        bad[i] = b;
+    }
+
+    if( arqin.bad() && !arqin.eof() )    //caso de erro na leitura do arquivo
+    {
+        cout << "Erro:carregarEstado!\nErro na leitura do arquivo!" << endl;
+        arqin.close();
+        return false;
+    }
+
+    arqin.close();
+    cout << "Estado <" << saveFile << "> carregado com sucesso!" << endl;
     return true;
 }
