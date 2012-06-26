@@ -477,54 +477,54 @@ bool TBL::carregarMolde( string arqMoldeRegras )
     return true;
 }
 
-bool TBL::salvarEstado( string saveFile, vector<int> good, vector<int> bad )
-{
-    ofstream arqout( saveFile.c_str() );
-    if( !arqout.is_open() ) //verifica se arquivo conseguiu ser aberto
-    {
-        cout << "Erro:salvarEstado!\nFalha na abertura do arquivo!" << endl;
-        return false;
-    }
-
-    int numRegras = good.size();
-
-    for( register int i = 0; i < numRegras; i++ )
-    {
-        arqout << good[i] << ' ' << bad[i] << endl;
-    }
-
-    arqout.close();
-    cout << "Estado <" << saveFile << "> salvo com sucesso!" << endl;
-    return true;
-}
-
-bool TBL::carregarEstado( string saveFile, vector<int> &good, vector<int> &bad )
-{
-    ifstream arqin( saveFile.c_str() );
-    if( !arqin.is_open() ) //verifica se arquivo conseguiu ser aberto
-    {
-        cout << "Erro:carregarEstado!\nFalha na abertura do arquivo!" << endl;
-        return false;
-    }
-
-    int numRegras = good.size(), g, b;
-
-    for( register int i = 0; i < numRegras; i++ )
-    {
-        arqin >> g;
-        good[i] = g;
-        arqin >> b;
-        bad[i] = b;
-    }
-
-    if( arqin.bad() && !arqin.eof() )    //caso de erro na leitura do arquivo
-    {
-        cout << "Erro:carregarEstado!\nErro na leitura do arquivo!" << endl;
-        arqin.close();
-        return false;
-    }
-
-    arqin.close();
-    cout << "Estado <" << saveFile << "> carregado com sucesso!" << endl;
-    return true;
-}
+//bool TBL::salvarEstado( string saveFile, vector<int> good, vector<int> bad )
+//{
+//    ofstream arqout( saveFile.c_str() );
+//    if( !arqout.is_open() ) //verifica se arquivo conseguiu ser aberto
+//    {
+//        cout << "Erro:salvarEstado!\nFalha na abertura do arquivo!" << endl;
+//        return false;
+//    }
+//
+//    int numRegras = good.size();
+//
+//    for( register int i = 0; i < numRegras; i++ )
+//    {
+//        arqout << good[i] << ' ' << bad[i] << endl;
+//    }
+//
+//    arqout.close();
+//    cout << "Estado <" << saveFile << "> salvo com sucesso!" << endl;
+//    return true;
+//}
+//
+//bool TBL::carregarEstado( string saveFile, vector<int> &good, vector<int> &bad )
+//{
+//    ifstream arqin( saveFile.c_str() );
+//    if( !arqin.is_open() ) //verifica se arquivo conseguiu ser aberto
+//    {
+//        cout << "Erro:carregarEstado!\nFalha na abertura do arquivo!" << endl;
+//        return false;
+//    }
+//
+//    int numRegras = good.size(), g, b;
+//
+//    for( register int i = 0; i < numRegras; i++ )
+//    {
+//        arqin >> g;
+//        good[i] = g;
+//        arqin >> b;
+//        bad[i] = b;
+//    }
+//
+//    if( arqin.bad() && !arqin.eof() )    //caso de erro na leitura do arquivo
+//    {
+//        cout << "Erro:carregarEstado!\nErro na leitura do arquivo!" << endl;
+//        arqin.close();
+//        return false;
+//    }
+//
+//    arqin.close();
+//    cout << "Estado <" << saveFile << "> carregado com sucesso!" << endl;
+//    return true;
+//}
