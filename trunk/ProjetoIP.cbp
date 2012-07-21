@@ -52,6 +52,8 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="maisprovavel.cpp" />
 		<Unit filename="maisprovavel.h" />
+		<Unit filename="regra.cpp" />
+		<Unit filename="regra.h" />
 		<Unit filename="tbl.cpp" />
 		<Unit filename="tbl.h" />
 		<Unit filename="treinador.cpp" />
