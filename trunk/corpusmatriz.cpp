@@ -4,10 +4,50 @@ CorpusMatriz::CorpusMatriz( vector<string> atributos )
     :Corpus( atributos )
 {
     //ctor
+    separador = '_';
+}
+
+void CorpusMatriz::ajustarSeparador(char separador){
+    this->separador = separador;
 }
 
 bool CorpusMatriz::carregarArquivo( string arquivo )
 {
+    //verifica se atributos foram passados
+    if (!atributos.size()){
+        string at;
+        ifstream arqat( (arquivo + ".names").c_str() ); // Abre arquivo para leitura em modo texto
+        if( !arqat.is_open() ) //verifica se arquivo conseguiu ser aberto
+        {
+            cout << "Aviso:carregarArquivo!\nNão foi possível carregar atributos!" << endl;
+            return false;
+        }
+
+        //varre linha a linha por atributos
+        while(arqat.good()){
+            arqat >> at;
+            if (arqat.eof())
+                break;
+            atributos.push_back(at);
+        }
+        arqat.close();
+
+        //realoca membros em função de novos atributos do corpus
+        qtd_atributos = atributos.size();
+        for( register int i = 0; i < qtd_atributos; i++ )
+            posAtributos[atributos[i]] = i;
+        frases[0][0].resize( qtd_atributos );
+
+        //verifica se os atributos foram carregados
+        if( !qtd_atributos )
+        {
+            cout << "Aviso:carregarArquivo!\nNão foi possível carregar atributos!" << endl;
+            return false;
+        }
+        else
+            cout << qtd_atributos << " atributos carregados com sucesso." << endl;
+    }
+
     ifstream arqin( arquivo.c_str() ); // Abre arquivo para leitura em modo texto
     if( !arqin.is_open() ) //verifica se arquivo conseguiu ser aberto
     {
@@ -31,7 +71,7 @@ bool CorpusMatriz::carregarArquivo( string arquivo )
                 for( register int i = 0; i < qtd_atributos; i++ )
                 {
                     // lê a palavra que será colocada no vector símbolos
-                    while( ( ch != '_' || i == qtd_atributos - 1 ) && ch != '\n' && !arqin.eof() ) //torna programa mais
+                    while( ( ch != separador || i == qtd_atributos - 1 ) && ch != '\n' && !arqin.eof() ) //torna programa mais
                     {                                                              //robusto em relação a erros '_' no corpus
                         str.push_back( ch );
                         arqin.get( ch );
@@ -119,22 +159,23 @@ bool CorpusMatriz::gravarArquivo( string arquivo )
         return false;
     }
 
-    int column;
+    int column, k;
 
     for( register int i = 0; i < qtd_sentencas; i++ )
     {
         column = frases[i].size();
         for( register int j = 0; j < column; j++ )
-            for( register int k = 0; k < qtd_atributos; k++ )
-            {
-                if( k == qtd_atributos - 1 ) arqout << simbolos[ frases[i][j][k] ] << endl;
-                else arqout << simbolos[ frases[i][j][k] ] << '_';
-            }
+        {
+            for( k = 0; k < qtd_atributos - 1; k++ )
+                arqout << simbolos[ frases[i][j][k] ] << separador;
+            arqout << simbolos[ frases[i][j][k] ] << endl;
+        }
         arqout << endl;
     }
 
     arqout.close();
 
     cout << "Arquivo <" << arquivo << "> gravado com sucesso!" << endl;
+
     return true;
 }

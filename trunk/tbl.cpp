@@ -126,45 +126,45 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
     numRegras = regras.size();
     cout << "numRegras: " << numRegras << endl;
 
-    for( i = 0; i < row; i++ )
-    {
-        column = corpus.pegarQtdTokens( i );
-        for( j = 0; j < column; j++ )
-        {
-            frases_ijReal = corpus.pegarValor(i,j,atributo);
-            frases_ijAjuste = corpus.pegarValor(i,j,qtdAtributos-1);
-            for( L = 0; L < numRegras; L++ )
-            {
-                regraInvalida = false;
-
-                linha_end = regras[L].estrutura.end();
-                for( linha = regras[L].estrutura.begin(); linha != linha_end; linha++ )
-                {
-                    //tirar esse if em um loop individual?
-                    if( ( aux = j + linha->first ) >= column || aux < 0 )
-                    {
-                        regraInvalida = true;
-                        break;
-                    }
-                    if( corpus.pegarValor(i,aux,linha->second[0]) != linha->second[1] )
-                    {
-                        regraInvalida = true;
-                        break;
-                    }
-                }
-                if( !regraInvalida )
-                {
-                    if( frases_ijReal == regras[L].resp && frases_ijReal != frases_ijAjuste )
-                        regras[L].good++;
-                    if( frases_ijReal != regras[L].resp && frases_ijReal == frases_ijAjuste )
-                        regras[L].bad++;
-                }
-            }
-        }
-    }
+//    for( i = 0; i < row; i++ )
+//    {
+//        column = corpus.pegarQtdTokens( i );
+//        for( j = 0; j < column; j++ )
+//        {
+//            frases_ijReal = corpus.pegarValor(i,j,atributo);
+//            frases_ijAjuste = corpus.pegarValor(i,j,qtdAtributos-1);
+//            for( L = 0; L < numRegras; L++ )
+//            {
+//                regraInvalida = false;
+//
+//                linha_end = regras[L].estrutura.end();
+//                for( linha = regras[L].estrutura.begin(); linha != linha_end; linha++ )
+//                {
+//                    //tirar esse if em um loop individual?
+//                    if( ( aux = j + linha->first ) >= column || aux < 0 )
+//                    {
+//                        regraInvalida = true;
+//                        break;
+//                    }
+//                    if( corpus.pegarValor(i,aux,linha->second[0]) != linha->second[1] )
+//                    {
+//                        regraInvalida = true;
+//                        break;
+//                    }
+//                }
+//                if( !regraInvalida )
+//                {
+//                    if( frases_ijReal == regras[L].resp && frases_ijReal != frases_ijAjuste )
+//                        regras[L].good++;
+//                    if( frases_ijReal != regras[L].resp && frases_ijReal == frases_ijAjuste )
+//                        regras[L].bad++;
+//                }
+//            }
+//        }
+//    }
 
     //salvarEstado("outputs/saveScore.txt",regras);
-    //carregarEstado("inputs/saveScore.txt",regras);
+    carregarEstado("inputs/saveScore.txt",regras);
 
     maxScore = -999999999;
     for( L = 0; L < numRegras; L++ )

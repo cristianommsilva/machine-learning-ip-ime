@@ -9,8 +9,6 @@ using namespace std;
 
 class Corpus
 {
-        map<string,int> posAtributos;
-        vector<string> atributos;
     public:
         Corpus( vector<string> atributos );
         virtual ~Corpus();
@@ -27,7 +25,10 @@ class Corpus
         bool ajustarValor( int sentenca, int token, int atributo, int valor );
         string pegarAtributo( int indice );
         int pegarPosAtributo( string atributo );
+        vector<string> pegarAtributos();
     protected:
+        map<string,int> posAtributos;
+        vector<string> atributos;
         vector<string> simbolos;
         vector< vector< vector<int> > > frases;
         map<string,int> dicionario;

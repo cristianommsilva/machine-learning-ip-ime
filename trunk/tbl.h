@@ -6,8 +6,6 @@
 #include "maisprovavel.h"
 #include "regra.h"
 #include <algorithm>
-#define LIM_FREQ_UNKNOWN 3
-#define ATRBT_UTILIZADO "pos"
 #define ATRBT_CLASSIFICADO 0
 
 class TBL : public Treinador
