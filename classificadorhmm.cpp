@@ -1,5 +1,4 @@
 #include "classificadorhmm.h"
-#include <stdlib.h>
 
 void ClassificadorHMM::definirMatrizTransicao( map< string, map< string, double > > matrizTransicao )
 {
@@ -20,9 +19,8 @@ bool ClassificadorHMM::executarClassificacao( Corpus &corpusProva, int atributo 
 {
     corpusProva.criarAtributo( "pos", "N" );
     int tam_atributos = corpusProva.pegarQtdAtributos();
-    int row = corpusProva.pegarQtdSentencas(), column;
+    int row = corpusProva.pegarQtdSentencas(), column, aux;
     vector< int > numPos; //vetor que contem valor dos POS
-    int aux;
     map< string, map< string, double > >::iterator linha, linha_end;
     map< string, double >::iterator coluna, coluna_end;
 
@@ -84,26 +82,25 @@ bool ClassificadorHMM::executarClassificacao( Corpus &corpusProva, int atributo 
         vetInicialInt[ corpusProva.pegarIndice(coluna->first) ] = coluna->second;
     /// /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    map< int, map< int, double > >::iterator linhaInt;
-    //map< int, double >::iterator colunaInt;
-    int linhaViterbi, linhaVtbAnt, qtdPos = numPos.size(), maiorIndice;
-    ///Tratar de RNF relativo ao limite do int
-    //int caminho[1000][qtdPos];
-    vector< vector< int > > caminho;
+    map< int, map< int, double > >::iterator linhaInt_end;
+    int linhaViterbi, linhaVtbAnt, qtdPos = numPos.size(), maiorIndice = 0;
     double matrizViterbi[2][qtdPos], maiorValor, aux_double;
 
-    linhaInt = tabFreqObservacoesInt.end();
+    //verifica o valor da coluna mais extensa de frases[][]
+    for( register int i = 0; i < row; i++ )
+        if( ( aux = corpusProva.pegarQtdTokens( i ) ) > maiorIndice ) maiorIndice = aux;
+    int caminho[maiorIndice][qtdPos];
+
+
+    linhaInt_end = tabFreqObservacoesInt.end();
     for ( register int i = 0; i < row; i++ )
     {
         column = corpusProva.pegarQtdTokens( i );
-        caminho.resize( column + 1 );
-        caminho[0].resize( qtdPos );
         linhaViterbi = 0;
-
 
         ///Verificar depois se transpor a matriz B nao afeta em nada o codigo
         //preenchimento do estado inicial
-        if ( tabFreqObservacoesInt.find( aux = corpusProva.pegarValor(i,0,atributo) ) != linhaInt )
+        if ( tabFreqObservacoesInt.find( aux = corpusProva.pegarValor(i,0,atributo) ) != linhaInt_end )
             for( register int k = 0; k < qtdPos; k++ )
                 matrizViterbi[linhaViterbi][k] = log( vetInicialInt[ numPos[k] ] ) + log( tabFreqObservacoesInt[ aux ][ numPos[k] ] );
             //cout << corpusProva.pegarSimbolo( numPos[k] ) << ' ' << matrizViterbi[linhaViterbi][k] << ' ';
@@ -113,16 +110,13 @@ bool ClassificadorHMM::executarClassificacao( Corpus &corpusProva, int atributo 
                 matrizViterbi[linhaViterbi][k] = log( vetInicialInt[ numPos[k] ] ); // caso a frequencia seja zero para todos os estados
                      //cout << corpusProva.pegarSimbolo( numPos[k] ) << ' ' << matrizViterbi[linhaViterbi][k] << ' ';               /** PI x B */
 
-        //cout << endl << endl;
-        //system("pause");
         linhaVtbAnt = linhaViterbi; //criado para otimização
         linhaViterbi = 1;
         //varrer as observações
         for( register int j = 1; j < column; j++ )
         {
-            caminho[j].resize( qtdPos );
             //varre os estados
-            if ( tabFreqObservacoesInt.find( aux = corpusProva.pegarValor(i,j,atributo) ) != linhaInt )
+            if ( tabFreqObservacoesInt.find( aux = corpusProva.pegarValor(i,j,atributo) ) != linhaInt_end )
                 for( register int k = 0; k < qtdPos; k++ )
                 {
                     maiorValor = 0.0;
@@ -136,8 +130,6 @@ bool ClassificadorHMM::executarClassificacao( Corpus &corpusProva, int atributo 
 
                     matrizViterbi[linhaViterbi][k] = maiorValor + log( tabFreqObservacoesInt[ aux ][ numPos[k] ] );
                     caminho[j][k] = maiorIndice;
-
-                    //cout << corpusProva.pegarSimbolo( numPos[k] ) << ' ' << matrizViterbi[linhaViterbi][k] << ' ';
                 }
             else
                 for( register int k = 0; k < qtdPos; k++ )
@@ -153,39 +145,10 @@ bool ClassificadorHMM::executarClassificacao( Corpus &corpusProva, int atributo 
 
                     matrizViterbi[linhaViterbi][k] = maiorValor; // caso a frequencia seja zero para todos os estados
                     caminho[j][k] = maiorIndice;
-                    //cout << corpusProva.pegarSimbolo( numPos[k] ) << ' ' << matrizViterbi[linhaViterbi][k] << ' ';
                 }
-            //cout << endl;
-
-//            ///Debugadores///////////////////////////
-//                    for( register int m = 0; m < qtdPos; m++ )
-//                        if( ( aux_double = matrizViterbi[linhaViterbi][m] ) >= maiorValor )
-//                        {
-//                            maiorValor = aux_double;
-//                            maiorIndice = m;
-//                        }
-//
-//                    int n = j;
-//                    while( n > 0 )
-//                    {
-//                        cout << corpusProva.pegarSimbolo( numPos[maiorIndice] ) << ' ';
-//                        maiorIndice = caminho[n-1][ caminho[n][maiorIndice] ];
-//                        n--;
-//                    }
-
-            //cout << endl << endl;
-            //system("pause");
             linhaVtbAnt = linhaViterbi;
             linhaViterbi = ( linhaViterbi + 1 )%2;
         }
-
-//        for( int tt = 0; tt < column; tt++ )
-//        {
-//            for( int uu = 0; uu < qtdPos; uu++ )
-//                cout << caminho[tt][uu] << ' ';
-//                cout << endl;
-//        }
-
 
         maiorValor = 0.0;
         for( register int m = 0; m < qtdPos; m++ )
@@ -195,15 +158,11 @@ bool ClassificadorHMM::executarClassificacao( Corpus &corpusProva, int atributo 
                 maiorIndice = m;
             }
 
-        //corpusProva.ajustarValor( i, j, tam_atributos - 1, numPos[ maiorIndice ] );
-        //maiorIndice = caminho[ column - 1 ][maiorIndice];
         for( register int j = column - 1; j >= 0 ; j-- )
         {
             corpusProva.ajustarValor( i, j, tam_atributos - 1, numPos[ maiorIndice ] );
             maiorIndice = caminho[j][ maiorIndice ];
         }
-
-        //cout << ((double)i)/row << endl;
     }
 
     return true;

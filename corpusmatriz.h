@@ -8,8 +8,11 @@
 
 class CorpusMatriz : public Corpus
 {
+    private:
+        char separador;
     public:
-        CorpusMatriz( vector<string> atributos );
+        void ajustarSeparador(char);
+        CorpusMatriz( vector<string> atributos = vector<string>() );
         virtual bool carregarArquivo( string arquivo );
         virtual bool gravarArquivo( string arquivo );
 };

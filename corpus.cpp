@@ -3,14 +3,16 @@
 Corpus::Corpus( vector<string> atributos )
     : atributos( atributos )
 {
+    qtd_sentencas = 1;
+    qtd_simbolos = 0;
+
     frases.resize(1);
     frases[0].resize(1);
-    frases[0][0].resize( atributos.size() );
-    qtd_sentencas = 1;
+
     qtd_atributos = atributos.size();
-    qtd_simbolos = 0;
     for( register int i = 0; i < qtd_atributos; i++ )
         posAtributos[atributos[i]] = i;
+    frases[0][0].resize( qtd_atributos );
 }
 
 Corpus::~Corpus()
@@ -23,7 +25,7 @@ string Corpus::pegarSimbolo( int indice )
     if ( indice < 0 || indice >= ( int )simbolos.size() )
     {
         cout << "Erro: pegarSimbolo!\nBusca fora dos limites!" << endl;
-        return "erro!!";
+        return NULL;
     }
 
     return simbolos[ indice ];
@@ -84,7 +86,7 @@ bool Corpus::criarAtributo( string atributo, string valorAtributo )
             frases[i][j].push_back( dicionario_valorAtributo );
     }
 
-    cout << "Atributo <\"" << atributo << "\" -> " << "\"" << valorAtributo << "\"" << "> criado com sucesso!" << endl;
+    //cout << "Atributo <\"" << atributo << "\" -> " << "\"" << valorAtributo << "\"" << "> criado com sucesso!" << endl;
     return true;
 }
 
@@ -159,4 +161,9 @@ int Corpus::pegarPosAtributo( string atributo )
         return -1;
     }
     return it->second;
+}
+
+vector< string > Corpus::pegarAtributos()
+{
+    return atributos;
 }

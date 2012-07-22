@@ -3,8 +3,6 @@
 
 #include "corpus.h"
 
-using namespace std;
-
 class Avaliador
 {
     public:
