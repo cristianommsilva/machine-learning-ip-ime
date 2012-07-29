@@ -21,7 +21,7 @@ bool ClassificadorTBL::executarClassificacao( Corpus &corpusProva, int atributo 
     //Classificação inicial
     classInicial->executarClassificacao( corpusProva, atributo );
 
-    int qtdAtributos = corpusProva.pegarQtdAtributos();
+    int qtdAtributos = corpusProva.pegarQtdAtributos() - 1;
     int row = corpusProva.pegarQtdSentencas(), column, numRegras = regras.size(), aux;
     register int i, j, L;
     bool regraInvalida;
@@ -34,10 +34,10 @@ bool ClassificadorTBL::executarClassificacao( Corpus &corpusProva, int atributo 
     vector< int > vet( 2 );
     vector< int > respRegrasInt;
 
-    for( L = 0; L < numRegras; L++ )
+    for( L = 0; L < numRegras; ++L )
     {
         linha_end = regras[L].end();
-        for( linha = regras[L].begin(); linha != linha_end; linha++ )
+        for( linha = regras[L].begin(); linha != linha_end; ++linha )
         {
             vet[0] = corpusProva.pegarPosAtributo( linha->second[0] );
             vet[1] = corpusProva.pegarIndice( linha->second[1] );
@@ -48,16 +48,16 @@ bool ClassificadorTBL::executarClassificacao( Corpus &corpusProva, int atributo 
         var.clear();
     }
 
-    for( i = 0; i < row; i++ )
+    for( i = 0; i < row; ++i )
     {
         column = corpusProva.pegarQtdTokens( i );
-        for( j = 0; j < column; j++ )
-            for( L = 0; L < numRegras; L++ )
+        for( j = 0; j < column; ++j )
+            for( L = 0; L < numRegras; ++L )
             {
                 regraInvalida = false;
 
                 linhaInt_end = regrasInt[L].end();
-                for( linhaInt = regrasInt[L].begin(); linhaInt != linhaInt_end; linhaInt++ )
+                for( linhaInt = regrasInt[L].begin(); linhaInt != linhaInt_end; ++linhaInt )
                 {
                     if( ( aux = j + linhaInt->first ) >= column || aux < 0 )
                     {
@@ -72,7 +72,7 @@ bool ClassificadorTBL::executarClassificacao( Corpus &corpusProva, int atributo 
                 }
                 if( !regraInvalida )
                 {
-                    corpusProva.ajustarValor(i,j,qtdAtributos - 1,respRegrasInt[L]);
+                    corpusProva.ajustarValor(i,j,qtdAtributos,respRegrasInt[L]);
                     L = numRegras; //break
                 }
             }
@@ -94,10 +94,10 @@ bool ClassificadorTBL::gravarConhecimento( string arquivo )
     int numRegras = regras.size();
     multimap< int, vector< string > >::iterator linha, linha_end;
 
-    for( register int i = 0; i < numRegras; i++ )
+    for( register int i = 0; i < numRegras; ++i )
     {
         linha_end = regras[i].end();
-        for( linha = regras[i].begin(); linha != linha_end; linha++ )
+        for( linha = regras[i].begin(); linha != linha_end; ++linha )
             arqout << linha->second[0] << ' ' << linha->first << ' ' << linha->second[1] << ' ';
         arqout << "=> " << respRegras[i] << endl;
     }
