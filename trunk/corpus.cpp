@@ -10,7 +10,7 @@ Corpus::Corpus( vector<string> atributos )
     frases[0].resize(1);
 
     qtd_atributos = atributos.size();
-    for( register int i = 0; i < qtd_atributos; i++ )
+    for( register int i = 0; i < qtd_atributos; ++i )
         posAtributos[atributos[i]] = i;
     frases[0][0].resize( qtd_atributos );
 }
@@ -79,10 +79,10 @@ bool Corpus::criarAtributo( string atributo, string valorAtributo )
     int column;
     int dicionario_valorAtributo = dicionario[ valorAtributo ];
 
-    for( register int i = 0; i < qtd_sentencas; i++ )
+    for( register int i = 0; i < qtd_sentencas; ++i )
     {
         column = frases[i].size();
-        for( register int j = 0; j < column; j++ )
+        for( register int j = 0; j < column; ++j )
             frases[i][j].push_back( dicionario_valorAtributo );
     }
 
