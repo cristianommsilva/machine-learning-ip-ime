@@ -56,7 +56,7 @@
 		<Cursor position="243" topLine="0" />
 	</File>
 	<File name="main.cpp" open="0" top="0" tabpos="1">
-		<Cursor position="2794" topLine="80" />
+		<Cursor position="3391" topLine="83" />
 	</File>
 	<File name="maisprovavel.cpp" open="0" top="0" tabpos="8">
 		<Cursor position="4079" topLine="117" />
@@ -64,11 +64,11 @@
 	<File name="maisprovavel.h" open="0" top="0" tabpos="5">
 		<Cursor position="284" topLine="0" />
 	</File>
-	<File name="tbl.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="6577" topLine="151" />
+	<File name="tbl.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="21541" topLine="438" />
 	</File>
-	<File name="tbl.h" open="0" top="0" tabpos="2">
-		<Cursor position="517" topLine="2" />
+	<File name="tbl.h" open="1" top="0" tabpos="2">
+		<Cursor position="442" topLine="0" />
 	</File>
 	<File name="treinador.cpp" open="0" top="0" tabpos="5">
 		<Cursor position="92" topLine="0" />
