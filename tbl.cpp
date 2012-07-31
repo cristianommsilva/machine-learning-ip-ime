@@ -1,5 +1,17 @@
 #include "tbl.h"
 
+TBL::TBL( Classificador* classInicial, string arqMoldeRegras, int toleranciaScore )
+{
+    this->classInicial = classInicial;
+    this->toleranciaScore = toleranciaScore;
+    carregarMolde( arqMoldeRegras );
+}
+
+TBL::~TBL()
+{
+    delete classInicial;
+}
+
 bool TBL::contemEstrutura( multimap< int, vector< int > > estrutura, multimap< int, vector< int > > bestEstrutura )
 {
     bool encontrou;
@@ -21,18 +33,6 @@ bool TBL::contemEstrutura( multimap< int, vector< int > > estrutura, multimap< i
         if( !encontrou ) return false;
     }
     return true;
-}
-
-TBL::TBL( Classificador* classInicial, string arqMoldeRegras, int toleranciaScore )
-{
-    this->classInicial = classInicial;
-    this->toleranciaScore = toleranciaScore;
-    carregarMolde( arqMoldeRegras );
-}
-
-TBL::~TBL()
-{
-    //dtor
 }
 
 Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
@@ -450,9 +450,11 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
         cout << "numRegras: " << regrasTemporarias.size() << endl;
 
         //remover regras cuja estrutura contem a estrutura da melhor regra
-        for( bp = regrasTemporarias.begin(); bp != regrasTemporarias.end(); ++bp )
+        bp = regrasTemporarias.begin();
+        while( bp != regrasTemporarias.end() )
             if( bp->second.good == 0 || contemEstrutura( bp->first, bestEstrutura ) )
-                regrasTemporarias.erase( bp );
+                regrasTemporarias.erase( bp++ );
+            else ++bp;
 
         cout << "numRegras: " << regrasTemporarias.size() << endl;
 
