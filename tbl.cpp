@@ -384,68 +384,71 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
             fronteira.clear();
         }
 
-        for( i = 0; i < row; ++i )
+        if( regrasTemporarias2.size() != 0 )
         {
-            column = corpus.pegarQtdTokens( i );
-            for( j = 0; j < column; ++j )
-                if( ( frases_ijReal = corpus.pegarValor(i,j,atributo) ) == corpus.pegarValor(i,j,qtdAtributos-1) )
-                    for( L = 0; L < numMoldeRegras; ++L )
-                    {
-                        moldeInvalido = false;
+            for( i = 0; i < row; ++i )
+            {
+                column = corpus.pegarQtdTokens( i );
+                for( j = 0; j < column; ++j )
+                    if( ( frases_ijReal = corpus.pegarValor(i,j,atributo) ) == corpus.pegarValor(i,j,qtdAtributos-1) )
+                        for( L = 0; L < numMoldeRegras; ++L )
+                        {
+                            moldeInvalido = false;
 
-                        itMolde_end = moldeRegras[L].end();
-                        for( itMolde = moldeRegras[L].begin(); itMolde != itMolde_end; ++itMolde )
-                        {
-                            if( ( aux = j + itMolde->first ) >= column || aux < 0 )
+                            itMolde_end = moldeRegras[L].end();
+                            for( itMolde = moldeRegras[L].begin(); itMolde != itMolde_end; ++itMolde )
                             {
-                                moldeInvalido = true;
-                                break;
+                                if( ( aux = j + itMolde->first ) >= column || aux < 0 )
+                                {
+                                    moldeInvalido = true;
+                                    break;
+                                }
+                                vet[0] = itMolde->second;
+                                vet[1] = corpus.pegarValor(i, aux, vet[0]);
+                                var.insert( pair< int, vector< int > >( itMolde->first, vet ) );
                             }
-                            vet[0] = itMolde->second;
-                            vet[1] = corpus.pegarValor(i, aux, vet[0]);
-                            var.insert( pair< int, vector< int > >( itMolde->first, vet ) );
+                            if( !moldeInvalido )
+                            {
+                                ret = regrasTemporarias2.equal_range( var );
+                                bp_end = ret.second;
+                                for( bp = ret.first; bp != bp_end; ++bp )
+                                    if( bp->second.resp != frases_ijReal )
+                                        ++bp->second.bad;
+                            }
+                            var.clear();
                         }
-                        if( !moldeInvalido )
+                    else
+                        for( L = 0; L < numMoldeRegras; ++L )
                         {
-                            ret = regrasTemporarias2.equal_range( var );
-                            bp_end = ret.second;
-                            for( bp = ret.first; bp != bp_end; ++bp )
-                                if( bp->second.resp != frases_ijReal )
-                                    ++bp->second.bad;
-                        }
-                        var.clear();
-                    }
-                else
-                    for( L = 0; L < numMoldeRegras; ++L )
-                    {
-                        moldeInvalido = false;
+                            moldeInvalido = false;
 
-                        itMolde_end = moldeRegras[L].end();
-                        for( itMolde = moldeRegras[L].begin(); itMolde != itMolde_end; ++itMolde )
-                        {
-                            if( ( aux = j + itMolde->first ) >= column || aux < 0 )
+                            itMolde_end = moldeRegras[L].end();
+                            for( itMolde = moldeRegras[L].begin(); itMolde != itMolde_end; ++itMolde )
                             {
-                                moldeInvalido = true;
-                                break;
+                                if( ( aux = j + itMolde->first ) >= column || aux < 0 )
+                                {
+                                    moldeInvalido = true;
+                                    break;
+                                }
+                                vet[0] = itMolde->second;
+                                vet[1] = corpus.pegarValor(i, aux, vet[0]);
+                                var.insert( pair< int, vector< int > >( itMolde->first, vet ) );
                             }
-                            vet[0] = itMolde->second;
-                            vet[1] = corpus.pegarValor(i, aux, vet[0]);
-                            var.insert( pair< int, vector< int > >( itMolde->first, vet ) );
+                            if( !moldeInvalido )
+                            {
+                                ret = regrasTemporarias2.equal_range( var );
+                                bp_end = ret.second;
+                                for( bp = ret.first; bp != bp_end; ++bp )
+                                    if( bp->second.resp == frases_ijReal )
+                                        ++bp->second.good;
+                            }
+                            var.clear();
                         }
-                        if( !moldeInvalido )
-                        {
-                            ret = regrasTemporarias2.equal_range( var );
-                            bp_end = ret.second;
-                            for( bp = ret.first; bp != bp_end; ++bp )
-                                if( bp->second.resp == frases_ijReal )
-                                    ++bp->second.good;
-                        }
-                        var.clear();
-                    }
+            }
+
+            regrasTemporarias.insert( regrasTemporarias2.begin(), regrasTemporarias2.end() );
+            regrasTemporarias2.clear();
         }
-
-        regrasTemporarias.insert( regrasTemporarias2.begin(), regrasTemporarias2.end() );
-        regrasTemporarias2.clear();
 
         cout << "numRegras: " << regrasTemporarias.size() << endl;
 
