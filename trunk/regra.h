@@ -1,9 +1,6 @@
 #ifndef REGRA_H
 #define REGRA_H
 
-#include <map>
-#include <vector>
-
 using namespace std;
 
 struct Regra

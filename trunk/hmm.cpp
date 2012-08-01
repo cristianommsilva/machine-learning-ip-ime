@@ -24,12 +24,15 @@ Classificador *HMM::executarTreinamento( Corpus &corpus, int atributo )
 
         objClassificador->ajustarTabFreqObservacoes( corpus.pegarSimbolo(corpus.pegarValor(i,0,atributo)), corpus.pegarSimbolo(corpus.pegarValor(i,0,0)) );
         objClassificador->ajustarVetInicial( corpus.pegarSimbolo(corpus.pegarValor(i,0,atributo)) );
-    	for ( j = 1; j < column - 1; ++j )
-    	{
-    	    objClassificador->ajustarTabFreqObservacoes( corpus.pegarSimbolo(corpus.pegarValor(i,j,atributo)), corpus.pegarSimbolo(corpus.pegarValor(i,j,0)) );
-            ++matrizTransicao[corpus.pegarSimbolo(corpus.pegarValor(i,j,atributo))][corpus.pegarSimbolo(corpus.pegarValor(i,j+1,atributo))];
-    	}
-    	objClassificador->ajustarTabFreqObservacoes( corpus.pegarSimbolo(corpus.pegarValor(i,j,atributo)), corpus.pegarSimbolo(corpus.pegarValor(i,j,0)) );
+        if( column != 1 )
+        {
+            for ( j = 1; j < (column - 1); ++j )
+            {
+                objClassificador->ajustarTabFreqObservacoes( corpus.pegarSimbolo(corpus.pegarValor(i,j,atributo)), corpus.pegarSimbolo(corpus.pegarValor(i,j,0)) );
+                ++matrizTransicao[corpus.pegarSimbolo(corpus.pegarValor(i,j,atributo))][corpus.pegarSimbolo(corpus.pegarValor(i,j+1,atributo))];
+            }
+            objClassificador->ajustarTabFreqObservacoes( corpus.pegarSimbolo(corpus.pegarValor(i,j,atributo)), corpus.pegarSimbolo(corpus.pegarValor(i,j,0)) );
+        }
     }
 
     ///Verificar depois até onde o double mantem a precisão

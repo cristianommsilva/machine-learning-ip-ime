@@ -10,7 +10,7 @@ using namespace std;
 class Corpus
 {
     public:
-        Corpus( vector<string> atributos );
+        Corpus( vector<string> atributos = vector<string>() );
         virtual ~Corpus();
         virtual bool carregarArquivo( string arquivo ) = 0;
         virtual bool gravarArquivo( string arquivo ) = 0;
