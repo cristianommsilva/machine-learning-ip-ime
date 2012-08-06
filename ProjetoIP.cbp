@@ -58,6 +58,16 @@
 		<Unit filename="tbl.h" />
 		<Unit filename="treinador.cpp" />
 		<Unit filename="treinador.h" />
+		<Unit filename="validador.cpp" />
+		<Unit filename="validador.h" />
+		<Unit filename="validadordivisao.cpp" />
+		<Unit filename="validadordivisao.h" />
+		<Unit filename="validadorkdobras.cpp" />
+		<Unit filename="validadorkdobras.h" />
+		<Unit filename="validadorteste.cpp" />
+		<Unit filename="validadorteste.h" />
+		<Unit filename="validadortreino.cpp" />
+		<Unit filename="validadortreino.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

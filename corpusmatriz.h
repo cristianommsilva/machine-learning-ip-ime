@@ -15,6 +15,7 @@ class CorpusMatriz : public Corpus
         CorpusMatriz( vector<string> atributos = vector<string>() );
         virtual bool carregarArquivo( string arquivo );
         virtual bool gravarArquivo( string arquivo );
+        virtual Corpus* clone();
 };
 
 #endif // CORPUSMATRIZ_H
