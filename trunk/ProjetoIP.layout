@@ -4,8 +4,8 @@
 	<File name="avaliador.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="113" topLine="0" />
 	</File>
-	<File name="avaliador.h" open="0" top="0" tabpos="2">
-		<Cursor position="193" topLine="0" />
+	<File name="avaliador.h" open="0" top="0" tabpos="5">
+		<Cursor position="269" topLine="0" />
 	</File>
 	<File name="avaliador_acuracia.cpp" open="0" top="0" tabpos="7">
 		<Cursor position="278" topLine="0" />
@@ -55,7 +55,7 @@
 	<File name="hmm.h" open="0" top="0" tabpos="6">
 		<Cursor position="243" topLine="0" />
 	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="1">
+	<File name="main.cpp" open="1" top="1" tabpos="1">
 		<Cursor position="3938" topLine="95" />
 	</File>
 	<File name="maisprovavel.cpp" open="0" top="0" tabpos="8">
@@ -67,7 +67,7 @@
 	<File name="regra.h" open="0" top="0" tabpos="0">
 		<Cursor position="32" topLine="0" />
 	</File>
-	<File name="tbl.cpp" open="1" top="1" tabpos="2">
+	<File name="tbl.cpp" open="1" top="0" tabpos="2">
 		<Cursor position="17161" topLine="0" />
 	</File>
 	<File name="tbl.h" open="0" top="0" tabpos="2">
@@ -78,5 +78,11 @@
 	</File>
 	<File name="treinador.h" open="0" top="0" tabpos="4">
 		<Cursor position="228" topLine="0" />
+	</File>
+	<File name="validador.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="validador.h" open="0" top="0" tabpos="3">
+		<Cursor position="423" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

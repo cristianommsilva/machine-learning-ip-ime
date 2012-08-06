@@ -4,6 +4,8 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
@@ -14,18 +16,25 @@ class Corpus
         virtual ~Corpus();
         virtual bool carregarArquivo( string arquivo ) = 0;
         virtual bool gravarArquivo( string arquivo ) = 0;
+        virtual Corpus* clone() = 0;
         string pegarSimbolo( int indice );
         int pegarIndice( string simbolo );
         bool criarAtributo( string atributo, string valorAtributo );
         int pegarValor( int sentenca, int token, int atributo );
         int pegarQtdSentencas();
+        int pegarQtdConjExemplos(){return pegarQtdSentencas();}
         int pegarQtdAtributos();
         int pegarQtdTokens( int i );
+        int pegarQtdExemplos(int i){return pegarQtdTokens(i);}
         int pegarQtdSimbolos();
         bool ajustarValor( int sentenca, int token, int atributo, int valor );
         string pegarAtributo( int indice );
         int pegarPosAtributo( string atributo );
         vector<string> pegarAtributos();
+        vector< Corpus* > splitCorpus( float percTotal );
+        vector< Corpus* > splitCorpus( int dobras );
+        void operator += ( Corpus &lde );
+        void limpaFrases();
     protected:
         map<string,int> posAtributos;
         vector<string> atributos;

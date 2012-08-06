@@ -571,10 +571,12 @@
 1342907604 c:\users\zapdos\desktop\google code ip\avaliador.h
 	"corpus.h"
 
-1343784675 c:\users\zapdos\desktop\google code ip\corpus.h
+1344216471 c:\users\zapdos\desktop\google code ip\corpus.h
 	<iostream>
 	<vector>
 	<map>
+	<cstdlib>
+	<ctime>
 
 1343396828 source:c:\users\zapdos\desktop\google code ip\avaliador_acuracia.cpp
 	"avaliador_acuracia.h"
@@ -656,7 +658,7 @@
 	"maisprovavel.h"
 	<fstream>
 
-1343782115 source:c:\users\zapdos\desktop\google code ip\tbl.cpp
+1344146657 source:c:\users\zapdos\desktop\google code ip\tbl.cpp
 	"tbl.h"
 
 1343964862 c:\users\zapdos\desktop\google code ip\tbl.h
@@ -770,4 +772,12 @@
 	"regra.h"
 
 1343784330 c:\users\zapdos\desktop\google code ip\regra.h
+
+1344194913 source:c:\users\zapdos\desktop\google code ip\validador.cpp
+	"validador.h"
+
+1344195326 c:\users\zapdos\desktop\google code ip\validador.h
+	"corpus.h"
+	"avaliador.h"
+	"treinador.h"
 
