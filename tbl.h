@@ -5,7 +5,6 @@
 #include "classificadortbl.h"
 #include "maisprovavel.h"
 #include "regra.h"
-#include <algorithm>
 #include <cmath>
 #define ATRBT_CLASSIFICADO 0
 
