@@ -3,14 +3,14 @@
 #include <cstdio>
 #include <cstdlib>
 
-#include "corpusmatriz.h"
-#include "maisprovavel.h"
-#include "hmm.h"
-#include "tbl.h"
-#include "avaliador_acuracia.h"
-#include "classificador_maisprovavel.h"
-#include "classificadorhmm.h"
-#include "classificadortbl.h"
+#include "corpus/corpusmatriz.h"
+#include "treinador/maisprovavel.h"
+#include "treinador/hmm.h"
+#include "treinador/tbl.h"
+#include "avaliador/avaliador_acuracia.h"
+#include "classificador/classificador_maisprovavel.h"
+#include "classificador/classificadorhmm.h"
+#include "classificador/classificadortbl.h"
 
 #define LIM_FREQ_UNKNOWN 3
 #define ATRBT_ANALISADO 1

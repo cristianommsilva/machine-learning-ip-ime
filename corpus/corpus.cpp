@@ -186,7 +186,7 @@ vector< Corpus* > Corpus::splitCorpus( float percTotal )
     vetCorpus[1] = this->clone();
     vetCorpus[1]->frases.clear();
 
-    for( register int i = 0; i < qtd_sentencas; i++ )
+    for( register int i = 0; i < qtd_sentencas; ++i )
         if( vetIndices[i] )
             vetCorpus[1]->frases.push_back( frases[i] );
         else

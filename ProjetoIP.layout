@@ -1,106 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="avaliador.cpp" open="0" top="0" tabpos="4">
-		<Cursor position="113" topLine="0" />
+	<File name="avaliador\Avaliador.h" open="0" top="0" tabpos="0">
+		<Cursor position="64" topLine="0" />
 	</File>
-	<File name="avaliador.h" open="0" top="0" tabpos="5">
-		<Cursor position="269" topLine="0" />
+	<File name="classificador\classificador.h" open="0" top="0" tabpos="0">
+		<Cursor position="72" topLine="0" />
 	</File>
-	<File name="avaliador_acuracia.cpp" open="0" top="0" tabpos="7">
-		<Cursor position="278" topLine="0" />
+	<File name="classificador\classificadortbl.h" open="0" top="0" tabpos="0">
+		<Cursor position="109" topLine="0" />
 	</File>
-	<File name="avaliador_acuracia.h" open="1" top="0" tabpos="3">
-		<Cursor position="329" topLine="0" />
+	<File name="main.cpp" open="1" top="1" tabpos="0">
+		<Cursor position="361" topLine="0" />
 	</File>
-	<File name="classificador.cpp" open="0" top="0" tabpos="12">
-		<Cursor position="60" topLine="0" />
+	<File name="treinador\hmm.h" open="0" top="0" tabpos="0">
+		<Cursor position="83" topLine="0" />
 	</File>
-	<File name="classificador.h" open="0" top="0" tabpos="7">
-		<Cursor position="94" topLine="0" />
+	<File name="treinador\maisprovavel.h" open="0" top="0" tabpos="0">
+		<Cursor position="101" topLine="0" />
 	</File>
-	<File name="classificador_maisprovavel.cpp" open="0" top="0" tabpos="4">
-		<Cursor position="2578" topLine="0" />
+	<File name="treinador\tbl.h" open="0" top="0" tabpos="0">
+		<Cursor position="151" topLine="0" />
 	</File>
-	<File name="classificador_maisprovavel.h" open="0" top="0" tabpos="8">
-		<Cursor position="319" topLine="0" />
+	<File name="treinador\treinador.h" open="0" top="0" tabpos="0">
+		<Cursor position="102" topLine="0" />
 	</File>
-	<File name="classificadorhmm.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="1013" topLine="6" />
-	</File>
-	<File name="classificadorhmm.h" open="0" top="0" tabpos="9">
-		<Cursor position="441" topLine="0" />
-	</File>
-	<File name="classificadortbl.cpp" open="0" top="0" tabpos="4">
-		<Cursor position="2455" topLine="0" />
-	</File>
-	<File name="classificadortbl.h" open="0" top="0" tabpos="10">
-		<Cursor position="607" topLine="0" />
-	</File>
-	<File name="corpus.cpp" open="1" top="0" tabpos="6">
-		<Cursor position="5184" topLine="166" />
-	</File>
-	<File name="corpus.h" open="1" top="0" tabpos="7">
-		<Cursor position="422" topLine="11" />
-	</File>
-	<File name="corpusmatriz.cpp" open="1" top="1" tabpos="8">
-		<Cursor position="8200" topLine="178" />
-	</File>
-	<File name="corpusmatriz.h" open="0" top="0" tabpos="1">
-		<Cursor position="432" topLine="0" />
-	</File>
-	<File name="hmm.cpp" open="0" top="0" tabpos="4">
-		<Cursor position="1331" topLine="15" />
-	</File>
-	<File name="hmm.h" open="0" top="0" tabpos="6">
-		<Cursor position="243" topLine="0" />
-	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="3304" topLine="84" />
-	</File>
-	<File name="maisprovavel.cpp" open="0" top="0" tabpos="8">
-		<Cursor position="465" topLine="0" />
-	</File>
-	<File name="maisprovavel.h" open="0" top="0" tabpos="5">
-		<Cursor position="284" topLine="0" />
-	</File>
-	<File name="regra.h" open="0" top="0" tabpos="0">
-		<Cursor position="32" topLine="0" />
-	</File>
-	<File name="tbl.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="17161" topLine="0" />
-	</File>
-	<File name="tbl.h" open="0" top="0" tabpos="2">
-		<Cursor position="442" topLine="0" />
-	</File>
-	<File name="treinador.cpp" open="0" top="0" tabpos="5">
-		<Cursor position="92" topLine="0" />
-	</File>
-	<File name="treinador.h" open="0" top="0" tabpos="4">
-		<Cursor position="228" topLine="0" />
-	</File>
-	<File name="validador.cpp" open="0" top="0" tabpos="4">
-		<Cursor position="381" topLine="0" />
-	</File>
-	<File name="validador.h" open="1" top="0" tabpos="2">
-		<Cursor position="523" topLine="0" />
-	</File>
-	<File name="validadordivisao.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="527" topLine="0" />
-	</File>
-	<File name="validadordivisao.h" open="1" top="0" tabpos="5">
-		<Cursor position="150" topLine="0" />
-	</File>
-	<File name="validadorteste.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="601" topLine="0" />
-	</File>
-	<File name="validadorteste.h" open="0" top="0" tabpos="0">
-		<Cursor position="353" topLine="0" />
-	</File>
-	<File name="validadortreino.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="504" topLine="0" />
-	</File>
-	<File name="validadortreino.h" open="0" top="0" tabpos="0">
-		<Cursor position="265" topLine="0" />
+	<File name="validador\validador.h" open="0" top="0" tabpos="0">
+		<Cursor position="135" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

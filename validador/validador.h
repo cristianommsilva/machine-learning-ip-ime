@@ -1,9 +1,9 @@
 #ifndef VALIDADOR_H
 #define VALIDADOR_H
 
-#include "corpus.h"
-#include "avaliador.h"
-#include "treinador.h"
+#include "../corpus/corpus.h"
+#include "../avaliador/avaliador.h"
+#include "../treinador/treinador.h"
 #define ATRBT_ANALISADO 1
 #define ATRBT_CLASSIFICADO 0
 
