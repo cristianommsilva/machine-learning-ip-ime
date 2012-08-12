@@ -804,3 +804,69 @@
 1344197763 c:\users\zapdos\desktop\google code ip\validadortreino.h
 	"validador.h"
 
+1329838160 source:c:\users\zapdos\desktop\google code ip\avaliador\avaliador.cpp
+	"avaliador.h"
+
+1344797785 c:\users\zapdos\desktop\google code ip\avaliador\avaliador.h
+	"../corpus/corpus.h"
+
+1344216471 c:\users\zapdos\desktop\google code ip\corpus\corpus.h
+	<iostream>
+	<vector>
+	<map>
+	<cstdlib>
+	<ctime>
+
+1343396828 source:c:\users\zapdos\desktop\google code ip\avaliador\avaliador_acuracia.cpp
+	"avaliador_acuracia.h"
+
+1329838156 c:\users\zapdos\desktop\google code ip\avaliador\avaliador_acuracia.h
+	"avaliador.h"
+
+1329838164 source:c:\users\zapdos\desktop\google code ip\classificador\classificador.cpp
+	"classificador.h"
+
+1344797882 c:\users\zapdos\desktop\google code ip\classificador\classificador.h
+	"../corpus/corpus.h"
+
+1343538883 source:c:\users\zapdos\desktop\google code ip\classificador\classificador_maisprovavel.cpp
+	"classificador_maisprovavel.h"
+
+1329838160 c:\users\zapdos\desktop\google code ip\classificador\classificador_maisprovavel.h
+	"classificador.h"
+	<fstream>
+
+1343783670 source:c:\users\zapdos\desktop\google code ip\classificador\classificadorhmm.cpp
+	"classificadorhmm.h"
+
+1340059064 c:\users\zapdos\desktop\google code ip\classificador\classificadorhmm.h
+	"classificador.h"
+	<fstream>
+	<cmath>
+
+1344146657 source:c:\users\zapdos\desktop\google code ip\classificador\classificadortbl.cpp
+	"classificadortbl.h"
+
+1344797860 c:\users\zapdos\desktop\google code ip\classificador\classificadortbl.h
+	"classificador.h"
+	"../treinador/maisprovavel.h"
+	<fstream>
+
+1344797989 c:\users\zapdos\desktop\google code ip\treinador\maisprovavel.h
+	"treinador.h"
+	"../classificador/classificador_maisprovavel.h"
+
+1344798049 c:\users\zapdos\desktop\google code ip\treinador\treinador.h
+	"../corpus/corpus.h"
+	"../classificador/classificador.h"
+
+1344345156 source:c:\users\zapdos\desktop\google code ip\corpus\corpus.cpp
+	"corpus.h"
+
+1344286374 source:c:\users\zapdos\desktop\google code ip\corpus\corpusmatriz.cpp
+	"corpusmatriz.h"
+
+1344205070 c:\users\zapdos\desktop\google code ip\corpus\corpusmatriz.h
+	<fstream>
+	"corpus.h"
+

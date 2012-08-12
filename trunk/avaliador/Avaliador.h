@@ -1,7 +1,7 @@
 #ifndef AVALIADOR_H
 #define AVALIADOR_H
 
-#include "corpus.h"
+#include "../corpus/corpus.h"
 
 class Avaliador
 {
