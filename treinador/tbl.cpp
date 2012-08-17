@@ -458,7 +458,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
         //remover regras cuja estrutura contem a estrutura da melhor regra
         bp = regrasTemporarias.begin();
         while( bp != regrasTemporarias.end() )
-            if( bp->second.good == 0 || contemEstrutura( bp->first, bestEstrutura ) )
+            if( bp->second.good <= 0 || contemEstrutura( bp->first, bestEstrutura ) )
                 regrasTemporarias.erase( bp++ );
             else ++bp;
 

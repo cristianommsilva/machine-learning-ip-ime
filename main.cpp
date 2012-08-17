@@ -112,7 +112,7 @@ int main()
 
     printf( "Acuracia: %.2f%%\n", 100 * objAvalAcur.calcularDesempenho( objCorpusProva, ATRBT_ANALISADO, ATRBT_NOVO )[ 0 ] );
     objCorpusProva.gravarArquivo( "outputs/corpusGravado.txt" );
-    objClass->gravarConhecimento( "outputs/conhecimentoTBL.txt" );
+    objClass->gravarConhecimento( "outputs/conhecimentoTBL5.txt" );
     delete objClass;
 
 	return 0;

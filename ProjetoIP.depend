@@ -636,19 +636,19 @@
 1329838162 source:c:\users\zapdos\desktop\google code ip\treinador.cpp
 	"treinador.h"
 
-1344218258 source:c:\users\zapdos\desktop\google code ip\main.cpp
+1345164607 source:c:\users\zapdos\desktop\google code ip\main.cpp
 	<iostream>
 	<vector>
 	<cstdio>
 	<cstdlib>
-	"corpusmatriz.h"
-	"maisprovavel.h"
-	"hmm.h"
-	"tbl.h"
-	"avaliador_acuracia.h"
-	"classificador_maisprovavel.h"
-	"classificadorhmm.h"
-	"classificadortbl.h"
+	"corpus/corpusmatriz.h"
+	"treinador/maisprovavel.h"
+	"treinador/hmm.h"
+	"treinador/tbl.h"
+	"avaliador/avaliador_acuracia.h"
+	"classificador/classificador_maisprovavel.h"
+	"classificador/classificadorhmm.h"
+	"classificador/classificadortbl.h"
 
 1344146657 source:c:\users\zapdos\desktop\google code ip\classificadortbl.cpp
 	"classificadortbl.h"
@@ -869,4 +869,64 @@
 1344205070 c:\users\zapdos\desktop\google code ip\corpus\corpusmatriz.h
 	<fstream>
 	"corpus.h"
+
+1344797973 c:\users\zapdos\desktop\google code ip\treinador\hmm.h
+	"treinador.h"
+	"../classificador/classificadorhmm.h"
+
+1344798022 c:\users\zapdos\desktop\google code ip\treinador\tbl.h
+	"treinador.h"
+	"../classificador/classificadortbl.h"
+	"maisprovavel.h"
+	"../outros/regra.h"
+	<cmath>
+
+1343784330 c:\users\zapdos\desktop\google code ip\outros\regra.h
+
+1343354435 source:c:\users\zapdos\desktop\google code ip\outros\regra.cpp
+	"regra.h"
+
+1343782963 source:c:\users\zapdos\desktop\google code ip\treinador\hmm.cpp
+	"hmm.h"
+
+1343397013 source:c:\users\zapdos\desktop\google code ip\treinador\maisprovavel.cpp
+	"maisprovavel.h"
+
+1345134315 source:c:\users\zapdos\desktop\google code ip\treinador\tbl.cpp
+	"tbl.h"
+
+1329838162 source:c:\users\zapdos\desktop\google code ip\treinador\treinador.cpp
+	"treinador.h"
+
+1344195805 source:c:\users\zapdos\desktop\google code ip\validador\validador.cpp
+	"validador.h"
+
+1344798084 c:\users\zapdos\desktop\google code ip\validador\validador.h
+	"../corpus/corpus.h"
+	"../avaliador/avaliador.h"
+	"../treinador/treinador.h"
+
+1344209218 source:c:\users\zapdos\desktop\google code ip\validador\validadordivisao.cpp
+	"validadordivisao.h"
+
+1344198927 c:\users\zapdos\desktop\google code ip\validador\validadordivisao.h
+	"validador.h"
+
+1344216548 source:c:\users\zapdos\desktop\google code ip\validador\validadorkdobras.cpp
+	"validadorkdobras.h"
+
+1344209717 c:\users\zapdos\desktop\google code ip\validador\validadorkdobras.h
+	"validador.h"
+
+1344198353 source:c:\users\zapdos\desktop\google code ip\validador\validadorteste.cpp
+	"validadorteste.h"
+
+1344197942 c:\users\zapdos\desktop\google code ip\validador\validadorteste.h
+	"validador.h"
+
+1344198378 source:c:\users\zapdos\desktop\google code ip\validador\validadortreino.cpp
+	"validadortreino.h"
+
+1344197763 c:\users\zapdos\desktop\google code ip\validador\validadortreino.h
+	"validador.h"
 
