@@ -1,9 +1,10 @@
 #include "validadordivisao.h"
 
-ValidadorDivisao::ValidadorDivisao( float percTeste, int numeroIteracoes )
+ValidadorDivisao::ValidadorDivisao( Avaliador &avaliador, int numeroIteracoes, float percTeste ) :
+Validador( avaliador, numeroIteracoes )
 {
     this->percTeste = percTeste;
-    this->numeroIteracoes = numeroIteracoes;
+    srand( time( NULL ) );
 }
 
 ValidadorDivisao::~ValidadorDivisao()
@@ -11,16 +12,22 @@ ValidadorDivisao::~ValidadorDivisao()
     //dtor
 }
 
-vector< vector< float > > ValidadorDivisao::executarExperimento( Treinador &treinador, Corpus &corpus )
+vector< vector< float > > ValidadorDivisao::executarExperimento( Treinador &treinador, Corpus &corpus, int atributoTreino, int atributoTeste )
 {
+    int qtd_sentencas = corpus.pegarQtdSentencas();
     vector< vector< float > > resultado;
     vector< Corpus* > vetCorpus;
+    vector< bool > vetMascara( ( int )percTeste*qtd_sentencas, true );
+    vetMascara.resize( qtd_sentencas );
+
     for( int i = 0; i < numeroIteracoes; ++i )
     {
-        vetCorpus = corpus.splitCorpus( percTeste );
-        treinador.executarTreinamento( *vetCorpus[0], ATRBT_ANALISADO )->executarClassificacao( *vetCorpus[1], ATRBT_CLASSIFICADO );
-        resultado.push_back( avaliador->calcularDesempenho( *vetCorpus[1], ATRBT_ANALISADO, corpus.pegarQtdAtributos() - 1 ) );
-        vetCorpus.clear();
+        random_shuffle( vetMascara.begin(), vetMascara.end() );
+        vetCorpus = corpus.splitCorpus( vetMascara );
+        treinador.executarTreinamento( *vetCorpus[0], atributoTreino )->executarClassificacao( *vetCorpus[1], atributoTeste );
+        resultado.push_back( avaliador->calcularDesempenho( *vetCorpus[1], atributoTreino, atributoTeste ) );
+        delete vetCorpus[0];
+        delete vetCorpus[1];
     }
     return resultado;
 }

@@ -13,10 +13,10 @@ class TBL : public Treinador
         Classificador *classInicial;
         int toleranciaScore;
         vector< multimap< int, string > > moldeRegras;
+        string atributoChute;
         bool carregarMolde( string arqMoldeRegras );
-        bool contemEstrutura( multimap< int, vector< int > > estrutura, multimap< int, vector< int > > bestEstrutura );
     public:
-        TBL( Classificador* classInicial, string arqMoldeRegras, int toleranciaScore );
+        TBL( Classificador* classInicial, string arqMoldeRegras, string atributoChute, int toleranciaScore );
         virtual ~TBL();
         virtual Classificador *executarTreinamento( Corpus &corpus, int atributo );
 };

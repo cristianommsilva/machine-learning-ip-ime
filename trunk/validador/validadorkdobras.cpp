@@ -1,8 +1,9 @@
 #include "validadorkdobras.h"
 
-ValidadorKDobras::ValidadorKDobras( int dobras )
+ValidadorKDobras::ValidadorKDobras( Avaliador &avaliador, int dobras ) :
+Validador( avaliador, dobras )
 {
-    this->dobras = dobras;
+    srand( time( NULL ) );
 }
 
 ValidadorKDobras::~ValidadorKDobras()
@@ -10,22 +11,31 @@ ValidadorKDobras::~ValidadorKDobras()
     //dtor
 }
 
-vector< vector< float > > ValidadorKDobras::executarExperimento( Treinador &treinador, Corpus &corpus )
+vector< vector< float > > ValidadorKDobras::executarExperimento( Treinador &treinador, Corpus &corpus, int atributoTreino, int atributoTeste )
 {
+    int qtd_sentencas = corpus.pegarQtdSentencas();
+    vector< int> vetDobras;
     vector< vector< float > > resultado;
     vector< Corpus* > vetCorpus;
-    Corpus *acumulador = corpus.clone();
-    acumulador->limpaFrases();
+    vector< bool > vetMascara(qtd_sentencas);
 
-    vetCorpus = corpus.splitCorpus( dobras );
-    for( int i = 0; i < dobras; ++i )
+    for( int i = 0; i < numeroIteracoes; ++i )
+        vetDobras.assign(qtd_sentencas/numeroIteracoes, i);
+
+    vetDobras.resize(qtd_sentencas, -1);
+    random_shuffle( vetDobras.begin(), vetDobras.end() );
+
+    for( int i = 0; i < numeroIteracoes; ++i )
     {
-        for( register int j = 0; j < dobras; ++j )
-            if( j != i ) *acumulador += *vetCorpus[j];
-        treinador.executarTreinamento( *acumulador, ATRBT_ANALISADO )->executarClassificacao( *vetCorpus[i], ATRBT_CLASSIFICADO );
-        resultado.push_back( avaliador->calcularDesempenho( *vetCorpus[i], ATRBT_ANALISADO, corpus.pegarQtdAtributos() - 1 ) );
-        acumulador->limpaFrases();
+        for( int j = 0; j < qtd_sentencas; ++j )
+            if( vetDobras[j] == i ) vetMascara[j] = true;
+            else vetMascara[j] = false;
+
+        vetCorpus = corpus.splitCorpus( vetMascara );
+        treinador.executarTreinamento( *vetCorpus[0], atributoTreino )->executarClassificacao( *vetCorpus[1], atributoTeste );
+        resultado.push_back( avaliador->calcularDesempenho( *vetCorpus[1], atributoTreino, atributoTeste ) );
+        delete vetCorpus[0];
+        delete vetCorpus[1];
     }
-    vetCorpus.clear();
     return resultado;
 }
