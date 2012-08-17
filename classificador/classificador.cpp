@@ -2,7 +2,7 @@
 
 Classificador::Classificador()
 {
-    //ctor
+
 }
 
 Classificador::~Classificador()

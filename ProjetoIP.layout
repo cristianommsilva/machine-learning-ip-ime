@@ -7,11 +7,17 @@
 	<File name="classificador\classificador.h" open="0" top="0" tabpos="0">
 		<Cursor position="72" topLine="0" />
 	</File>
+	<File name="classificador\classificadorhmm.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="190" topLine="0" />
+	</File>
 	<File name="classificador\classificadortbl.h" open="0" top="0" tabpos="0">
 		<Cursor position="109" topLine="0" />
 	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="3996" topLine="95" />
+	<File name="main.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="2550" topLine="55" />
+	</File>
+	<File name="treinador\hmm.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="656" topLine="15" />
 	</File>
 	<File name="treinador\hmm.h" open="0" top="0" tabpos="0">
 		<Cursor position="83" topLine="0" />
@@ -19,8 +25,8 @@
 	<File name="treinador\maisprovavel.h" open="0" top="0" tabpos="0">
 		<Cursor position="101" topLine="0" />
 	</File>
-	<File name="treinador\tbl.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="14579" topLine="293" />
+	<File name="treinador\tbl.cpp" open="0" top="0" tabpos="1">
+		<Cursor position="14579" topLine="260" />
 	</File>
 	<File name="treinador\tbl.h" open="0" top="0" tabpos="0">
 		<Cursor position="151" topLine="0" />

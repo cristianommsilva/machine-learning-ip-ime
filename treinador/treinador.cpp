@@ -2,7 +2,7 @@
 
 Treinador::Treinador()
 {
-    //ctor
+
 }
 
 Treinador::~Treinador()

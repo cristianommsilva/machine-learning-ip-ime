@@ -4,8 +4,8 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <cstdio>
 #include <cstdlib>
-#include <ctime>
 
 using namespace std;
 
@@ -31,10 +31,7 @@ class Corpus
         string pegarAtributo( int indice );
         int pegarPosAtributo( string atributo );
         vector<string> pegarAtributos();
-        vector< Corpus* > splitCorpus( float percTotal );
-        vector< Corpus* > splitCorpus( int dobras );
-        void operator += ( Corpus &lde );
-        void limpaFrases();
+        vector< Corpus* > splitCorpus( vector< bool > vetMascara );
     protected:
         map<string,int> posAtributos;
         vector<string> atributos;

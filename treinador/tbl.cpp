@@ -1,9 +1,10 @@
 #include "tbl.h"
 
-TBL::TBL( Classificador* classInicial, string arqMoldeRegras, int toleranciaScore )
+TBL::TBL( Classificador* classInicial, string arqMoldeRegras, string atributoChute, int toleranciaScore )
 {
     this->classInicial = classInicial;
     this->toleranciaScore = toleranciaScore;
+    this->atributoChute = atributoChute;
     carregarMolde( arqMoldeRegras );
 }
 
@@ -12,38 +13,52 @@ TBL::~TBL()
     delete classInicial;
 }
 
-bool TBL::contemEstrutura( multimap< int, vector< int > > estrutura, multimap< int, vector< int > > bestEstrutura )
-{
-    bool encontrou;
-    multimap<int, vector< int > >::iterator linha, linha_end, bp, bp_end;
-    pair< multimap<int, vector< int > >::iterator, multimap<int, vector< int > >::iterator > bounds;
-
-    linha_end = bestEstrutura.end();
-    for( linha = bestEstrutura.begin(); linha != linha_end; ++linha )
-    {
-        encontrou = false;
-        bounds = estrutura.equal_range( linha->first );
-        bp_end = bounds.second;
-        for( bp = bounds.first; bp != bp_end; ++bp )
-            if( bp->second == linha->second )
-            {
-                encontrou = true;
-                break;
-            }
-        if( !encontrou ) return false;
-    }
-    return true;
-}
+//bool TBL::contemEstrutura( multimap< int, vector< int > > estrutura, multimap< int, vector< int > > bestEstrutura )
+//{
+//    bool encontrou;
+//    multimap<int, vector< int > >::iterator linha, linha_end, bp, bp_end;
+//    pair< multimap<int, vector< int > >::iterator, multimap<int, vector< int > >::iterator > bounds;
+//
+//    linha_end = estrutura.end();
+//    for( linha = estrutura.begin(); linha != linha_end; ++linha )
+//    {
+//        encontrou = false;
+//        bounds = bestEstrutura.equal_range( linha->first );
+//        bp_end = bounds.second;
+//        for( bp = bounds.first; bp != bp_end; ++bp )
+//            if( bp->second == linha->second )
+//            {
+//                encontrou = true;
+//                break;
+//            }
+//        if( !encontrou ) return false;
+//    }
+//    return true;
+//}
 
 Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
 {
-    ClassificadorTBL *objClassificador = new ClassificadorTBL( classInicial );
-    int row = corpus.pegarQtdSentencas(), column, numMoldeRegras = this->moldeRegras.size(), qtdAtributos, maxScore = toleranciaScore, aux, frases_ijReal, tam_fronteira, lim_fronteira, tam_indices;
+    int atributo_chute;
+    if( ( atributo_chute = corpus.pegarPosAtributo( atributoChute ) ) == -1 )
+    {
+        cout << "Erro: executarTreinamento!\nAtributo inexistente!" << endl;
+        return NULL;
+    }
+
+    //Classificação inicial do corpus
+    if( !classInicial->executarClassificacao( corpus, atributo_chute ) )
+    {
+        cout << "Erro: executarTreinamento!\nClassificacao BLS nao executada!" << endl;
+        return NULL;
+    }
+
+    int row = corpus.pegarQtdSentencas(), column, numMoldeRegras = this->moldeRegras.size(), maxScore = toleranciaScore, aux, frases_ijReal, tam_fronteira, lim_fronteira, tam_indices;
     bool moldeInvalido, regraInvalida;
     multimap< int, vector< int > > var, bestEstrutura;
     vector< int > vet(2), vetIndices;
     vector< vector< int > > fronteira;
-    vector< string > vetString(2);
+    vector< string > vetString(2), respRegras;
+    vector< multimap< int, vector< string > > > regras;
     //iterators
     int i,j,k,L,M;
     multimap<int, vector< int > >::iterator linha, linha_end, linha_inicio, best_begin;
@@ -60,9 +75,6 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
     vector< multimap< int, vector< int > > > regrasArmazenadas;
     vector< multimap< int, int> > moldeRegras( numMoldeRegras );
 
-
-    //Classificação inicial do corpus
-    classInicial->executarClassificacao( corpus, ATRBT_CLASSIFICADO );
 
     //converter molde de regras
     int tamMinMolde = 999999999, tamMaxMolde = -999999999;
@@ -88,14 +100,12 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
         itMoldes_rbegin[L] = moldeRegras[L].rbegin();
     }
 
-    qtdAtributos = corpus.pegarQtdAtributos();
-
     //cria as regras temporárias e calcula o good de cada regra
     for( i = 0; i < row; ++i )
     {
         column = corpus.pegarQtdTokens( i );
         for( j = 0; j < column; ++j )
-            if( ( frases_ijReal = corpus.pegarValor(i,j,atributo) ) != corpus.pegarValor(i,j, qtdAtributos - 1) )
+            if( ( frases_ijReal = corpus.pegarValor(i,j,atributo) ) != corpus.pegarValor(i,j, atributo_chute) )
                 for( L = 0; L < numMoldeRegras; ++L )
                 {
                     if( j + itMoldes_begin[L]->first < 0 || j + itMoldes_rbegin[L]->first >= column ) continue;
@@ -131,7 +141,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
         column = corpus.pegarQtdTokens( i );
         //cout << (double)i/row << endl;
         for( j = 0; j < column; ++j )
-            if( ( frases_ijReal = corpus.pegarValor(i,j,atributo) ) == corpus.pegarValor(i,j,qtdAtributos-1) )
+            if( ( frases_ijReal = corpus.pegarValor(i,j,atributo) ) == corpus.pegarValor(i,j,atributo_chute) )
                 for( L = 0; L < numMoldeRegras; ++L )
                 {
                     if( j + itMoldes_begin[L]->first < 0 || j + itMoldes_rbegin[L]->first >= column ) continue;
@@ -181,7 +191,8 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
             vetString[1] = corpus.pegarSimbolo( linha->second[1] );
             rule.insert( pair< int, vector< string > >( linha->first, vetString ) );
         }
-        objClassificador->inserirRegra( rule, corpus.pegarSimbolo( maxIndice->second.resp ) );
+        regras.push_back( rule );
+        respRegras.push_back( corpus.pegarSimbolo( maxIndice->second.resp ) );
         best_rbegin = bestEstrutura.rbegin();
 
         //atualizar Corpus com a nova regra
@@ -199,7 +210,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                         regraInvalida = true;
                         break;
                     }
-                if( !regraInvalida && corpus.pegarValor(i,j,qtdAtributos-1) != maxIndice->second.resp )
+                if( !regraInvalida && corpus.pegarValor(i,j,atributo_chute) != maxIndice->second.resp )
                     vetIndices.push_back( j );
             }
 
@@ -227,7 +238,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
             {
                 lim_fronteira = fronteira[k][1];
                 for( j = fronteira[k][0]; j <= lim_fronteira; ++j )
-                    if( ( frases_ijReal = corpus.pegarValor(i,j,atributo) ) == corpus.pegarValor(i,j,qtdAtributos-1) )
+                    if( ( frases_ijReal = corpus.pegarValor(i,j,atributo) ) == corpus.pegarValor(i,j,atributo_chute) )
                         for( L = 0; L < numMoldeRegras; ++L )
                         {
                             if( j + itMoldes_begin[L]->first < 0 || j + itMoldes_rbegin[L]->first >= column ) continue;;
@@ -270,13 +281,13 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
             }
 
             for( j = 0; j < tam_indices; ++j )
-                corpus.ajustarValor(i,vetIndices[j],qtdAtributos - 1,maxIndice->second.resp);
+                corpus.ajustarValor(i,vetIndices[j],atributo_chute,maxIndice->second.resp);
 
             for( k = 0; k < tam_fronteira; ++k )
             {
                 lim_fronteira = fronteira[k][1];
                 for( j = fronteira[k][0]; j <= lim_fronteira; ++j )
-                    if( ( frases_ijReal = corpus.pegarValor(i,j,atributo) ) != corpus.pegarValor(i,j,qtdAtributos-1) )
+                    if( ( frases_ijReal = corpus.pegarValor(i,j,atributo) ) != corpus.pegarValor(i,j,atributo_chute) )
                         for( L = 0; L < numMoldeRegras; ++L ) //aplicar molde de regras na vizinhança da palavra alterada
                         {
                             if( j + itMoldes_begin[L]->first < 0 || j + itMoldes_rbegin[L]->first >= column ) continue;
@@ -301,15 +312,15 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                                 }
                             if( !moldeInvalido )
                             {
-                                aux = regrasArmazenadas.size();
-                                for( M = 0; M < aux; ++M )
-                                    if( contemEstrutura( var, regrasArmazenadas[M] ) )
-                                    {
-                                        moldeInvalido = true;
-                                        break;
-                                    }
-                                if( !moldeInvalido )
-                                {
+//                                aux = regrasArmazenadas.size();
+//                                for( M = 0; M < aux; ++M )
+//                                    if( contemEstrutura( var, regrasArmazenadas[M] ) )
+//                                    {
+//                                        moldeInvalido = true;
+//                                        break;
+//                                    }
+//                                if( !moldeInvalido )
+//                                {
                                     ret = regrasTemporarias2.equal_range( var );
                                     bp_end = ret.second;
                                     for( bp = ret.first; bp != bp_end; ++bp )
@@ -323,7 +334,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                                         regrasTemporarias2.insert( pair< multimap< int, vector< int > >, Regra >( var, Regra( frases_ijReal, 1 ) ) );
                                         rT2.push_back( pair< multimap< int, vector< int > >, Regra >( var, Regra( frases_ijReal, 1 ) ) );
                                     }
-                                }
+//                                }
                             }
                             var.clear();
                         }
@@ -359,7 +370,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
             {
                 column = corpus.pegarQtdTokens( i );
                 for( j = 0; j < column; ++j )
-                    if( ( frases_ijReal = corpus.pegarValor(i,j,atributo) ) == corpus.pegarValor(i,j,qtdAtributos-1) )
+                    if( ( frases_ijReal = corpus.pegarValor(i,j,atributo) ) == corpus.pegarValor(i,j,atributo_chute) )
                         for( L = 0; L < numMoldeRegras; ++L )
                         {
                             if( j + itMoldes_begin[L]->first < 0 || j + itMoldes_rbegin[L]->first >= column ) continue;
@@ -416,7 +427,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
                     for( j = 0; j < column; ++j )
                     {
                         if( j + linha_inicio->first < 0 || j + linha_ultimo->first >= column ) continue;
-                        if( ( frases_ijReal = corpus.pegarValor(i,j,atributo) ) == corpus.pegarValor(i,j,qtdAtributos-1) )
+                        if( ( frases_ijReal = corpus.pegarValor(i,j,atributo) ) == corpus.pegarValor(i,j,atributo_chute) )
                         {
                             if( M == frases_ijReal ) continue;
                             regraInvalida = false;
@@ -458,7 +469,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
         //remover regras cuja estrutura contem a estrutura da melhor regra
         bp = regrasTemporarias.begin();
         while( bp != regrasTemporarias.end() )
-            if( bp->second.good <= 0 || contemEstrutura( bp->first, bestEstrutura ) )
+            if( bp->second.good == 0 )//|| contemEstrutura( bp->first, bestEstrutura ) )
                 regrasTemporarias.erase( bp++ );
             else ++bp;
 
@@ -481,7 +492,7 @@ Classificador *TBL::executarTreinamento( Corpus &corpus, int atributo )
         cout << "=>" << ' ' << corpus.pegarSimbolo(maxIndice->second.resp) << endl;
         }
 
-    return objClassificador;
+    return new ClassificadorTBL( classInicial, atributoChute, regras, respRegras );
 }
 
 bool TBL::carregarMolde( string arqMoldeRegras )
