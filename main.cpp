@@ -12,7 +12,7 @@
 #include "classificador/classificadorhmm.h"
 #include "classificador/classificadortbl.h"
 
-#define LIM_FREQ_UNKNOWN 3
+#define LIM_FREQ_UNKNOWN 0
 #define ATRBT_ANALISADO 1
 #define ATRBT_CLASSIFICADO 0
 #define ATRBT_NOVO 3
@@ -51,41 +51,9 @@ using namespace std;
 //}
 
 //HMM
-int main()
-{
-    vector<string> atributos;
-    atributos.push_back("word");
-    atributos.push_back("tpos");
-    atributos.push_back("np");
-
-    CorpusMatriz objCorpus( atributos );
-    objCorpus.carregarArquivo( "inputs/train.txt" );
-    objCorpus.criarAtributo( "pos", "N" );
-
-    Classificador *objClass;
-    HMM objHMM( "word" );
-    objClass = objHMM.executarTreinamento( objCorpus, ATRBT_ANALISADO );
-    //objClass->carregarConhecimento( "inputs/conhecimentoHMM.txt" );
-
-    CorpusMatriz objCorpusProva( atributos );
-    objCorpusProva.carregarArquivo( "inputs/test.txt" );
-    objCorpusProva.criarAtributo( "pos", "N" );
-
-    objClass->executarClassificacao( objCorpusProva, ATRBT_NOVO );
-    AvaliadorAcuracia objAvalAcur;
-
-    printf( "Acuracia: %.2f%%\n", 100 * objAvalAcur.calcularDesempenho( objCorpusProva, ATRBT_ANALISADO, ATRBT_NOVO )[ 0 ] );
-    objCorpusProva.gravarArquivo( "outputs/corpusGravado.txt" );
-    objClass->gravarConhecimento( "outputs/conhecimentoHMM.txt" );
-    delete objClass;
-
-	return 0;
-}
-
-//TBL
 //int main()
 //{
-//    vector<string> atributos, atributosTeste;
+//    vector<string> atributos;
 //    atributos.push_back("word");
 //    atributos.push_back("tpos");
 //    atributos.push_back("np");
@@ -94,22 +62,12 @@ int main()
 //    objCorpus.carregarArquivo( "inputs/train.txt" );
 //    objCorpus.criarAtributo( "pos", "N" );
 //
-//    Classificador *objClassInicial;
-//    MaisProvavel objMProv( "word", LIM_FREQ_UNKNOWN );
-//    objClassInicial = objMProv.executarTreinamento( objCorpus, ATRBT_ANALISADO );
-//
 //    Classificador *objClass;
-//    TBL objTBL( objClassInicial, "inputs/molde.txt", "pos", 2 );
-//    objClass = objTBL.executarTreinamento( objCorpus, ATRBT_ANALISADO );
+//    HMM objHMM( "word" );
+//    objClass = objHMM.executarTreinamento( objCorpus, ATRBT_ANALISADO );
+//    //objClass->carregarConhecimento( "inputs/conhecimentoHMM.txt" );
 //
-//    //Classificador *objClass = new ClassificadorTBL( objClassInicial );
-//    //objClass->carregarConhecimento( "inputs/conhecimentoTBL.txt" );
-//
-//    atributosTeste.push_back( "word" );
-//    atributosTeste.push_back( "tpos" );
-//    atributosTeste.push_back( "np" );
-//
-//    CorpusMatriz objCorpusProva( atributosTeste );
+//    CorpusMatriz objCorpusProva( atributos );
 //    objCorpusProva.carregarArquivo( "inputs/test.txt" );
 //    objCorpusProva.criarAtributo( "pos", "N" );
 //
@@ -118,8 +76,50 @@ int main()
 //
 //    printf( "Acuracia: %.2f%%\n", 100 * objAvalAcur.calcularDesempenho( objCorpusProva, ATRBT_ANALISADO, ATRBT_NOVO )[ 0 ] );
 //    objCorpusProva.gravarArquivo( "outputs/corpusGravado.txt" );
-//    objClass->gravarConhecimento( "outputs/conhecimentoTBL.txt" );
+//    objClass->gravarConhecimento( "outputs/conhecimentoHMM.txt" );
 //    delete objClass;
 //
 //	return 0;
 //}
+
+//TBL
+int main()
+{
+    vector<string> atributos, atributosTeste;
+    atributos.push_back("word");
+    atributos.push_back("tpos");
+    atributos.push_back("np");
+
+    CorpusMatriz objCorpus( atributos );
+    objCorpus.carregarArquivo( "inputs/train.txt" );
+    objCorpus.criarAtributo( "pos", "N" );
+
+    Classificador *objClassInicial;
+    MaisProvavel objMProv( "word", LIM_FREQ_UNKNOWN );
+    objClassInicial = objMProv.executarTreinamento( objCorpus, ATRBT_ANALISADO );
+
+    Classificador *objClass;
+    TBL objTBL( objClassInicial, "inputs/molde.txt", "pos", 2 );
+    objClass = objTBL.executarTreinamento( objCorpus, ATRBT_ANALISADO );
+
+    //Classificador *objClass = new ClassificadorTBL( objClassInicial );
+    //objClass->carregarConhecimento( "inputs/conhecimentoTBL.txt" );
+
+    atributosTeste.push_back( "word" );
+    atributosTeste.push_back( "tpos" );
+    atributosTeste.push_back( "np" );
+
+    CorpusMatriz objCorpusProva( atributosTeste );
+    objCorpusProva.carregarArquivo( "inputs/test.txt" );
+    objCorpusProva.criarAtributo( "pos", "N" );
+
+    objClass->executarClassificacao( objCorpusProva, ATRBT_NOVO );
+    AvaliadorAcuracia objAvalAcur;
+
+    printf( "Acuracia: %.2f%%\n", 100 * objAvalAcur.calcularDesempenho( objCorpusProva, ATRBT_ANALISADO, ATRBT_NOVO )[ 0 ] );
+    objCorpusProva.gravarArquivo( "outputs/corpusGravado.txt" );
+    objClass->gravarConhecimento( "outputs/conhecimentoTBL.txt" );
+    delete objClass;
+
+	return 0;
+}
