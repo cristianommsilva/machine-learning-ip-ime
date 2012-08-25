@@ -4,7 +4,7 @@
 #include "classificador.h"
 #include "../treinador/maisprovavel.h"
 #include <fstream>
-#define LIM_FREQ_UNKNOWN 3
+#define LIM_FREQ_UNKNOWN 0
 #define ATRBT_ANALISADO 1
 
 class ClassificadorTBL : public Classificador
