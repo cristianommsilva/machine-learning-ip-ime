@@ -27,7 +27,7 @@ Janela::~Janela()
 
 void Janela::abrirArquivo()
 {
-    s = QFileDialog::getOpenFileName( this, "Abrir","","Documentos de texto (*.txt);;Todos os arquivos (*.*)" );
+    if( s == "" ) s = QFileDialog::getOpenFileName( this, "Abrir","","Documentos de texto (*.txt);;Todos os arquivos (*.*)" );
     if( s != "" )
     {
         string a = s.toStdString();
@@ -45,6 +45,13 @@ void Janela::abrirArquivo()
         st << corpus->pegarQtdSentencas();
         ui->lineEdit_instancias->setText( QString::fromStdString( st.str() ) );
 
+        //limpador da janela de atributos
+        for( int i = 0; i < ui->tableWidget_atributos->rowCount(); ++i )
+        {
+            delete ui->tableWidget_atributos->item( i, 0 );
+            delete ui->tableWidget_atributos->item( i, 1 );
+        }
+
         ui->tableWidget_atributos->setRowCount( n );
         QTableWidgetItem *item;
         for( int i = 0; i < n; ++i )
@@ -59,16 +66,23 @@ void Janela::abrirArquivo()
 
 void Janela::habilitarBotao(int index)
 {
-    if( index )
+    if( corpus != NULL ) delete corpus;
+    indexCorpus = index;
+    if( !index )
     {
-        ui->comboBox_corpus->removeItem( 0 );
-        if( corpus != NULL ) delete corpus;
-        indexCorpus = index;
+        ui->pushButton_abrir->setEnabled( false );
+        ui->toolButton_construtor->setEnabled( false );
+    }
+    else
+    {
         ui->pushButton_abrir->setEnabled( true );
         ui->toolButton_construtor->setEnabled( true );
     }
     switch( index )
     {
+        case 0 :
+            corpus = NULL;
+            break;
         case 1 :
             corpus = new CorpusMatriz();
             break;
@@ -88,10 +102,10 @@ void Janela::definirParametros()
     {
         case 1 :
             delete corpus;
-            if( s != "" );
             ParamCorpus construtor;
             construtor.exec();
             corpus = new CorpusMatriz( construtor.atributos, construtor.separador, construtor.dividirExemplos );
             break;
     }
+    if( s != "" ) abrirArquivo();
 }
