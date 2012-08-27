@@ -12,6 +12,7 @@ Janela::Janela(QWidget *parent) :
     ui->comboBox_corpus->addItem( "CorpusMatriz" );
 
     //ui->tableWidget_atributos->setColumnCount( 2 );
+    //ui->tableWidget_atributos->setColumnWidth(1,5);
     ui->tableWidget_atributos->setHorizontalHeaderLabels( QStringList() << "No." << "Nome" );
     //ui->tableWidget_atributos->verticalHeader()->setVisible( false ); // Deixa invisível o cabeçalho vertical
     //ui->tableWidget_atributos->horizontalHeader()->setStretchLastSection(true); // Alarga a última coluna conforme o tamanho do TableView
@@ -97,14 +98,35 @@ void Janela::atributoSelecionado( int row, int column )
 }
 
 void Janela::definirParametros()
-{       
+{
     switch( indexCorpus )
     {
         case 1 :
             delete corpus;
-            ParamCorpus construtor;
-            construtor.exec();
-            corpus = new CorpusMatriz( construtor.atributos, construtor.separador, construtor.dividirExemplos );
+            model.inserirDados(0,0,"Separador:");
+            model.inserirDados(1,0,"Dividir Exemplos:");
+            model.inserirDados(0,1,"");
+            model.inserirDados(2,0,"Atributos automaticos:");
+            model.inserirDados(3,0,"Nº atributos:");
+
+            ct.ajustaModelo( model );
+
+            QCheckBox *cbox = new QCheckBox();
+            model.inserirDados(1,1,ct,cbox);
+            cbox = new QCheckBox();
+            cbox->setChecked( true );
+            model.inserirDados(2,1,ct,cbox);
+            QSpinBox *sbox = new QSpinBox();
+            sbox->setValue( 1 );
+            sbox->setMaximum( 99 );
+            sbox->setMinimum( 1 );
+            sbox->setEnabled( false );
+            model.inserirDados(3,1,ct,sbox);
+            ct.exec();
+            corpus = new CorpusMatriz( ct.parametros[2], ct.parametros[0][0][0], atoi(ct.parametros[1][0].c_str()) );
+            //ParamCorpus construtor;
+            //construtor.exec();
+            //corpus = new CorpusMatriz( construtor.atributos, construtor.separador, construtor.dividirExemplos );
             break;
     }
     if( s != "" ) abrirArquivo();

@@ -1,0 +1,15 @@
+INPUT(
+./debug\main.o
+./debug\janela.o
+./debug\corpusmatriz.o
+./debug\corpus.o
+./debug\botao.o
+./debug\paramcorpus.o
+./debug\param.o
+./debug\modeloparam.o
+./debug\moc_janela.o
+./debug\moc_botao.o
+./debug\moc_paramcorpus.o
+./debug\moc_param.o
+./debug\moc_modeloparam.o
+);

@@ -4,7 +4,12 @@
 #include <QWidget>
 #include <QFileDialog>
 #include <QTableWidgetItem>
+#include <QStandardItem>
+#include <QSpinBox>
 #include <sstream>
+#include <cstdlib>
+#include "param.h"
+#include "modeloparam.h"
 #include "paramcorpus.h"
 #include "../../corpus/corpusmatriz.h"
 
@@ -25,6 +30,8 @@ private:
     Corpus *corpus;
     int indexCorpus;
     QString s;
+    Param ct;
+    ModeloParam model;
 
 public slots:
     void abrirArquivo();
