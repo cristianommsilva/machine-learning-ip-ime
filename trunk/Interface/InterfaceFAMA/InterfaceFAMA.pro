@@ -15,13 +15,18 @@ SOURCES += main.cpp\
     ../../corpus/corpusmatriz.cpp \
     ../../corpus/corpus.cpp \
     botao.cpp \
-    paramcorpus.cpp
+    paramcorpus.cpp \
+    param.cpp \
+    modeloparam.cpp
 
 HEADERS  += janela.h \
     ../../corpus/corpusmatriz.h \
     ../../corpus/corpus.h \
     botao.h \
-    paramcorpus.h
+    paramcorpus.h \
+    param.h \
+    modeloparam.h
 
 FORMS    += janela.ui \
-    paramcorpus.ui
+    paramcorpus.ui \
+    param.ui
