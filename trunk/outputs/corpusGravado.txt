@@ -172,8 +172,8 @@ apressar_V_O_V
 a_ART_O_ART
 colheita_N_O_N
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 provoca_V_O_V
 perdas_N_O_N
 significativas_ADJ_O_ADJ
@@ -303,8 +303,8 @@ de_PREP_O_PREP
 5_NUM_O_NUM
 km/h_N_O_N
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 dá_V_O_V
 para_PREP_O_PREP
 colher_V_O_V
@@ -332,7 +332,7 @@ e_KC_O_KC
 %_N_O_N
 superior_ADJ_O_ADJ
 a_PREP_+_PREP
-a_PROSUB_O_ART
+a_PROSUB_O_PROSUB
 de_PREP_+_PREP
 a_ART_O_ART
 máquina_N_O_N
@@ -683,8 +683,8 @@ sacos_N_O_N
 por_PREP_O_PREP
 hectare_N_O_N
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 representa_V_O_V
 1,5_NUM_O_NUM
 milhão_N_O_N
@@ -897,7 +897,7 @@ por_PREP_O_PREP
 largura_N_O_N
 equivalente_ADJ_O_ADJ
 a_PREP_+_PREP
-a_PROSUB_O_ART
+a_PROSUB_O_PROSUB
 de_PREP_+_PREP
 a_ART_O_ART
 plataforma_N_O_N
@@ -1060,7 +1060,7 @@ mãos_N_O_N
 atadas_PCP_O_ADJ
 ._._O_.
 
-É_V_O_V
+É_V_O_VAUX
 proibido_PCP_O_PCP
 caçar_V_O_V
 ._._O_.
@@ -1073,8 +1073,8 @@ os_ART_O_ART
 técnicos_N_O_N
 não_ADV_O_ADV
 sabem_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 fazer_V_O_V
 ._._O_.
 
@@ -1132,7 +1132,7 @@ aproximadamente_ADV_O_ADV
 8_NUM_O_NUM
 anos_N_O_N
 e_KC_O_KC
-que_KS_O_KS
+que_KS_O_PRO-KS-REL
 somente_PDEN_O_PDEN
 poucos_PROADJ_O_PROADJ
 adultos_N_O_N
@@ -1475,7 +1475,7 @@ As_ART_O_ART
 altas_ADJ_O_N
 precipitações_N_O_ADJ
 ,_,_O_,
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 em_PREP_O_PREP
 alguns_PROADJ_O_PROADJ
 lugares_N_O_N
@@ -1839,7 +1839,7 @@ de_PREP_O_PREP
 %_N_O_N
 superior_ADJ_O_ADJ
 a_PREP_+_PREP
-a_PROSUB_O_ART
+a_PROSUB_O_PROSUB
 de_PREP_+_PREP
 a_ART_O_ART
 máquina_N_O_N
@@ -1853,7 +1853,7 @@ faça_V_O_V
 uma_NUM_O_ART
 marca_N_O_N
 em_PREP_+_PREP
-um_PROSUB_O_ART
+um_PROSUB_O_PROSUB
 de_PREP_+_PREP
 os_ART_O_ART
 pontos_N_O_N
@@ -1940,7 +1940,7 @@ máquina_N_O_N
 A_ART_O_ART
 velocidade_N_O_N
 ideal_ADJ_O_ADJ
-é_VAUX_O_V
+é_VAUX_O_VAUX
 obtida_PCP_O_PCP
 o_ART_O_ART
 molinete_N_O_N
@@ -2090,7 +2090,7 @@ a_ART_O_ART
 inferior_N_O_ADJ
 deve_VAUX_O_VAUX
 ser_V_O_V
-um_ADV_O_ART
+um_ADV_O_ADV
 pouco_ADV_O_ADV
 menor_ADJ_O_ADJ
 ,_,_O_,
@@ -2860,7 +2860,7 @@ arrozeira_ADJ_O_N
 gaúcha_ADJ_O_ADJ
 ,_,_O_,
 considerada_PCP_O_PCP
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_PROSUB_O_ART
 mais_ADV_O_N
@@ -3355,7 +3355,7 @@ a_PREP_O_PREP
 30_NUM_O_NUM
 %_N_O_N
 de_PREP_+_PREP
-a_PROSUB_O_ART
+a_PROSUB_O_PROSUB
 de_PREP_+_PREP
 a_ART_O_ART
 safra_N_O_N
@@ -3923,7 +3923,7 @@ barreira_N_O_N
 simplificadora_ADJ_O_ADJ
 ,_,_O_,
 ou_PDEN_O_KC
-seja_PDEN_O_V
+seja_PDEN_O_PDEN
 ,_,_O_,
 praticamente_ADV_O_ADV
 não_ADV_O_ADV
@@ -4128,8 +4128,8 @@ preço_N_O_N
 mínimo_ADJ_O_N
 oficial_ADJ_O_ADJ
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 mal_ADV_O_ADV
 dá_V_O_V
 para_PREP_O_PREP
@@ -5048,7 +5048,7 @@ produtos_N_O_N
 ._._O_.
 
 "_"_O_"
-Nossa_PROADJ_O_NPROP
+Nossa_PROADJ_O_PROADJ
 meta_N_O_N
 é_V_O_V
 melhorar_V_O_V
@@ -5265,7 +5265,7 @@ compra_N_O_N
 Se_KS_O_KS
 a_ART_O_ART
 ficha_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 aprovada_PCP_O_PCP
 ,_,_O_,
 o_ART_O_ART
@@ -5607,7 +5607,7 @@ colheitadeiras_N_O_N
 "_"_O_"
 Isto_PROSUB_O_PROSUB
 mostra_V_O_V
-o_ADV-KS_O_ART
+o_ADV-KS_O_PROSUB
 quanto_ADV-KS_O_PREP
 o_ART_O_ART
 setor_N_O_N
@@ -5806,7 +5806,7 @@ a_ART_O_ART
 energia_N_O_N
 elétrica_ADJ_O_ADJ
 ,_,_O_,
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 em_PREP_+_PREP
 o_ART_O_ART
 período_N_O_N
@@ -5855,7 +5855,7 @@ Externa_NPROP_O_NPROP
 Comum_NPROP_O_NPROP
 )_)_O_)
 ,_,_O_,
-ficou_VAUX_O_V
+ficou_VAUX_O_VAUX
 decidido_PCP_O_PCP
 que_KS_O_KS
 os_ART_O_ART
@@ -6206,8 +6206,8 @@ US$_CUR_O_CUR
 milhões_N_O_N
 ,_,_O_,
 o_ART_O_ART
-mesmo_PROSUB_O_PROADJ
-que_KS_O_PROSUB
+mesmo_PROSUB_O_PROSUB
+que_KS_O_PRO-KS-REL
 em_PREP_O_PREP
 93_N_O_N
 ._._O_.
@@ -6260,7 +6260,7 @@ rural_ADJ_O_ADJ
 de_PREP_+_PREP
 a_ART_O_ART
 ,_,_O_,
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 em_PREP_+_PREP
 a_ART_O_ART
 semana_N_O_N
@@ -6305,8 +6305,8 @@ os_ART_O_ART
 deputados_N_O_N
 ruralistas_ADJ_O_,
 desconhece_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 ocorreu_V_O_V
 em_PREP_+_PREP
 os_ART_O_ART
@@ -6575,7 +6575,7 @@ que_KS_O_KS
 o_ART_O_ART
 frango_N_O_N
 é_V_O_V
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 mais_ADV_O_N
@@ -6775,7 +6775,7 @@ Estado_N_O_N
 ._._O_.
 
 Observa_V_+_V
-se_PROPESS_O_KS
+se_PROPESS_O_PROPESS
 que_KS_O_KS
 em_PREP_+_PREP
 a_ART_O_ART
@@ -7246,7 +7246,7 @@ em_PREP_O_PREP
 modelo_N_O_N
 semelhante_ADJ_O_ADJ
 a_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 de_PREP_+_PREP
 a_ART_O_ART
 Bolsa_NPROP_O_N
@@ -7744,7 +7744,7 @@ e_KC_O_KC
 o_ART_O_ART
 suco_N_O_N
 cítrico_ADJ_O_,
-tem_VAUX_O_V
+tem_VAUX_O_VAUX
 sido_PCP_O_PCP
 certamente_ADV_O_ADV
 nossa_PROADJ_O_PROADJ
@@ -7882,8 +7882,8 @@ e_KC_O_KC
 tratamento_N_O_N
 definidos_PCP_O_PCP
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 sinaliza_V_O_V
 uma_ART_O_ART
 situação_N_O_N
@@ -8029,7 +8029,7 @@ choques_N_O_N
 ,_,_O_,
 fazendo_V_O_V
 com_PREP_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 quedas_N_O_N
 e_KC_O_KC
 subidas_N_O_V
@@ -8195,8 +8195,8 @@ beneficiar_V_O_V
 o_ART_O_ART
 citricultor_N_O_N
 ,_,_O_,
-aqueles_PROSUB_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+aqueles_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 não_ADV_O_ADV
 estão_V_O_V
 presos_PCP_O_N
@@ -8619,7 +8619,7 @@ ser_VAUX_O_VAUX
 controladas_PCP_O_PCP
 por_PREP_+_PREP
 os_ART_O_ART
-agrônomos_N_O_ADJ
+agrônomos_N_O_N
 ._._O_.
 
 sistema_N_O_N
@@ -8925,7 +8925,7 @@ O_ART_O_ART
 consumo_N_O_N
 de_PREP_+_PREP
 o_ART_O_ART
-mineral_N_O_ADJ
+mineral_N_O_N
 permaneceu_V_O_V
 entre_PREP_O_PREP
 1,8_NUM_O_NUM
@@ -9237,7 +9237,7 @@ as_ART_O_ART
 águas_N_O_N
 ,_,_O_,
 ou_PDEN_O_KC
-seja_PDEN_O_V
+seja_PDEN_O_PDEN
 ,_,_O_,
 a_PREP_O_PREP
 partir_PREP_O_PREP
@@ -9682,7 +9682,7 @@ tropical_ADJ_O_ADJ
 ._._O_.
 
 Ela_PROPESS_O_PROPESS
-é_VAUX_O_V
+é_VAUX_O_VAUX
 criada_PCP_O_PCP
 sem_PREP_O_PREP
 tratos_N_O_N
@@ -9851,7 +9851,7 @@ Estados_N_O_N
 onde_ADV-KS-REL_O_ADV-KS-REL
 a_ART_O_ART
 raça_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 criada_PCP_O_PCP
 em_PREP_O_PREP
 maior_ADJ_O_ADJ
@@ -10985,11 +10985,11 @@ defesa_N_O_N
 "_"_O_"
 ,_,_O_,
 ou_PDEN_O_KC
-seja_PDEN_O_V
+seja_PDEN_O_PDEN
 ,_,_O_,
 se_KS_O_PROPESS
 não_ADV_O_ADV
-ficar_V_O_V
+ficar_V_O_VAUX
 satisfeito_PCP_O_PCP
 com_PREP_O_PREP
 a_ART_O_ART
@@ -11421,7 +11421,7 @@ leite_N_O_N
 ._._O_.
 
 Deixando_V_O_V
-um_ADV_O_ART
+um_ADV_O_ADV
 pouco_ADV_O_ADV
 de_PREP_O_PREP
 lado_N_O_PREP
@@ -11459,7 +11459,7 @@ nelore_ADJ_O_ADJ
 O_ART_O_ART
 chamado_PCP_O_N
 cruzamento_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 feito_PCP_O_PCP
 em_PREP_+_PREP
 o_ART_O_ART
@@ -11511,7 +11511,7 @@ ele_PROPESS_O_PROPESS
 ,_,_O_,
 cada_PROADJ_O_PROADJ
 animal_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 ofertado_PCP_O_PCP
 com_PREP_O_PREP
 um_ART_O_ART
@@ -11719,7 +11719,7 @@ de_PREP_O_PREP
 0,29_NUM_O_NUM
 URV_N_O_N
 pedido_PCP_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 baseado_PCP_O_PCP
 em_PREP_O_PREP
 planilha_N_O_N
@@ -13163,7 +13163,7 @@ em_PREP_O_PREP
 São_NPROP_O_NPROP
 Paulo_NPROP_O_NPROP
 ,_,_O_,
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 em_PREP_+_PREP
 a_ART_O_ART
 semana_N_O_N
@@ -13379,7 +13379,7 @@ ano_N_O_N
 (_(_O_(
 veja_V_O_V
 texto_N_O_N
-acima_ADV_O_PREP
+acima_ADV_O_ADV
 )_)_O_)
 ._._O_.
 
@@ -13506,7 +13506,7 @@ aumento_N_O_N
 de_PREP_+_PREP
 a_ART_O_ART
 demanda_N_O_N
-veio_V_O_V
+veio_V_O_VAUX
 acompanhado_PCP_O_PCP
 de_PREP_O_PREP
 maior_ADJ_O_ADJ
@@ -13744,7 +13744,7 @@ a_ART_O_PREP
 área_N_O_N
 plantada_PCP_O_PCP
 ,_,_O_,
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 em_PREP_+_PREP
 o_ART_O_ART
 ano_N_O_N
@@ -13886,7 +13886,7 @@ demanda_N_O_N
 em_PREP_+_PREP
 o_ART_O_ART
 período_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 integrado_PCP_O_PCP
 por_PREP_O_PREP
 soja_N_O_N
@@ -14069,7 +14069,7 @@ laranjas_N_O_N
 A_ART_O_ART
 DowElanco_NPROP_O_N
 ,_,_O_,
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 principais_ADJ_O_ADJ
@@ -14138,7 +14138,7 @@ brasileiro_NPROP_O_ADJ
 
 Começou_VAUX_O_V
 a_PREP_O_ART
-circular_V_O_ADJ
+circular_V_O_N
 em_PREP_+_PREP
 o_ART_O_ART
 último_ADJ_O_ADJ
@@ -14568,7 +14568,7 @@ mundo_N_O_N
 ,_,_O_,
 a_ART_O_ART
 compatibilização_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 feita_PCP_O_PCP
 através_PREP_O_PREP
 de_PREP_O_PREP
@@ -14775,8 +14775,8 @@ de_PREP_+_PREP
 o_ART_O_ART
 leite_N_O_N
 ,_,_O_,
-aquele_PROSUB_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+aquele_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 cuida_V_O_V
 de_PREP_O_PREP
 seu_PROADJ_O_PROADJ
@@ -14829,7 +14829,7 @@ externo_ADJ_O_ADJ
 ._._O_.
 
 O_ART_O_ART
-interno_N_O_ADJ
+interno_N_O_N
 é_V_O_V
 o_ART_O_ART
 safrista_N_O_N
@@ -14848,7 +14848,7 @@ as_ART_O_ART
 chuvas_N_O_N
 ;_;_O_;
 o_ART_O_ART
-externo_N_O_ADJ
+externo_N_O_N
 é_V_O_V
 a_ART_O_ART
 importação_N_O_N
@@ -15146,7 +15146,7 @@ a_ART_O_ART
 social_ADJ_O_ADJ
 ._._O_.
 
-São_VAUX_O_V
+São_VAUX_O_VAUX
 conhecidos_PCP_O_PCP
 os_ART_O_ART
 graves_ADJ_O_ADJ
@@ -15297,7 +15297,7 @@ do_NPROP_O_NPROP
 Rio_NPROP_O_NPROP
 Preto_NPROP_O_NPROP
 foi_V_O_V
-a_PROSUB_O_ART
+a_PROSUB_O_ADV
 mais_ADV_O_ADV
 prejudicada_PCP_O_PCP
 por_PREP_+_PREP
@@ -15437,7 +15437,7 @@ garantia_N_O_N
 de_PREP_+_PREP
 este_PROADJ_O_PROADJ
 desempenho_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 dada_PCP_O_PCP
 por_PREP_+_PREP
 os_ART_O_ART
@@ -15603,7 +15603,7 @@ micro-aspersão_N_O_N
 ,_,_O_,
 o_ART_O_ART
 gás_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 usado_PCP_O_PCP
 para_PREP_O_PREP
 estimular_V_O_V
@@ -16425,7 +16425,7 @@ termina_V_O_V
 dia_N_O_N
 13_N_AP_N
 ,_,_O_,
-é_VAUX_O_V
+é_VAUX_O_VAUX
 promovida_PCP_O_PCP
 em_PREP_+_PREP
 o_ART_O_ART
@@ -16922,7 +16922,7 @@ Ten_N_EST_NPROP
 '_'_O_'
 ,_,_O_,
 ou_PDEN_O_KC
-seja_PDEN_O_V
+seja_PDEN_O_PDEN
 ,_,_O_,
 entre_PREP_O_PREP
 os_ART_O_ART
@@ -16983,7 +16983,7 @@ Kalman_NPROP_O_N
 ._._O_.
 
 Ele_PROPESS_O_PROPESS
-próprio_PROADJ_O_ADJ
+próprio_PROADJ_O_PROADJ
 conseguiu_V_O_V
 o_ART_O_ART
 grande_ADJ_O_ADJ
@@ -17769,7 +17769,7 @@ transferência_N_O_N
 de_PREP_O_PREP
 embriões_N_O_N
 como_PREP_O_PREP
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 formas_N_O_N
@@ -18074,7 +18074,7 @@ venda_N_O_N
 via_PREP_O_PREP
 satélite_N_O_N
 foi_V_O_V
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 de_PREP_+_PREP
 a_ART_O_ART
 Nova_NPROP_O_NPROP
@@ -18135,8 +18135,8 @@ transmitidos_PCP_O_PCP
 ao_ADV_O_PREP
 vivo_ADV_O_N
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 ajudou_V_O_V
 a_ART_O_ART
 divulgação_N_O_N
@@ -18744,7 +18744,7 @@ US$_CUR_O_CUR
 bilhões_N_O_N
 anuais_ADJ_O_ADJ
 e_KC_O_KC
-tem_VAUX_O_V
+tem_VAUX_O_VAUX
 crescido_PCP_O_PCP
 em_PREP_O_PREP
 média_N_O_N
@@ -19019,7 +19019,7 @@ telefonis_N_O_N
 celular_ADJ_O_ADJ
 não_ADV_O_ADV
 deve_VAUX_O_VAUX
-ficar_V_O_V
+ficar_V_O_VAUX
 restrito_PCP_O_PCP
 apenas_PDEN_O_PDEN
 a_PREP_+_PREP
@@ -19070,7 +19070,7 @@ a_ART_O_ART
 estimativa_N_O_N
 é_V_O_V
 que_KS_O_KS
-menos_PREP_O_ADV
+menos_PREP_O_PREP
 de_PREP_O_PREP
 50_NUM_O_NUM
 mil_NUM_O_N
@@ -19356,7 +19356,7 @@ Telesp_NPROP_O_NPROP
 
 O_ART_O_ART
 aparelho_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 instalado_PCP_O_PCP
 uma_NUM_O_ART
 semana_N_O_N
@@ -19845,7 +19845,7 @@ Em_PREP_+_PREP
 o_ART_O_ART
 Brasil_NPROP_O_NPROP
 ,_,_O_,
-é_VAUX_O_V
+é_VAUX_O_VAUX
 vendido_PCP_O_PCP
 por_PREP_+_PREP
 a_ART_O_ART
@@ -19907,7 +19907,7 @@ vaca_N_O_N
 Se_KS_O_KS
 a_ART_O_ART
 doença_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 tratada_PCP_O_PCP
 logo_ADV_O_ADV
 tem_V_O_V
@@ -19931,7 +19931,7 @@ normal_ADJ_O_ADJ
 Mas_KC_O_KC
 se_KS_O_PROPESS
 a_ART_O_PREP
-é_VAUX_O_V
+é_VAUX_O_VAUX
 detectada_PCP_O_PCP
 tardiamente_ADV_O_ADV
 ,_,_O_,
@@ -20010,8 +20010,8 @@ em_PREP_+_PREP
 o_ART_O_ART
 leite_N_O_N
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 percebemos_V_O_V
 por_PREP_+_PREP
 a_ART_O_ART
@@ -20024,7 +20024,7 @@ elétrica_ADJ_O_ADJ
 
 O_ART_O_ART
 sistema_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 formado_PCP_O_PCP
 por_PREP_O_PREP
 um_ART_O_ART
@@ -20477,7 +20477,7 @@ Vegetais_NPROP_O_NPROP
 ._._O_.
 
 "_"_O_"
-Tem_VAUX_O_V
+Tem_VAUX_O_VAUX
 sido_PCP_O_PCP
 flagrante_ADJ_O_N
 a_ART_O_PREP
@@ -21313,7 +21313,7 @@ leilão_N_O_N
 O_ART_O_ART
 Fascination_NPROP_O_N
 vendeu_V_O_V
-os_ART_O_ART
+os_ART_O_PROSUB
 em_PREP_O_PREP
 seis_NUM_O_NUM
 pagamentos_N_O_N
@@ -21594,7 +21594,7 @@ dupla_ADJ_O_N
 aptidão_N_O_N
 ,_,_O_,
 ou_PDEN_O_KC
-seja_PDEN_O_V
+seja_PDEN_O_PDEN
 ,_,_O_,
 produz_V_O_V
 carne_N_O_N
@@ -21669,7 +21669,7 @@ Razuk_NPROP_O_ADJ
 
 Segundo_PREP_O_PREP
 Razuk_NPROP_O_ART
-esse_PROSUB_O_PROADJ
+esse_PROSUB_O_PROSUB
 é_V_O_V
 o_ART_O_ART
 único_ADJ_O_ADJ
@@ -21758,7 +21758,7 @@ próximos_ADJ_O_ADJ
 ,_,_O_,
 durante_PREP_O_PREP
 a_PREP_O_ART
-3ª_ADJ_O_ADJ
+3ª_ADJ_O_N
 Exposul_NPROP_O_PREP
 Internacional_NPROP_O_NPROP
 ,_,_O_,
@@ -22096,7 +22096,7 @@ lá_ADV_O_ADV
 um_ART_O_ART
 cheque_N_O_N
 e_KC_O_KC
-o_PROPESS_O_ART
+o_PROPESS_O_PROPESS
 colocou_V_O_V
 no_PREP_+_PREP
 meio_PREP_+_N
@@ -22148,7 +22148,7 @@ foi_VAUX_O_VAUX
 crescendo_V_O_V
 ,_,_O_,
 até_KS_O_PREP
-que_KS_O_KS
+que_KS_O_PRO-KS-REL
 Simon_NPROP_O_NPROP
 deu_V_O_V
 um_ART_O_ART
@@ -22212,7 +22212,7 @@ Quem_PROSUB_O_PROSUB
 havia_VAUX_O_VAUX
 apoiado_PCP_O_PCP
 Richa_NPROP_O_NPROP
-sorriu_V_O_V
+sorriu_V_O_VAUX
 aliviado_PCP_O_PCP
 ._._O_.
 
@@ -22231,7 +22231,7 @@ para_PREP_O_PREP
 a_ART_O_ART
 galeria_N_O_N
 de_PREP_+_PREP
-os_PROSUB_O_ART
+os_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 pregam_V_O_V
 peças_N_O_N
@@ -22381,7 +22381,7 @@ os_ART_O_ART
 processos_N_O_N
 estão_V_O_V
 em_PREP_+_PREP
-a_ART_O_ART
+a_ART_O_PROSUB
 desde_PREP_O_PREP
 a_ART_O_ART
 segunda-feira_N_O_N
@@ -22532,7 +22532,7 @@ dias_N_O_N
 Só_PDEN_O_ADV
 depois_PREP_O_ADV
 de_PREP_O_PREP
-ver_V_O_V
+ver_V_O_VAUX
 aprovado_PCP_O_PCP
 o_ART_O_ART
 projeto_N_O_N
@@ -22860,7 +22860,7 @@ de_PREP_+_PREP
 o_ART_O_ART
 parecer_N_O_N
 a_PREP_+_PREP
-o_ART_O_ART
+o_ART_O_PROSUB
 para_PREP_O_PREP
 a_ART_O_ART
 continuidade_N_O_N
@@ -22989,7 +22989,7 @@ por_PREP_O_PREP
 esta_PROADJ_O_PROADJ
 CPMI_NPROP_O_N
 ,_,_O_,
-sobretudo_PDEN_O_ADV
+sobretudo_PDEN_O_KS
 porque_KS_O_KS
 nada_PROSUB_O_PROSUB
 foi_VAUX_O_VAUX
@@ -23562,7 +23562,7 @@ nove_NUM_O_NUM
 anos_N_O_N
 em_PREP_O_PREP
 que_PRO-KS-REL_O_PRO-KS-REL
-esteve_V_O_V
+esteve_V_O_VAUX
 casada_PCP_O_PCP
 com_PREP_O_PREP
 o_ART_O_ART
@@ -23688,7 +23688,7 @@ estabilização_N_O_N
 "_"_O_"
 Às_ADV_O_ADV
 vezes_ADV_O_ADV
-alguém_PROSUB_O_PROSUB
+alguém_PROSUB_O_PROADJ
 me_PROPESS_O_PROPESS
 pergunta_V_O_V
 como_ADV-KS_O_PREP
@@ -23837,7 +23837,7 @@ comunica_V_O_V
 que_KS_O_KS
 prepara_V_O_V
 ,_,_O_,
-no_KC_O_NPROP
+no_KC_O_KC
 entanto_KC_O_KC
 ,_,_O_,
 uma_ART_O_ART
@@ -23851,8 +23851,8 @@ ela_PROPESS_O_PROPESS
 ainda_ADV_O_ADV
 não_ADV_O_ADV
 sabe_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 será_V_O_V
 ._._O_.
 
@@ -23883,7 +23883,7 @@ Odacir_NPROP_O_PREP
 Klein_NPROP_O_NPROP
 estava_V_O_V
 sóbrio_ADJ_O_ADJ
-quando_KS_O_KS
+quando_KS_O_PRO-KS-REL
 ,_,_O_,
 a_PREP_O_ART
 meio_N_O_N
@@ -23960,8 +23960,8 @@ dois_NUM_O_NUM
 deputados_N_O_N
 ,_,_O_,
 para_PREP_O_PREP
-os_PRO-KS-REL_O_ART
-quais_PRO-KS-REL_O_PROADJ
+os_PRO-KS-REL_O_PRO-KS-REL
+quais_PRO-KS-REL_O_PRO-KS-REL
 a_ART_O_ART
 CPI_NPROP_O_N
 de_PREP_+_PREP
@@ -24060,7 +24060,7 @@ de_PREP_+_PREP
 o_ART_O_ART
 relatório_N_O_N
 de_PREP_O_PREP
-que_PRO-KS-REL_O_PRO-KS-REL
+que_PRO-KS-REL_O_KS
 tanto_ADV_O_ADV
 se_PROPESS_O_PROPESS
 autolouvaram_V_O_V
@@ -24343,10 +24343,10 @@ brandas_ADJ_O_ADJ
 em_PREP_+_PREP
 relação_PREP_+_N
 a_PREP_+_PREP
-a_PROSUB_O_PREP
+a_PROSUB_O_PRO-KS-REL
 que_PRO-KS-REL_O_PRO-KS-REL
 ele_PROPESS_O_PROPESS
-próprio_PROADJ_O_ADJ
+próprio_PROADJ_O_PROADJ
 faz_V_O_V
 a_PREP_+_PREP
 a_ART_O_ART
@@ -24818,7 +24818,7 @@ a_PREP_+_PREP
 a_ART_O_ART
 regra_N_O_N
 que_PRO-KS-REL_O_PRO-KS-REL
-tem_VAUX_O_V
+tem_VAUX_O_VAUX
 sido_PCP_O_PCP
 utilizada_PCP_O_PCP
 em_PREP_+_PREP
@@ -24910,7 +24910,7 @@ o_ART_O_ART
 ano_N_O_N
 anterior_ADJ_O_ADJ
 a_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 de_PREP_+_PREP
 a_ART_O_ART
 sua_PROADJ_O_PROADJ
@@ -24918,7 +24918,7 @@ vigência_N_O_N
 ._._O_.
 
 Ou_KC_O_KC
-seja_KC_O_V
+seja_KC_O_PDEN
 ,_,_O_,
 no_PREP_+_PREP
 caso_PREP_+_N
@@ -24984,7 +24984,7 @@ o_ART_O_ART
 esperado_N_O_N
 ,_,_O_,
 ou_PDEN_O_KC
-seja_PDEN_O_V
+seja_PDEN_O_PDEN
 ,_,_O_,
 risco_N_O_N
 de_PREP_+_PREP
@@ -25401,7 +25401,7 @@ por_PREP_+_PREP
 o_ART_O_ART
 pico_N_O_N
 ,_,_O_,
-sobretudo_PDEN_O_ADV
+sobretudo_PDEN_O_KS
 quando_KS_O_KS
 o_ART_O_ART
 indexador_N_O_N
@@ -25531,7 +25531,7 @@ que_KS_O_KS
 o_ART_O_ART
 índice_N_O_N
 não_ADV_O_ADV
-é_VAUX_O_V
+é_VAUX_O_VAUX
 manipulado_PCP_O_PCP
 ,_,_O_,
 essa_PROADJ_O_PROADJ
@@ -25559,7 +25559,7 @@ Fernando_NPROP_O_NPROP
 Henrique_NPROP_O_NPROP
 espera_V_O_V
 que_KS_O_KS
-antes_PREP_+_ADV
+antes_PREP_+_PREP
 de_PREP_+_PREP
 a_ART_O_ART
 criação_N_O_N
@@ -25950,7 +25950,7 @@ a_ART_O_ART
 Câmara_NPROP_O_N
 era_V_O_V
 de_PREP_O_PREP
-que_KS_O_KS
+que_KS_O_PRO-KS-REL
 Inocêncio_NPROP_O_NPROP
 chegaria_V_O_V
 a_PREP_O_ART
@@ -26051,7 +26051,7 @@ Grosso_NPROP_O_NPROP
 do_NPROP_O_NPROP
 Sul_NPROP_O_NPROP
 não_ADV_O_ADV
-estiveram_V_O_V
+estiveram_V_O_VAUX
 representados_PCP_O_PCP
 ._._O_.
 
@@ -26683,8 +26683,8 @@ ricos_N_O_N
 
 Vamos_VAUX_O_VAUX
 checar_V_O_V
-tudo_PROSUB_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+tudo_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 é_V_O_V
 sinal_N_O_N
 exterior_ADJ_O_N
@@ -26820,8 +26820,8 @@ US$_CUR_O_CUR
 4,6_NUM_O_NUM
 bilhões_N_O_N
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 representa_V_O_V
 um_ART_O_ART
 crescimento_N_O_N
@@ -26984,7 +26984,7 @@ de_PREP_+_PREP
 a_ART_O_ART
 Usiminas_NPROP_O_NPROP
 ,_,_O_,
-CSN_NPROP_O_NPROP
+CSN_NPROP_O_KC
 e_KC_O_KC
 demais_PROADJ_O_PROADJ
 participações_N_O_N
@@ -27131,7 +27131,7 @@ milhões_N_O_N
 ._._O_.
 
 Caso_KS_O_KS
-o_ART_O_ART
+o_ART_O_PROPESS
 eleve_V_O_V
 de_PREP_O_PREP
 23_NUM_O_NUM
@@ -27205,7 +27205,7 @@ sob_PREP_O_PREP
 a_ART_O_ART
 alegação_N_O_N
 de_PREP_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 não_ADV_O_ADV
 possuem_V_O_V
 faturamento_N_O_N
@@ -27253,7 +27253,7 @@ pensionista_N_O_PREP
 o_ART_O_ART
 equivalente_N_O_N
 a_PREP_+_PREP
-o_PRO-KS_O_ART
+o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 foi_VAUX_O_VAUX
 gasto_PCP_O_PCP
@@ -27262,7 +27262,7 @@ em_PREP_O_PREP
 ._._O_.
 
 O_ART_O_NPROP
-ficaria_V_O_V
+ficaria_V_O_VAUX
 obrigado_PCP_O_PCP
 ,_,_O_,
 caso_KS_O_PREP
@@ -27370,9 +27370,9 @@ dos_NPROP_O_NPROP
 Trabalhadores_NPROP_O_NPROP
 ,_,_O_,
 com_PREP_O_PREP
-os_PRO-KS-REL_O_ART
+os_PRO-KS-REL_O_PROSUB
 quais_PRO-KS-REL_O_PRO-KS-REL
-esteve_V_O_V
+esteve_V_O_VAUX
 reunido_PCP_O_PCP
 ontem_ADV_O_ADV
 a_PREP_+_PREP
@@ -27740,7 +27740,7 @@ o_ART_O_ART
 pólo_N_O_N
 aglutinador_ADJ_O_ADJ
 de_PREP_+_PREP
-os_PROSUB_O_ART
+os_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 rejeitam_V_O_V
 a_ART_O_ART
@@ -28371,7 +28371,7 @@ gazeta_N_O_N
 "_"_O_"
 ,_,_O_,
 em_PREP_+_PREP
-o_PRO-KS_O_ART
+o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 o_ART_O_ART
 TJ_NPROP_O_NPROP
@@ -28590,7 +28590,7 @@ pagos_PCP_O_PCP
 ._._O_.
 
 E_KC_O_KC
-sim_ADV_O_ADV
+sim_ADV_O_KS
 porque_KS_O_KS
 "_"_O_"
 também_PDEN_O_PDEN
@@ -28919,7 +28919,7 @@ imbatível_ADJ_O_ADJ
 
 Não_ADV_O_ADV
 ,_,_O_,
-tanto_KS_O_ADV
+tanto_KS_O_KS
 que_KS_O_KS
 já_ADV_O_ADV
 começou_VAUX_O_V
@@ -29279,7 +29279,7 @@ e_KC_O_NPROP
 Fleury_NPROP_O_NPROP
 aumentaram_V_O_V
 depois_KS_O_PREP
-que_KS_O_KS
+que_KS_O_PRO-KS-REL
 Itamar_NPROP_O_NPROP
 Franco_NPROP_O_NPROP
 escolheu_V_O_V
@@ -29850,7 +29850,7 @@ Ferreira_NPROP_O_NPROP
 da_NPROP_O_NPROP
 Silva_NPROP_O_NPROP
 ,_,_O_,
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 em_PREP_O_PREP
 1992_N_O_N
 foi_V_O_V
@@ -29929,7 +29929,7 @@ PSB_NPROP_O_NPROP
 afirma_V_O_V
 que_KS_O_KS
 "_"_O_"
-o_ART_O_ART
+o_ART_O_NPROP
 Movimento_NPROP_O_NPROP
 Sem_NPROP_O_NPROP
 Terra_NPROP_O_NPROP
@@ -30169,7 +30169,7 @@ o_ART_O_ART
 país_N_O_N
 ,_,_O_,
 para_PREP_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 não_ADV_O_ADV
 se_PROPESS_O_PROPESS
 repitam_V_O_V
@@ -30266,7 +30266,7 @@ nada_PROSUB_O_PROSUB
 A_ART_O_ART
 reunião_N_O_N
 de_PREP_+_PREP
-a_ART_O_ART
+a_ART_O_PROSUB
 de_PREP_+_PREP
 o_ART_O_ART
 PT_NPROP_O_NPROP
@@ -30421,8 +30421,8 @@ CIOSL_NPROP_O_NPROP
 )_)_O_)
 ,_,_O_,
 a_PREP_+_PREP
-a_ART_O_ART
-qual_PRO-KS-REL_O_PROADJ
+a_ART_O_PRO-KS-REL
+qual_PRO-KS-REL_O_PRO-KS-REL
 a_PREP_O_ART
 Cut_NPROP_O_NPROP
 e_KC_O_KC
@@ -30623,7 +30623,7 @@ Sindical_NPROP_O_NPROP
 ,_,_O_,
 que_PRO-KS-REL_O_PRO-KS-REL
 também_PDEN_O_PDEN
-é_VAUX_O_V
+é_VAUX_O_VAUX
 filiada_PCP_O_PCP
 a_PREP_+_PREP
 a_ART_O_ART
@@ -30679,7 +30679,7 @@ carro_N_O_N
 de_PREP_O_PREP
 som_N_O_N
 de_PREP_+_PREP
-o_ART_O_ART
+o_ART_O_PROSUB
 de_PREP__PREP
 o_ART_O_ART
 ABCD_NPROP_O_NPROP
@@ -30699,7 +30699,7 @@ A_ART_O_ART
 expectativa_N_O_N
 é_V_O_V
 de_PREP_O_PREP
-que_KS_O_KS
+que_KS_O_PRO-KS-REL
 Clodovil_NPROP_O_NPROP
 apresente_V_O_V
 a_ART_O_ART
@@ -30962,8 +30962,8 @@ abril_N_O_N
 de_PREP_O_PREP
 93_N_O_N
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 correspondia_V_O_V
 em_PREP_+_PREP
 a_ART_O_ART
@@ -31065,7 +31065,7 @@ seus_PROADJ_O_PROADJ
 currículos_N_O_N
 certificados_N_O_N
 de_PREP_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 já_ADV_O_ADV
 realizaram_V_O_V
 tarefas_N_O_N
@@ -31105,7 +31105,7 @@ meses_N_O_N
 
 Exigências_N_O_N
 como_PREP_O_PREP
-esta_PROSUB_O_PROADJ
+esta_PROSUB_O_PROSUB
 ,_,_O_,
 de_PREP_O_PREP
 acordo_PREP_O_N
@@ -31343,8 +31343,8 @@ estrelas_N_O_N
 ._._O_.
 
 É_V_O_V
-o_PROSUB_O_ART
-que_PRO-KS-REL_O_PRO-KS-REL
+o_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 conclui_V_O_V
 uma_ART_O_ART
 nova_ADJ_O_ADJ
@@ -31686,7 +31686,7 @@ o_ART_O_ART
 Brasil_NPROP_O_NPROP
 como_PREP_O_PREP
 "_"_O_"
-As_NPROP_O_ART
+As_NPROP_O_NPROP
 Três_NPROP_O_NPROP
 Marias_NPROP_O_NPROP
 "_"_O_"
@@ -32014,7 +32014,7 @@ o_ART_O_ART
 país_N_O_N
 ,_,_O_,
 para_PREP_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 não_ADV_O_ADV
 se_PROPESS_O_PROPESS
 repitam_V_O_V
@@ -32111,7 +32111,7 @@ nada_PROSUB_O_PROSUB
 A_ART_O_ART
 reunião_N_O_N
 de_PREP_+_PREP
-a_ART_O_ART
+a_ART_O_PROSUB
 de_PREP__PREP
 o_ART_O_ART
 PT_NPROP_O_NPROP
@@ -32181,7 +32181,7 @@ de_PREP_O_PREP
 um_ART_O_ART
 caminhão_N_O_N
 de_PREP_+_PREP
-o_ART_O_ART
+o_ART_O_PROSUB
 de_PREP_+_PREP
 o_ART_O_ART
 ABCD_NPROP_O_NPROP
@@ -32873,7 +32873,7 @@ de_PREP_+_PREP
 a_ART_O_ART
 Usiminas_NPROP_O_NPROP
 ,_,_O_,
-CSN_NPROP_O_NPROP
+CSN_NPROP_O_KC
 e_KC_O_KC
 demais_PROADJ_O_PROADJ
 participações_N_O_N
@@ -33037,7 +33037,7 @@ sob_PREP_O_PREP
 a_ART_O_ART
 alegação_N_O_N
 de_PREP_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 não_ADV_O_ADV
 possuem_V_O_V
 faturamento_N_O_N
@@ -33130,7 +33130,7 @@ Henrique_NPROP_O_NPROP
 Hargreaves_NPROP_O_NPROP
 para_PREP_O_PREP
 reassumir_V_O_V
-a_PREP_O_ART
+a_PREP_O_PROPESS
 ._._O_.
 
 "_"_O_"
@@ -33218,8 +33218,8 @@ votação_N_O_N
 porque_KS_O_KS
 não_ADV_O_ADV
 teve_V_O_V
-ninguém_PROSUB_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+ninguém_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 ligasse_V_O_V
 para_PREP_O_PREP
 ele_PROPESS_O_PROPESS
@@ -33242,7 +33242,7 @@ Santos_NPROP_O_NPROP
 
 Raul_NPROP_O_NPROP
 Belém_NPROP_O_NPROP
-é_VAUX_O_V
+é_VAUX_O_VAUX
 considerado_PCP_O_PCP
 o_ART_O_ART
 deputado_N_O_N
@@ -33266,7 +33266,7 @@ de_PREP_O_PREP
 privatização_N_O_N
 ._._O_.
 
-O_PROSUB_O_ART
+O_PROSUB_O_PROSUB
 de_PREP_+_PREP
 a_ART_O_ART
 Arafértil_NPROP_O_N
@@ -33316,7 +33316,7 @@ a_ART_O_ART
 Arafértil_NPROP_O_N
 ._._O_.
 
-Estava_V_O_V
+Estava_V_O_VAUX
 decidido_PCP_O_PCP
 que_KS_O_KS
 o_ART_O_ART
@@ -33548,7 +33548,7 @@ a_PREP_+_PREP
 a_ART_O_ART
 regra_N_O_N
 que_PRO-KS-REL_O_PRO-KS-REL
-tem_VAUX_O_V
+tem_VAUX_O_VAUX
 sido_PCP_O_PCP
 utilizada_PCP_O_PCP
 em_PREP_+_PREP
@@ -33677,7 +33677,7 @@ Bisol_NPROP_O_NPROP
 ,_,_O_,
 coordenador_N_O_N
 de_PREP_+_PREP
-a_ART_O_ART
+a_ART_O_PROSUB
 em_PREP_+_PREP
 a_ART_O_ART
 CPI_NPROP_O_N
@@ -33904,7 +33904,7 @@ como_PREP_O_PREP
 o_ART_O_ART
 Real_NPROP_O_N
 ,_,_O_,
-têm_VAUX_O_V
+têm_VAUX_O_VAUX
 tido_PCP_O_PCP
 maior_ADJ_O_ADJ
 aprovação_N_O_N
@@ -33984,7 +33984,7 @@ URV_N_O_N
 
 O_ART_O_ART
 restaurante_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 administrado_PCP_O_PCP
 por_PREP_+_PREP
 a_ART_O_ART
@@ -34400,7 +34400,7 @@ O_ART_O_ART
 TSE_NPROP_O_NPROP
 alerta_V_O_V
 para_PREP_O_PREP
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 consequências_N_O_N
@@ -34915,7 +34915,7 @@ de_PREP_+_PREP
 a_ART_O_ART
 Agricultura_N_O_N
 ,_,_O_,
-Educação_ADJ_O_NPROP
+Educação_ADJ_O_KC
 e_KC_O_KC
 Saúde_ADJ_O_N
 ._._O_.
@@ -35098,8 +35098,8 @@ Uma_ART_O_ART
 Guarda_N_O_NPROP
 Nacional_N_O_NPROP
 ,_,_O_,
-qualquer_PROSUB_O_PROSUB
-que_KS_O_PRO-KS-REL
+qualquer_PROSUB_O_PRO-KS
+que_KS_O_PRO-KS
 fosse_V_O_V
 a_ART_O_ART
 composição_N_O_N
@@ -35629,7 +35629,7 @@ em_PREP_+_PREP
 a_ART_O_ART
 passagem_N_O_N
 de_PREP_O_PREP
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 para_PREP_O_PREP
 outra_PROADJ_O_PROADJ
 moeda_N_O_N
@@ -35646,7 +35646,7 @@ com_PREP_O_PREP
 a_ART_O_ART
 repetição_N_O_N
 ,_,_O_,
-mais_PROADJ_O_ADV
+mais_PROADJ_O_KS
 do_KS_O_KS
 que_KS_O_KS
 isso_PROSUB_O_PROSUB
@@ -35780,7 +35780,7 @@ estabilizada_PCP_O_PCP
 ._._O_.
 
 Ou_PDEN_O_KC
-seja_PDEN_O_V
+seja_PDEN_O_PDEN
 ,_,_O_,
 o_ART_O_ART
 resultado_N_O_N
@@ -35820,7 +35820,7 @@ o_ART_O_ART
 inteligente_N_O_ADJ
 e_KC_O_KC
 o_ART_O_ART
-respeitoso_N_O_ADJ
+respeitoso_N_O_N
 com_PREP_O_PREP
 a_ART_O_ART
 população_N_O_N
@@ -36248,7 +36248,7 @@ Rosane_NPROP_O_NPROP
 Collor_NPROP_O_NPROP
 a_PREP_O_PREP
 devolver_V_O_V
-os_ART_O_ART
+os_ART_O_ADV
 quase_ADV_O_ADV
 US$_CUR_O_CUR
 20_NUM_O_NUM
@@ -36387,7 +36387,7 @@ a_ART_O_ART
 quarta-feira_N_O_N
 reportagem_N_O_N
 em_PREP_+_PREP
-a_PRO-KS-REL_O_PREP
+a_PRO-KS-REL_O_PRO-KS-REL
 qual_PRO-KS-REL_O_PRO-KS-REL
 afirma_V_O_V
 que_KS_O_KS
@@ -36419,7 +36419,7 @@ informação_N_O_N
 foi_VAUX_O_VAUX
 dada_PCP_O_PCP
 por_PREP_O_PREP
-um_PROSUB_O_ART
+um_PROSUB_O_PROSUB
 de_PREP_+_PREP
 os_ART_O_ART
 membros_N_O_N
@@ -36538,7 +36538,7 @@ campanha_N_O_N
 ._._O_.
 
 "_"_O_"
-Ali_ADV_O_NPROP
+Ali_ADV_O_PROSUB
 estão_V_O_VAUX
 sentados_PCP_O_PCP
 os_ART_O_ART
@@ -36714,7 +36714,7 @@ visita_N_O_N
 em_PREP_O_PREP
 retribuição_N_O_N
 a_PREP_+_PREP
-a_PROSUB_O_PREP
+a_PROSUB_O_PRO-KS-REL
 que_PRO-KS-REL_O_PRO-KS-REL
 lhe_PROPESS_O_PROPESS
 fizera_V_O_V
@@ -37014,7 +37014,7 @@ não_ADV_O_ADV
 tem_V_O_V
 "_"_O_"
 lucro_N_O_N
-nenhum_PROADJ_O_PROSUB
+nenhum_PROADJ_O_PROADJ
 com_PREP_O_PREP
 a_ART_O_ART
 obra_N_O_N
@@ -37043,7 +37043,7 @@ Inácio_NPROP_O_NPROP
 Lula_NPROP_O_NPROP
 da_NPROP_O_NPROP
 Silva_NPROP_O_NPROP
-a_PREP_O_ART
+a_PREP_O_NPROP
 Salvador_NPROP_O_NPROP
 ,_,_O_,
 amanhã_ADV_O_ADV
@@ -37341,7 +37341,7 @@ informado_PCP_O_PCP
 o_ART_O_ART
 motivo_N_O_N
 por_PREP_+_PREP
-o_PRO-KS-REL_O_ART
+o_PRO-KS-REL_O_PROSUB
 qual_PRO-KS-REL_O_PRO-KS-REL
 quer_V_O_V
 evitar_V_O_V
@@ -37469,7 +37469,7 @@ Com_PREP_O_PREP
 certeza_N_O_N
 ,_,_O_,
 é_V_O_V
-isso_PROSUB_O_PROSUB
+isso_PROSUB_O_PROADJ
 o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 ele_PROPESS_O_PROPESS
@@ -37493,7 +37493,7 @@ televisão_N_O_N
 ,_,_O_,
 ontem_ADV_O_ADV
 ,_,_O_,
-o_ART_O_ART
+o_ART_O_PROSUB
 de_PREP_+_PREP
 a_ART_O_ART
 República_N_O_N
@@ -37995,7 +37995,7 @@ atuação_N_O_N
 de_PREP_O_PREP
 Bisol_NPROP_O_NPROP
 com_PREP_O_PREP
-a_PROSUB_O_ART
+a_PROSUB_O_PROSUB
 de_PREP_O_PREP
 alguns_PROADJ_O_PROADJ
 parlamentares_N_O_N
@@ -38103,7 +38103,7 @@ que_KS_O_KS
 o_ART_O_ART
 Bisol_NPROP_O_NPROP
 é_V_O_V
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 pessoas_N_O_N
@@ -38527,7 +38527,7 @@ a_ART_O_ART
 campanha_N_O_N
 presidencial_ADJ_O_ADJ
 não_ADV_O_ADV
-ficou_V_O_V
+ficou_V_O_VAUX
 restrita_PCP_O_PCP
 a_PREP_+_PREP
 a_ART_O_ART
@@ -39294,9 +39294,9 @@ falta_N_O_N
 de_PREP_O_PREP
 saneamento_N_O_N
 básico_ADJ_O_ADJ
-é_VAUX_O_V
+é_VAUX_O_VAUX
 considerada_PCP_O_PCP
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 principais_ADJ_O_ADJ
@@ -39386,7 +39386,7 @@ o_ART_O_ART
 presidente_N_O_N
 de_PREP_+_PREP
 a_ART_O_ART
-regional_N_O_ADJ
+regional_N_O_N
 de_PREP_+_PREP
 a_ART_O_ART
 UDR_NPROP_O_NPROP
@@ -39429,7 +39429,7 @@ São_NPROP_O_NPROP
 Paulo_NPROP_O_NPROP
 )_)_O_)
 ,_,_O_,
-andam_V_O_V
+andam_V_O_VAUX
 armados_PCP_O_PCP
 ._._O_.
 
@@ -39698,7 +39698,7 @@ juiz_N_O_N
 enviou_V_O_V
 ofício_N_O_N
 a_PREP_+_PREP
-a_ART_O_ART
+a_ART_O_PROSUB
 em_PREP_O_PREP
 que_PRO-KS-REL_O_PRO-KS-REL
 requer_V_O_V
@@ -40207,7 +40207,7 @@ recorrer_V_O_V
 ._._O_.
 
 Pascine_NPROP_O_PROPESS
-era_V_O_V
+era_V_O_VAUX
 acusado_PCP_O_PCP
 de_PREP_O_PREP
 tráfico_N_O_N
@@ -40285,7 +40285,7 @@ nascidos_PCP_O_PCP
 por_PREP_O_PREP
 fertilização_N_O_N
 in_N_O_PREP
-vitro_N_O_ADJ
+vitro_N_O_ADV
 ,_,_O_,
 ou_KC_O_KC
 bebês_N_O_N
@@ -40311,7 +40311,7 @@ Em_PREP_+_PREP
 a_ART_O_ART
 fertilização_N_O_N
 in_N_O_PREP
-vitro_N_O_ADJ
+vitro_N_O_ADV
 ,_,_O_,
 embriões_N_O_N
 humanos_ADJ_O_ADJ
@@ -40331,7 +40331,7 @@ espermatozóide_N_O_N
 Depois_ADV_O_PREP
 o_ART_O_ART
 embrião_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 implantado_PCP_O_PCP
 em_PREP_+_PREP
 o_ART_O_ART
@@ -40532,7 +40532,7 @@ taxa_N_O_N
 de_PREP_O_PREP
 malformações_N_O_N
 em_PREP_+_PREP
-as_PROSUB_O_ART
+as_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 fazem_V_O_V
 in_ADV_O_N
@@ -40542,7 +40542,7 @@ mostra_V_O_V
 menor_ADJ_O_ADJ
 que_KS_O_KS
 em_PREP_+_PREP
-as_PROSUB_O_ART
+as_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 engravidam_V_O_V
 naturalmente_ADV_O_ADV
@@ -40692,8 +40692,8 @@ hoje_ADV_O_ADV
 em_PREP_+_PREP
 a_ART_O_ART
 revista_N_O_N
-Science_NPROP_O_NPROP
-que_KS_O_PRO-KS-REL
+Science_NPROP_O_KS
+que_KS_O_KS
 conseguiram_V_O_V
 analisar_V_O_V
 como_ADV-KS_O_PREP
@@ -40884,7 +40884,7 @@ total_ADJ_O_ADJ
 de_PREP_+_PREP
 a_ART_O_ART
 estação_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 estimado_PCP_O_PCP
 em_PREP_O_PREP
 US$_CUR_O_CUR
@@ -41079,8 +41079,8 @@ PMDB_NPROP_O_NPROP
 o_ART_O_ART
 PFL_NPROP_O_NPROP
 conseguiu_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 queria_V_O_V
 :_:_O_:
 ontem_ADV_O_ADV
@@ -41123,7 +41123,7 @@ sua_PROADJ_O_PROADJ
 estratégia_N_O_N
 anterior_ADJ_O_ADJ
 de_PREP_O_PREP
-ficar_V_O_V
+ficar_V_O_VAUX
 afastado_PCP_O_PCP
 de_PREP_+_PREP
 a_ART_O_ART
@@ -41336,7 +41336,7 @@ Maurício_NPROP_O_NPROP
 Corrêa_NPROP_O_NPROP
 deve_VAUX_O_VAUX
 se_PROPESS_O_PROPESS
-declarar_V_O_V
+declarar_V_O_VAUX
 impedido_PCP_O_PCP
 de_PREP_O_PREP
 participar_V_O_V
@@ -41478,7 +41478,7 @@ moscas_N_O_N
 
 Domingo_N_O_NPROP
 ,_,_O_,
-Itamar_NPROP_O_NPROP
+Itamar_NPROP_O_KC
 e_KC_O_KC
 sua_PROADJ_O_PROADJ
 acompanhante_N_O_N
@@ -41754,7 +41754,7 @@ em_PREP_O_PREP
 almoço_N_O_N
 ._._O_.
 
-Estava_VAUX_O_V
+Estava_VAUX_O_VAUX
 acompanhado_PCP_O_PCP
 de_PREP_+_PREP
 o_ART_O_ART
@@ -41793,7 +41793,7 @@ juros_N_O_N
 -_-_O_-
 O_ART_O_ART
 juro_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 pago_PCP_O_PCP
 por_PREP_O_PREP
 quase_ADV_O_ADV
@@ -41922,7 +41922,7 @@ meses_N_O_N
 ._._O_.
 
 Em_PREP_O_PREP
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 estas_PROADJ_O_PROADJ
 incursões_N_O_N
@@ -42016,7 +42016,7 @@ Como_KS_O_PREP
 a_ART_O_ART
 aeronave_N_O_N
 sacolejava_V_O_,
-mais_ADV_O_ADV
+mais_ADV_O_KS
 do_KS_O_KS
 que_KS_O_KS
 o_ART_O_ART
@@ -42065,7 +42065,7 @@ brincadeira_N_O_N
 :_:_O_:
 -_-_O_-
 Só_PDEN_O_PDEN
-assim_ADV_O_PDEN
+assim_ADV_O_ADV
 mesmo_PDEN_O_PDEN
 para_PREP_O_PREP
 estes_PROADJ_O_PROADJ
@@ -42901,7 +42901,7 @@ que_KS_O_KS
 "_"_O_"
 é_V_O_V
 natural_ADJ_O_ADJ
-que_KS_O_KS
+que_KS_O_PRO-KS-REL
 ,_,_O_,
 sendo_V_O_V
 o_ART_O_ART
@@ -43236,7 +43236,7 @@ nossas_PROADJ_O_PROADJ
 responsabilidades_N_O_N
 e_KC_O_KC
 as_ART_O_ART
-minhas_PROSUB_O_PROADJ
+minhas_PROSUB_O_PROSUB
 em_ADV_O_PREP
 particular_ADV_O_N
 como_PREP_O_PREP
@@ -43254,9 +43254,9 @@ possamos_VAUX_O_VAUX
 juntos_ADJ_O_PCP
 ,_,_O_,
 executar_V_O_V
-aquilo_PROSUB_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
-até_PREP_O_PREP
+aquilo_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
+até_PREP_O_PROPESS
 agora_ADV_O_ADV
 são_V_O_V
 projetos_N_O_N
@@ -43285,7 +43285,7 @@ em_PREP_+_PREP
 uma_ART_O_ART
 democracia_N_O_N
 como_PREP_O_PREP
-a_PROSUB_O_PREP
+a_PROSUB_O_PRO-KS-REL
 que_PRO-KS-REL_O_PRO-KS-REL
 nós_PROPESS_O_PROPESS
 vivemos_V_O_V
@@ -43372,7 +43372,7 @@ portanto_KC_O_KC
 a_ART_O_ART
 esperança_N_O_N
 de_PREP_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 ,_,_O_,
 em_PREP_+_PREP
 o_ART_O_ART
@@ -43477,7 +43477,7 @@ O_ART_O_ART
 fato_N_O_N
 de_PREP_O_PREP
 nós_PROPESS_O_PROPESS
-todos_PROADJ_O_PROSUB
+todos_PROADJ_O_PROADJ
 estarmos_V_O_V
 em_PREP_+_PREP
 o_ART_O_ART
@@ -43527,7 +43527,7 @@ certeza_N_O_N
 de_PREP_O_PREP
 que_KS_O_PRO-KS-REL
 nós_PROPESS_O_PROPESS
-todos_PROADJ_O_PROSUB
+todos_PROADJ_O_PROADJ
 estaremos_VAUX_O_V
 pensando_V_O_V
 somente_PDEN_O_PDEN
@@ -43630,10 +43630,10 @@ vou_VAUX_O_VAUX
 ser_V_O_V
 fiel_ADJ_O_ADJ
 a_PREP_+_PREP
-o_PRO-KS_O_ART
+o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 eu_PROPESS_O_PROPESS
-tenho_VAUX_O_V
+tenho_VAUX_O_VAUX
 dito_PCP_O_PCP
 depois_PREP_O_PREP
 de_PREP_O_PREP
@@ -43656,7 +43656,7 @@ eu_PROPESS_O_PROPESS
 acho_V_O_V
 que_KS_O_KS
 não_ADV_O_ADV
-é_V_O_V
+é_V_O_VAUX
 apropriado_PCP_O_PCP
 para_PREP_O_PREP
 os_ART_O_ART
@@ -43688,7 +43688,7 @@ autorizado_PCP_O_PCP
 que_PRO-KS-REL_O_KS
 informará_V_O_V
 detalhadamente_ADV_O_ADV
-tudo_PROSUB_O_PROSUB
+tudo_PROSUB_O_PROADJ
 o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 acontece_V_O_V
@@ -43786,7 +43786,7 @@ exercer_V_O_V
 
 Agradeço_V_O_V
 a_PREP_O_ART
-todos_PROSUB_O_PROADJ
+todos_PROSUB_O_PROSUB
 e_KC_O_KC
 desejo_V_O_N
 muita_PROADJ_O_PROADJ
@@ -43803,7 +43803,7 @@ PSDB_NPROP_O_NPROP
 ._._O_.
 
 Muylaert_NPROP_O_NPROP
-é_VAUX_O_V
+é_VAUX_O_VAUX
 sugerido_PCP_O_PCP
 para_PREP_O_PREP
 ministério_N_O_N
@@ -43814,7 +43814,7 @@ PáGINA_N_O_N
 :_:_O_:
 1-4_N_AP_N
 Muylaert_NPROP_O_NPROP
-é_VAUX_O_V
+é_VAUX_O_VAUX
 sugerido_PCP_O_PCP
 para_PREP_O_PREP
 ministério_N_O_N
@@ -44132,7 +44132,7 @@ entendimentos_N_O_N
 aliados_N_O_N
 de_PREP_O_PREP
 FHC_NPROP_O_NPROP
-têm_VAUX_O_V
+têm_VAUX_O_VAUX
 buscado_PCP_O_PCP
 fazer_V_O_V
 com_PREP_O_PREP
@@ -44141,7 +44141,7 @@ PMDB_NPROP_O_NPROP
 ,_,_O_,
 fato_N_O_N
 que_PRO-KS-REL_O_PRO-KS-REL
-tem_VAUX_O_V
+tem_VAUX_O_VAUX
 irritado_PCP_O_PCP
 o_ART_O_ART
 PFL_NPROP_O_NPROP
@@ -44538,7 +44538,7 @@ não_ADV_O_ADV
 se_PROPESS_O_PROPESS
 transfere_V_O_V
 de_PREP_O_PREP
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 a_PREP_+_PREP
 a_ART_O_ART
 outra_PROSUB_O_PROSUB
@@ -44580,7 +44580,7 @@ liberdades_N_O_N
 democráticas_ADJ_O_ADJ
 ,_,_O_,
 e_KC_O_KC
-sermos_V_O_V
+sermos_V_O_VAUX
 governados_PCP_O_PCP
 de_PREP_O_PREP
 forma_N_O_N
@@ -45177,7 +45177,7 @@ a_ART_O_ART
 marra_N_O_N
 e_KC_O_KC
 o_ART_O_ART
-coitado_N_O_ADJ
+coitado_N_O_N
 de_PREP_+_PREP
 o_ART_O_ART
 trabalhador_N_O_N
@@ -45270,13 +45270,13 @@ Monark_NPROP_O_N
 "_"_O_"
 Estou_V_O_V
 desacostumado_PCP_O_PREP
-a_PREP_O_ART
-isso_PROSUB_O_PROSUB
+a_PREP_O_PRO-KS-REL
+isso_PROSUB_O_PRO-KS-REL
 aqui_ADV_O_ADV
 ._._O_.
 
 "_"_O_"
-Antigo_ADJ_O_NPROP
+Antigo_ADJ_O_PROADJ
 reduto_N_O_N
 seu_PROADJ_O_N
 ,_,_O_,
@@ -45366,7 +45366,7 @@ deixou_V_O_V
 a_PREP_O_ART
 Villares_NPROP_O_NPROP
 e_KC_O_KC
-tentou_V_O_V
+tentou_V_O_PDEN
 ,_,_O_,
 sem_PREP_O_PREP
 conseguir_V_O_V
@@ -45942,7 +45942,7 @@ Superior_NPROP_O_NPROP
 Eleitoral_NPROP_O_NPROP
 manifesto_N_O_N
 em_PREP_+_PREP
-o_PRO-KS-REL_O_ART
+o_PRO-KS-REL_O_PROSUB
 qual_PRO-KS-REL_O_PRO-KS-REL
 condenam_V_O_V
 a_ART_O_ART
@@ -46036,7 +46036,7 @@ a_ART_O_ART
 sua_PROADJ_O_PROADJ
 imagem_N_O_N
 a_PREP_+_PREP
-a_PROSUB_O_ART
+a_PROSUB_O_PROSUB
 de_PREP_+_PREP
 o_ART_O_ART
 presidente_N_O_N
@@ -46161,7 +46161,7 @@ PT_NPROP_O_NPROP
 prometiam_V_O_V
 declarações_N_O_N
 bombásticas_ADJ_O_PREP
-um_PROSUB_O_ART
+um_PROSUB_O_PROSUB
 contra_PREP_O_PREP
 o_ART_O_ART
 outro_PROSUB_O_N
@@ -46291,7 +46291,7 @@ PB_NPROP_O_NPROP
 O_ART_O_ART
 grupo_N_O_N
 completo_ADJ_O_ADJ
-ficou_V_O_V
+ficou_V_O_VAUX
 hospedado_PCP_O_PCP
 em_PREP_+_PREP
 o_ART_O_ART
@@ -46909,7 +46909,7 @@ presidente_N_O_N
 ._._O_.
 
 a_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 parece_V_O_V
 ,_,_O_,
@@ -47095,7 +47095,7 @@ governador_N_O_N
 congratulou_V_O_ADJ
 a_PREP_O_PREP
 si_PROPESS_O_PROPESS
-mesmo_PROADJ_O_PDEN
+mesmo_PROADJ_O_PROADJ
 ,_,_O_,
 porque_KS_O_KS
 "_"_O_"
@@ -47266,8 +47266,8 @@ uma_ART_O_ART
 ação_N_O_N
 militar_ADJ_O_ADJ
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 não_ADV_O_ADV
 falta_V_O_V
 é_V_O_V
@@ -47306,8 +47306,8 @@ direitos_N_O_N
 ._._O_.
 
 Foi_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 entenderam_V_O_V
 alguns_PROADJ_O_PROADJ
 telejornais_N_O_N
@@ -47862,8 +47862,8 @@ político_ADJ_O_ADJ
 se_PROPESS_O_PROPESS
 fará_V_O_V
 é_V_O_V
-algo_PROSUB_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+algo_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 não_ADV_O_ADV
 pretendo_V_O_V
 montar_V_O_V
@@ -48098,8 +48098,8 @@ presidente_N_O_N
 eleito_PCP_O_PCP
 ,_,_O_,
 em_PREP_+_PREP
-a_PRO-KS-REL_O_ART
-qual_PRO-KS-REL_O_PROADJ
+a_PRO-KS-REL_O_PRO-KS-REL
+qual_PRO-KS-REL_O_PRO-KS-REL
 o_ART_O_ART
 prefeito_N_O_N
 manifestou_V_O_V
@@ -48138,7 +48138,7 @@ Para_PREP_O_PREP
 eles_PROPESS_O_PROPESS
 ,_,_O_,
 Maluf_NPROP_O_NPROP
-saiu_V_O_V
+saiu_V_O_VAUX
 desgastado_PCP_O_PCP
 de_PREP_+_PREP
 a_ART_O_ART
@@ -48399,7 +48399,7 @@ São_NPROP_O_NPROP
 Paulo_NPROP_O_NPROP
 Desemprego_N_O_N
 "_"_O_"
-Que_KS_O_NPROP
+Que_KS_O_PROSUB
 sejam_VAUX_O_VAUX
 criados_PCP_O_PCP
 programas_N_O_N
@@ -48410,7 +48410,7 @@ a_ART_O_ART
 pequena_ADJ_O_ADJ
 empresa_N_O_N
 ,_,_O_,
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 devido_PREP_+_PREP
 a_PREP_+_PREP
 a_ART_O_ART
@@ -48804,7 +48804,7 @@ O_ART_O_ART
 peessedebista_N_O_N
 acredita_V_O_V
 que_KS_O_KS
-haja_V_O_V
+haja_V_O_VAUX
 elevado_PCP_O_PCP
 número_N_O_N
 de_PREP_O_PREP
@@ -48841,7 +48841,7 @@ já_ADV_O_ADV
 decidiu_V_O_V
 que_KS_O_KS
 ,_,_O_,
-se_KS_O_PROPESS
+se_KS_O_KS
 eleito_PCP_O_PCP
 ,_,_O_,
 fechará_V_O_V
@@ -49271,7 +49271,7 @@ o_ART_O_ART
 fim-de-semana_N_O_N
 ,_,_O_,
 segundo_PREP_O_PREP
-as_PRO-KS-REL_O_ART
+as_PRO-KS-REL_O_PROSUB
 quais_PRO-KS-REL_O_PRO-KS-REL
 haveria_V_O_V
 um_ART_O_ART
@@ -49304,8 +49304,8 @@ carreira_N_O_N
 ,_,_O_,
 que_PRO-KS-REL_O_PRO-KS-REL
 sabe_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 agrada_V_O_V
 a_PREP_+_PREP
 o_ART_O_ART
@@ -49345,7 +49345,7 @@ governo_N_O_N
 ,_,_O_,
 Bernardini_NPROP_O_NPROP
 se_PROPESS_O_PROPESS
-disse_V_O_V
+disse_V_O_VAUX
 preocupado_PCP_O_PCP
 com_PREP_O_PREP
 os_ART_O_ART
@@ -49383,8 +49383,8 @@ de_PREP_+_PREP
 o_ART_O_ART
 consumo_N_O_N
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 faria_V_O_V
 necessário_ADJ_O_ADJ
 outro_PROADJ_O_PROADJ
@@ -49550,7 +49550,7 @@ paulistas_ADJ_O_ADJ
 ._._O_.
 
 "_"_O_"
-Se_KS_O_KS
+Se_KS_O_PRO-KS-REL
 ,_,_O_,
 de_ADV_O_PREP
 fato_ADV_O_N
@@ -49582,7 +49582,7 @@ a_ART_O_ART
 inflação_N_O_N
 ,_,_O_,
 sem_PREP_O_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 não_ADV_O_ADV
 haverá_V_O_V
@@ -50437,7 +50437,7 @@ o_ART_O_ART
 secretário_N_O_N
 executivo_ADJ_O_N
 de_PREP_+_PREP
-o_ART_O_ART
+o_ART_O_PROSUB
 para_PREP_O_PREP
 o_ART_O_ART
 Eclipse_N_O_N
@@ -50511,7 +50511,7 @@ disse_V_O_V
 Ivette_NPROP_O_ART
 Acuna_NPROP_O_N
 ,_,_O_,
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 promotoras_N_O_N
@@ -50844,7 +50844,7 @@ um_ART_O_ART
 espelho_N_O_N
 e_KC_O_KC
 movimente_V_+_PREP
-os_PROPESS_O_ART
+os_PROPESS_O_PROSUB
 até_PREP_O_PREP
 posicionar_V_O_V
 o_ART_O_ART
@@ -51078,7 +51078,7 @@ com_PREP_O_PREP
 que_KS_O_KS
 a_ART_O_ART
 mulher_N_O_N
-fique_V_O_V
+fique_V_O_VAUX
 exposta_PCP_O_PCP
 por_PREP_O_PREP
 mais_PROADJ_O_PROADJ
@@ -51129,7 +51129,7 @@ interior_N_O_N
 de_PREP_+_PREP
 a_ART_O_ART
 vagina_N_O_N
-fica_V_O_V
+fica_V_O_VAUX
 exposto_PCP_O_PCP
 a_PREP_+_PREP
 o_ART_O_ART
@@ -51503,7 +51503,7 @@ ontem_ADV_O_ADV
 Não_ADV_O_ADV
 falei_V_O_V
 porque_KS_O_KS
-estive_V_O_V
+estive_V_O_VAUX
 ocupada_PCP_O_PCP
 durante_PREP_O_PREP
 todo_PROADJ_O_PROADJ
@@ -51602,7 +51602,7 @@ seria_V_O_V
 melhor_ADJ_O_ADV
 você_PROPESS_O_PROPESS
 ir_V_O_V
-embora_ADV_O_KS
+embora_ADV_O_PROPESS
 porque_KS_O_KS
 não_ADV_O_ADV
 vão_VAUX_O_V
@@ -51949,7 +51949,7 @@ próprio_PROADJ_O_PROADJ
 candidato_N_O_N
 ,_,_O_,
 de_PREP_O_PREP
-que_KS_O_KS
+que_KS_O_PRO-KS-REL
 Rossi_NPROP_O_NPROP
 não_ADV_O_ADV
 tem_V_O_V
@@ -52386,7 +52386,7 @@ disse_V_O_V
 que_KS_O_KS
 o_ART_O_ART
 levantamento_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 feito_PCP_O_PCP
 por_PREP_O_PREP
 pessoas_N_O_N
@@ -52487,7 +52487,7 @@ a_ART_O_ART
 seguinte_ADJ_O_ADJ
 forma_N_O_N
 :_:_O_:
-era_V_O_V
+era_V_O_VAUX
 aberta_PCP_O_PCP
 uma_ART_O_ART
 conta_N_O_N
@@ -52714,7 +52714,7 @@ Sarney_NPROP_O_NPROP
 
 A_ART_O_ART
 emissora_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 controlada_PCP_O_PCP
 por_PREP_+_PREP
 os_ART_O_ART
@@ -52876,7 +52876,7 @@ Serviço_NPROP_O_NPROP
 Brasileiro_NPROP_O_NPROP
 de_NPROP_O_NPROP
 Apoio_NPROP_O_NPROP
-as_NPROP_O_ART
+as_NPROP_O_NPROP
 Micro_NPROP_O_NPROP
 e_NPROP_O_NPROP
 Pequenas_NPROP_O_NPROP
@@ -53366,7 +53366,7 @@ em_PREP_+_PREP
 o_ART_O_ART
 evento_N_O_N
 ,_,_O_,
-é_VAUX_O_V
+é_VAUX_O_VAUX
 comandado_PCP_O_PCP
 por_PREP_+_PREP
 o_ART_O_ART
@@ -53610,7 +53610,7 @@ O_ART_O_ART
 paradeiro_N_O_N
 de_PREP_O_PREP
 Santos_NPROP_O_NPROP
-é_VAUX_O_V
+é_VAUX_O_VAUX
 desconhecido_PCP_O_PCP
 ._._O_.
 
@@ -53625,7 +53625,7 @@ libertado_PCP_O_PCP
 sob_PREP_O_PREP
 alegação_N_O_N
 de_PREP_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 não_ADV_O_ADV
 tinha_VAUX_O_VAUX
 cometido_PCP_O_PCP
@@ -54093,8 +54093,8 @@ em_PREP_O_PREP
 si_PROPESS_O_PROPESS
 próprio_PROADJ_O_ADJ
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 acabou_VAUX_O_V
 não_ADV_O_ADV
 acontecendo_V_O_V
@@ -54143,7 +54143,7 @@ de_PREP_O_PREP
 pichadores_N_O_N
 denominada_PCP_O_PCP
 "_"_O_"
-Os_NPROP_O_ART
+Os_NPROP_O_NPROP
 Melhores_NPROP_O_NPROP
 "_"_O_"
 ,_,_O_,
@@ -55123,7 +55123,7 @@ Detran-_NPROP_O_NPROP
 MS_NPROP_O_NPROP
 promove_V_O_V
 de_PREP_O_PREP
-a_PREP_O_ART
+a_PREP_O_PROSUB
 de_PREP_O_PREP
 abril_N_O_N
 novos_ADJ_O_ADJ
@@ -55515,7 +55515,7 @@ que_KS_O_KS
 a_ART_O_ART
 fábrica_N_O_N
 poderá_VAUX_O_VAUX
-ficar_VAUX_O_V
+ficar_VAUX_O_VAUX
 aberta_PCP_O_PCP
 após_PREP_O_PREP
 a_ART_O_ART
@@ -55862,7 +55862,7 @@ a_PREP_+_PREP
 o_ART_O_ART
 local_N_O_N
 o_ART_O_ART
-alagoano_N_O_ADJ
+alagoano_N_O_N
 Hermeto_NPROP_O_PREP
 Pascoal_NPROP_O_N
 e_KC_O_KC
@@ -56139,7 +56139,7 @@ cobertura_N_O_N
 vegetal_ADJ_O_ADJ
 de_PREP_O_PREP
 Sergipe_NPROP_O_NPROP
-é_VAUX_O_V
+é_VAUX_O_VAUX
 composta_PCP_O_PCP
 de_PREP_O_PREP
 mata_N_O_N
@@ -56244,8 +56244,8 @@ pesquisa_N_O_N
 científica_ADJ_O_ADJ
 ,_,_O_,
 repassou_V_O_PREP
-a_PREP_O_ART
-todo_PROADJ_O_PROADJ
+a_PREP_O_PRO-KS-REL
+todo_PROADJ_O_PRO-KS-REL
 o_ART_O_ART
 país_N_O_N
 com_PREP_O_PREP
@@ -56663,7 +56663,7 @@ Secretaria_NPROP_O_NPROP
 da_NPROP_O_NPROP
 Ciência_NPROP_O_NPROP
 ,_,_O_,
-Tecnologia_NPROP_O_NPROP
+Tecnologia_NPROP_O_KC
 e_KC_O_KC
 de_PREP_O_PREP
 São_NPROP_O_NPROP
@@ -56903,7 +56903,7 @@ Inquérito_NPROP_O_NPROP
 )_)_O_)
 ,_,_O_,
 como_PREP_O_PREP
-a_PROSUB_O_PREP
+a_PROSUB_O_PRO-KS-REL
 que_PRO-KS-REL_O_PRO-KS-REL
 apurou_V_O_V
 o_ART_O_ART
@@ -57665,7 +57665,7 @@ a_ART_O_ART
 atividade_N_O_N
 policial_ADJ_O_ADJ
 ,_,_O_,
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 em_PREP_+_PREP
 o_ART_O_ART
 Rio_NPROP_O_NPROP
@@ -57995,7 +57995,7 @@ preso_N_O_N
 morreu_V_O_V
 e_KC_O_KC
 outro_PROSUB_O_PROSUB
-saiu_V_O_V
+saiu_V_O_VAUX
 ferido_ADJ_O_PCP
 durante_PREP_O_PREP
 uma_ART_O_ART
@@ -58184,7 +58184,7 @@ internado_PCP_O_PCP
 ._._O_.
 
 Os_ART_O_ART
-eram_V_O_V
+eram_V_O_VAUX
 condenados_PCP_O_PCP
 por_PREP_O_PREP
 tráfico_N_O_N
@@ -58813,8 +58813,8 @@ Reis_NPROP_O_NPROP
 -_-_O_-
 município_N_O_N
 a_PREP_+_PREP
-o_ART_O_ART
-qual_PROSUB_O_PROADJ
+o_ART_O_PRO-KS-REL
+qual_PROSUB_O_PRO-KS-REL
 a_ART_O_ART
 administração_N_O_N
 de_PREP_+_PREP
@@ -59492,7 +59492,7 @@ de_PREP_O_PREP
 outra_PROADJ_O_PROADJ
 escola_N_O_N
 em_PREP_+_PREP
-a_PRO-KS-REL_O_PREP
+a_PRO-KS-REL_O_PRO-KS-REL
 qual_PRO-KS-REL_O_PRO-KS-REL
 pretendia_V_O_V
 matricular_V_+_V
@@ -59526,7 +59526,7 @@ filho_N_O_N
 que_PRO-KS_O_PRO-KS-REL
 aulas_N_O_N
 eram_V_O_V
-essas_PROSUB_O_PROADJ
+essas_PROSUB_O_PROSUB
 ._._O_.
 
 O_ART_O_ART
@@ -59534,7 +59534,7 @@ menino_N_O_N
 respondeu_V_O_V
 :_:_O_:
 "_"_O_"
-a_ART_O_ART
+a_ART_O_NPROP
 tia_N_O_NPROP
 Célia_NPROP_O_NPROP
 pegava_V_O_V
@@ -59722,7 +59722,7 @@ para_PREP_O_PREP
 uma_ART_O_ART
 casa_N_O_N
 onde_ADV-KS-REL_O_ADV
-eram_V_O_V
+eram_V_O_VAUX
 feitas_PCP_O_PCP
 fotos_N_O_N
 e_KC_O_KC
@@ -59764,7 +59764,7 @@ para_PREP_O_PREP
 os_ART_O_ART
 locais_N_O_N
 onde_ADV-KS-REL_O_ADV
-eram_V_O_V
+eram_V_O_VAUX
 feitas_PCP_O_PCP
 as_ART_O_ART
 orgias_N_O_N
@@ -59774,7 +59774,7 @@ A_ART_O_ART
 Kombi_N_O_NPROP
 -_-_O_NPROP
 Alvarenga_NPROP_O_NPROP
-é_VAUX_O_V
+é_VAUX_O_VAUX
 acusado_PCP_O_PCP
 de_PREP_O_PREP
 abusar_V_O_N
@@ -59852,7 +59852,7 @@ as_ART_O_ART
 crianças_N_O_N
 afirmaram_V_O_V
 que_KS_O_KS
-eram_V_O_V
+eram_V_O_VAUX
 levadas_PCP_O_PCP
 ._._O_.
 
@@ -60043,7 +60043,7 @@ crianças_N_O_N
 Os_ART_O_ART
 meninos_N_O_N
 dizem_V_O_V
-que_KS_O_KS
+que_KS_O_PROPESS
 aprenderam_V_O_KS
 que_KS_O_KS
 "_"_O_"
@@ -60125,7 +60125,7 @@ brincadeira_N_O_N
 "_"_O_"
 ,_,_O_,
 que_PRO-KS-REL_O_PRO-KS-REL
-eram_V_O_V
+eram_V_O_VAUX
 feitos_PCP_O_PCP
 "_"_O_"
 de_PREP_O_PREP
@@ -60188,8 +60188,8 @@ que_KS_O_KS
 ,_,_O_,
 se_KS_O_PROPESS
 relatasse_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 acontecia_V_O_V
 em_PREP_+_PREP
 a_ART_O_ART
@@ -60370,7 +60370,7 @@ de_PREP_+_PREP
 os_ART_O_ART
 sem_N_O_N
 teto_N_O_N
-era_V_O_V
+era_V_O_VAUX
 amarrado_PCP_O_PCP
 a_PREP_O_PREP
 uma_ART_O_ART
@@ -61082,7 +61082,7 @@ a_ART_O_ART
 ,_,_O_,
 a_ART_O_ART
 estrada_N_O_N
-ficou_V_O_V
+ficou_V_O_VAUX
 interditada_ADJ_O_PCP
 de_PREP_+_PREP
 as_ART_O_ART
@@ -61668,10 +61668,10 @@ literalmente_ADV_O_ADV
 "_"_O_"
 malhar_V_O_NPROP
 "_"_O_"
-tudo_PROADJ_O_PROSUB
+tudo_PROADJ_O_PROADJ
 aquilo_PROSUB_O_PROSUB
 de_PREP_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 não_ADV_O_ADV
 gosta_V_O_V
 ._._O_.
@@ -61685,7 +61685,7 @@ de_PREP_+_PREP
 a_ART_O_ART
 festa_N_O_N
 é_V_O_V
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 de_PREP_+_PREP
 o_ART_O_ART
 ex-ministro_N_O_N
@@ -61707,7 +61707,7 @@ malhado_PCP_O_PCP
 por_PREP_O_PREP
 ter_VAUX_O_VAUX
 deixado_PCP_O_PCP
-o_ART_O_ART
+o_ART_O_PROSUB
 durante_PREP_O_PREP
 a_ART_O_ART
 execução_N_O_N
@@ -61795,7 +61795,7 @@ característica_N_O_N
 básica_ADJ_O_ADJ
 ,_,_O_,
 ou_PDEN_O_KC
-seja_PDEN_O_V
+seja_PDEN_O_PDEN
 ,_,_O_,
 sem_PREP_O_PREP
 deixar_VAUX_O_V
@@ -61895,7 +61895,7 @@ vegetais_NPROP_O_ADJ
 que_PRO-KS-REL_O_PRO-KS-REL
 vai_V_O_V
 de_PREP_O_PREP
-a_PREP_O_ART
+a_PREP_O_PROSUB
 de_PREP_O_PREP
 abril_N_O_N
 ._._O_.
@@ -62408,7 +62408,7 @@ PR_NPROP_O_NPROP
 onde_ADV-KS-REL_O_ADV-KS-REL
 moram_V_O_V
 ,_,_O_,
-assim_KS_O_ADV
+assim_KS_O_KS
 que_KS_O_KS
 a_ART_O_ART
 notícia_N_O_N
@@ -62431,7 +62431,7 @@ telefonemas_N_O_N
 de_PREP_O_PREP
 Pablo_NPROP_O_NPROP
 Baron_NPROP_O_NPROP
-eram_V_O_V
+eram_V_O_VAUX
 feitos_PCP_O_PCP
 de_PREP_O_PREP
 telefones_N_O_N
@@ -62530,7 +62530,7 @@ está_V_O_V
 apaixonado_PCP_O_N
 por_PREP_+_PREP
 a_ART_O_ART
-brasileira_N_O_ADJ
+brasileira_N_O_N
 ._._O_.
 
 diretoras_N_O_N
@@ -62646,7 +62646,7 @@ para_PREP_O_PREP
 uma_ART_O_ART
 casa_N_O_N
 onde_ADV-KS-REL_O_ADV
-eram_V_O_V
+eram_V_O_VAUX
 feitas_PCP_O_PCP
 fotos_N_O_N
 e_KC_O_KC
@@ -62677,7 +62677,7 @@ para_PREP_O_PREP
 os_ART_O_ART
 locais_N_O_N
 onde_ADV-KS-REL_O_ADV
-eram_V_O_V
+eram_V_O_VAUX
 feitas_PCP_O_PCP
 as_ART_O_ART
 orgias_N_O_N
@@ -62802,7 +62802,7 @@ prontos_ADJ_O_ADJ
 A_ART_O_ART
 escola_N_O_N
 também_PDEN_O_PDEN
-é_VAUX_O_V
+é_VAUX_O_VAUX
 acusada_PCP_O_PCP
 de_PREP_O_PREP
 fazer_V_O_V
@@ -62816,7 +62816,7 @@ brincadeira_N_O_N
 "_"_O_"
 ,_,_O_,
 que_PRO-KS-REL_O_PRO-KS-REL
-eram_V_O_V
+eram_V_O_VAUX
 feitos_PCP_O_PCP
 "_"_O_"
 de_PREP_O_PREP
@@ -62877,7 +62877,7 @@ requisitados_PCP_O_V
 por_PREP_O_PREP
 namorados_N_O_N
 ,_,_O_,
-principalmente_ADV_O_ADV
+principalmente_ADV_O_KS
 quando_KS_O_KS
 o_ART_O_ART
 par_N_O_N
@@ -63382,7 +63382,7 @@ origem_N_O_N
 italiana_ADJ_O_ADJ
 ,_,_O_,
 elas_PROPESS_O_PROPESS
-são_VAUX_O_V
+são_VAUX_O_VAUX
 fabricadas_PCP_O_PCP
 em_PREP_+_PREP
 a_ART_O_ART
@@ -63809,7 +63809,7 @@ ovos_N_O_N
 ._._O_.
 
 Ou_PDEN_O_KC
-seja_PDEN_O_V
+seja_PDEN_O_PDEN
 ,_,_O_,
 comprou_V_O_V
 de_PREP_O_PREP
@@ -64193,7 +64193,7 @@ e_KC_O_KC
 guloseimas_N_O_ART
 igualzinha_ADJ_O_N
 a_PREP_+_PREP
-as_PROSUB_O_ART
+as_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 existem_V_O_V
 em_PREP_O_PREP
@@ -64327,7 +64327,7 @@ importados_N_O_N
 o_ART_O_ART
 mesmo_PROADJ_O_PROADJ
 produto_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 encontrado_PCP_O_PCP
 por_PREP_O_PREP
 Cr$_CUR_O_CUR
@@ -64368,7 +64368,7 @@ Cr$_CUR_O_CUR
 o_ART_O_ART
 perfume_N_O_N
 Eternity_NPROP_O_NPROP
-é_VAUX_O_V
+é_VAUX_O_VAUX
 encontrado_PCP_O_PCP
 por_PREP_O_PREP
 Cr$_CUR_O_CUR
@@ -64422,7 +64422,7 @@ Pepsodente_NPROP_O_N
 por_PDEN_O_PREP
 exemplo_PDEN_O_N
 ,_,_O_,
-é_VAUX_O_V
+é_VAUX_O_VAUX
 encontrada_PCP_O_PCP
 por_PREP_O_PREP
 Cr$_CUR_O_CUR
@@ -65207,7 +65207,7 @@ fabricados_PCP_O_PCP
 com_PREP_O_PREP
 papelão_N_O_N
 e_KC_O_KC
-possuem_V_O_V
+possuem_V_O_PDEN
 ,_,_O_,
 cada_PROADJ_O_PROADJ
 um_PROSUB_O_N
@@ -65468,7 +65468,7 @@ branco_ADJ_O_N
 
 Sua_PROADJ_O_PROADJ
 cozinha_N_O_N
-fica_V_O_V
+fica_V_O_VAUX
 instalada_PCP_O_PCP
 em_PREP_+_PREP
 o_ART_O_ART
@@ -65760,7 +65760,7 @@ de_PREP_+_PREP
 a_ART_O_ART
 Coréia_NPROP_O_NPROP
 por_PREP_+_PREP
-o_ART_O_ART
+o_ART_O_PROSUB
 para_PREP_O_PREP
 distribuição_N_O_N
 gratuita_ADJ_O_ADJ
@@ -66169,8 +66169,8 @@ obrigatória_ADJ_O_ADJ
 "_"_O_"
 Não_ADV_O_ADV
 é_V_O_V
-isto_PROSUB_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+isto_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 está_V_O_VAUX
 escrito_PCP_O_PCP
 em_PREP_+_PREP
@@ -66191,7 +66191,7 @@ de_PREP_+_PREP
 a_ART_O_ART
 Inal_NPROP_O_N
 ,_,_O_,
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 fabricantes_N_O_N
@@ -66418,7 +66418,7 @@ la_PROPESS_O_NPROP
 
 Vira-Lata_NPROP_O_PROPESS
 é_V_O_V
-o_ART_O_ART
+o_ART_O_PROSUB
 de_PREP_O_PREP
 uma_ART_O_ART
 história_N_O_N
@@ -66660,7 +66660,7 @@ picotada_PCP_O_ADJ
 ,_,_O_,
 de_KS_O_PREP
 forma_KS_O_N
-que_KS_O_KS
+que_KS_O_PRO-KS-REL
 seus_PROADJ_O_PROADJ
 leitores_N_O_N
 possam_VAUX_O_VAUX
@@ -66682,7 +66682,7 @@ página_N_O_N
 de_PREP_+_PREP
 o_ART_O_ART
 gibi_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 dedicada_PCP_O_PCP
 a_PREP_O_ART
 curtas_ADJ_O_ADJ
@@ -66878,7 +66878,7 @@ custaram_V_O_V
 vezes_N_O_N
 menos_ADV_O_PREP
 que_KS_O_KS
-as_ART_O_ART
+as_ART_O_PROSUB
 ._._O_.
 
 "_"_O_"
@@ -67131,7 +67131,7 @@ obra_N_O_N
 
 ..._..._O_...
 operários_N_O_N
-morreram_V_O_V
+morreram_V_O_VAUX
 queimados_PCP_O_PCP
 em_PREP_+_PREP
 o_ART_O_ART
@@ -67238,7 +67238,7 @@ Pelo_PDEN_O_PDEN
 menos_PDEN_O_PREP
 uma_NUM_O_ART
 pessoa_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 contaminada_PCP_O_PCP
 por_PREP_+_PREP
 o_ART_O_ART
@@ -67591,7 +67591,7 @@ que_KS_O_KS
 o_ART_O_ART
 usuário_N_O_N
 se_PROPESS_O_PROPESS
-mantenha_V_O_V
+mantenha_V_O_VAUX
 informado_PCP_O_PCP
 de_PREP_+_PREP
 os_ART_O_ART
@@ -67602,7 +67602,7 @@ partida_N_O_N
 
 Quatro_NUM_O_NUM
 pessoas_N_O_N
-morreram_V_O_V
+morreram_V_O_VAUX
 afogadas_PCP_O_PCP
 em_PREP_+_PREP
 este_PROADJ_O_PROADJ
@@ -67886,7 +67886,7 @@ eliminar_V_O_V
 as_ART_O_ART
 denúncias_N_O_N
 de_PREP_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 policiais_N_O_N
 estariam_VAUX_O_VAUX
 utilizando_V_O_V
@@ -68070,7 +68070,7 @@ para_PREP_O_PREP
 a_ART_O_ART
 elaboração_N_O_N
 de_PREP_+_PREP
-o_ART_O_ART
+o_ART_O_PROSUB
 de_PREP_+_PREP
 a_ART_O_ART
 reserva_N_O_N
@@ -68913,7 +68913,7 @@ Triângulo_NPROP_O_NPROP
 Rosa_NPROP_O_NPROP
 -_-_O_-
 para_PREP_O_PREP
-os_PROSUB_O_ART
+os_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 defenderam_V_O_V
 os_ART_O_ART
@@ -69042,8 +69042,8 @@ não_ADV_O_ADV
 é_V_O_V
 grande_ADJ_O_ADJ
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 os_PROPESS_O_PROPESS
 impede_V_O_V
 de_PREP_O_PREP
@@ -69160,7 +69160,7 @@ a_ART_O_ART
 Candelária_N_O_NPROP
 ,_,_O_,
 de_PREP_+_PREP
-o_PRO-KS-REL_O_ART
+o_PRO-KS-REL_O_PROSUB
 qual_PRO-KS-REL_O_PRO-KS-REL
 soube_V_O_V
 tirar_V_O_V
@@ -69356,7 +69356,7 @@ bicheiros_N_O_N
 e_KC_O_KC
 deu_V_O_V
 em_PREP_+_PREP
-o_PRO-KS_O_ART
+o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 deu_V_O_V
 ..._..._O_...
@@ -69365,7 +69365,7 @@ Mas_KC_O_KC
 se_KS_O_PROPESS
 não_ADV_O_ADV
 bastasse_V_O_V
-tudo_PROADJ_O_PROSUB
+tudo_PROADJ_O_PROADJ
 isso_PROSUB_O_PROSUB
 ,_,_O_,
 ainda_ADV_O_ADV
@@ -69426,7 +69426,7 @@ as_ART_O_ART
 PMs_NPROP_O_NPROP
 e_KC_O_KC
 garante_V_+_V
-se_PROPESS_O_KS
+se_PROPESS_O_PROPESS
 que_KS_O_KS
 os_ART_O_ART
 presídios_N_O_N
@@ -70578,7 +70578,7 @@ Só_PDEN_O_ADV
 um_PROSUB_O_ADV
 de_PREP_+_PREP
 eles_PROPESS_O_PROPESS
-ficou_VAUX_O_V
+ficou_VAUX_O_VAUX
 caído_PCP_O_PCP
 em_PREP_+_PREP
 o_ART_O_ART
@@ -70660,7 +70660,7 @@ carro_N_O_N
 e_KC_O_KC
 irmã_N_O_N
 de_PREP_O_PREP
-um_PROSUB_O_ART
+um_PROSUB_O_PROSUB
 de_PREP_+_PREP
 os_ART_O_ART
 presos_N_O_N
@@ -70771,7 +70771,7 @@ do_KS_O_KS
 que_KS_O_KS
 em_PREP_+_PREP
 os_ART_O_ART
-anteriores_N_O_ADJ
+anteriores_N_O_N
 ._._O_.
 
 Portaria_NPROP_O_N
@@ -70996,8 +70996,8 @@ para_PREP_O_PREP
 outras_PROADJ_O_PROADJ
 escolas_N_O_N
 ,_,_O_,
-mesmo_KS_O_PROSUB
-que_KS_O_PRO-KS-REL
+mesmo_KS_O_PRO-KS
+que_KS_O_PRO-KS
 tenham_V_O_V
 65_NUM_O_NUM
 pessoas_N_O_N
@@ -71164,7 +71164,7 @@ a_ART_O_ART
 rede_N_O_N
 ,_,_O_,
 em_PREP_+_PREP
-a_PRO-KS-REL_O_PREP
+a_PRO-KS-REL_O_PRO-KS-REL
 qual_PRO-KS-REL_O_PRO-KS-REL
 era_VAUX_O_V
 destacada_PCP_O_PREP
@@ -71339,8 +71339,8 @@ o_ART_O_ART
 Estado_N_O_N
 que_PRO-KS-REL_O_PRO-KS-REL
 define_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 se_PROPESS_O_PROPESS
 paga_V_O_V
 por_PREP_O_PREP
@@ -71562,7 +71562,7 @@ em_PREP_+_PREP
 o_ART_O_ART
 horizonte_N_O_N
 ,_,_O_,
-já_KS_O_ADV
+já_KS_O_KS
 que_KS_O_KS
 o_ART_O_ART
 problema_N_O_N
@@ -71932,7 +71932,7 @@ doença_N_O_N
 
 A_ART_O_ART
 leptospirose_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 transmitida_PCP_O_PCP
 através_PREP_+_PREP
 de_PREP_+_PREP
@@ -72256,7 +72256,7 @@ a_ART_O_ART
 história_N_O_N
 narrada_PCP_O_PCP
 com_PREP_O_PREP
-a_PROSUB_O_ART
+a_PROSUB_O_PROSUB
 de_PREP_O_PREP
 sua_PROADJ_O_PROADJ
 bisavó_N_O_N
@@ -72278,7 +72278,7 @@ lugar_N_O_N
 próximo_PREP_+_PREP
 a_PREP_+_ART
 "_"_O_"
-o_ART_O_ART
+o_ART_O_NPROP
 Rio_NPROP_O_NPROP
 e_KC_O_KC
 a_PREP_O_ART
@@ -73038,7 +73038,7 @@ passado_PCP_O_PCP
 o_ART_O_ART
 Consema_NPROP_O_N
 embargou_V_O_PREP
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 obras_N_O_N
@@ -73110,7 +73110,7 @@ complexo_N_O_N
 ._._O_.
 
 Em_PREP_O_PREP
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 obras_N_O_N
@@ -73209,7 +73209,7 @@ janeiro_N_O_N
 fui_VAUX_O_VAUX
 informado_PCP_O_PCP
 de_PREP_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 ainda_ADV_O_ADV
 não_ADV_O_ADV
 havia_V_O_V
@@ -73331,7 +73331,7 @@ Cidade_NPROP_O_NPROP
 é_NPROP_O_V
 Sua_NPROP_O_NPROP
 /_/_O_/
-Via_PREP_O_NPROP
+Via_PREP_O_PREP
 São_NPROP_O_NPROP
 Paulo_NPROP_O_NPROP
 "_"_O_"
@@ -74543,7 +74543,7 @@ Ambiente_NPROP_O_NPROP
 ,_,_O_,
 o_ART_O_ART
 Cades_NPROP_O_NPROP
-é_VAUX_O_V
+é_VAUX_O_VAUX
 composto_PCP_O_PCP
 por_PREP_O_PREP
 29_NUM_O_NUM
@@ -74569,7 +74569,7 @@ de_PREP_+_PREP
 o_ART_O_ART
 relatório_N_O_N
 fora_V_O_PREP
-insuficiente_ADJ_O_ADJ
+insuficiente_ADJ_O_ADV
 ,_,_O_,
 abstiveram_V_+_PRO-KS-REL
 se_PROPESS_O_PROPESS
@@ -74597,7 +74597,7 @@ e_NPROP_O_NPROP
 Arquitetura_NPROP_O_NPROP
 )_)_O_)
 ,_,_O_,
-PNBE_NPROP_O_NPROP
+PNBE_NPROP_O_KC
 e_KC_O_KC
 órgãos_N_O_N
 estaduais_ADJ_O_ADJ
@@ -74859,7 +74859,7 @@ União_NPROP_O_N
 com_PREP_O_PREP
 o_ART_O_ART
 Estado_N_O_N
-ficou_VAUX_O_V
+ficou_VAUX_O_VAUX
 definida_PCP_O_PCP
 em_PREP_O_PREP
 um_ART_O_ART
@@ -75206,7 +75206,7 @@ em_PREP_+_PREP
 o_ART_O_ART
 Rio_NPROP_O_NPROP
 supera_V_O_V
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 de_PREP_O_PREP
 qualquer_PROADJ_O_PROADJ
 outra_PROADJ_O_PROADJ
@@ -75632,7 +75632,7 @@ atos_N_O_N
 tão_ADV_O_ADV
 violentos_ADJ_O_ADJ
 como_PREP_O_PREP
-os_PROSUB_O_ART
+os_PROSUB_O_PROSUB
 em_PREP_+_PREP
 o_ART_O_ART
 Rio_NPROP_O_NPROP
@@ -75663,7 +75663,7 @@ Rio_NPROP_O_NPROP
 de_NPROP_O_NPROP
 Janeiro_NPROP_O_NPROP
 ,_,_O_,
-já_KS_O_ADV
+já_KS_O_KS
 que_KS_O_KS
 o_ART_O_ART
 tráfico_N_O_N
@@ -75767,7 +75767,7 @@ As_ART_O_ART
 operações_N_O_N
 não_ADV_O_ADV
 duraram_V_O_V
-do_PREP_O_KS
+do_PREP_O_PROPESS
 que_PREP_O_KS
 três_NUM_O_NUM
 meses_N_O_N
@@ -75943,7 +75943,7 @@ Eleitoral_NPROP_O_NPROP
 um_ART_O_ART
 manifesto_N_O_N
 em_PREP_+_PREP
-o_PRO-KS-REL_O_ART
+o_PRO-KS-REL_O_PROSUB
 qual_PRO-KS-REL_O_PRO-KS-REL
 denunciam_V_O_V
 ações_N_O_N
@@ -76478,7 +76478,7 @@ Rio_NPROP_O_NPROP
 de_NPROP_O_NPROP
 Janeiro_NPROP_O_NPROP
 em_PREP_+_PREP
-o_PRO-KS_O_ART
+o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 diz_V_O_V
 respeito_N_O_N
@@ -76731,7 +76731,7 @@ necessidades_N_O_N
 ,_,_O_,
 reforçará_V_O_PREP
 os_ART_O_ART
-efetivos_N_O_ADJ
+efetivos_N_O_N
 de_PREP_+_PREP
 a_ART_O_ART
 Polícia_NPROP_O_NPROP
@@ -76761,7 +76761,7 @@ entorpecentes_N_O_N
 e_KC_O_KC
 armas_N_O_N
 e_KC_O_KC
-os_PROPESS_O_ART
+os_PROPESS_O_PROPESS
 colocará_V_O_V
 sob_PREP_O_PREP
 o_ART_O_ART
@@ -76808,7 +76808,7 @@ estarem_V_O_V
 de_PREP_O_PREP
 acordo_PREP_O_N
 com_PREP_O_PREP
-todas_PROSUB_O_PROADJ
+todas_PROSUB_O_PROSUB
 e_KC_O_KC
 cada_PROADJ_O_PROADJ
 uma_ART_O_N
@@ -77047,7 +77047,7 @@ Wanderley_NPROP_O_NPROP
 Nunes_NPROP_O_NPROP
 e_KC_O_KC
 a_ART_O_ART
-passageira_N_O_ADJ
+passageira_N_O_N
 Etil_NPROP_O_PREP
 Schultiz_NPROP_O_ART
 dos_NPROP_O_NPROP
@@ -77229,7 +77229,7 @@ dizer_V_O_V
 porém_KC_O_KC
 ,_,_O_,
 se_KS_O_PROPESS
-estava_V_O_V
+estava_V_O_VAUX
 preparado_PCP_O_PCP
 para_PREP_O_PREP
 um_ART_O_ART
@@ -77402,7 +77402,7 @@ entradas_N_O_N
 de_PREP_+_PREP
 a_ART_O_ART
 favela_N_O_N
-eram_V_O_V
+eram_V_O_VAUX
 controladas_PCP_O_PCP
 por_PREP_O_PREP
 "_"_O_"
@@ -77444,7 +77444,7 @@ de_PREP_O_PREP
 200_NUM_O_NUM
 metros_N_O_N
 de_PREP_O_PREP
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 duas_NUM_O_N
@@ -77475,7 +77475,7 @@ Em_PREP_+_PREP
 as_ART_O_ART
 proximidades_N_O_N
 de_PREP_O_PREP
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 passarelas_N_O_N
@@ -77725,7 +77725,7 @@ armas_N_O_N
 ._._O_.
 
 "_"_O_"
-Já_KS_O_ADV
+Já_KS_O_PDEN
 que_KS_O_KS
 dizem_V_O_V
 que_KS_O_KS
@@ -77921,7 +77921,7 @@ em_PREP_+_PREP
 as_ART_O_ART
 favelas_N_O_N
 :_:_O_:
-é_VAUX_O_V
+é_VAUX_O_VAUX
 substituído_PCP_O_PCP
 assim_KS_O_ADV
 que_KS_O_KS
@@ -78607,8 +78607,8 @@ por_PREP_+_PREP
 a_ART_O_ART
 portaria_N_O_N
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 evidenciaria_V_O_V
 a_ART_O_ART
 conivência_N_O_N
@@ -78638,7 +78638,7 @@ CV_NPROP_O_NPROP
 
 É_V_O_V
 o_ART_O_ART
-maior_N_O_ADJ
+maior_N_O_N
 de_PREP_+_PREP
 os_ART_O_ART
 presídios_N_O_N
@@ -78928,7 +78928,7 @@ falsidade_N_O_N
 
 A_ART_O_ART
 lista_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 composta_PCP_O_PCP
 por_PREP_O_PREP
 livros_N_O_N
@@ -79153,7 +79153,7 @@ Carlos_NPROP_O_NPROP
 de_NPROP_O_NPROP
 Oliveira_NPROP_O_NPROP
 ,_,_O_,
-ontem_ADV_O_ADV
+ontem_ADV_O_KS
 que_KS_O_KS
 não_ADV_O_ADV
 irá_VAUX_O_VAUX
@@ -79315,7 +79315,7 @@ silenciador_N_O_N
 O_ART_O_ART
 professor_N_O_N
 disse_V_O_V
-que_KS_O_KS
+que_KS_O_PROPESS
 Pissardo_NPROP_O_KS
 teria_VAUX_O_VAUX
 encomendado_PCP_O_PCP
@@ -79520,8 +79520,8 @@ surpreende_V_O_V
 
 Vamos_VAUX_O_VAUX
 aguardar_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 ele_PROPESS_O_PROPESS
 terá_V_O_V
 a_PREP_O_ART
@@ -80052,7 +80052,7 @@ informou_V_O_V
 de_PREP_O_PREP
 que_PRO-KS_O_PRO-KS-REL
 forma_N_O_V
-eles_PROPESS_O_PROPESS
+eles_PROPESS_O_KS
 teriam_VAUX_O_VAUX
 participado_PCP_O_PCP
 de_PREP_+_PREP
@@ -80232,7 +80232,7 @@ havia_V_O_V
 três_NUM_O_NUM
 meses_N_O_N
 e_KC_O_KC
-era_VAUX_O_V
+era_VAUX_O_VAUX
 liderada_PCP_O_PCP
 por_PREP_+_PREP
 o_ART_O_ART
@@ -80626,7 +80626,7 @@ lugar_N_O_N
 ._._O_.
 
 Ninguém_PROSUB_O_PROSUB
-ficou_VAUX_O_V
+ficou_VAUX_O_VAUX
 ferido_PCP_O_PCP
 ._._O_.
 
@@ -82043,7 +82043,7 @@ empresas_N_O_N
 ,_,_O_,
 a_ART_O_ART
 contratação_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 feita_PCP_O_PCP
 por_PREP_O_PREP
 bancas_N_O_N
@@ -83159,7 +83159,7 @@ linha_N_O_N
 afirmou_V_O_V
 ._._O_.
 
-O_ART_O_ART
+O_ART_O_PROSUB
 de_PREP_+_PREP
 o_ART_O_ART
 PDT_NPROP_O_NPROP
@@ -83291,7 +83291,7 @@ o_ART_O_ART
 Estado_N_O_N
 "_"_O_"
 em_PREP_+_PREP
-o_PRO-KS_O_ART
+o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 diz_V_O_V
 respeito_N_O_N
@@ -83457,7 +83457,7 @@ entendo_V_O_V
 a_ART_O_ART
 diferença_N_O_N
 entre_PREP_O_PREP
-o_PRO-KS_O_ART
+o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 ocorre_V_O_V
 em_PREP_O_PREP
@@ -83725,7 +83725,7 @@ alguns_PROADJ_O_PROADJ
 exemplos_N_O_N
 concretos_ADJ_O_ADJ
 de_PREP_+_PREP
-o_PRO-KS_O_ART
+o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 pode_VAUX_O_VAUX
 ser_VAUX_O_VAUX
@@ -83735,8 +83735,8 @@ feito_PCP_O_PCP
 Não_ADV_O_ADV
 posso_VAUX_O_VAUX
 adiantar_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 vai_VAUX_O_VAUX
 ser_VAUX_O_VAUX
 estudado_PCP_O_PCP
@@ -84220,7 +84220,7 @@ Cidade_PROSUB_O_NPROP
 é_PROSUB_O_V
 Sua_PROSUB_O_NPROP
 /_/_O_/
-Via_PREP_O_NPROP
+Via_PREP_O_PREP
 São_NPROP_O_NPROP
 Paulo_NPROP_O_NPROP
 "_"_O_"
@@ -84330,7 +84330,7 @@ PL_NPROP_O_NPROP
 ,_,_O_,
 partido_N_O_N
 a_PREP_+_PREP
-o_PRO-KS-REL_O_ART
+o_PRO-KS-REL_O_PROSUB
 qual_PRO-KS-REL_O_PRO-KS-REL
 ele_PROPESS_O_PROPESS
 se_PROPESS_O_PROPESS
@@ -84757,7 +84757,7 @@ antecedência_N_O_N
 
 O_ART_O_ART
 centro_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 denominado_PCP_O_PCP
 de_PREP_O_PREP
 CPTEC_NPROP_O_NPROP
@@ -85373,7 +85373,7 @@ contra_PREP_O_PREP
 2.400_N_O_NUM
 de_PREP_+_PREP
 a_ART_O_ART
-anterior_N_O_ADJ
+anterior_N_O_N
 ._._O_.
 
 O_ART_O_ART
@@ -85527,7 +85527,7 @@ o_ART_O_ART
 Maksoud_NPROP_O_NPROP
 Plaza_NPROP_O_NPROP
 ,_,_O_,
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 nove_NUM_O_NUM
@@ -85617,7 +85617,7 @@ de_PREP_+_PREP
 o_ART_O_ART
 evento_N_O_N
 ,_,_O_,
-quando_KS_O_KS
+quando_KS_O_PRO-KS-REL
 cerca_PREP_O_PREP
 de_PREP_O_PREP
 5.000_NUM_O_NUM
@@ -86019,7 +86019,7 @@ sistema_N_O_N
 bastante_ADV_O_ADV
 afetado_PCP_O_PCP
 é_V_O_V
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 de_PREP_+_PREP
 o_ART_O_ART
 Alto_NPROP_O_NPROP
@@ -86077,7 +86077,7 @@ Poá_NPROP_O_NPROP
 ,_,_O_,
 Itaquaquecetuba_NPROP_O_NPROP
 ,_,_O_,
-Suzano_NPROP_O_NPROP
+Suzano_NPROP_O_KC
 e_KC_O_KC
 Arujá_NPROP_O_N
 ,_,_O_,
@@ -86422,8 +86422,8 @@ aborto_N_O_N
 ou_KC_O_KC
 masturbação_N_O_N
 são_V_O_V
-os_PRO-KS-REL_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+os_PRO-KS-REL_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 conseguem_VAUX_O_V
 responder_V_O_V
 com_PREP_O_PREP
@@ -86439,7 +86439,7 @@ a_ART_O_ART
 resposta_N_O_N
 ou_KC_O_KC
 se_KS_O_PROPESS
-sentir_V_O_V
+sentir_V_O_VAUX
 envergonhado_PCP_O_PCP
 em_PREP_O_PREP
 falar_V_O_V
@@ -86498,7 +86498,7 @@ a_ART_O_ART
 criança_N_O_N
 que_KS_O_PRO-KS-REL
 se_PROPESS_O_PROPESS
-sentem_V_O_V
+sentem_V_O_VAUX
 constrangidos_PCP_O_PCP
 ao_PREP_O_PREP
 responder_V_O_V
@@ -86841,7 +86841,7 @@ ninguém_PROSUB_O_PROSUB
 
 Você_PROPESS_O_PROPESS
 não_ADV_O_ADV
-é_VAUX_O_V
+é_VAUX_O_VAUX
 obrigado_PCP_O_PCP
 a_PREP_O_PREP
 responder_V_O_V
@@ -86932,7 +86932,7 @@ camisinhas_N_O_N
 
 Pais_N_O_NPROP
 que_PRO-KS-REL_O_PRO-KS-REL
-ficam_V_O_V
+ficam_V_O_VAUX
 constrangidos_PCP_O_PCP
 em_PREP_O_PREP
 responder_V_O_V
@@ -86991,7 +86991,7 @@ e_KC_O_KC
 não_ADV_O_ADV
 fazem_V_O_V
 mal_ADV_O_ADV
-algum_PROSUB_O_PROADJ
+algum_PROSUB_O_PROSUB
 ._._O_.
 
 Para_PREP_O_PREP
@@ -87284,7 +87284,7 @@ as_ART_O_ART
 ,_,_O_,
 o_ART_O_ART
 shopping_N_EST_N
-era_V_O_V
+era_V_O_VAUX
 iluminado_PCP_O_PCP
 parcialmente_ADV_O_ADV
 por_PREP_O_PREP
@@ -88375,7 +88375,7 @@ menina_N_O_N
 A_ART_O_ART
 polícia_N_O_N
 ,_,_O_,
-no_KC_O_NPROP
+no_KC_O_KC
 entanto_KC_O_KC
 ,_,_O_,
 afirma_V_O_V
@@ -88626,7 +88626,7 @@ suspeita_N_O_N
 de_PREP_+_PREP
 a_ART_O_ART
 polícia_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 baseada_PCP_O_PCP
 em_PREP_+_PREP
 o_ART_O_ART
@@ -88770,7 +88770,7 @@ dito_V_O_N
 "_"_O_"
 Você_PROPESS_O_PROPESS
 escolhe_V_O_V
-se_PROPESS_O_PROPESS
+se_PROPESS_O_KS
 vai_VAUX_O_VAUX
 querer_V_O_V
 ser_VAUX_O_VAUX
@@ -88907,7 +88907,7 @@ concretiza_V_O_V
 ._._O_.
 
 Ou_PDEN_O_KC
-seja_PDEN_O_V
+seja_PDEN_O_PDEN
 ,_,_O_,
 a_ART_O_ART
 polícia_N_O_N
@@ -89080,7 +89080,7 @@ sabem_V_O_V
 o_ART_O_ART
 motivo_N_O_N
 por_PREP_+_PREP
-o_PRO-KS-REL_O_ART
+o_PRO-KS-REL_O_PROSUB
 qual_PRO-KS-REL_O_PRO-KS-REL
 estão_VAUX_O_V
 linchando_V_O_PREP
@@ -89126,7 +89126,7 @@ parte_N_O_N
 de_PREP_+_PREP
 os_ART_O_ART
 linchamentos_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 feita_PCP_O_PCP
 por_PREP_O_PREP
 taxistas_N_O_N
@@ -89374,7 +89374,7 @@ Polícia_NPROP_O_NPROP
 Civil_NPROP_O_NPROP
 como_ADV-KS_O_PREP
 sendo_V_O_V
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 armas_N_O_N
@@ -89432,7 +89432,7 @@ Neto_NPROP_O_NPROP
 e_KC_O_KC
 filha_N_O_N
 de_PREP_+_PREP
-este_PROSUB_O_PROADJ
+este_PROSUB_O_PROSUB
 ,_,_O_,
 Carolina_NPROP_O_NPROP
 ,_,_O_,
@@ -89639,7 +89639,7 @@ Não_ADV_O_ADV
 Os_ART_O_ART
 alunos_N_O_N
 de_PREP_+_PREP
-a_ART_O_ART
+a_ART_O_PROSUB
 de_PREP_+_PREP
 a_ART_O_ART
 UniSantos_NPROP_O_N
@@ -89676,7 +89676,7 @@ junho_N_O_N
 A_ART_O_ART
 medida_N_O_N
 não_ADV_O_ADV
-é_V_O_V
+é_V_O_VAUX
 válida_PCP_O_PCP
 para_PREP_O_PREP
 os_ART_O_ART
@@ -90014,7 +90014,7 @@ Pereira_NPROP_O_NPROP
 54_NUM_O_N
 ,_,_O_,
 disse_V_O_V
-que_KS_O_KS
+que_KS_O_PROPESS
 se_KS_O_KS
 os_ART_O_ART
 eleitores_N_O_N
@@ -90312,7 +90312,7 @@ A_ART_O_ART
 Prefeitura_N_O_N
 de_PREP_O_PREP
 Salvador_NPROP_O_NPROP
-a_ART_O_ART
+a_ART_O_NPROP
 2ª_ADJ_O_NPROP
 Feira_NPROP_O_NPROP
 da_NPROP_O_NPROP
@@ -91370,7 +91370,7 @@ Manaus_NPROP_O_NPROP
 
 Vera_NPROP_O_NPROP
 Lúcia_NPROP_O_NPROP
-era_V_O_V
+era_V_O_VAUX
 separada_PCP_O_PCP
 e_KC_O_KC
 trabalhava_V_O_V
@@ -91466,7 +91466,7 @@ a_ART_O_ART
 América_NPROP_O_NPROP
 Latina_NPROP_O_NPROP
 ,_,_O_,
-era_VAUX_O_V
+era_VAUX_O_VAUX
 entregue_PCP_O_PCP
 a_PREP_+_PREP
 o_ART_O_ART
@@ -91533,7 +91533,7 @@ de_PREP_+_PREP
 os_ART_O_ART
 números_N_O_N
 com_PREP_O_PREP
-os_PRO-KS-REL_O_ART
+os_PRO-KS-REL_O_PROSUB
 quais_PRO-KS-REL_O_PRO-KS-REL
 se_PROPESS_O_PROPESS
 provar_V_O_V
@@ -91686,7 +91686,7 @@ dos_NPROP_O_NPROP
 Metalúrgicos_NPROP_O_NPROP
 de_NPROP_O_NPROP
 Santos_NPROP_O_NPROP
-tem_VAUX_O_V
+tem_VAUX_O_VAUX
 sido_PCP_O_PCP
 incansável_ADJ_O_ADJ
 em_PREP_+_PREP
@@ -92545,7 +92545,7 @@ de_NPROP_O_NPROP
 Andrade_NPROP_O_NPROP
 ,_,_O_,
 em_PREP_+_PREP
-o_PRO-KS-REL_O_ART
+o_PRO-KS-REL_O_PROSUB
 qual_PRO-KS-REL_O_PRO-KS-REL
 foram_VAUX_O_VAUX
 inseridos_PCP_O_PCP
@@ -92903,7 +92903,7 @@ roubado_PCP_O_PCP
 onde_ADV-KS-REL_O_ADV-KS-REL
 o_ART_O_ART
 comerciante_N_O_N
-era_VAUX_O_V
+era_VAUX_O_VAUX
 levado_PCP_O_PCP
 como_PREP_O_PREP
 refém_N_O_N
@@ -93019,7 +93019,7 @@ hospital_N_O_N
 ._._O_.
 
 Ele_PROPESS_O_PROPESS
-continua_V_O_V
+continua_V_O_VAUX
 internado_PCP_O_PCP
 ,_,_O_,
 mas_KC_O_KC
@@ -93153,7 +93153,7 @@ que_KS_O_KS
 Neusinha_NPROP_O_V
 ,_,_O_,
 como_KS_O_PREP
-é_VAUX_O_V
+é_VAUX_O_VAUX
 conhecida_PCP_O_PCP
 ,_,_O_,
 está_V_O_V
@@ -93270,7 +93270,7 @@ o_ART_O_ART
 Rio_NPROP_O_NPROP
 de_NPROP_O_NPROP
 Janeiro_NPROP_O_NPROP
-a_PREP_O_ART
+a_PREP_O_NPROP
 São_NPROP_O_NPROP
 Paulo_NPROP_O_NPROP
 ._._O_.
@@ -93641,7 +93641,7 @@ O_ART_O_ART
 estado_N_O_N
 de_PREP_O_PREP
 atenção_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 declarado_PCP_O_PCP
 quando_KS_O_PREP
 a_ART_O_ART
@@ -93649,7 +93649,7 @@ qualidade_N_O_N
 de_PREP_+_PREP
 o_ART_O_ART
 ar_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 considerada_PCP_O_PCP
 "_"_O_"
 má_ADJ_O_ADJ
@@ -93672,7 +93672,7 @@ qualidade_N_O_N
 de_PREP_+_PREP
 o_ART_O_ART
 ar_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 classificada_PCP_O_PCP
 como_PREP_O_PREP
 "_"_O_"
@@ -94006,7 +94006,7 @@ calor_N_O_N
 deve_VAUX_O_VAUX
 continuar_V_O_V
 pelo_PDEN_O_PDEN
-menos_PDEN_O_PDEN
+menos_PDEN_O_ADV
 até_PREP_O_PDEN
 amanhã_ADV_O_ADV
 ._._O_.
@@ -94756,7 +94756,7 @@ a_PREP_+_PREP
 o_ART_O_ART
 contrário_N_O_N
 de_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 vem_VAUX_O_V
 ocorrendo_V_O_V
@@ -95334,7 +95334,7 @@ de_PREP_+_PREP
 o_ART_O_ART
 alto_N_O_N
 de_PREP_O_PREP
-um_PROSUB_O_ART
+um_PROSUB_O_PROSUB
 de_PREP_+_PREP
 os_ART_O_ART
 prédios_N_O_N
@@ -95916,7 +95916,7 @@ coliformes_N_O_ART
 fecais_ADJ_O_N
 é_V_O_V
 maior_ADJ_O_ADJ
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 padrão_N_O_N
 desejado_PCP_O_PCP
 ._._O_.
@@ -96192,8 +96192,8 @@ não_ADV_O_ADV
 podia_VAUX_O_VAUX
 se_PROPESS_O_PROPESS
 deitar_V_O_V
-se_PROPESS_O_PROPESS
-sentia_V_O_V
+se_PROPESS_O_KS
+sentia_V_O_VAUX
 sufocado_PCP_O_PCP
 ._._O_.
 
@@ -96438,7 +96438,7 @@ rodas_N_O_N
 Para_PREP_O_PREP
 Lin_NPROP_O_N
 ,_,_O_,
-essas_PROSUB_O_PROADJ
+essas_PROSUB_O_PROSUB
 não_ADV_O_ADV
 são_V_O_V
 as_ART_O_ART
@@ -96542,7 +96542,7 @@ de_PREP_+_PREP
 os_ART_O_ART
 problemas_N_O_N
 são_V_O_V
-muitas_PROSUB_O_PROADJ
+muitas_PROSUB_O_PROSUB
 ._._O_.
 
 "_"_O_"
@@ -96687,7 +96687,7 @@ demoradas_PCP_O_N
 
 Oliveira_NPROP_O_NPROP
 se_PROPESS_O_PROPESS
-sente_V_O_V
+sente_V_O_VAUX
 desgastado_PCP_O_PCP
 em_PREP_+_PREP
 o_ART_O_ART
@@ -97087,7 +97087,7 @@ com_PREP_O_PREP
 função_N_O_N
 pedagógica_ADJ_O_ADJ
 ,_,_O_,
-já_KS_O_ADV
+já_KS_O_KS
 que_KS_O_KS
 exige_V_O_V
 a_ART_O_ART
@@ -97658,7 +97658,7 @@ o_ART_O_ART
 atraso_N_O_N
 ,_,_O_,
 "_"_O_"
-já_KS_O_ADV
+já_KS_O_PDEN
 que_KS_O_KS
 essa_PROADJ_O_PROADJ
 empresa_N_O_N
@@ -97735,7 +97735,7 @@ de_PREP_+_PREP
 o_ART_O_ART
 consorciado_N_O_N
 em_PREP_+_PREP
-o_PRO-KS_O_ART
+o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 se_PROPESS_O_PROPESS
 refere_V_O_V
@@ -97903,7 +97903,7 @@ Cidade_NPROP_O_NPROP
 é_NPROP_O_V
 Sua_NPROP_O_NPROP
 /_/_O_/
-Via_PREP_O_NPROP
+Via_PREP_O_PREP
 São_NPROP_O_NPROP
 Paulo_NPROP_O_NPROP
 "_"_O_"
@@ -98260,7 +98260,7 @@ de_PREP_O_PREP
 ontem_ADV_O_ADV
 ,_,_O_,
 eles_PROPESS_O_PROPESS
-estavam_V_O_V
+estavam_V_O_VAUX
 identificados_PCP_O_PCP
 apenas_PDEN_O_PDEN
 como_PREP_O_PREP
@@ -98439,8 +98439,8 @@ em_PREP_+_PREP
 o_ART_O_ART
 período_N_O_N
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 daria_V_O_V
 um_ART_O_ART
 preço_N_O_N
@@ -98563,7 +98563,7 @@ de_PREP_+_PREP
 a_ART_O_ART
 portaria_N_O_N
 e_KC_O_KC
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROPESS
 reduziu_V_O_V
 os_ART_O_ART
 preços_N_O_N
@@ -98852,7 +98852,7 @@ Polícia_NPROP_O_NPROP
 Civil_NPROP_O_NPROP
 como_KS_O_PREP
 sendo_V_O_V
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 armas_N_O_N
@@ -98992,7 +98992,7 @@ Biscaia_NPROP_O_NPROP
 
 O_ART_O_ART
 livreto_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 intitulado_PCP_O_PCP
 "_"_O_"
 A_NPROP_O_ART
@@ -99079,7 +99079,7 @@ de_PREP_+_PREP
 a_ART_O_ART
 via_N_O_N
 Anchieta_NPROP_O_NPROP
-ficará_V_O_V
+ficará_V_O_VAUX
 fechada_PCP_O_PCP
 hoje_ADV_O_ADV
 até_PREP_O_PREP
@@ -99128,7 +99128,7 @@ as_ART_O_ART
 6h_N_HOR_N
 )_)_O_)
 de_PREP_O_PREP
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 faixas_N_O_N
@@ -99206,7 +99206,7 @@ A._NPROP_O_NPROP
 ,_,_O_,
 16_NUM_O_N
 ,_,_O_,
-é_VAUX_O_V
+é_VAUX_O_VAUX
 acusado_PCP_O_PCP
 de_PREP_O_PREP
 atropelar_V_O_V
@@ -99294,7 +99294,7 @@ Metrô_N_O_N
 O_ART_O_ART
 posto_N_O_N
 substitui_V_O_V
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 de_PREP_+_PREP
 a_ART_O_ART
 estação_N_O_N
@@ -99305,7 +99305,7 @@ centro_N_O_N
 ,_,_O_,
 que_PRO-KS-REL_O_PRO-KS-REL
 foi_VAUX_O_V
-desativado_PCP_O_KS
+desativado_PCP_O_PROPESS
 porque_KS_O_KS
 a_ART_O_ART
 região_N_O_N
@@ -99571,7 +99571,7 @@ em_PREP_+_PREP
 a_ART_O_ART
 fiscalização_N_O_N
 ,_,_O_,
-já_KS_O_ADV
+já_KS_O_KS
 que_KS_O_KS
 carnes_N_O_N
 e_KC_O_KC
@@ -99742,7 +99742,7 @@ O_ART_O_ART
 estado_N_O_N
 de_PREP_O_PREP
 atenção_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 declarado_PCP_O_PCP
 quando_KS_O_PREP
 a_ART_O_ART
@@ -100305,7 +100305,7 @@ para_PREP_O_PREP
 o_ART_O_ART
 anunciante_N_O_N
 como_KC_]_PREP
-para_PREP_O_PREP
+para_PREP_O_PRO-KS-REL
 quem_PRO-KS_O_PRO-KS-REL
 responde_V_O_V
 a_PREP_+_PREP
@@ -100595,7 +100595,7 @@ de_PREP_O_PREP
 dumping_N_EST_N
 "_"_O_"
 são_V_O_V
-as_PROSUB_O_ART
+as_PROSUB_O_PROSUB
 de_PREP_+_PREP
 o_ART_O_ART
 Japão_NPROP_O_NPROP
@@ -100661,7 +100661,7 @@ milhões_N_O_N
 ,_,_O_,
 é_V_O_V
 "_"_O_"
-mais_ADV_O_ADV
+mais_ADV_O_PDEN
 que_ADV_O_KS
 respeitável_ADJ_O_ADJ
 "_"_O_"
@@ -101249,7 +101249,7 @@ preço_N_O_N
 menor_ADJ_O_ADJ
 do_KS_O_KS
 que_KS_O_KS
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 a_PREP_+_PREP
 a_ART_O_ART
 vista_N_O_N
@@ -101521,7 +101521,7 @@ Eles_PROPESS_O_PROPESS
 compram_V_O_V
 apenas_PDEN_O_PDEN
 o_ART_O_ART
-necessário_N_O_ADJ
+necessário_N_O_N
 para_PREP_O_PREP
 manter_V_O_V
 o_ART_O_ART
@@ -101592,7 +101592,7 @@ operações_N_O_N
 ._._O_.
 
 "_"_O_"
-Nossas_PROADJ_O_NPROP
+Nossas_PROADJ_O_PROADJ
 vendas_N_O_N
 com_PREP_O_PREP
 cartão_N_O_N
@@ -101633,7 +101633,7 @@ Em_PREP_+_PREP
 o_ART_O_ART
 total_N_O_N
 ,_,_O_,
-o_ART_O_ART
+o_ART_O_PROPESS
 representa_V_O_V
 30_NUM_O_NUM
 %_N_O_N
@@ -101822,7 +101822,7 @@ o_ART_O_ART
 consumidor_N_O_N
 que_PRO-KS-REL_O_PRO-KS-REL
 usava_V_O_V
-o_ART_O_ART
+o_ART_O_PROPESS
 ._._O_.
 
 Não_ADV_O_ADV
@@ -101940,7 +101940,7 @@ o_ART_O_ART
 rendimento_N_O_N
 real_ADJ_O_ADJ
 de_PREP_+_PREP
-a_ART_O_ART
+a_ART_O_PROSUB
 de_PREP_O_PREP
 poupança_N_O_N
 e_KC_O_KC
@@ -102458,7 +102458,7 @@ ser_VAUX_O_VAUX
 reclassificados_PCP_O_PCP
 em_PREP_+_PREP
 o_ART_O_ART
-realizável_ADJ_O_ADJ
+realizável_ADJ_O_N
 a_PREP_O_PREP
 longo_ADJ_O_PREP
 prazo_N_O_N
@@ -102536,7 +102536,7 @@ há_V_O_V
 o_ART_O_ART
 temor_N_O_N
 de_PREP_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 empresas_N_O_N
 estatais_ADJ_O_ADJ
 tornem_V_+_V
@@ -102694,8 +102694,8 @@ de_PREP_O_PREP
 US$_CUR_O_CUR
 1.500_NUM_O_NUM
 ,_,_O_,
-o_PRO-KS-REL_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+o_PRO-KS-REL_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 dá_V_O_V
 a_ART_O_ART
 medida_N_O_N
@@ -103178,7 +103178,7 @@ razoável_ADJ_O_ADJ
 a_PREP_+_ART
 exemplo_PREP_+_N
 de_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 ocorreu_V_O_V
 em_PREP_+_PREP
@@ -103235,7 +103235,7 @@ em_PREP_O_PREP
 1987_N_O_N
 ,_,_O_,
 ou_PDEN_O_KC
-seja_PDEN_O_V
+seja_PDEN_O_PDEN
 ,_,_O_,
 não_ADV_O_ADV
 temos_VAUX_O_VAUX
@@ -103246,7 +103246,7 @@ empregos_N_O_N
 ,_,_O_,
 fazendo_V_O_V
 com_PREP_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 parcela_N_O_N
 significativa_ADJ_O_ADJ
 de_PREP_O_PREP
@@ -103275,7 +103275,7 @@ como_ADV-KS-REL_O_PREP
 de_PREP_O_PREP
 nossa_PROADJ_O_PROADJ
 produção_N_O_N
-eram_VAUX_O_V
+eram_VAUX_O_VAUX
 destinados_PCP_O_PCP
 a_PREP_+_PREP
 as_ART_O_ART
@@ -103364,7 +103364,7 @@ outros_PROADJ_O_PROADJ
 serviços_N_O_N
 públicos_ADJ_O_ADJ
 ,_,_O_,
-tem_VAUX_O_V
+tem_VAUX_O_VAUX
 percebido_PCP_O_PCP
 o_ART_O_ART
 estado_N_O_N
@@ -103383,7 +103383,7 @@ por_PREP_+_PREP
 o_ART_O_ART
 fato_N_O_N
 de_PREP_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 mesmo_PDEN_O_PDEN
 em_PREP_+_PREP
 os_ART_O_ART
@@ -103447,7 +103447,7 @@ foram_VAUX_O_VAUX
 efetuadas_PCP_O_PCP
 ,_,_O_,
 sem_KS_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 ,_,_O_,
 contudo_KC_O_KC
 ,_,_O_,
@@ -103686,8 +103686,8 @@ não_ADV_O_ADV
 a_PROPESS_O_PREP
 toma_V_O_V
 considerando_V_O_V
-aquela_PROSUB_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+aquela_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 seria_V_O_V
 mais_ADV_O_ADV
 adequada_PCP_O_PCP
@@ -103800,7 +103800,7 @@ Todas_PROADJ_O_PROADJ
 as_ART_O_ART
 discussões_N_O_N
 que_PRO-KS-REL_O_PRO-KS-REL
-tem_VAUX_O_V
+tem_VAUX_O_VAUX
 surgido_PCP_O_PCP
 recentemente_ADV_O_ADV
 entre_PREP_O_PREP
@@ -103870,7 +103870,7 @@ o_ART_O_ART
 atual_ADJ_O_ADJ
 plano_N_O_N
 ,_,_O_,
-ainda_KS_O_ADV
+ainda_KS_O_KS
 que_KS_O_KS
 revestidas_PCP_O_V
 de_PREP_O_PREP
@@ -104174,7 +104174,7 @@ partir_PREP_+_PREP
 de_PREP_+_PREP
 o_ART_O_ART
 momento_N_O_N
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 nossa_PROADJ_O_PROADJ
 economia_N_O_N
 recupere_V_O_PREP
@@ -104611,7 +104611,7 @@ Uísque_N_O_N
 e_KC_O_KC
 vodca_N_O_N
 ,_,_O_,
-no_KC_O_NPROP
+no_KC_O_KC
 entanto_KC_O_KC
 ,_,_O_,
 dispararam_V_O_V
@@ -104630,7 +104630,7 @@ respectivamente_ADV_O_ADV
 ._._O_.
 
 As_ART_O_ART
-não-alcoólicas_N_O_ADJ
+não-alcoólicas_N_O_N
 ficaram_V_O_V
 31,48_NUM_O_ART
 %_N_O_N
@@ -105380,7 +105380,7 @@ anterior_N_O_ADJ
 ,_,_O_,
 os_ART_O_ART
 cereais_N_O_N
-o_ART_O_ART
+o_ART_O_PROADJ
 de_PREP_+_PREP
 as_ART_O_ART
 massas_N_O_N
@@ -105495,7 +105495,7 @@ de_PREP_O_PREP
 %_N_O_N
 ,_,_O_,
 a_ART_O_ART
-maior_N_O_ADJ
+maior_N_O_N
 de_PREP_+_PREP
 os_ART_O_ART
 hipermercados_N_O_N
@@ -105519,14 +105519,14 @@ seguir_V_O_V
 ._._O_.
 
 Alimento_N_O_ART
-básico_ADJ_O_ADJ
+básico_ADJ_O_N
 sobe_V_O_V
 10,88_NUM_O_ART
 %_N_O_N
 ._._O_.
 
 Alimento_N_O_ART
-básico_ADJ_O_ADJ
+básico_ADJ_O_N
 sobe_V_O_V
 10,88_NUM_O_ART
 %_N_O_N
@@ -105558,7 +105558,7 @@ de_PREP_O_PREP
 %_N_O_N
 ._._O_.
 
-Havia_VAUX_O_V
+Havia_VAUX_O_VAUX
 sido_PCP_O_PCP
 de_PREP_O_PREP
 4,95_NUM_O_ART
@@ -105800,7 +105800,7 @@ de_PREP_O_PREP
 vacinação_N_O_N
 contra_PREP_O_PREP
 a_ART_O_ART
-aftosa_ADJ_O_ADJ
+aftosa_ADJ_O_N
 ._._O_.
 
 Técnicos_N_O_N
@@ -106123,7 +106123,7 @@ que_PRO-KS-REL_O_PRO-KS-REL
 geram_V_O_V
 seguros_N_O_N
 como_PREP_O_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 de_PREP_O_PREP
 transporte_N_O_N
 ,_,_O_,
@@ -106392,7 +106392,7 @@ em_PREP_O_PREP
 São_NPROP_O_NPROP
 Paulo_NPROP_O_NPROP
 ,_,_O_,
-tem_VAUX_O_V
+tem_VAUX_O_VAUX
 sido_PCP_O_PCP
 até_PREP_O_PREP
 agora_ADV_O_ADV
@@ -106457,7 +106457,7 @@ econômico_ADJ_O_ADJ
 financeiro_ADJ_O_ADJ
 de_PREP_+_PREP
 as_ART_O_ART
-mesmas_PROSUB_O_PROADJ
+mesmas_PROSUB_O_PROSUB
 e_KC_O_KC
 elaborará_V_O_PREP
 um_ART_O_ART
@@ -106468,10 +106468,10 @@ específica_ADJ_O_ADJ
 ,_,_O_,
 cuja_PRO-KS-REL_O_PRO-KS-REL
 falta_N_O_V
-é_VAUX_O_V
+é_VAUX_O_VAUX
 apontada_PCP_O_PCP
 como_PREP_O_PREP
-um_PROSUB_O_ART
+um_PROSUB_O_PROSUB
 de_PREP_+_PREP
 os_ART_O_ART
 principais_ADJ_O_ADJ
@@ -106819,7 +106819,7 @@ carinho_N_O_N
 seus_PROADJ_O_PROADJ
 produtos_N_O_N
 e_KC_O_KC
-se_KS_O_PROPESS
+se_KS_O_KS
 algumas_PROADJ_O_PROADJ
 empresas_N_O_N
 e_KC_O_KC
@@ -107042,8 +107042,8 @@ as_PROSUB_O_ART
 segundo_PREP_O_PREP
 Faria_NPROP_O_NPROP
 ,_,_O_,
-o_PRO-KS-REL_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+o_PRO-KS-REL_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 deve_VAUX_O_VAUX
 ser_VAUX_O_VAUX
 controlado_PCP_O_PCP
@@ -107587,8 +107587,8 @@ V_NPROP_O_N
 Mas_KC_O_KC
 só_PDEN_O_PDEN
 escrevi_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 vi_V_O_V
 em_PREP_+_PREP
 o_ART_O_ART
@@ -107660,7 +107660,7 @@ você_PROPESS_O_PROPESS
 ._._O_.
 
 "_"_O_"
-Já_KS_O_ADV
+Já_KS_O_PDEN
 que_KS_O_KS
 ele_PROPESS_O_PROPESS
 queria_V_O_V
@@ -107993,7 +107993,7 @@ poderá_VAUX_O_VAUX
 continuar_VAUX_O_VAUX
 jogando_V_O_V
 se_KS_O_KS
-o_ART_O_ART
+o_ART_O_PROSUB
 de_PREP_+_PREP
 a_ART_O_ART
 CBF_NPROP_O_NPROP
@@ -108126,7 +108126,7 @@ um_ART_O_ART
 recado_N_O_N
 aqui_ADV_O_ADV
 em_PREP_+_PREP
-o_ART_O_ART
+o_ART_O_PROSUB
 de_PREP_O_PREP
 treinamento_N_O_N
 "_"_O_"
@@ -108707,7 +108707,7 @@ ombros_N_O_N
 e_KC_O_KC
 pernas_N_O_N
 de_PREP_+_PREP
-os_ART_O_ART
+os_ART_O_PROSUB
 por_PREP_+_PREP
 a_ART_O_ART
 manhã_ADV_O_N
@@ -108819,7 +108819,7 @@ fazia_V_O_V
 30_NUM_O_NUM
 partidas_N_O_N
 em_PREP_O_PREP
-que_PRO-KS-REL_O_PRO-KS-REL
+que_PRO-KS-REL_O_KS
 não_ADV_O_ADV
 se_PROPESS_O_PROPESS
 envolvia_V_O_V
@@ -109470,7 +109470,7 @@ saiba_V_O_V
 marcar_V_O_V
 ,_,_O_,
 mas_KC_O_KC
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 também_PDEN_O_PDEN
 encoste_V_O_V
 mais_ADV_O_ADV
@@ -110264,7 +110264,7 @@ Orlando_NPROP_O_NPROP
 ._._O_.
 
 Por_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 vi_V_O_V
 em_PREP_+_PREP
@@ -110430,7 +110430,7 @@ a_PREP_+_PREP
 o_ART_O_ART
 contrário_N_O_N
 de_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 se_PROPESS_O_PROPESS
 dizia_V_O_V
@@ -110501,7 +110501,7 @@ greve_N_O_N
 
 Existe_V_O_V
 ,_,_O_,
-no_KC_O_NPROP
+no_KC_O_KC
 entanto_KC_O_KC
 ,_,_O_,
 uma_ART_O_ART
@@ -110556,7 +110556,7 @@ de_PREP_+_PREP
 esse_PROADJ_O_PROADJ
 processo_N_O_N
 ,_,_O_,
-NBA_NPROP_O_NPROP
+NBA_NPROP_O_KC
 e_KC_O_KC
 associação_N_O_N
 de_PREP_O_PREP
@@ -110620,7 +110620,7 @@ State_NPROP_O_NPROP
 O_ART_O_ART
 time_N_O_N
 ,_,_O_,
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 em_PREP_+_PREP
 o_ART_O_ART
 ano_N_O_N
@@ -110665,7 +110665,7 @@ contundiram_V_O_V
 
 Devem_VAUX_O_VAUX
 ,_,_O_,
-no_KC_O_NPROP
+no_KC_O_KC
 entanto_KC_O_KC
 ,_,_O_,
 desfalcar_V_O_V
@@ -110859,7 +110859,7 @@ pena_N_O_N
 ou_KC_O_KC
 remorso_N_O_N
 por_PREP_+_PREP
-o_PRO-KS_O_ART
+o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 havia_VAUX_O_VAUX
 feito_PCP_O_PCP
@@ -111097,7 +111097,7 @@ o_ART_O_ART
 último_ADJ_O_ADJ
 sábado_N_O_N
 ,_,_O_,
-quando_ADV-KS-REL_O_KS
+quando_ADV-KS-REL_O_PRO-KS-REL
 cerca_PREP_O_PREP
 de_PREP_O_PREP
 15_NUM_O_NUM
@@ -111455,7 +111455,7 @@ vitórias_N_O_N
 )_)_O_)
 ,_,_O_,
 mas_KC_O_KC
-o_PROPESS_O_ART
+o_PROPESS_O_PROPESS
 supera_V_O_V
 em_PREP_+_PREP
 o_ART_O_ART
@@ -111511,7 +111511,7 @@ de_PREP_O_PREP
 manhã_ADV_O_N
 ,_,_O_,
 em_PREP_+_PREP
-o_ART_O_ART
+o_ART_O_PROSUB
 de_PREP_O_PREP
 treinamento_N_O_N
 de_PREP_+_PREP
@@ -111539,8 +111539,8 @@ a_PREP_O_PREP
 ele_PROPESS_O_PROPESS
 para_PREP_O_PREP
 repensar_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 está_VAUX_O_V
 acontecendo_V_O_V
 em_PREP_+_PREP
@@ -111863,7 +111863,7 @@ o_ART_O_ART
 Botafogo_NPROP_O_NPROP
 e_KC_O_KC
 que_KS_O_PRO-KS-REL
-ficou_V_O_V
+ficou_V_O_VAUX
 impressionado_PCP_O_PCP
 com_PREP_O_PREP
 o_ART_O_ART
@@ -112234,7 +112234,7 @@ partidas_N_O_N
 O_ART_O_ART
 jogador_N_O_N
 ,_,_O_,
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 em_PREP_+_PREP
 a_ART_O_ART
 primeira_ADJ_O_ADJ
@@ -112336,7 +112336,7 @@ quartas_N_O_N
 de_N_O_PREP
 final_N_O_N
 em_PREP_+_PREP
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 duas_NUM_O_NUM
@@ -112467,7 +112467,7 @@ começa_V_O_V
 a_ART_O_ART
 preocupação_N_O_N
 de_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 devemos_VAUX_O_VAUX
 fazer_V_O_V
@@ -112532,8 +112532,8 @@ Disputar_V_O_PREP
 uma_ART_O_ART
 medalha_N_O_N
 ,_,_O_,
-qualquer_PROSUB_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+qualquer_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 seja_V_O_V
 ,_,_O_,
 em_PREP_+_PREP
@@ -112562,7 +112562,7 @@ a_ART_O_ART
 Rússia_NPROP_O_NPROP
 ,_,_O_,
 por_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 exibiu_V_O_V
 em_PREP_+_PREP
@@ -112673,7 +112673,7 @@ hoje_ADV_O_ADV
 ._._O_.
 
 Segundo_N_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 ,_,_O_,
 se_KS_O_KS
 eu_PROPESS_O_PROPESS
@@ -113184,7 +113184,7 @@ Mossa_NPROP_O_NPROP
 ,_,_O_,
 com_PREP_O_PREP
 quem_PRO-KS-REL_O_PRO-KS-REL
-esteve_V_O_V
+esteve_V_O_VAUX
 casado_PCP_O_PCP
 há_V_O_V
 dez_NUM_O_NUM
@@ -113256,7 +113256,7 @@ a_ART_O_ART
 reportagem_N_O_N
 local_ADJ_O_ADJ
 A_ART_O_ART
-cubana_N_O_ADJ
+cubana_N_O_N
 Mireya_NPROP_O_PREP
 Luis_NPROP_O_NPROP
 viajou_V_O_V
@@ -114388,7 +114388,7 @@ Recurso_N_O_N
 de_PREP_+_PREP
 a_ART_O_ART
 Benetton_NPROP_O_NPROP
-é_VAUX_O_V
+é_VAUX_O_VAUX
 analisado_PCP_O_PCP
 2ª_N_O_ADJ
 feira_N_O_N
@@ -114552,7 +114552,7 @@ segundo_N_O_N
 Recurso_N_O_N
 de_PREP_+_PREP
 a_ART_O_PREP
-é_VAUX_O_V
+é_VAUX_O_VAUX
 analisado_PCP_O_PCP
 2ª_N_O_ADJ
 fiera_N_O_PREP
@@ -114608,13 +114608,13 @@ Montpellier_NPROP_O_N
 ,_,_O_,
 Lyon_NPROP_O_NPROP
 ,_,_O_,
-Bordeaux_NPROP_O_NPROP
+Bordeaux_NPROP_O_KC
 e_KC_O_KC
 Nantes_NPROP_O_N
 ,_,_O_,
 sedes_N_O_N
 de_PREP_+_PREP
-a_ART_O_ART
+a_ART_O_PROSUB
 de_PREP_O_PREP
 98_N_O_N
 ,_,_O_,
@@ -114895,7 +114895,7 @@ Isidoro_NPROP_O_NPROP
 
 O_PROSUB_O_PROSUB
 que_PROSUB_O_PRO-KS-REL
-tem_VAUX_O_V
+tem_VAUX_O_VAUX
 faltado_PCP_O_PCP
 a_PREP_+_PREP
 o_ART_O_ART
@@ -114922,7 +114922,7 @@ Libertadores_NPROP_O_NPROP
 ._._O_.
 
 Por_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 vi_V_O_V
 ,_,_O_,
@@ -114966,7 +114966,7 @@ os_ART_O_ART
 primeiros_ADJ_O_ADJ
 times_N_O_N
 de_PREP_+_PREP
-o_ART_O_ART
+o_ART_O_PROSUB
 de_PREP_+_PREP
 o_ART_O_ART
 primeiro_N_O_ADJ
@@ -115140,7 +115140,7 @@ o_ART_O_ART
 veterano_N_O_N
 Michel_NPROP_O_NPROP
 (_(_O_(
-havia_VAUX_O_VAUX
+havia_VAUX_O_V
 perdido_PCP_O_PCP
 um_ART_O_ART
 pênalti_N_O_N
@@ -115178,8 +115178,8 @@ de_PREP_O_PREP
 Butrague'o_NPROP_O_N
 já_ADV_O_ADV
 deu_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 tinha_VAUX_O_V
 que_KS_O_KS
 dar_V_O_V
@@ -115368,7 +115368,7 @@ de_PREP_+_PREP
 a_ART_O_ART
 Espanha_NPROP_O_NPROP
 é_V_O_V
-o_PROSUB_O_ART
+o_PROSUB_O_ADV
 mais_ADV_O_ADV
 recheado_PCP_O_PCP
 ._._O_.
@@ -116213,7 +116213,7 @@ Com_PREP_O_PREP
 as_ART_O_ART
 expulsões_N_O_N
 ,_,_O_,
-ficou_VAUX_O_V
+ficou_VAUX_O_VAUX
 liquidado_PCP_O_PCP
 Sport_NPROP_O_NPROP
 joga_V_O_V
@@ -116903,8 +116903,8 @@ quiver_N_EST_NPROP
 "_"_O_"
 apropriado_PCP_O_PCP
 ,_,_O_,
-o_PRO-KS-REL_O_PROSUB
-qual_PRO-KS-REL_O_PRO-KS-REL
+o_PRO-KS-REL_O_PRO-KS
+qual_PRO-KS-REL_O_PRO-KS
 mereceu_V_O_V
 comentários_N_O_N
 de_PREP_+_PREP
@@ -117470,8 +117470,8 @@ em_PREP_+_PREP
 o_ART_O_ART
 capacete_N_O_N
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 impediria_V_O_V
 o_ART_O_ART
 pagamento_N_O_N
@@ -117723,7 +117723,7 @@ especificações_N_O_N
 A_ART_O_ART
 Fia_NPROP_O_NPROP
 ,_,_O_,
-no_KC_O_NPROP
+no_KC_O_KC
 entanto_KC_O_KC
 ,_,_O_,
 não_ADV_O_ADV
@@ -117796,7 +117796,7 @@ escolha_N_O_N
 de_PREP_+_PREP
 o_ART_O_ART
 capacete_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 feita_PCP_O_PCP
 ,_,_O_,
 em_ADV_O_PREP
@@ -118102,7 +118102,7 @@ metros_N_O_N
 ._._O_.
 
 Por_PREP_O_PREP
-que_PROSUB_O_PRO-KS-REL
+que_PROSUB_O_KS
 ,_,_O_,
 em_PREP_+_PREP
 a_ART_O_ART
@@ -118123,7 +118123,7 @@ de_PREP_O_PREP
 25_NUM_O_NUM
 m_N_O_N
 é_V_O_V
-um_ADV_O_ART
+um_ADV_O_ADV
 pouco_ADV_O_ADV
 diferente_ADJ_O_ADJ
 ._._O_.
@@ -118160,7 +118160,7 @@ muito_ADV_O_ADV
 melhor_ADJ_O_ADJ
 ranqueado_PCP_O_N
 em_PREP_+_PREP
-a_PROSUB_O_ART
+a_PROSUB_O_PROSUB
 de_PREP_O_PREP
 25_NUM_O_NUM
 m_N_O_N
@@ -118189,8 +118189,8 @@ relação_PREP_O_PREP
 a_PREP_O_ART
 Popov_NPROP_O_N
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 você_PROPESS_O_PROPESS
 apontaria_V_O_V
 como_PREP_O_PREP
@@ -118392,7 +118392,7 @@ atleta_N_O_N
 de_PREP_O_PREP
 25_NUM_O_NUM
 anos_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 considerado_PCP_O_PCP
 novo_ADJ_O_ADJ
 ._._O_.
@@ -118707,7 +118707,7 @@ os_ART_O_ART
 EUA_NPROP_O_NPROP
 ._._O_.
 
-Os_PROSUB_O_ART
+Os_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 treinam_V_O_V
 em_PREP_+_PREP
@@ -118836,7 +118836,7 @@ ser_V_O_V
 exagero_N_O_N
 ,_,_O_,
 mas_KC_O_KC
-é_V_O_V
+é_V_O_PDEN
 ,_,_O_,
 certamente_ADV_O_ADV
 ,_,_O_,
@@ -119057,7 +119057,7 @@ Pokroviskaia_NPROP_O_NPROP
 ._._O_.
 
 A_ART_O_ART
-russa_N_O_ADJ
+russa_N_O_N
 foi_V_O_V
 técnica_N_O_N
 de_PREP_+_PREP
@@ -119140,7 +119140,7 @@ este_PROADJ_O_PROADJ
 Mundial_NPROP_O_NPROP
 são_V_O_V
 o_ART_O_ART
-australiano_N_O_ADJ
+australiano_N_O_N
 Kieren_NPROP_O_PREP
 Perkins_NPROP_O_N
 e_KC_O_KC
@@ -119201,7 +119201,7 @@ que_PRO-KS-REL_O_PRO-KS-REL
 queria_V_O_V
 que_KS_O_KS
 o_ART_O_ART
-australiano_N_O_ADJ
+australiano_N_O_N
 batesse_V_O_V
 "_"_O_"
 apenas_PDEN_O_PDEN
@@ -119280,7 +119280,7 @@ domínio_N_O_N
 chinês_ADJ_O_ADJ
 semelhante_ADJ_O_ADJ
 a_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 de_PREP_+_PREP
 a_ART_O_ART
 Alemanha_NPROP_O_NPROP
@@ -119603,7 +119603,7 @@ dez_N_O_N
 77_N_O_NUM
 Chances_N_O_N
 :_:_O_:
-é_VAUX_O_V
+é_VAUX_O_VAUX
 considerado_PCP_O_PCP
 a_ART_O_PREP
 revelação_N_O_N
@@ -119791,7 +119791,7 @@ microfone_N_O_N
 O'Neal_NPROP_O_NPROP
 arremessou_V_O_NPROP
 e_KC_O_KC
-errou_V_O_V
+errou_V_O_PDEN
 ,_,_O_,
 provocando_V_O_V
 suspiros_N_O_N
@@ -120460,7 +120460,7 @@ Ironicamente_ADV_O_ADV
 ,_,_O_,
 ontem_ADV_O_ADV
 foi_V_O_V
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 melhores_ADJ_O_ADJ
@@ -121602,7 +121602,7 @@ Isidoro_NPROP_O_NPROP
 
 O_PROSUB_O_PROSUB
 que_PROSUB_O_PRO-KS-REL
-tem_VAUX_O_V
+tem_VAUX_O_VAUX
 faltado_PCP_O_PCP
 a_PREP_+_PREP
 o_ART_O_ART
@@ -121629,7 +121629,7 @@ Libertadores_NPROP_O_NPROP
 ._._O_.
 
 Por_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 vi_V_O_V
 ,_,_O_,
@@ -122186,7 +122186,7 @@ individuais_ADJ_O_ADJ
 
 E_KC_O_KC
 em_PREP_+_PREP
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 essas_PROADJ_O_PROADJ
 jogadas_N_O_N
@@ -122733,7 +122733,7 @@ clube_N_O_N
 o_ART_O_ART
 ataque_N_O_N
 ,_,_O_,
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 até_PREP_O_PREP
 agora_ADV_O_ADV
 marcou_V_O_V
@@ -123622,7 +123622,7 @@ notório_ADJ_O_ADJ
 O_ART_O_ART
 clube_N_O_N
 ,_,_O_,
-no_KC_O_NPROP
+no_KC_O_KC
 entanto_KC_O_KC
 ,_,_O_,
 ainda_ADV_O_ADV
@@ -124621,7 +124621,7 @@ Botafogo_NPROP_O_NPROP
 
 "_"_O_"
 Faltou_V_O_V
-um_ADV_O_ART
+um_ADV_O_ADV
 pouco_ADV_O_ADV
 de_PREP_O_PREP
 calma_N_O_N
@@ -124859,7 +124859,7 @@ a_PREP_O_PREP
 Fito_NPROP_O_NPROP
 disse_V_O_V
 que_KS_O_KS
-ficou_V_O_V
+ficou_V_O_VAUX
 satisfeito_PCP_O_PCP
 com_PREP_O_PREP
 os_ART_O_ART
@@ -125237,7 +125237,7 @@ escolha_N_O_N
 de_PREP_+_PREP
 o_ART_O_ART
 capacete_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 feita_PCP_O_PCP
 ,_,_O_,
 em_ADV_O_PREP
@@ -125270,7 +125270,7 @@ com_PREP_O_PREP
 a_ART_O_ART
 fornecedora_N_O_N
 e_KC_O_KC
-ganha_V_O_V
+ganha_V_O_VAUX
 determinado_PCP_O_PCP
 valor_N_O_N
 para_PREP_O_PREP
@@ -125536,8 +125536,8 @@ em_PREP_+_PREP
 o_ART_O_ART
 capacete_N_O_N
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 impediria_V_O_V
 o_ART_O_ART
 pagamento_N_O_N
@@ -126279,7 +126279,7 @@ crânio_N_O_N
 é_V_O_V
 semelhante_ADJ_O_ADJ
 a_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 de_PREP_+_PREP
 o_ART_O_ART
 bugio_N_O_N
@@ -126300,7 +126300,7 @@ cauda_N_O_N
 são_V_O_V
 semelhantes_ADJ_O_ADJ
 a_PREP_+_PREP
-os_PROSUB_O_ART
+os_PROSUB_O_PROSUB
 de_PREP_O_PREP
 um_ART_O_ART
 macaco-aranha_N_O_N
@@ -126331,11 +126331,11 @@ diferentes_ADJ_O_ADJ
 Temos_VAUX_O_V
 que_KS_O_KS
 estudar_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 fez_V_O_V
 com_PREP_O_PREP
-que_PRO-KS_O_PRO-KS-REL
+que_PRO-KS_O_KS
 tendências_N_O_N
 evolutivas_ADJ_O_,
 tão_ADV_O_ADV
@@ -126444,7 +126444,7 @@ Natural_NPROP_O_NPROP
 de_NPROP_O_NPROP
 Londres_NPROP_O_NPROP
 ,_,_O_,
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 até_PREP_O_PREP
 o_ART_O_ART
 fim_N_O_N
@@ -126501,7 +126501,7 @@ de_PREP_O_PREP
 Woodward_NPROP_O_N
 ,_,_O_,
 descobriu_V_+_V
-se_PROPESS_O_KS
+se_PROPESS_O_PROPESS
 que_KS_O_KS
 as_ART_O_ART
 diferentes_PROADJ_O_PROADJ
@@ -126516,7 +126516,7 @@ que_KS_O_KS
 o_ART_O_ART
 fóssil_N_O_N
 parecesse_V_O_V
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 de_PREP_O_PREP
 um_ART_O_ART
 homem-macaco_N_O_N
@@ -126531,12 +126531,12 @@ continha_V_O_V
 dentes_N_O_N
 humanos_ADJ_O_ADJ
 ,_,_O_,
-os_PRO-KS-REL_O_PROSUB
-quais_PRO-KS-REL_O_PRO-KS-REL
+os_PRO-KS-REL_O_PRO-KS
+quais_PRO-KS-REL_O_PRO-KS
 foram_VAUX_O_VAUX
 manchados_PCP_O_PCP
 como_PREP_O_PREP
-os_PROSUB_O_ART
+os_PROSUB_O_PROSUB
 de_PREP_+_PREP
 os_ART_O_ART
 fósseis_N_O_N
@@ -126582,7 +126582,7 @@ foi_V_O_V
 ele_PROPESS_O_PROPESS
 ,_,_O_,
 que_PRO-KS-REL_O_PRO-KS-REL
-era_V_O_V
+era_V_O_VAUX
 conhecido_PCP_O_PCP
 como_PREP_O_PREP
 um_ART_O_ART
@@ -126664,7 +126664,7 @@ artigo_N_O_N
 de_PREP_O_PREP
 pesquisadores_N_O_N
 canadenses_ADJ_O_ADJ
-é_VAUX_O_V
+é_VAUX_O_VAUX
 baseado_PCP_O_PCP
 em_PREP_+_PREP
 os_ART_O_ART
@@ -126837,7 +126837,7 @@ No_KC_O_NPROP
 entanto_KC_O_KC
 ,_,_O_,
 já_ADV_O_ADV
-era_V_O_V
+era_V_O_VAUX
 sabido_PCP_O_PCP
 que_KS_O_KS
 certos_PROADJ_O_PROADJ
@@ -127249,7 +127249,7 @@ exploração_N_O_N
 de_PREP_+_PREP
 esses_PROADJ_O_PROADJ
 sítios_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 feita_PCP_O_PCP
 por_PREP_O_PREP
 profissionais_N_O_N
@@ -127400,7 +127400,7 @@ entre_PREP_O_PREP
 os_ART_O_ART
 paleontólogos_N_O_N
 ,_,_O_,
-já_KS_O_ADV
+já_KS_O_KS
 que_KS_O_KS
 a_ART_O_ART
 imensa_ADJ_O_ADJ
@@ -127752,7 +127752,7 @@ de_NPROP_O_PREP
 Noé_NPROP_O_ART
 "_"_O_"
 ,_,_O_,
-é_VAUX_O_V
+é_VAUX_O_VAUX
 defendida_PCP_O_PCP
 ,_,_O_,
 entre_PREP_O_PREP
@@ -127816,7 +127816,7 @@ série_N_O_N
 de_PREP_O_PREP
 variações_N_O_N
 em_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 diz_V_O_V
 respeito_N_O_N
@@ -127835,7 +127835,7 @@ substituição_N_O_N
 A_ART_O_ART
 segunda_ADJ_O_ADJ
 hipótese_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 chamada_PCP_O_PCP
 de_PREP_O_PREP
 "_"_O_"
@@ -127909,7 +127909,7 @@ A_ART_O_ART
 "_"_O_"
 evolução-multirregional_NPROP_O_NPROP
 "_"_O_"
-é_VAUX_O_V
+é_VAUX_O_VAUX
 defendida_PCP_O_PCP
 hoje_ADV_O_ADV
 principalmente_ADV_O_ADV
@@ -128102,7 +128102,7 @@ o_ART_O_ART
 verão_N_O_N
 ,_,_O_,
 quando_ADV-KS-REL_O_KS
-é_VAUX_O_V
+é_VAUX_O_VAUX
 realizado_PCP_O_PCP
 o_ART_O_ART
 trabalho_N_O_N
@@ -128180,7 +128180,7 @@ de_PREP_O_PREP
 profundidade_N_O_N
 ,_,_O_,
 a_PREP_+_PREP
-o_PRO-KS-REL_O_ART
+o_PRO-KS-REL_O_PROSUB
 qual_PRO-KS-REL_O_PRO-KS-REL
 desciam_V_O_V
 por_PREP_O_PREP
@@ -128343,7 +128343,7 @@ impermeáveis_ADJ_O_N
 ,_,_O_,
 além_KC_O_PREP
 de_KC_O_PREP
-usarem_V_O_V
+usarem_V_O_VAUX
 sofisticados_PCP_O_PCP
 equipamentos_N_O_N
 ._._O_.
@@ -128917,12 +128917,12 @@ microcomputador_N_O_N
 ._._O_.
 
 Experiência_N_O_ART
-própria_ADJ_O_ADJ
+própria_ADJ_O_N
 ._._O_.
 
 Dia_N_O_N
 de_PREP_+_PREP
-esses_PROSUB_O_PROADJ
+esses_PROSUB_O_PROSUB
 ,_,_O_,
 foi_V_O_V
 possível_ADJ_O_ADJ
@@ -129045,7 +129045,7 @@ Em_PREP_+_PREP
 o_ART_O_ART
 primeiro_ADJ_O_N
 caso_N_O_PREP
-tudo_PROADJ_O_PROSUB
+tudo_PROADJ_O_PROADJ
 o_PROSUB_O_PROSUB
 que_PROSUB_O_PRO-KS-REL
 você_PROPESS_O_PROPESS
@@ -129123,7 +129123,7 @@ Basta_V_O_V
 ser_VAUX_O_VAUX
 associado_PCP_O_PCP
 de_PREP_O_PREP
-um_PROSUB_O_ART
+um_PROSUB_O_PROSUB
 de_PREP_+_PREP
 os_ART_O_ART
 serviços_N_O_N
@@ -129317,7 +129317,7 @@ mais_ADV_O_ADV
 sofisticado_PCP_O_PCP
 do_KS_O_KS
 que_KS_O_KS
-o_PROSUB_O_ART
+o_PROSUB_O_PROPESS
 faz_V_O_V
 encomendas_N_O_N
 por_PREP_+_PREP
@@ -129677,7 +129677,7 @@ máquina_N_O_N
 pode_VAUX_O_VAUX
 haver_V_O_V
 de_PREP_O_PREP
-um_NUM_O_ART
+um_NUM_O_PROSUB
 a_PREP_O_PREP
 quatro_NUM_O_NUM
 processadores_N_O_N
@@ -129943,10 +129943,10 @@ sistema_N_O_N
 %_N_O_N
 superior_ADJ_O_ADJ
 a_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 de_PREP_+_PREP
 o_ART_O_ART
-anterior_ADJ_O_ADJ
+anterior_ADJ_O_N
 ._._O_.
 
 Ainda_ADV_O_ADV
@@ -129992,7 +129992,7 @@ máquinas_N_O_N
 são_V_O_V
 mais_ADV_O_ADV
 econômicas_ADJ_O_ADJ
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 modelos_N_O_N
 anteriores_ADJ_O_ADJ
 ._._O_.
@@ -130192,7 +130192,7 @@ Marchelli_NPROP_O_NPROP
 ,_,_O_,
 pesquisador_N_O_N
 em_PREP_+_PREP
-a_ART_O_ART
+a_ART_O_PROSUB
 de_PREP_+_PREP
 a_ART_O_ART
 USP_NPROP_O_NPROP
@@ -130218,7 +130218,7 @@ Computação_NPROP_O_NPROP
 e_KC_O_KC
 professor_N_O_N
 de_PREP_+_PREP
-o_ART_O_ART
+o_ART_O_PROSUB
 de_PREP_+_PREP
 o_ART_O_ART
 Instituto_NPROP_O_NPROP
@@ -130620,8 +130620,8 @@ a_ART_O_ART
 família_N_O_N
 deve_VAUX_O_VAUX
 saber_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 é_V_O_V
 de_PREP_O_PREP
 uso_N_O_N
@@ -130934,7 +130934,7 @@ Valdemar_NPROP_O_NPROP
 Setzer_NPROP_O_NPROP
 ,_,_O_,
 de_PREP_+_PREP
-o_ART_O_ART
+o_ART_O_PROSUB
 de_PREP_+_PREP
 a_ART_O_ART
 USP_NPROP_O_NPROP
@@ -131019,8 +131019,8 @@ tem_V_O_V
 cabimento_N_O_N
 ela_PROPESS_O_PROPESS
 aprender_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 é_V_O_V
 uma_ART_O_ART
 prova_N_O_N
@@ -131117,7 +131117,7 @@ de_PREP_O_PREP
 pegador_N_O_N
 e_KC_O_KC
 não_ADV_O_ADV
-ficar_V_O_V
+ficar_V_O_VAUX
 sentada_PCP_O_PCP
 ,_,_O_,
 como_PREP_O_PREP
@@ -131253,8 +131253,8 @@ cores_N_O_N
 desenha_V_O_V
 e_KC_O_KC
 apaga_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 fez_V_O_V
 com_PREP_O_PREP
 desenvoltura_N_O_N
@@ -131399,7 +131399,7 @@ programas_N_O_N
 educativos_ADJ_O_ADJ
 ,_,_O_,
 como_PREP_O_PREP
-um_PROADJ_O_ART
+um_PROADJ_O_PROSUB
 de_PREP_O_PREP
 inglês_N_O_N
 ,_,_O_,
@@ -131815,8 +131815,8 @@ a_ART_O_ART
 criança_N_O_N
 pode_VAUX_O_VAUX
 aprender_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 é_V_O_V
 ecologicamente_ADV_O_ADV
 correto_ADJ_O_ADJ
@@ -131922,7 +131922,7 @@ Tel_N_O_N
 ._._O_.
 
 "_"_O_"
-My_NPROP_O_NPROP
+My_NPROP_O_PROADJ
 First_NPROP_O_N
 Atlas_NPROP_O_NPROP
 "_"_O_"
@@ -131954,7 +131954,7 @@ Vendido_V_O_N
 sob_PREP_O_PREP
 encomenda_N_O_N
 em_PREP_+_PREP
-a_ART_O_ART
+a_ART_O_PROSUB
 por_PREP_O_PREP
 US$_CUR_O_CUR
 83_NUM_O_NUM
@@ -132001,12 +132001,12 @@ formas_N_O_N
 geométricas_ADJ_O_ADJ
 ._._O_.
 
-É_VAUX_O_V
+É_VAUX_O_VAUX
 vendido_PCP_O_PCP
 sob_PREP_O_PREP
 encomenda_N_O_N
 em_PREP_+_PREP
-a_ART_O_ART
+a_ART_O_PROSUB
 por_PREP_O_PREP
 US$_CUR_O_CUR
 55_NUM_O_NUM
@@ -132085,7 +132085,7 @@ Está_VAUX_O_VAUX
 sendo_VAUX_O_VAUX
 vendido_PCP_O_PCP
 em_PREP_+_PREP
-a_ART_O_ART
+a_ART_O_PROSUB
 em_PREP_O_PREP
 promoção_N_O_N
 ._._O_.
@@ -132239,7 +132239,7 @@ dez_NUM_O_NUM
 anos_N_O_N
 ,_,_O_,
 usando_V_O_V
-um_PROSUB_O_ART
+um_PROSUB_O_ADV
 hoje_ADV_O_ADV
 ultrapassado_PCP_O_PCP
 XT_N_O_N
@@ -132646,7 +132646,7 @@ sistema_N_O_N
 tradicional_ADJ_O_ADJ
 ,_,_O_,
 o_ART_O_ART
-automático_N_O_ADJ
+automático_N_O_N
 reduz_V_O_V
 em_PREP_O_PREP
 até_PREP_O_PREP
@@ -132795,7 +132795,7 @@ versão_N_O_N
 10_N_O_N
 ._._O_.
 
-É_VAUX_O_V
+É_VAUX_O_VAUX
 usado_PCP_O_PCP
 em_PREP_+_PREP
 a_ART_O_ART
@@ -132803,7 +132803,7 @@ indústria_N_O_N
 aeroespacial_ADJ_O_ADJ
 e_KC_O_KC
 em_PREP_+_PREP
-a_PROSUB_O_ART
+a_PROSUB_O_PROSUB
 de_PREP_O_PREP
 automóveis_N_O_N
 ,_,_O_,
@@ -132838,7 +132838,7 @@ US$_CUR_O_CUR
 695_NUM_O_NUM
 -_-_O_-
 a_ART_O_ART
-completa_N_O_ADJ
+completa_N_O_N
 sai_V_O_V
 por_PREP_O_PREP
 US$_CUR_O_CUR
@@ -133286,7 +133286,7 @@ livro_N_O_N
 inclui_V_O_V
 resumo_N_O_N
 -_-_O_-
-é_VAUX_O_V
+é_VAUX_O_VAUX
 organizado_PCP_O_PCP
 por_PREP_+_PREP
 a_ART_O_ART
@@ -133399,7 +133399,7 @@ exato_ADJ_O_ADJ
 instante_N_O_N
 que_PRO-KS-REL_O_PRO-KS-REL
 aposta_N_O_V
-é_VAUX_O_V
+é_VAUX_O_VAUX
 feita_PCP_O_PCP
 em_PREP_+_PREP
 de_PREP_+_PREP
@@ -133549,7 +133549,7 @@ uma_ART_O_ART
 associação_N_O_N
 de_PREP_+_PREP
 a_ART_O_ART
-brasileira_N_O_ADJ
+brasileira_N_O_N
 com_PREP_O_PREP
 o_ART_O_ART
 grupo_N_O_N
@@ -133764,7 +133764,7 @@ videocassete_N_O_N
 
 O_ART_O_ART
 notebook_N_EST_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 inserido_PCP_O_PCP
 em_PREP_+_PREP
 essa_PROADJ_O_PROADJ
@@ -133779,7 +133779,7 @@ vídeo_N_O_N
 
 A_ART_O_ART
 conexão_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 feita_PCP_O_PCP
 automaticamente_ADV_O_ADV
 por_PREP_+_PREP
@@ -134103,7 +134103,7 @@ processo_N_O_N
 
 O_ART_O_ART
 programa_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 voltado_PCP_O_PCP
 para_PREP_O_PREP
 usuários_N_O_N
@@ -134294,7 +134294,7 @@ lieder_N_EST_N
 ,_,_O_,
 gênero_N_O_N
 em_PREP_O_PREP
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 Franz_NPROP_O_NPROP
 Schubert_NPROP_O_NPROP
 foi_V_O_V
@@ -134311,7 +134311,7 @@ lúdica_ADJ_O_ADJ
 com_PREP_O_PREP
 o_ART_O_ART
 usuário_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 feita_PCP_O_PCP
 em_PREP_+_PREP
 torno_PREP_+_N
@@ -134473,10 +134473,10 @@ o_ART_O_ART
 usuário_N_O_N
 se_PROPESS_O_PROPESS
 sente_V_O_V
-agredido_PCP_O_KS
+agredido_PCP_O_PROPESS
 quando_KS_O_KS
 Salieri_NPROP_O_PROPESS
-é_VAUX_O_V
+é_VAUX_O_VAUX
 qualificado_PCP_O_PCP
 de_PREP_O_PREP
 "_"_O_"
@@ -134505,7 +134505,7 @@ a_PREP_+_PREP
 o_ART_O_ART
 rejeitar_V_O_N
 e_KC_O_KC
-reforçar_V_O_V
+reforçar_V_O_PDEN
 ,_,_O_,
 ao_ADV_O_PREP
 mesmo_ADV_O_PROADJ
@@ -134681,8 +134681,8 @@ em_PREP_+_PREP
 os_ART_O_ART
 cenários_N_O_N
 por_PREP_+_PREP
-o_PRO-KS-REL_O_ART
-qual_PRO-KS-REL_O_PROADJ
+o_PRO-KS-REL_O_PRO-KS-REL
+qual_PRO-KS-REL_O_PRO-KS-REL
 o_ART_O_ART
 jogador_N_O_N
 passa_V_O_V
@@ -134736,7 +134736,7 @@ ancestrais_N_O_N
 Em_PREP_O_PREP
 pesadelos_N_O_N
 ,_,_O_,
-é_VAUX_O_V
+é_VAUX_O_VAUX
 perseguido_PCP_O_PCP
 por_PREP_O_PREP
 antepassados_N_O_N
@@ -134928,8 +134928,8 @@ estratégicas_ADJ_O_ADJ
 
 Para_PREP_O_PREP
 entender_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 acontece_V_O_V
 com_PREP_O_PREP
 o_ART_O_ART
@@ -135096,7 +135096,7 @@ com_PREP_O_PREP
 o_ART_O_ART
 mouse_N_EST_N
 em_PREP_O_PREP
-cada_PROADJ_O_PROADJ
+cada_PROADJ_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 prateleiras_N_O_N
@@ -135271,7 +135271,7 @@ a_PREP_+_PREP
 a_ART_O_ART
 loja_N_O_N
 ou_KC_O_KC
-telefona_V_O_V
+telefona_V_O_PDEN
 ,_,_O_,
 não_ADV_O_ADV
 perdemos_V_O_V
@@ -135563,8 +135563,8 @@ Claris_NPROP_O_NPROP
 Works_NPROP_O_NPROP
 "_"_O_"
 é_V_O_V
-tudo_PROSUB_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+tudo_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 o_ART_O_ART
 usuário_N_O_N
 deseja_V_O_V
@@ -135632,7 +135632,7 @@ essa_PROADJ_O_PROADJ
 interação_N_O_N
 de_PREP_O_PREP
 programas_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 traduzida_PCP_O_PCP
 em_PREP_O_PREP
 facilidade_N_O_N
@@ -135641,7 +135641,7 @@ facilidade_N_O_N
 Nada_PROSUB_O_PROSUB
 comparado_PCP_O_PCP
 a_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_ADV-KS-REL_O_PRO-KS-REL
 o_ART_O_ART
 usuário_N_O_N
@@ -135870,7 +135870,7 @@ botão_N_O_N
 ,_,_O_,
 a_ART_O_ART
 tarefa_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 executada_PCP_O_PCP
 de_PREP_O_PREP
 qualquer_PROADJ_O_PROADJ
@@ -135936,7 +135936,7 @@ mês_N_O_N
 ,_,_O_,
 o_ART_O_ART
 programa_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 feito_PCP_O_PCP
 para_PREP_O_PREP
 uso_N_O_N
@@ -136582,7 +136582,7 @@ físicos_ADJ_O_ADJ
 
 A_ART_O_ART
 informática_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 usada_PCP_O_PCP
 também_PDEN_O_PDEN
 em_PREP_+_PREP
@@ -136715,7 +136715,7 @@ pronunciar_V_O_V
 adequadamente_ADV_O_ADV
 sons_N_O_N
 como_PREP_O_PREP
-os_PROSUB_O_ART
+os_PROSUB_O_PROSUB
 de_PREP_+_PREP
 o_ART_O_ART
 s_N_O_N
@@ -136740,7 +136740,7 @@ com_PREP_O_PREP
 escape_N_O_N
 lateral_ADJ_O_N
 -_-_O_-
-é_VAUX_O_V
+é_VAUX_O_VAUX
 acompanhada_PCP_O_PCP
 por_PREP_O_PREP
 alterações_N_O_N
@@ -136826,7 +136826,7 @@ voz_N_O_N
 ._._O_.
 
 Em_PREP_O_PREP
-um_PROSUB_O_ART
+um_PROSUB_O_PROSUB
 de_PREP_+_PREP
 os_ART_O_ART
 exercícios_N_O_N
@@ -137299,7 +137299,7 @@ processo_N_O_N
 separadamente_ADV_O_ADV
 ,_,_O_,
 ou_PDEN_O_KC
-seja_PDEN_O_V
+seja_PDEN_O_PDEN
 ,_,_O_,
 fazer_V_O_V
 a_ART_O_ART
@@ -137578,7 +137578,7 @@ se_PROPESS_O_PROPESS
 dê_V_O_V
 conta_N_O_N
 de_PREP_O_PREP
-que_PRO-KS_O_PRO-KS-REL
+que_PRO-KS_O_KS
 não_ADV_O_ADV
 era_V_O_V
 exatamente_ADV_O_ADV
@@ -137679,7 +137679,7 @@ Federal_NPROP_O_NPROP
 Trade_NPROP_O_NPROP
 Comission_NPROP_O_NPROP
 estão_VAUX_O_V
-trabalhando_V_O_V
+trabalhando_V_O_VAUX
 juntos_ADV_O_PCP
 para_PREP_O_PREP
 encontrar_V_O_V
@@ -137891,7 +137891,7 @@ especializados_PCP_O_PCP
 certamente_ADV_O_ADV
 vão_VAUX_O_VAUX
 custar_V_O_V
-um_ADV_O_ART
+um_ADV_O_ADV
 pouco_ADV_O_ADV
 a_PREP_+_PREP
 o_ART_O_ART
@@ -137954,7 +137954,7 @@ a_ART_O_ART
 pena_N_O_N
 ,_,_O_,
 como_PREP_O_PREP
-os_PROSUB_O_ART
+os_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 localizam_V_O_V
 filmes_N_O_N
@@ -137966,8 +137966,8 @@ de_PREP_+_PREP
 a_ART_O_ART
 cidade_N_O_N
 ,_,_O_,
-os_ART_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+os_ART_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 fornecem_V_O_V
 as_ART_O_ART
 listas_N_O_N
@@ -138018,7 +138018,7 @@ linhas_N_O_N
 900_N_O_N
 é_V_O_V
 que_KS_O_KS
-depois_ADV_O_ADV
+depois_ADV_O_PREP
 de_PREP_O_PREP
 algum_PROADJ_O_PROADJ
 tempo_N_O_N
@@ -138048,7 +138048,7 @@ elas_PROPESS_O_PROPESS
 
 Chega_V_O_V
 em_PREP_+_PREP
-a_ART_O_PREP
+a_ART_O_PRO-KS-REL
 que_PRO-KS-REL_O_PRO-KS-REL
 vem_V_O_V
 a_PREP_+_PREP
@@ -138136,7 +138136,7 @@ terá_V_O_V
 desempenho_N_O_N
 superior_ADJ_O_ADJ
 a_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 de_PREP_O_PREP
 estações_N_O_N
 de_PREP_O_PREP
@@ -138950,7 +138950,7 @@ três_NUM_O_NUM
 livros_N_O_N
 Ana_NPROP_O_NPROP
 Lucia_NPROP_O_NPROP
-tem_V_O_V
+tem_V_O_VAUX
 publicados_PCP_O_PCP
 e_KC_O_KC
 cerca_PREP_O_PREP
@@ -139253,7 +139253,7 @@ lê_V_O_V
 em_PREP_O_PREP
 voz_N_O_N
 sintetizada_PCP_O_PCP
-o_PRO-KS_O_ART
+o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 está_V_O_VAUX
 escrito_PCP_O_PCP
@@ -139861,7 +139861,7 @@ a_ART_O_ART
 Moddata_NPROP_O_N
 em_PREP_+_PREP
 a_ART_O_ART
-4ª_ADJ_O_ADJ
+4ª_ADJ_O_N
 Telexpo_NPROP_O_PREP
 94_N_O_N
 -_-_O_-
@@ -140099,12 +140099,12 @@ Paulo_NPROP_O_NPROP
 )_)_O_)
 ,_,_O_,
 de_PREP_O_PREP
-a_PREP_O_ART
+a_PREP_O_PROSUB
 de_PREP_O_PREP
 março_N_O_N
 ,_,_O_,
 de_PREP_+_PREP
-as_ART_O_ART
+as_ART_O_PROSUB
 a_PREP_+_PREP
 as_ART_O_ART
 22h_N_HOR_N
@@ -140722,7 +140722,7 @@ COMDEX_NPROP_O_ART
 Rio_NPROP_O_NPROP
 :_:_O_:
 de_PREP_O_PREP
-a_PREP_O_ART
+a_PREP_O_PROSUB
 de_PREP_O_PREP
 março_N_O_N
 em_PREP_+_PREP
@@ -140833,8 +140833,8 @@ compreendida_PCP_O_PCP
 ou_KC_O_KC
 para_PREP_O_PREP
 lembrar_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 foi_VAUX_O_VAUX
 dito_PCP_O_PCP
 ,_,_O_,
@@ -140994,7 +140994,7 @@ algum_PROADJ_O_PROADJ
 eventual_ADJ_O_ADJ
 erro_N_O_N
 ,_,_O_,
-caso_KS_O_N
+caso_KS_O_KS
 você_PROPESS_O_PROPESS
 se_PROPESS_O_PROPESS
 dê_V_O_V
@@ -141071,7 +141071,7 @@ Electronic_NPROP_O_NPROP
 Arts_NPROP_O_NPROP
 ._._O_.
 
-Os_PROSUB_O_ART
+Os_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 preferem_V_O_V
 jogos_N_O_N
@@ -141710,7 +141710,7 @@ lâmpada_N_O_N
 que_PRO-KS-REL_O_PRO-KS-REL
 acende_V_O_V
 e_KC_O_KC
-apaga_V_O_V
+apaga_V_O_PDEN
 ,_,_O_,
 permitindo_V_O_V
 a_PREP_+_PREP
@@ -141767,7 +141767,7 @@ Matemática_NPROP_O_NPROP
 US$_CUR_O_CUR
 60_NUM_O_NUM
 ,_,_O_,
-cada_PROSUB_O_PROADJ
+cada_PROSUB_O_PROSUB
 )_)_O_)
 tratam_V_O_V
 de_PREP_+_PREP
@@ -141805,7 +141805,7 @@ Ciências_NPROP_O_NPROP
 US$_CUR_O_CUR
 60_NUM_O_NUM
 ,_,_O_,
-cada_PROSUB_O_PROADJ
+cada_PROSUB_O_PROSUB
 )_)_O_)
 ,_,_O_,
 o_ART_O_ART
@@ -142308,7 +142308,7 @@ Research_NPROP_O_NPROP
 ,_,_O_,
 o_ART_O_ART
 produto_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 voltado_PCP_O_PCP
 para_PREP_O_PREP
 quem_PRO-KS_O_PRO-KS-REL
@@ -142673,7 +142673,7 @@ line_N_EST_ADJ
 ._._O_.
 
 Americano_N_O_NPROP
-é_VAUX_O_V
+é_VAUX_O_VAUX
 exagerado_PCP_O_PCP
 ._._O_.
 
@@ -142762,7 +142762,7 @@ apenas_PDEN_O_PDEN
 marginal_ADJ_O_N
 ,_,_O_,
 ou_PDEN_O_KC
-seja_PDEN_O_V
+seja_PDEN_O_PDEN
 ,_,_O_,
 os_ART_O_ART
 alunos_N_O_N
@@ -142848,7 +142848,7 @@ o_ART_O_ART
 Congresso_NPROP_O_N
 ,_,_O_,
 a_ART_O_ART
-maior_N_O_ADJ
+maior_N_O_N
 de_PREP_+_PREP
 o_ART_O_ART
 mundo_N_O_N
@@ -143028,7 +143028,7 @@ crianças_N_O_N
 "_"_O_"
 educa_V_O_V
 "_"_O_"
-mais_ADV_O_ADV
+mais_ADV_O_PDEN
 que_KS_O_KS
 o_ART_O_ART
 melhor_ADJ_O_ADJ
@@ -143143,7 +143143,7 @@ poder_VAUX_O_N
 usar_V_O_V
 mais_ADV_O_ADV
 ,_,_O_,
-já_KS_O_ADV
+já_KS_O_KS
 que_KS_O_KS
 não_ADV_O_ADV
 demora_V_O_V
@@ -143458,7 +143458,7 @@ porém_KC_O_KC
 o_ART_O_ART
 preço_N_O_N
 ainda_ADV_O_ADV
-é_VAUX_O_V
+é_VAUX_O_VAUX
 elevado_PCP_O_PCP
 ._._O_.
 
@@ -143547,7 +143547,7 @@ som_N_O_N
 Pro_NPROP_O_NPROP
 Audio_NPROP_O_NPROP
 16_NPROP_O_NPROP
-é_VAUX_O_V
+é_VAUX_O_VAUX
 produzida_PCP_O_PCP
 por_PREP_+_PREP
 a_ART_O_ART
@@ -143802,7 +143802,7 @@ instalação_N_O_N
 de_PREP_+_PREP
 o_ART_O_ART
 kit_N_EST_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 facilitada_PCP_O_PCP
 por_PREP_+_PREP
 o_ART_O_ART
@@ -143992,7 +143992,7 @@ cinemática_ADJ_O_ADJ
 ,_,_O_,
 essa_PROADJ_O_PROADJ
 movimentação_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 feita_PCP_O_PCP
 em_PREP_O_PREP
 três_NUM_O_NUM
@@ -144854,7 +144854,7 @@ A_ART_O_ART
 linha_N_O_N
 de_PREP_O_PREP
 monitores_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 composta_PCP_O_PCP
 por_PREP_O_PREP
 dez_NUM_O_NUM
@@ -145156,7 +145156,7 @@ superservidor_N_O_N
 
 A_ART_O_ART
 máquina_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 apresentada_PCP_O_PCP
 em_PREP_O_PREP
 gabinete_N_O_N
@@ -146153,7 +146153,7 @@ gráfico_ADJ_O_ADJ
 ,_,_O_,
 a_ART_O_ART
 estação_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 baseada_PCP_O_PCP
 em_PREP_+_PREP
 o_ART_O_ART
@@ -146194,7 +146194,7 @@ básica_ADJ_O_ADJ
 com_PREP_O_PREP
 memória_N_O_N
 de_PREP_+_PREP
-a_PROSUB_O_ART
+a_PROSUB_O_PROSUB
 de_PREP_O_PREP
 32_NUM_O_NUM
 Mbytes_N_O_N
@@ -146688,7 +146688,7 @@ KVA_NPROP_O_N
 )_)_O_)
 ._._O_.
 
-Os_PROSUB_O_ART
+Os_PROSUB_O_PROSUB
 em_PREP_+_PREP
 o_ART_O_ART
 breaks_N_EST_N
@@ -146705,7 +146705,7 @@ impressora_N_O_N
 )_)_O_)
 ._._O_.
 
-Os_PROSUB_O_ART
+Os_PROSUB_O_PROSUB
 em_PREP_+_PREP
 o_ART_O_ART
 breaks_N_EST_N
@@ -147321,7 +147321,7 @@ a_ART_O_ART
 tela_N_O_N
 )_)_O_)
 e_KC_O_KC
-é_VAUX_O_V
+é_VAUX_O_VAUX
 indicado_PCP_O_PCP
 para_PREP_O_PREP
 multimídia_ADJ_O_N
@@ -147957,7 +147957,7 @@ multiplexadores_N_O_ART
 StrataCom_NPROP_O_N
 (_(_O_(
 foto_N_O_N
-acima_ADV_O_PREP
+acima_ADV_O_ADV
 )_)_O_)
 com_PREP_O_PREP
 recursos_N_O_N
@@ -148254,7 +148254,7 @@ LaserSafe_NPROP_O_ART
 Plus_NPROP_O_NPROP
 (_(_O_(
 foto_N_O_N
-acima_ADV_O_PREP
+acima_ADV_O_ADV
 )_)_O_)
 com_PREP_O_PREP
 desconto_N_O_N
@@ -148588,7 +148588,7 @@ Adventure_NPROP_O_NPROP
 CD_N_O_N
 que_PRO-KS-REL_O_PRO-KS-REL
 traz_V_O_V
-tudo_PROADJ_O_PROSUB
+tudo_PROADJ_O_PROADJ
 o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 você_PROPESS_O_PROPESS
@@ -148761,7 +148761,7 @@ também_PDEN_O_PDEN
 design_N_EST_N
 diferenciado_PCP_O_PCP
 para_PREP_O_PREP
-um_PROSUB_O_ART
+um_PROSUB_O_PROSUB
 de_PREP_+_PREP
 os_ART_O_ART
 modelos_N_O_N
@@ -148845,10 +148845,10 @@ vibração_N_O_N
 Quando_KS_O_KS
 o_ART_O_ART
 disparador_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 acionado_PCP_O_PCP
 ,_,_O_,
-microprocessadores_N_O_N
+microprocessadores_N_O_KS
 se_PROPESS_O_PROPESS
 ativam_V_O_V
 para_PREP_O_PREP
@@ -148867,7 +148867,7 @@ de_PREP_+_PREP
 a_ART_O_ART
 foto_N_O_N
 ,_,_O_,
-é_VAUX_O_V
+é_VAUX_O_VAUX
 feita_PCP_O_PCP
 a_ART_O_PREP
 correção_N_O_N
@@ -149343,7 +149343,7 @@ agradável_ADJ_O_ADJ
 a_PREP_O_PREP
 retratos_N_O_N
 e_KC_O_KC
-corrige_V_O_V
+corrige_V_O_PDEN
 ,_,_O_,
 ainda_ADV_O_ADV
 ,_,_O_,
@@ -149481,7 +149481,7 @@ A_ART_O_ART
 maior_ADJ_O_ADJ
 qualidade_N_O_N
 ,_,_O_,
-no_KC_O_NPROP
+no_KC_O_KC
 entanto_KC_O_KC
 ,_,_O_,
 é_V_O_V
@@ -149681,8 +149681,8 @@ cor_N_O_N
 ,_,_O_,
 para_PREP_O_PREP
 designar_V_O_V
-tudo_PROSUB_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+tudo_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 não_ADV_O_ADV
 pareça_V_O_V
 branco_N_O_N
@@ -149700,7 +149700,7 @@ série_N_O_N
 de_PREP_O_PREP
 matizes_N_O_N
 étnicos_ADJ_O_ADJ
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 ,_,_O_,
 cada_PROADJ_O_PROADJ
 vez_N_O_N
@@ -149977,7 +149977,7 @@ de_PREP_O_PREP
 imigrantes_N_O_N
 -_-_O_-
 que_PRO-KS-REL_O_PRO-KS-REL
-têm_VAUX_O_V
+têm_VAUX_O_VAUX
 chegado_PCP_O_PCP
 a_PREP_+_PREP
 o_ART_O_ART
@@ -150071,7 +150071,7 @@ El_NPROP_O_NPROP
 Mariachi_NPROP_O_NPROP
 "_"_O_"
 ,_,_O_,
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 segundo_KS_O_PREP
 seu_PROADJ_O_PROADJ
 diretor_N_O_N
@@ -150252,7 +150252,7 @@ Paulo_NPROP_O_NPROP
 e_KC_O_KC
 são_V_O_V
 raros_ADJ_O_ADJ
-os_PROSUB_O_PRO-KS-REL
+os_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 saem_V_O_V
 de_PREP_+_PREP
@@ -150369,7 +150369,7 @@ Califórnia_NPROP_O_NPROP
 em_PREP_O_PREP
 Berkeley_NPROP_O_NPROP
 ,_,_O_,
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 universidades_N_O_N
@@ -150596,7 +150596,7 @@ uma_ART_O_ART
 idéia_N_O_N
 distorcida_PCP_O_PCP
 de_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 sejam_V_O_V
 os_ART_O_ART
@@ -150628,8 +150628,8 @@ são_V_O_V
 as_ART_O_ART
 melhores_N_O_ADJ
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 não_ADV_O_ADV
 é_V_O_V
 verdade_N_O_N
@@ -150790,7 +150790,7 @@ David_NPROP_O_NPROP
 Wang_NPROP_O_NPROP
 Louie_NPROP_O_NPROP
 ,_,_O_,
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 em_PREP_O_PREP
 1991_N_O_N
 publicou_V_O_V
@@ -151014,7 +151014,7 @@ Sri_NPROP_O_NPROP
 Lanka_NPROP_O_NPROP
 ,_,_O_,
 o_ART_O_ART
-descendente_N_O_ADJ
+descendente_N_O_N
 de_PREP_O_PREP
 ingleses_N_O_N
 ,_,_O_,
@@ -151084,7 +151084,7 @@ inglês_N_O_N
 Seu_PROADJ_O_PROADJ
 romance_N_O_N
 "_"_O_"
-Os_NPROP_O_ART
+Os_NPROP_O_NPROP
 Vestígios_NPROP_O_NPROP
 do_NPROP_O_NPROP
 Dia_NPROP_O_NPROP
@@ -151442,7 +151442,7 @@ televisão_N_O_N
 Mas_KC_O_KC
 essa_PROADJ_O_PROADJ
 atividade_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 interrompida_PCP_O_PCP
 por_PREP_O_PREP
 Andrew_NPROP_O_NPROP
@@ -151481,8 +151481,8 @@ Washington_NPROP_O_NPROP
 foi_V_O_V
 de_PREP_O_PREP
 representar_V_O_V
-algo_PROSUB_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+algo_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 ele_PROPESS_O_PROPESS
 não_ADV_O_ADV
 é_V_O_V
@@ -151498,7 +151498,7 @@ filme_N_O_N
 ._._O_.
 
 Em_PREP_+_PREP
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 cenas_N_O_N
@@ -151813,10 +151813,10 @@ a_ART_O_PREP
 coisa_N_O_N
 mais_ADV_O_ADV
 importante_ADJ_O_ADJ
-tem_VAUX_O_V
+tem_VAUX_O_VAUX
 sido_PCP_O_PCP
 com_PREP_O_PREP
-que_PRO-KS_O_PRO-KS-REL
+que_PRO-KS_O_KS
 diretor_N_O_N
 trabalhei_V_O_V
 ._._O_.
@@ -151825,7 +151825,7 @@ De_PREP_O_PREP
 fato_N_O_N
 ,_,_O_,
 Washington_NPROP_O_NPROP
-tem_VAUX_O_V
+tem_VAUX_O_VAUX
 trabalhado_PCP_O_PCP
 com_PREP_O_PREP
 os_ART_O_ART
@@ -151896,7 +151896,7 @@ aprendendo_V_O_V
 
 Washington_NPROP_O_NPROP
 começou_V_O_V
-sua_PROADJ_O_PROADJ
+sua_PROADJ_O_PROSUB
 em_PREP_+_PREP
 direção_PREP_+_N
 a_PREP_+_PREP
@@ -152533,8 +152533,8 @@ o_ART_O_ART
 suficiente_N_O_N
 para_PREP_O_PREP
 dizer_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 você_PROPESS_O_PROPESS
 quer_V_O_V
 ._._O_.
@@ -152756,7 +152756,7 @@ mas_KC_O_KC
 Frank_NPROP_O_NPROP
 acabou_VAUX_O_VAUX
 levando_V_+_V
-o_PROPESS_O_ART
+o_PROPESS_O_PROSUB
 por_PREP_+_PREP
 os_ART_O_ART
 US$_CUR_O_CUR
@@ -152911,7 +152911,7 @@ ficaram_V_O_V
 em_PREP_+_PREP
 a_ART_O_ART
 cidade_N_O_N
-eram_V_O_V
+eram_V_O_VAUX
 esperados_PCP_O_PCP
 em_PREP_+_PREP
 a_ART_O_ART
@@ -153102,7 +153102,7 @@ cedo_ADV_O_ADV
 ._._O_.
 
 Para_PREP_O_PREP
-praticarem_V_O_V
+praticarem_V_O_VAUX
 juntos_ADJ_O_PCP
 seu_PROADJ_O_PROADJ
 esporte_N_O_N
@@ -153385,7 +153385,7 @@ em_PREP_O_PREP
 clima_N_O_N
 semelhante_ADJ_O_ADJ
 a_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 de_PREP_+_PREP
 aquele_PROADJ_O_PROADJ
 dia_N_O_N
@@ -153523,8 +153523,8 @@ Os_ART_O_ART
 vizinhos_N_O_N
 não_ADV_O_ADV
 entendem_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 aconteceu_V_O_V
 com_PREP_O_PREP
 um_ART_O_ART
@@ -154214,7 +154214,7 @@ grandes_ADJ_O_ADJ
 livrarias_N_O_N
 norte-americanas_ADJ_O_ADJ
 se_PROPESS_O_PROPESS
-viram_V_O_V
+viram_V_O_VAUX
 obrigadas_PCP_O_PCP
 a_PREP_O_PREP
 criar_V_O_V
@@ -154279,7 +154279,7 @@ o_ART_O_ART
 poder_N_O_N
 aquisitivo_ADJ_O_ADJ
 de_PREP_+_PREP
-os_ART_O_ART
+os_ART_O_PROSUB
 em_PREP_+_PREP
 os_ART_O_ART
 EUA_NPROP_O_NPROP
@@ -154893,7 +154893,7 @@ sexo_N_O_N
 feminino_ADJ_O_ADJ
 ._._O_.
 
-É_VAUX_O_V
+É_VAUX_O_VAUX
 considerado_PCP_O_PCP
 politicamente_ADV_O_ADV
 incorreto_ADJ_O_ADJ
@@ -155101,7 +155101,7 @@ Hagedorn_NPROP_O_N
 A_ART_O_ART
 autora_N_O_N
 é_V_O_V
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 principais_ADJ_O_ADJ
@@ -155294,7 +155294,7 @@ O_ART_O_ART
 autor_N_O_N
 de_PREP_O_PREP
 "_"_O_"
-Os_NPROP_O_ART
+Os_NPROP_O_NPROP
 Reis_NPROP_O_NPROP
 do_NPROP_O_NPROP
 Mambo_NPROP_O_NPROP
@@ -155322,7 +155322,7 @@ espanhol_ADJ_O_ADJ
 Antonio_NPROP_O_NPROP
 Banderas_NPROP_O_NPROP
 como_PREP_O_PREP
-um_PROSUB_O_ART
+um_PROSUB_O_PROSUB
 de_PREP_+_PREP
 os_ART_O_ART
 protagonistas_N_O_N
@@ -155480,7 +155480,7 @@ o_ART_O_ART
 crepúsculo_N_O_N
 o_ART_O_ART
 homem_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 testado_PCP_O_PCP
 Editoria_N_O_N
 :_:_O_:
@@ -155493,7 +155493,7 @@ o_ART_O_ART
 crepúsculo_N_O_N
 o_ART_O_ART
 homem_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 testado_PCP_O_PCP
 Paulo_NPROP_O_NPROP
 Coelho_NPROP_O_NPROP
@@ -155545,7 +155545,7 @@ espirituais_ADJ_O_ADJ
 ,_,_O_,
 este_PROADJ_O_PROADJ
 momento_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 considerado_PCP_O_PCP
 sagrado_PCP_O_N
 ._._O_.
@@ -155593,10 +155593,10 @@ devemos_VAUX_O_VAUX
 começar_V_O_V
 tudo_PROADJ_O_PROSUB
 de_ADV_O_PREP
-novo_ADV_O_ADJ
+novo_ADV_O_ADV
 ,_,_O_,
 saudando_V_+_V
-o_PROPESS_O_ART
+o_PROPESS_O_PROSUB
 com_PREP_O_PREP
 um_ART_O_ART
 "_"_O_"
@@ -155621,7 +155621,7 @@ e_KC_O_KC
 de_PREP_+_PREP
 o_ART_O_ART
 homem_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 testado_PCP_O_PCP
 ._._O_.
 
@@ -155994,8 +155994,8 @@ este_PROSUB_O_PROSUB
 mas_KC_O_KC
 ,_,_O_,
 ,_,_O_,
-o_PROSUB_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+o_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 acontecia_V_O_V
 com_PREP_O_PREP
 Ameche_NPROP_O_N
@@ -156467,8 +156467,8 @@ De_PREP_+_PREP
 a_ART_O_ART
 Redação_N_O_N
 É_V_O_V
-o_PROSUB_O_ART
-que_PRO-KS-REL_O_PRO-KS-REL
+o_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 se_PROPESS_O_PROPESS
 pode_VAUX_O_VAUX
 chamar_V_O_V
@@ -156557,7 +156557,7 @@ realidade_N_O_N
 a_PREP_+_PREP
 partir_PREP_+_PREP
 de_PREP_+_PREP
-a_PROSUB_O_ART
+a_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 quimeras_N_O_N
@@ -156576,7 +156576,7 @@ conhece_V_O_V
 
 Se_KS_O_KS
 Fellini_NPROP_O_NPROP
-é_VAUX_O_V
+é_VAUX_O_VAUX
 tomado_PCP_O_PCP
 em_PREP_O_PREP
 começo_N_O_N
@@ -156673,7 +156673,7 @@ passarão_V_O_V
 vergonha_N_O_N
 perto_PREP_+_PREP
 de_PREP_+_PREP
-esses_PROSUB_O_PROADJ
+esses_PROSUB_O_PROSUB
 ._._O_.
 
 Em_PREP_O_PREP
@@ -156789,7 +156789,7 @@ conhecido_PCP_O_PCP
 
 E_KC_O_KC
 "_"_O_"
-As_NPROP_O_ART
+As_NPROP_O_NPROP
 Mil_NPROP_O_NPROP
 e_NPROP_O_KC
 Uma_NPROP_O_ART
@@ -156927,7 +156927,7 @@ conseguiu_V_O_V
 ser_VAUX_O_VAUX
 apontado_PCP_O_PCP
 como_PREP_O_PREP
-um_PROSUB_O_ART
+um_PROSUB_O_PROSUB
 de_PREP_+_PREP
 os_ART_O_ART
 melhores_ADJ_O_ADJ
@@ -157314,7 +157314,7 @@ que_KS_O_KS
 ser_V_O_V
 só_ADV_O_PDEN
 ela_PROPESS_O_PROPESS
-mesmo_PDEN_O_PDEN
+mesmo_PDEN_O_PROADJ
 ,_,_O_,
 com_PREP_O_PREP
 seus_PROADJ_O_PROADJ
@@ -157421,7 +157421,7 @@ está_VAUX_O_V
 nem_ADV_O_ADV
 ligando_V_O_V
 para_PREP_O_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 você_PROPESS_O_PROPESS
 acha_V_O_V
@@ -157461,7 +157461,7 @@ de_PREP_O_PREP
 '_'_O_'
 Caetano_NPROP_O_NPROP
 Por_NPROP_O_PREP
-que_NPROP_O_PRO-KS-REL
+que_NPROP_O_KS
 não_NPROP_O_ADV
 ?_?_O_?
 
@@ -157479,7 +157479,7 @@ livro_N_O_N
 "_"_O_"
 Caetano_NPROP_O_NPROP
 Por_NPROP_O_PREP
-que_NPROP_O_PRO-KS-REL
+que_NPROP_O_KS
 não_NPROP_O_ADV
 ?_?_O_?
 
@@ -157613,7 +157613,7 @@ um_ART_O_ART
 segundo_ADJ_O_ADJ
 nome_N_O_N
 :_:_O_:
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 de_PREP_+_PREP
 o_ART_O_ART
 poeta_N_O_N
@@ -157631,7 +157631,7 @@ anos_N_O_N
 de_PREP_O_PREP
 pesquisas_N_O_N
 em_PREP_O_PREP
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 Caetano_NPROP_O_NPROP
 foi_VAUX_O_V
 poucas_PROADJ_O_PROADJ
@@ -158242,7 +158242,7 @@ mais_PROADJ_O_PREP
 um_NUM_O_ART
 personagem_N_O_N
 de_KS_O_PREP
-o_KS_O_ART
+o_KS_O_PROSUB
 que_KS_O_PRO-KS-REL
 uma_ART_O_ART
 personalidade_N_O_N
@@ -158321,7 +158321,7 @@ Título_N_O_N
 :_:_O_:
 Caetano_NPROP_O_NPROP
 Por_NPROP_O_PREP
-que_NPROP_O_PRO-KS-REL
+que_NPROP_O_KS
 não_NPROP_O_ADV
 ?_?_O_?
 
@@ -158409,7 +158409,7 @@ livro_N_O_N
 "_"_O_"
 Caetano_NPROP_O_NPROP
 Por_NPROP_O_PREP
-que_NPROP_O_PRO-KS-REL
+que_NPROP_O_KS
 não_NPROP_O_ADV
 ?_?_O_?
 
@@ -158598,7 +158598,7 @@ por_PREP_+_PREP
 o_ART_O_ART
 casal_N_O_N
 de_PREP_O_PREP
-que_KS_O_KS
+que_KS_O_PRO-KS-REL
 Caetano_NPROP_O_NPROP
 ,_,_O_,
 feito_PCP_O_PCP
@@ -158904,8 +158904,8 @@ ela_PROPESS_O_PROPESS
 se_PROPESS_O_PROPESS
 identifica_V_O_V
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 fica_V_O_V
 visível_ADJ_O_ADJ
 em_PREP_+_PREP
@@ -158975,7 +158975,7 @@ Nenguinha_NPROP_O_NPROP
 ._._O_.
 
 (_(_O_(
-Sobre_PREP_O_NPROP
+Sobre_PREP_O_PREP
 "_"_O_"
 Neide_NPROP_O_NPROP
 Candolina_NPROP_O_NPROP
@@ -159033,7 +159033,7 @@ Caetano_NPROP_O_NPROP
 ._._O_.
 
 Por_NPROP_O_PREP
-que_NPROP_O_PRO-KS-REL
+que_NPROP_O_KS
 não_NPROP_O_ADV
 ?_?_O_?
 
@@ -159393,7 +159393,7 @@ de_PREP_+_PREP
 o_ART_O_ART
 coro_N_O_N
 lembram_V_O_V
-as_PROSUB_O_ART
+as_PROSUB_O_PROSUB
 de_PREP_O_PREP
 uma_ART_O_ART
 igreja_N_O_N
@@ -159633,7 +159633,7 @@ rei_N_O_N
 de_PREP_+_PREP
 o_ART_O_ART
 reggae_N_EST_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 lembrado_PCP_O_PCP
 em_PREP_O_PREP
 mais_PROADJ_O_PREP
@@ -159655,7 +159655,7 @@ fica_V_O_V
 a_ART_O_ART
 impressão_N_O_N
 de_PREP_O_PREP
-que_KS_O_KS
+que_KS_O_PRO-KS-REL
 Rita_NPROP_O_NPROP
 usa_V_O_V
 os_ART_O_ART
@@ -160012,8 +160012,8 @@ final_ADJ_O_ADJ
 De_PREP_O_PREP
 tudo_PROSUB_O_PROSUB
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 resta_V_O_V
 de_PREP_O_PREP
 mais_ADV_O_ADV
@@ -160032,7 +160032,7 @@ que_PRO-KS-REL_O_PRO-KS-REL
 quase_ADV_O_ADV
 evoca_V_O_V
 o_ART_O_ART
-burlesco_N_O_ADJ
+burlesco_N_O_N
 de_PREP_+_PREP
 o_ART_O_ART
 cinema_N_O_N
@@ -160114,7 +160114,7 @@ pode_VAUX_+_VAUX
 se_PROPESS_O_PROPESS
 entender_V_O_V
 "_"_O_"
-Os_NPROP_O_ART
+Os_NPROP_O_NPROP
 Primeiros_NPROP_O_NPROP
 Musicais_NPROP_O_NPROP
 da_NPROP_O_NPROP
@@ -160317,7 +160317,7 @@ própria_ADJ_O_ADJ
 ._._O_.
 
 "_"_O_"
-Os_NPROP_O_ART
+Os_NPROP_O_NPROP
 Primeiros_NPROP_O_NPROP
 Musicais_NPROP_O_NPROP
 da_NPROP_O_NPROP
@@ -160379,8 +160379,8 @@ de_PREP_+_PREP
 a_ART_O_ART
 coisa_N_O_N
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 chama_V_O_V
 a_ART_O_ART
 atenção_N_O_N
@@ -160410,8 +160410,8 @@ jukebox_N_EST_NPROP
 com_PREP_O_PREP
 imagem_N_O_N
 sobre_PREP_O_PREP
-os_PRO-KS-REL_O_ART
-quais_PRO-KS-REL_O_PROADJ
+os_PRO-KS-REL_O_PRO-KS-REL
+quais_PRO-KS-REL_O_PRO-KS-REL
 a_ART_O_ART
 própria_PROADJ_O_PROADJ
 Cultura_NPROP_O_N
@@ -160473,8 +160473,8 @@ cada_PROADJ_O_PROADJ
 intérprete_N_O_N
 e_KC_O_KC
 interpretar_V_O_V
-algo_PROSUB_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+algo_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 se_PROPESS_O_PROPESS
 pode_VAUX_O_VAUX
 chamar_V_O_V
@@ -160531,7 +160531,7 @@ essencial_N_O_N
 O_ART_O_ART
 programa_N_O_N
 vai_V_O_V
-um_ADV_O_ART
+um_ADV_O_ADV
 pouco_ADV_O_ADV
 em_PREP_+_PREP
 essa_PROADJ_O_PROADJ
@@ -160649,7 +160649,7 @@ Em_PREP_+_PREP
 esse_PROADJ_O_PROADJ
 sentido_PCP_O_N
 "_"_O_"
-Os_NPROP_O_ART
+Os_NPROP_O_NPROP
 Primeiros_NPROP_O_NPROP
 Musicais_NPROP_O_NPROP
 "_"_O_"
@@ -161102,7 +161102,7 @@ em_PREP_+_PREP
 a_ART_O_ART
 Bósnia_NPROP_O_NPROP
 :_:_O_:
-tudo_PROADJ_O_PROSUB
+tudo_PROADJ_O_NPROP
 isso_PROSUB_O_PROSUB
 mereceu_V_O_V
 minguados_PCP_O_ART
@@ -161125,7 +161125,7 @@ de_PREP_O_PREP
 uma_ART_O_ART
 retrospectiva_N_O_N
 de_PREP_+_PREP
-essas_PROSUB_O_PROADJ
+essas_PROSUB_O_PROSUB
 não_ADV_O_ADV
 é_V_O_V
 informar_V_O_V
@@ -161830,8 +161830,8 @@ previsíveis_ADJ_O_N
 Você_PROPESS_O_PROPESS
 já_ADV_O_ADV
 sabe_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 vai_VAUX_O_VAUX
 ocorrer_V_O_V
 ,_,_O_,
@@ -161927,8 +161927,8 @@ em_PREP_O_PREP
 certas_PROADJ_O_PROADJ
 onomatopéias_N_O_N
 ,_,_O_,
-o_PROSUB_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+o_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 é_V_O_V
 interessante_ADJ_O_ADJ
 enquanto_PREP_O_PREP
@@ -162605,7 +162605,7 @@ Nova_NPROP_O_NPROP
 York_NPROP_O_NPROP
 ._._O_.
 
-Tudo_PROADJ_O_PROSUB
+Tudo_PROADJ_O_PROADJ
 isso_PROSUB_O_PROSUB
 sem_PREP_O_PREP
 contar_V_O_V
@@ -163073,7 +163073,7 @@ Almodóvar_NPROP_O_NPROP
 ,_,_O_,
 Scorsese_NPROP_O_NPROP
 ,_,_O_,
-Coppola_NPROP_O_NPROP
+Coppola_NPROP_O_KC
 e_KC_O_KC
 Bertolluci_NPROP_O_N
 ._._O_.
@@ -163247,7 +163247,7 @@ nome_N_O_N
 e_KC_O_KC
 explica_V_O_V
 por_ADV-KS_O_PREP
-que_ADV-KS_O_PRO-KS-REL
+que_ADV-KS_O_KS
 só_PDEN_O_PDEN
 negros_N_O_N
 usam_V_O_V
@@ -163295,7 +163295,7 @@ Explorador_N_O_N
 britânico_ADJ_O_ADJ
 traduziu_V_O_V
 "_"_O_"
-Os_NPROP_O_ART
+Os_NPROP_O_NPROP
 Lusíadas_NPROP_O_NPROP
 "_"_O_"
 e_KC_O_KC
@@ -163550,7 +163550,7 @@ Burton_NPROP_O_NPROP
 ele_PROPESS_O_PROPESS
 traduziu_V_O_V
 "_"_O_"
-Os_NPROP_O_ART
+Os_NPROP_O_NPROP
 Lusíadas_NPROP_O_NPROP
 "_"_O_"
 para_PREP_O_PREP
@@ -163644,8 +163644,8 @@ ele_PROPESS_O_PROPESS
 "_"_O_"
 não_ADV_O_ADV
 descobriu_V_O_V
-nada_ADV_O_PROSUB
-Burckhardt_NPROP_O_PRO-KS-REL
+nada_ADV_O_PRO-KS
+Burckhardt_NPROP_O_PRO-KS
 já_ADV_O_ADV
 não_ADV_O_ADV
 tivesse_VAUX_O_VAUX
@@ -163675,10 +163675,10 @@ atos_N_O_N
 suspeitos_ADJ_O_ADJ
 de_PREP_O_PREP
 heroísmo_N_O_N
-tudo_PROADJ_O_PROSUB
+tudo_PROADJ_O_PROADJ
 isso_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
-a_PROPESS_O_PREP
+a_PROPESS_O_PROPESS
 tornou_V_O_V
 naturalmente_ADV_O_ADV
 um_ART_O_ART
@@ -163834,7 +163834,7 @@ o_ART_O_ART
 Brasil_NPROP_O_NPROP
 como_PREP_O_PREP
 "_"_O_"
-As_NPROP_O_ART
+As_NPROP_O_NPROP
 Montanhas_NPROP_O_NPROP
 da_NPROP_O_NPROP
 Lua_NPROP_O_NPROP
@@ -163869,8 +163869,8 @@ Speke_NPROP_O_NPROP
 1827-1864_N_DAT_NPROP
 )_)_O_)
 ,_,_O_,
-algo_PROSUB_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+algo_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 não_ADV_O_ADV
 era_V_O_V
 muito_ADV_O_ADV
@@ -163889,7 +163889,7 @@ Sutra_NPROP_O_NPROP
 "_"_O_"
 e_KC_O_KC
 "_"_O_"
-As_NPROP_O_ART
+As_NPROP_O_NPROP
 Mil_NPROP_O_NPROP
 e_NPROP_O_KC
 Uma_NPROP_O_ART
@@ -163954,7 +163954,7 @@ Livingstone_NPROP_O_NPROP
 ,_,_O_,
 alvo_N_O_N
 de_PREP_O_PREP
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 mais_ADV_O_N
@@ -164088,7 +164088,7 @@ currículo_N_O_N
 como_PREP_O_PREP
 militar_N_O_N
 ,_,_O_,
-embora_KS_O_KS
+embora_KS_O_PRO-KS-REL
 em_PREP_+_PREP
 a_ART_O_ART
 verdade_N_O_N
@@ -164503,7 +164503,7 @@ de_PREP_O_PREP
 Bering_NPROP_O_N
 ._._O_.
 
-Estava_V_O_V
+Estava_V_O_VAUX
 dada_PCP_O_PCP
 a_ART_O_PREP
 partida_N_O_N
@@ -165029,7 +165029,7 @@ reconheceu_V_O_V
 e_KC_O_KC
 sua_PROADJ_O_PROADJ
 mãe_N_O_N
-era_V_O_V
+era_V_O_VAUX
 dada_PCP_O_PCP
 a_PREP_O_PREP
 ocultices_N_O_N
@@ -165386,7 +165386,7 @@ o_ART_O_ART
 país_N_O_N
 ,_,_O_,
 em_PREP_+_PREP
-as_PRO-KS-REL_O_ART
+as_PRO-KS-REL_O_PROSUB
 quais_PRO-KS-REL_O_PRO-KS-REL
 realizou_V_O_V
 pesquisas_N_O_N
@@ -165656,7 +165656,7 @@ enviadas_PCP_O_PCP
 de_PREP_+_PREP
 a_ART_O_ART
 Itália_NPROP_O_NPROP
-a_PREP_O_ART
+a_PREP_O_NPROP
 Londres_NPROP_O_NPROP
 por_PREP_+_PREP
 o_ART_O_ART
@@ -166190,7 +166190,7 @@ Equipe_N_O_N
 de_PREP_O_PREP
 Articulistas_N_O_N
 Em_PREP_+_PREP
-um_PROSUB_O_ART
+um_PROSUB_O_PROSUB
 de_PREP_O_PREP
 seus_PROADJ_O_PROADJ
 ensaios_N_O_N
@@ -166288,7 +166288,7 @@ podemos_VAUX_O_VAUX
 dizer_V_O_V
 que_KS_O_KS
 um_PROSUB_O_PROSUB
-é_VAUX_O_V
+é_VAUX_O_VAUX
 exemplificado_PCP_O_PCP
 por_PREP_+_PREP
 o_ART_O_ART
@@ -166338,7 +166338,7 @@ Nikolai_NPROP_O_PREP
 Leskóv_NPROP_O_N
 ,_,_O_,
 após_ADV_O_PREP
-retomar_V_O_V
+retomar_V_O_VAUX
 determinadas_PCP_O_PCP
 observações_N_O_N
 que_PRO-KS-REL_O_PRO-KS-REL
@@ -166385,7 +166385,7 @@ resumo_ADV_O_N
 ,_,_O_,
 aquilo_PROSUB_O_PROSUB
 por_PREP_+_PREP
-o_PRO-KS_O_ART
+o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 os_ART_O_ART
 soldados_N_O_N
@@ -166396,7 +166396,7 @@ campos_N_O_N
 de_PREP_O_PREP
 batalha_N_O_N
 contrariava_V_O_V
-tudo_PROADJ_O_PROSUB
+tudo_PROADJ_O_PROADJ
 o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 os_ART_O_ART
@@ -166461,7 +166461,7 @@ uma_ART_O_ART
 crença_N_O_N
 residual_ADJ_O_ADJ
 em_PREP_+_PREP
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 duas_NUM_O_NUM
@@ -166765,9 +166765,9 @@ Europa_NPROP_O_NPROP
 continental_ADJ_O_ADJ
 ,_,_O_,
 através_PREP_+_PREP
-de_PREP_+_PREP
-a_PRO-KS-REL_O_ART
-qual_PRO-KS-REL_O_PROADJ
+de_PREP_+_PRO-KS-REL
+a_PRO-KS-REL_O_PRO-KS-REL
+qual_PRO-KS-REL_O_PRO-KS-REL
 os_ART_O_ART
 jovens_ADJ_O_N
 aristocratas_N_O_PREP
@@ -166866,7 +166866,7 @@ de_PREP_+_PREP
 a_ART_O_ART
 guerra_N_O_N
 ,_,_O_,
-no_KC_O_NPROP
+no_KC_O_KC
 entanto_KC_O_KC
 ,_,_O_,
 o_ART_O_ART
@@ -166893,7 +166893,7 @@ a_ART_O_ART
 redundância_N_O_N
 ,_,_O_,
 ou_PDEN_O_KC
-seja_PDEN_O_V
+seja_PDEN_O_PDEN
 ,_,_O_,
 todo_PROADJ_O_PROADJ
 mundo_N_O_N
@@ -166946,11 +166946,11 @@ York_NPROP_O_NPROP
 ou_KC_O_KC
 Tóquio_NPROP_O_NPROP
 ,_,_O_,
-Cairo_NPROP_O_NPROP
+Cairo_NPROP_O_KC
 ou_KC_O_KC
 Jerusalém_NPROP_O_NPROP
 ,_,_O_,
-Moscou_NPROP_O_NPROP
+Moscou_NPROP_O_KC
 ou_KC_O_KC
 Nova_NPROP_O_NPROP
 Délhi_NPROP_O_NPROP
@@ -167047,7 +167047,7 @@ de_PREP_+_PREP
 a_ART_O_ART
 viagem_N_O_N
 ,_,_O_,
-já_KS_O_ADV
+já_KS_O_KS
 que_KS_O_KS
 até_PDEN_O_PREP
 mesmo_PDEN_O_PROADJ
@@ -167321,7 +167321,7 @@ leitura_N_O_N
 são_V_O_V
 aquelas_PROSUB_O_PROSUB
 em_PREP_+_PREP
-as_PRO-KS-REL_O_ART
+as_PRO-KS-REL_O_PROSUB
 quais_PRO-KS-REL_O_PRO-KS-REL
 se_PROPESS_O_PROPESS
 fundem_V_O_V
@@ -167330,7 +167330,7 @@ ambos_PROADJ_O_PROADJ
 os_ART_O_ART
 tipos_N_O_N
 de_PREP_O_PREP
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 Benjamin_NPROP_O_NPROP
 falava_V_O_V
 :_:_O_:
@@ -167400,7 +167400,7 @@ coisas_N_O_N
 seriam_V_O_V
 mais_ADV_O_ADV
 fascinantes_ADJ_O_V
-do_KS_O_KS
+do_KS_O_PROPESS
 que_KS_O_KS
 a_ART_O_ART
 história_N_O_N
@@ -167546,7 +167546,7 @@ de_PREP_+_PREP
 a_ART_O_ART
 paisagem_N_O_N
 humana_ADJ_O_ADJ
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 ,_,_O_,
 de_PREP_O_PREP
 qualquer_PROADJ_O_PROADJ
@@ -167615,7 +167615,7 @@ feitas_PCP_O_PCP
 ._._O_.
 
 Sucede_V_O_PROSUB
-que_KS_O_PRO-KS-REL
+que_KS_O_PREP
 quem_PRO-KS_O_PRO-KS-REL
 quiser_V_O_V
 realizar_V_+_V
@@ -167737,7 +167737,7 @@ narrativas_N_O_N
 modernas_ADJ_O_ADJ
 :_:_O_:
 "_"_O_"
-Os_NPROP_O_ART
+Os_NPROP_O_NPROP
 Argonautas_NPROP_O_NPROP
 do_NPROP_O_NPROP
 Pacífico_NPROP_O_NPROP
@@ -167970,7 +167970,7 @@ em_PREP_+_PREP
 o_ART_O_ART
 tempo_N_O_N
 em_PREP_O_PREP
-que_PRO-KS-REL_O_PRO-KS-REL
+que_PRO-KS-REL_O_KS
 viajante_N_O_N
 não_ADV_O_ADV
 era_V_O_V
@@ -168125,12 +168125,12 @@ A_ART_O_ART
 diferença_N_O_N
 ?_?_O_?
 
-Os_PROSUB_O_ART
+Os_PROSUB_O_PROSUB
 de_PREP_O_PREP
 viagem_N_O_N
 indicam_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 devemos_VAUX_O_VAUX
 ver_V_O_V
 ;_;_O_;
@@ -168157,7 +168157,7 @@ tinha_V_O_V
 em_PREP_O_PREP
 mente_N_O_N
 viajantes_N_O_ADJ
-quando_KS_O_KS
+quando_KS_O_PRO-KS-REL
 ,_,_O_,
 em_PREP_O_PREP
 1839_N_O_N
@@ -168428,7 +168428,7 @@ Sério_N_O_N
 ._._O_.
 
 Em_PREP_+_PREP
-um_PROSUB_O_ART
+um_PROSUB_O_PROSUB
 de_PREP_+_PREP
 os_ART_O_ART
 números_N_O_N
@@ -168496,7 +168496,7 @@ mesmo_PROSUB_O_N
 Com_PREP_O_PREP
 ênfase_N_O_N
 em_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 há_V_O_V
 para_PREP_O_PREP
@@ -168649,8 +168649,8 @@ perdiam_V_O_V
 essas_PROADJ_O_PROADJ
 virtudes_N_O_N
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 levou_V_O_V
 um_ART_O_ART
 "_"_O_"
@@ -168812,7 +168812,7 @@ Coblenz_NPROP_O_N
 mas_KC_O_KC
 ,_,_O_,
 a_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 parece_V_O_V
 ,_,_O_,
@@ -168896,7 +168896,7 @@ em_PREP_O_PREP
 1929_N_O_N
 ,_,_O_,
 o_PRO-KS_O_ART
-que_PRO-KS_O_PROSUB
+que_PRO-KS_O_PROADJ
 muitos_PROSUB_O_PROSUB
 consideram_V_O_V
 a_ART_O_ART
@@ -169001,7 +169001,7 @@ mapas_N_O_N
 ._._O_.
 
 "_"_O_"
-Parecem_V_O_V
+Parecem_V_O_VAUX
 feitos_PCP_O_PCP
 de_PREP_O_PREP
 espiões_N_O_N
@@ -169220,7 +169220,7 @@ segundo_PREP_O_PREP
 Harrison_NPROP_O_NPROP
 Salisbury_NPROP_O_NPROP
 ,_,_O_,
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 de_PREP_O_PREP
 Rússia_NPROP_O_NPROP
 entende_V_O_V
@@ -169654,7 +169654,7 @@ um_ART_O_ART
 reformista_N_O_ADJ
 convicto_ADJ_O_ADJ
 em_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 se_PROPESS_O_PROPESS
 refere_V_O_V
@@ -169937,7 +169937,7 @@ século_N_O_N
 )_)_O_)
 ,_,_O_,
 como_KS_O_PREP
-deixou_V_O_V
+deixou_V_O_VAUX
 expresso_PCP_O_PCP
 em_PREP_O_PREP
 seu_N_O_PROADJ
@@ -170089,7 +170089,7 @@ virtude_N_O_N
 ._._O_.
 
 Vários_PROADJ_O_PROSUB
-não_ADV_O_ADV
+não_ADV_O_KC
 todos_PROSUB_O_PROSUB
 -_-_O_-
 textos_N_O_N
@@ -170126,7 +170126,7 @@ ele_PROPESS_O_PROPESS
 desejava_V_O_V
 e_KC_O_KC
 por_PREP_+_PREP
-as_PRO-KS-REL_O_ART
+as_PRO-KS-REL_O_PROSUB
 quais_PRO-KS-REL_O_PRO-KS-REL
 combatia_V_O_V
 ._._O_.
@@ -170789,7 +170789,7 @@ pequenos_ADJ_O_ADJ
 livretos_N_O_PREP
 cuja_PRO-KS-REL_O_PROADJ
 distribuição_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 feita_PCP_O_PCP
 que_PDEN_O_KS
 clandestinamente_ADV_O_V
@@ -170806,7 +170806,7 @@ de_PREP_O_PREP
 Curitiba_NPROP_O_NPROP
 ,_,_O_,
 como_KS_O_PREP
-é_VAUX_O_V
+é_VAUX_O_VAUX
 conhecido_PCP_O_PCP
 ,_,_O_,
 imprimiu_V_O_V
@@ -170936,7 +170936,7 @@ e_NPROP_O_NPROP
 Controvérsias_NPROP_O_NPROP
 "_"_O_"
 e_KC_O_KC
-traz_V_O_V
+traz_V_O_PDEN
 ,_,_O_,
 entre_PREP_O_PREP
 outros_PROSUB_O_PROSUB
@@ -171181,7 +171181,7 @@ Ohtake_NPROP_O_NPROP
 ._._O_.
 
 Um_ART_O_ART
-cético_N_O_ADJ
+cético_N_O_N
 contra_PREP_O_PREP
 os_ART_O_ART
 delírios_N_O_N
@@ -171195,7 +171195,7 @@ PáGINA_N_O_N
 :_:_O_:
 6-10_N_AP_N
 Um_ART_O_ART
-cético_N_O_ADJ
+cético_N_O_N
 contra_PREP_O_PREP
 os_ART_O_ART
 delírios_N_O_N
@@ -171317,7 +171317,7 @@ a_ART_O_ART
 impossibilidade_N_O_N
 de_PREP_O_PREP
 escolher_V_O_V
-essa_PROADJ_O_PROADJ
+essa_PROADJ_O_PROSUB
 ou_KC_O_KC
 aquela_PROADJ_O_PROADJ
 filosofia_N_O_N
@@ -171351,7 +171351,7 @@ de_PREP_O_PREP
 originalíssimo_ADJ_O_N
 ,_,_O_,
 é_V_O_V
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 pessoas_N_O_N
@@ -171461,7 +171461,7 @@ estudo_N_O_N
 de_PREP_+_PREP
 a_ART_O_ART
 filosofia_N_O_N
-era_V_O_V
+era_V_O_VAUX
 praticado_PCP_O_PCP
 em_PREP_+_PREP
 a_ART_O_ART
@@ -171557,7 +171557,7 @@ até_PREP_O_PREP
 hoje_ADV_O_ADV
 ,_,_O_,
 mas_KC_O_KC
-pensava_V_O_V
+pensava_V_O_PDEN
 ,_,_O_,
 em_PREP_+_PREP
 uma_ART_O_ART
@@ -171861,8 +171861,8 @@ só_PDEN_O_PDEN
 pode_VAUX_O_VAUX
 contar_V_O_V
 a_PREP_+_PREP
-os_ART_O_ART
-outros_PROSUB_O_PROADJ
+os_ART_O_PRO-KS-REL
+outros_PROSUB_O_PRO-KS-REL
 a_ART_O_ART
 sua_PROADJ_O_PROADJ
 própria_PROADJ_O_PROADJ
@@ -171887,8 +171887,8 @@ anunciar_V_O_V
 Ele_PROPESS_O_PROPESS
 conta_V_O_V
 a_PREP_+_PREP
-os_ART_O_ART
-outros_PROSUB_O_PROADJ
+os_ART_O_PRO-KS-REL
+outros_PROSUB_O_PRO-KS-REL
 a_ART_O_ART
 história_N_O_N
 de_PREP_+_PREP
@@ -171899,7 +171899,7 @@ em_PREP_+_PREP
 a_ART_O_ART
 expectativa_N_O_N
 de_PREP_O_PREP
-que_PRO-KS-REL_O_PRO-KS-REL
+que_PRO-KS-REL_O_KS
 ,_,_O_,
 se_KS_O_KS
 outros_PROSUB_O_PROSUB
@@ -171925,10 +171925,10 @@ a_ART_O_ART
 rua_N_O_N
 ,_,_O_,
 o_ART_O_ART
-cético_N_O_ADJ
+cético_N_O_N
 é_V_O_V
 um_ART_O_ART
-pessimista_N_O_ADJ
+pessimista_N_O_N
 ._._O_.
 
 A_ART_O_ART
@@ -172071,7 +172071,7 @@ vida_N_O_N
 
 Como_ADV_O_PREP
 um_ART_O_ART
-cético_N_O_ADJ
+cético_N_O_N
 como_PREP_O_PREP
 o_ART_O_ART
 Sr._N_O_N
@@ -172082,7 +172082,7 @@ o_ART_O_ART
 plano_N_O_N
 moral_ADJ_O_ADJ
 ,_,_O_,
-já_KS_O_ADV
+já_KS_O_KS
 que_KS_O_KS
 não_ADV_O_ADV
 há_V_O_V
@@ -172116,8 +172116,8 @@ mito_N_O_N
 muito_ADV_O_ADV
 difundido_PCP_O_PCP
 segundo_PREP_O_PREP
-o_PRO-KS-REL_O_ART
-qual_PRO-KS-REL_O_PROADJ
+o_PRO-KS-REL_O_PRO-KS-REL
+qual_PRO-KS-REL_O_PRO-KS-REL
 uma_ART_O_ART
 ação_N_O_N
 moral_ADJ_O_ADJ
@@ -172252,7 +172252,7 @@ Como_ADV_O_KS
 se_PROPESS_O_PROPESS
 comporta_V_O_V
 um_ART_O_ART
-cético_N_O_ADJ
+cético_N_O_N
 diante_PREP_+_PREP
 de_PREP_+_PREP
 essa_PROADJ_O_PROADJ
@@ -172375,10 +172375,10 @@ agora_ADV_O_ADV
 ._._O_.
 
 O_ART_O_ART
-cético_N_O_ADJ
+cético_N_O_N
 critica_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 as_ART_O_ART
 filosofias_N_O_N
 fizeram_V_O_V
@@ -172579,8 +172579,8 @@ perguntou_V_O_V
 De_PREP_O_PREP
 onde_ADV_O_ADV
 é_PDEN_O_V
-mesmo_PDEN_O_PROSUB
-que_PDEN_O_PRO-KS-REL
+mesmo_PDEN_O_PRO-KS
+que_PDEN_O_PRO-KS
 nos_PROPESS_O_PROPESS
 conhecemos_V_O_V
 ?_?_O_?
@@ -172777,7 +172777,7 @@ aula_N_O_N
 
 Despedimos_V_O_N
 e_KC_O_KC
-saímos_V_O_V
+saímos_V_O_VAUX
 juntos_PCP_O_PCP
 em_PREP_+_PREP
 a_ART_O_ART
@@ -172846,7 +172846,7 @@ enfim_ADV_O_ADV
 ._._O_.
 
 E_KC_O_KC
-entramos_V_O_V
+entramos_V_O_VAUX
 juntos_PCP_O_PCP
 para_PREP_O_PREP
 nossa_PROADJ_O_PROADJ
@@ -173104,7 +173104,7 @@ com_PREP_O_PREP
 um_ART_O_ART
 filósofo_N_O_N
 de_PREP_+_PREP
-esses_PROSUB_O_PROADJ
+esses_PROSUB_O_PROSUB
 ._._O_.
 
 Pois_KC_O_KC
@@ -173221,15 +173221,15 @@ Só_PDEN_O_ADV
 então_ADV_O_ADV
 Marilena_NPROP_O_NPROP
 entendeu_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 estava_VAUX_O_V
 acontecendo_V_O_V
 ._._O_.
 
 Porchat_NPROP_O_PROPESS
 demorou_V_O_V
-um_ADV_O_ART
+um_ADV_O_ADV
 pouco_ADV_O_ADV
 mais_ADV_O_ADV
 ._._O_.
@@ -173637,7 +173637,7 @@ resposta_N_O_N
 ,_,_O_,
 de_PREP_O_PREP
 Casablanca_NPROP_O_NPROP
-a_ART_O_ART
+a_ART_O_NPROP
 Freddy_NPROP_O_NPROP
 Krueger_NPROP_O_NPROP
 ._._O_.
@@ -174278,7 +174278,7 @@ de_PREP_+_PREP
 a_ART_O_ART
 escritora_N_O_N
 ;_;_O_;
-é_VAUX_O_V
+é_VAUX_O_VAUX
 dividido_PCP_O_PCP
 em_PREP_O_PREP
 quatro_NUM_O_NUM
@@ -174505,8 +174505,8 @@ mais_ADV_O_PROADJ
 importante_ADJ_O_N
 talvez_ADV_O_ADV
 seja_V_O_V
-aquela_PROSUB_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+aquela_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 vai_VAUX_O_VAUX
 buscar_V_O_V
 os_ART_O_ART
@@ -174555,12 +174555,12 @@ fórmula_N_O_N
 o_ART_O_ART
 autor_N_O_N
 inaugura_V_O_V
-aquele_PROSUB_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+aquele_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 poderia_VAUX_O_VAUX
 ser_V_O_V
 a_ART_O_ART
-máxima_N_O_ADJ
+máxima_N_O_N
 de_PREP_+_PREP
 o_ART_O_ART
 erotismo_N_O_N
@@ -174587,7 +174587,7 @@ logo_KC_O_ADV
 escrevo_V_O_V
 "_"_O_"
 ,_,_O_,
-já_KS_O_ADV
+já_KS_O_KS
 que_KS_O_KS
 as_ART_O_ART
 afinidades_N_O_N
@@ -174724,7 +174724,7 @@ cuja_PRO-KS-REL_O_PRO-KS-REL
 célebre_ADJ_O_ADJ
 suspeita_N_O_N
 de_PREP_O_PREP
-que_PRO-KS-REL_O_PRO-KS-REL
+que_PRO-KS-REL_O_KS
 gente_N_O_N
 não_ADV_O_ADV
 teria_VAUX_O_VAUX
@@ -174759,7 +174759,7 @@ que_PRO-KS-REL_O_PRO-KS-REL
 afirma_V_O_V
 através_PREP_O_PREP
 de_PREP_O_PREP
-um_PROSUB_O_ART
+um_PROSUB_O_PROSUB
 de_PREP_O_PREP
 seus_PROADJ_O_PROADJ
 personagens_N_O_N
@@ -174791,7 +174791,7 @@ Erótica_NPROP_O_NPROP
 "_"_O_"
 de_PREP_+_PREP
 o_ART_O_ART
-surrealista_N_O_ADJ
+surrealista_N_O_N
 Sarane_NPROP_O_PREP
 Alexandrian_NPROP_O_N
 ,_,_O_,
@@ -174976,12 +174976,12 @@ que_KS_O_KS
 ,_,_O_,
 de_PREP_O_PREP
 Platão_NPROP_O_NPROP
-a_ART_O_ART
+a_ART_O_NPROP
 Bataille_NPROP_O_NPROP
 ,_,_O_,
 de_PREP_O_PREP
 Sade_NPROP_O_NPROP
-a_ART_O_ART
+a_ART_O_NPROP
 Freud_NPROP_O_NPROP
 ,_,_O_,
 o_ART_O_ART
@@ -175037,7 +175037,7 @@ o_ART_O_ART
 desejo_N_O_N
 ,_,_O_,
 submetendo_V_+_V
-as_PROPESS_O_ART
+as_PROPESS_O_PROSUB
 a_PREP_O_PREP
 um_ART_O_ART
 jogo_N_O_N
@@ -175221,7 +175221,7 @@ os_ART_O_ART
 chamados_PCP_O_N
 livros_N_O_N
 licenciosos_ADJ_O_,
-era_V_O_V
+era_V_O_VAUX
 produzida_PCP_O_PCP
 em_PREP_+_PREP
 a_ART_O_ART
@@ -175386,7 +175386,7 @@ Catulo_NPROP_O_NPROP
 ,_,_O_,
 Horácio_NPROP_O_NPROP
 ,_,_O_,
-Ovídio_NPROP_O_NPROP
+Ovídio_NPROP_O_KC
 ou_KC_O_KC
 os_ART_O_ART
 poetas_N_O_N
@@ -175521,7 +175521,7 @@ Gargantua_NPROP_O_N
 expelido_PCP_O_V
 por_PREP_+_PREP
 o_ART_O_ART
-reto_N_O_ADJ
+reto_N_O_N
 de_PREP_+_PREP
 a_ART_O_ART
 mãe_N_O_N
@@ -175636,8 +175636,8 @@ Petrônio_NPROP_O_N
 O_ART_O_ART
 marquês_N_O_N
 inaugurou_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 poderíamos_VAUX_O_VAUX
 chamar_V_O_V
 de_PREP_O_PREP
@@ -175841,7 +175841,7 @@ a_PREP_O_PREP
 uma_ART_O_ART
 estilização_N_O_N
 ,_,_O_,
-ela_PROPESS_O_PROPESS
+ela_PROPESS_O_KS
 liberta_V_+_PCP
 se_PROPESS_O_PROPESS
 de_PREP_+_PREP
@@ -175939,7 +175939,7 @@ leitor_N_O_N
 ,_,_O_,
 semelhante_ADJ_O_ADJ
 a_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 encontramos_V_O_V
 em_PREP_+_PREP
@@ -176387,7 +176387,7 @@ fin-de-siècle_N_EST_N
 diz_V_O_V
 Showalter_NPROP_O_N
 ,_,_O_,
-é_VAUX_O_V
+é_VAUX_O_VAUX
 carregado_PCP_O_PCP
 de_PREP_O_PREP
 "_"_O_"
@@ -176931,7 +176931,7 @@ se_PROPESS_O_PROPESS
 ergueu_V_O_V
 e_KC_O_KC
 chamou_V_O_V
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 conferencistas_N_O_N
@@ -176949,7 +176949,7 @@ a_PREP_O_PREP
 chorar_V_O_V
 ,_,_O_,
 mas_KC_O_KC
-antes_KS_O_ADV
+antes_KS_O_KS
 que_KS_O_KS
 outros_PROADJ_O_PROADJ
 professores_N_O_N
@@ -177153,7 +177153,7 @@ sua_PROADJ_O_PROADJ
 visão_N_O_N
 de_PREP_O_PREP
 uma_ART_O_ART
-nova_ADJ_O_ADJ
+nova_ADJ_O_N
 era_N_O_V
 de_PREP_+_PREP
 o_ART_O_ART
@@ -177555,7 +177555,7 @@ os_ART_O_ART
 direitos_N_O_N
 de_PREP_+_PREP
 os_ART_O_ART
-gays_N_O_ADJ
+gays_N_O_N
 constituem_V_O_V
 uma_ART_O_ART
 ameaça_N_O_N
@@ -177659,7 +177659,7 @@ brasileiros_N_O_N
 sejam_V_O_V
 mais_ADV_O_ADV
 homófobos_ADJ_O_V
-do_KS_O_KS
+do_KS_O_PROPESS
 que_KS_O_KS
 os_ART_O_ART
 norte-americanos_N_O_N
@@ -177794,7 +177794,7 @@ sair_V_O_V
 inocentado_PCP_O_N
 ;_;_O_;
 ele_PROPESS_O_PROPESS
-entra_V_O_V
+entra_V_O_VAUX
 culpado_PCP_O_PCP
 em_PREP_+_PREP
 a_ART_O_ART
@@ -178099,7 +178099,7 @@ culpa_N_O_N
 
 (_(_O_(
 Note_V_+_V
-se_PROPESS_O_KS
+se_PROPESS_O_PROPESS
 que_KS_O_KS
 isto_PROSUB_O_PROSUB
 não_ADV_O_ADV
@@ -178212,7 +178212,7 @@ política_ADJ_O_N
 ._._O_.
 
 Mas_KC_O_KC
-eis_PDEN_O_ADV
+eis_PDEN_O_KS
 que_PDEN_O_KS
 ,_,_O_,
 em_PREP_O_PREP
@@ -178564,7 +178564,7 @@ uma_PROSUB_O_NPROP
 (_(_O_(
 aquela_PROSUB_O_PROSUB
 de_PREP_+_PREP
-a_PRO-KS-REL_O_PREP
+a_PRO-KS-REL_O_PRO-KS-REL
 qual_PRO-KS-REL_O_PRO-KS-REL
 seríamos_VAUX_O_V
 acusados_PCP_O_N
@@ -178632,7 +178632,7 @@ valeria_V_O_V
 tanto_ADV_O_ADV
 quanto_ADV_O_PREP
 as_ART_O_ART
-outras_PROSUB_O_PROADJ
+outras_PROSUB_O_PROSUB
 ._._O_.
 
 E_KC_O_KC
@@ -178680,7 +178680,7 @@ novos_ADJ_O_ADJ
 destinos_N_O_N
 coletivos_ADJ_O_ADJ
 para_PREP_O_PREP
-os_PRO-KS-REL_O_ART
+os_PRO-KS-REL_O_PROSUB
 quais_PRO-KS-REL_O_PRO-KS-REL
 se_PROPESS_O_PROPESS
 constróem_V_O_V
@@ -178744,7 +178744,7 @@ progressiva_ADJ_O_ADJ
 ._._O_.
 
 Ou_KC_O_KC
-ainda_ADV_O_ADV
+ainda_ADV_O_KS
 se_KS_O_KS
 os_ART_O_ART
 grupos_N_O_N
@@ -178792,7 +178792,7 @@ uma_ART_O_ART
 época_N_O_N
 ,_,_O_,
 a_ART_O_ART
-nossa_PROSUB_O_PROADJ
+nossa_PROSUB_O_PROSUB
 ,_,_O_,
 onde_ADV-KS-REL_O_ADV-KS-REL
 a_ART_O_ART
@@ -179346,7 +179346,7 @@ a_ART_O_ART
 proteína_N_O_N
 cuja_PRO-KS-REL_O_PRO-KS-REL
 produção_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 comandada_PCP_O_PCP
 por_PREP_+_PREP
 o_ART_O_ART
@@ -179456,7 +179456,7 @@ de_PREP_+_PREP
 as_ART_O_ART
 quatro_NUM_O_N
 citocinas_N_O_,
-é_VAUX_O_V
+é_VAUX_O_VAUX
 comandada_PCP_O_PCP
 por_PREP_O_PREP
 um_ART_O_ART
@@ -179546,7 +179546,7 @@ alergias_N_O_N
 ,_,_O_,
 assunto_N_O_N
 que_PRO-KS-REL_O_PRO-KS-REL
-tem_VAUX_O_V
+tem_VAUX_O_VAUX
 sido_PCP_O_PCP
 muito_ADV_O_ADV
 estudado_PCP_O_PCP
@@ -179577,7 +179577,7 @@ colaboradores_N_O_N
 ._._O_.
 
 o_ART_O_ART
-maior_ADJ_O_ADJ
+maior_ADJ_O_N
 ser_N_O_V
 vivo_ADJ_O_ADV
 de_PREP_+_PREP
@@ -179593,7 +179593,7 @@ PáGINA_N_O_N
 6-14_N_AP_N
 Qual_PROSUB_O_PROADJ
 o_ART_O_ART
-maior_ADJ_O_ADJ
+maior_ADJ_O_N
 ser_N_O_V
 vivo_ADJ_O_ADV
 de_PREP_+_PREP
@@ -179708,8 +179708,8 @@ eucalipto_N_O_ART
 Eucalyptus_N_O_N
 regnans_N_O_,
 chega_V_O_V
-a_PREP_O_ART
-quase_ADV_O_ADV
+a_PREP_O_ADV
+quase_ADV_O_PROADJ
 150_NUM_O_NUM
 m_N_O_N
 ._._O_.
@@ -179732,7 +179732,7 @@ Michigan_NPROP_O_NPROP
 EUA_NPROP_O_NPROP
 )_)_O_)
 tem_V_O_V
-filamentos_N_O_KS
+filamentos_N_O_PROPESS
 que_PRO-KS-REL_O_KS
 se_PROPESS_O_PROPESS
 estendem_V_O_V
@@ -179742,7 +179742,7 @@ mil_NUM_O_NUM
 m2_N_O_N
 ._._O_.
 
-Ficou_V_O_V
+Ficou_V_O_VAUX
 comprovado_PCP_O_PCP
 que_KS_O_KS
 se_PROPESS_O_PROPESS
@@ -179784,7 +179784,7 @@ t_N_O_N
 ,_,_O_,
 comparável_ADJ_O_ADJ
 a_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 de_PREP_+_PREP
 os_ART_O_ART
 maiores_ADJ_O_ADJ
@@ -180038,7 +180038,7 @@ citações_N_O_N
 científicas_ADJ_O_ADJ
 ,_,_O_,
 convenciona_V_+_V
-se_PROPESS_O_KS
+se_PROPESS_O_PROPESS
 que_KS_O_KS
 o_ART_O_ART
 primeiro_ADJ_O_ADJ
@@ -180351,7 +180351,7 @@ magética_ADJ_O_ADJ
 ,_,_O_,
 tais_PROADJ_O_PROADJ
 interações_N_O_N
-eram_V_O_V
+eram_V_O_VAUX
 consideradas_PCP_O_PCP
 fracas_ADJ_O_ADJ
 a_ART_O_PREP
@@ -180494,7 +180494,7 @@ Normalmente_ADV_O_ADV
 ,_,_O_,
 a_ART_O_ART
 responsabilidade_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 atribuída_PCP_O_PCP
 apenas_PDEN_O_PDEN
 a_PREP_O_ART
@@ -180613,7 +180613,7 @@ Segundo_PREP_O_PREP
 o_ART_O_ART
 pesquisador_N_O_N
 ,_,_O_,
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 razões_N_O_N
@@ -180648,8 +180648,8 @@ de_PREP_+_PREP
 as_ART_O_ART
 doenças_N_O_N
 avançou_V_O_V
-tanto_ADV_O_PROSUB
-que_KS_O_PRO-KS-REL
+tanto_ADV_O_PRO-KS
+que_KS_O_PRO-KS
 é_V_O_V
 difícil_ADJ_O_ADJ
 encontrar_V_O_V
@@ -180763,7 +180763,7 @@ ciência_N_O_N
 ._._O_.
 
 "_"_O_"
-Somos_VAUX_O_V
+Somos_VAUX_O_VAUX
 descritos_PCP_O_PCP
 como_PREP_O_PREP
 a_ART_O_ART
@@ -180955,7 +180955,7 @@ informa_V_O_V
 a_PREP_+_PREP
 o_ART_O_ART
 paciente_N_O_N
-que_KS_O_KS
+que_KS_O_PRO-KS-REL
 sua_PROADJ_O_PROADJ
 artéria_N_O_N
 aorta_N_O_,
@@ -181032,8 +181032,8 @@ que_KS_O_KS
 está_V_O_VAUX
 morto_PCP_O_PCP
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 pode_VAUX_O_VAUX
 desencorajar_V_+_V
 lo_PROPESS_O_PROPESS
@@ -181262,7 +181262,7 @@ diferentes_PROADJ_O_PROADJ
 
 Anualmente_ADV_O_ADV
 ,_,_O_,
-é_VAUX_O_V
+é_VAUX_O_VAUX
 concedido_PCP_O_PCP
 o_ART_O_ART
 prêmio_N_O_N
@@ -181401,7 +181401,7 @@ endereço_N_O_N
 ,_,_O_,
 através_PREP_+_PREP
 de_PREP_+_PREP
-o_PRO-KS-REL_O_ART
+o_PRO-KS-REL_O_PROSUB
 qual_PRO-KS-REL_O_PRO-KS-REL
 recebe_V_O_V
 e_KC_O_KC
@@ -181679,7 +181679,7 @@ que_PRO-KS-REL_O_PRO-KS-REL
 sabe_V_O_V
 ._._O_.
 
-Aquele_PROSUB_O_PROADJ
+Aquele_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_KS
 não_ADV_O_ADV
 conhece_V_O_V
@@ -181730,14 +181730,14 @@ zíper_N_O_N
 ._._O_.
 
 Foi_V_O_V
-o_PROSUB_O_ART
-que_PRO-KS-REL_O_PRO-KS-REL
+o_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 bastou_V_O_V
 para_PREP_O_PREP
 ele_PROPESS_O_PROPESS
 receber_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 poderia_VAUX_O_VAUX
 ser_VAUX_O_VAUX
 chamado_PCP_O_PCP
@@ -182254,7 +182254,7 @@ prata_N_O_N
 acumulado_PCP_O_N
 por_PREP_O_PREP
 piratas_N_O_ADJ
-é_VAUX_O_V
+é_VAUX_O_VAUX
 descoberto_PCP_O_PCP
 por_PREP_O_PREP
 um_ART_O_ART
@@ -182321,7 +182321,7 @@ o_ART_O_ART
 tesouro_N_O_N
 e_KC_O_KC
 o_PROPESS_O_ART
-mantém_V_O_V
+mantém_V_O_VAUX
 escondido_PCP_O_PCP
 em_PREP_O_PREP
 um_ART_O_ART
@@ -182402,7 +182402,7 @@ Turquia_NPROP_O_NPROP
 ,_,_O_,
 local_N_O_N
 de_PREP_+_PREP
-a_ART_O_ART
+a_ART_O_PROSUB
 até_ADV_O_PREP
 então_ADV_O_ADV
 mítica_ADJ_O_ADJ
@@ -182827,8 +182827,8 @@ compromete_V_O_V
 negociações_N_O_N
 para_PREP_O_PREP
 restituir_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 eles_PROPESS_O_PROPESS
 consideram_V_O_V
 legítimo_ADJ_O_ADJ
@@ -183156,7 +183156,7 @@ Atenas_NPROP_O_NPROP
 Hoje_ADV_O_ADV
 ,_,_O_,
 sabe_V_+_V
-se_PROPESS_O_KS
+se_PROPESS_O_PROPESS
 que_KS_O_KS
 isso_PROSUB_O_PROSUB
 não_ADV_O_ADV
@@ -183190,7 +183190,7 @@ nove_NUM_O_N
 de_PREP_O_PREP
 prata_N_O_N
 e_KC_O_KC
-várias_PROSUB_O_PROADJ
+várias_PROSUB_O_PROSUB
 de_PREP_O_PREP
 outros_PROADJ_O_PROADJ
 materiais_N_O_N
@@ -183549,8 +183549,8 @@ disposição_N_O_N
 Mas_KC_O_KC
 então_ADV_O_ADV
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 se_PROPESS_O_PROPESS
 acumula_V_O_V
 é_V_O_V
@@ -183575,7 +183575,7 @@ nos_PROPESS_O_N
 sintamos_V_O_PREP
 maravilhados_PCP_O_N
 com_PREP_O_PREP
-o_PRO-KS_O_ART
+o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 lemos_V_O_V
 ._._O_.
@@ -183917,7 +183917,7 @@ tornado_PCP_O_PCP
 branca_ADJ_O_ADJ
 ._._O_.
 
-Era_V_O_V
+Era_V_O_VAUX
 chegado_PCP_O_PCP
 a_PREP_O_PREP
 seus_PROADJ_O_PROADJ
@@ -183977,7 +183977,7 @@ Pomba_NPROP_O_NPROP
 "_"_O_"
 Portrait_NPROP_O_NPROP
 of_NPROP_O_NPROP
-a_NPROP_O_ART
+a_NPROP_O_NPROP
 Lady_NPROP_O_NPROP
 "_"_O_"
 (_(_O_(
@@ -184030,8 +184030,8 @@ Mérito_NPROP_O_NPROP
 uma_ART_O_ART
 distinção_N_O_N
 conferida_PCP_O_PREP
-a_PREP_O_ART
-muitos_PROADJ_O_PROADJ
+a_PREP_O_PROSUB
+muitos_PROADJ_O_PRO-KS-REL
 poucos_PROSUB_O_PROSUB
 ,_,_O_,
 a_PREP_+_PREP
@@ -184068,7 +184068,7 @@ a_PROSUB_O_ART
 de_PREP_O_NPROP
 Hemingway_NPROP_O_NPROP
 ,_,_O_,
-o_PROPESS_O_ART
+o_PROPESS_O_PROPESS
 usaria_V_O_V
 de_PREP_O_PREP
 um_ART_O_ART
@@ -184149,7 +184149,7 @@ prosa_N_O_N
 tão_ADV_O_ADV
 resplandecente_ADJ_O_V
 que_KS_O_KS
-o_PROPESS_O_ART
+o_PROPESS_O_PROPESS
 fará_V_O_V
 flutuar_V_O_V
 ._._O_.
@@ -184354,8 +184354,8 @@ condição_N_O_N
 verdadeiramente_ADV_O_ADV
 desmoralizada_PCP_O_V
 em_PREP_+_PREP
-a_PRO-KS-REL_O_ART
-qual_PRO-KS-REL_O_PROADJ
+a_PRO-KS-REL_O_PRO-KS-REL
+qual_PRO-KS-REL_O_PRO-KS-REL
 a_ART_O_ART
 Itália_NPROP_O_NPROP
 lança_V_O_V
@@ -184445,7 +184445,7 @@ toscana_ADJ_O_ADJ
 ._._O_.
 
 Mas_KC_O_KC
-agora_KS_O_ADV
+agora_KS_O_KS
 que_KS_O_KS
 troquei_V_O_V
 categoricamente_ADV_O_ADV
@@ -184509,7 +184509,7 @@ de_PREP_O_PREP
 beleza_N_O_N
 ,_,_O_,
 embora_KS_O_KS
-ainda_ADV_O_ADV
+ainda_ADV_O_PREP
 inspire_V_O_PREP
 um_ART_O_ART
 quê_N_O_N
@@ -184612,7 +184612,7 @@ reis_N_O_N
 foram_VAUX_O_VAUX
 enterrados_PCP_O_PCP
 tudo_PROADJ_O_PROSUB
-isto_PROSUB_O_PROSUB
+isto_PROSUB_O_PRO-KS
 parecia_VAUX_O_V
 criar_V_O_V
 um_ART_O_ART
@@ -184920,7 +184920,7 @@ pais_N_O_N
 em_PREP_O_PREP
 1882_N_O_N
 foi_V_O_V
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 razões_N_O_N
@@ -184969,13 +184969,13 @@ pessoa_N_O_N
 
 E_KC_O_KC
 assim_ADV_O_ADV
-ele_PROPESS_O_PROPESS
+ele_PROPESS_O_KS
 nos_PROPESS_O_PROPESS
 forneceu_V_O_V
 extensas_ADJ_O_ADJ
 impressões_N_O_N
 de_PREP_+_PREP
-o_PRO-KS_O_ART
+o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 viu_V_O_V
 (_(_O_(
@@ -185239,7 +185239,7 @@ amigo_N_O_N
 arguto_ADJ_O_ADJ
 ,_,_O_,
 de_PREP_O_PREP
-que_PRO-KS-REL_O_PRO-KS-REL
+que_PRO-KS-REL_O_KS
 ,_,_O_,
 encontrando_V_O_V
 um_ART_O_ART
@@ -185554,7 +185554,7 @@ socialismo_N_O_N
 queixando_V_+_V
 se_PROPESS_O_PROPESS
 de_PREP_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 já_ADV_O_ADV
 não_ADV_O_ADV
 deixavam_V_O_V
@@ -185726,8 +185726,8 @@ las_PROPESS_O_PROPESS
 mas_KC_O_KC
 de_PREP_O_PREP
 saber_N_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 fazer_V_O_V
 com_PREP_O_PREP
 elas_PROPESS_O_PROPESS
@@ -185770,7 +185770,7 @@ onde_ADV-KS-REL_O_ADV
 por_ADV_O_PREP
 vezes_ADV_O_N
 é_V_O_V
-perceptível_ADJ_O_KS
+perceptível_ADJ_O_PROPESS
 que_KS_O_KS
 nosso_PROADJ_O_PROADJ
 privilégio_N_O_N
@@ -185803,15 +185803,15 @@ descreveríamos_V_O_N
 atualmente_ADV_O_ADV
 ,_,_O_,
 James_NPROP_O_NPROP
-é_VAUX_O_V
+é_VAUX_O_VAUX
 acometido_PCP_O_PCP
 por_PREP_O_PREP
 preconceitos_N_O_N
 de_PREP_O_PREP
 classe_N_O_N
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 não_ADV_O_ADV
 quer_V_O_V
 dizer_V_O_V
@@ -185948,7 +185948,7 @@ diz_V_O_V
 ele_PROPESS_O_PROPESS
 ,_,_O_,
 pense_V_O_V
-um_ADV_O_ART
+um_ADV_O_ADV
 pouco_ADV_O_ADV
 ._._O_.
 
@@ -185965,7 +185965,7 @@ cada_PROADJ_O_PROADJ
 grão_N_O_N
 de_PREP_O_PREP
 testemunho_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 levado_PCP_O_PCP
 em_PREP_O_PREP
 conta_N_O_N
@@ -185991,7 +185991,7 @@ a_PREP_+_PREP
 as_ART_O_ART
 grandes_N_O_ADJ
 ,_,_O_,
-caso_KS_O_N
+caso_KS_O_KS
 se_PROPESS_O_PROPESS
 consiga_V_O_V
 descobrir_V_O_V
@@ -186116,7 +186116,7 @@ de_PREP_+_PREP
 a_ART_O_ART
 negligência_N_O_N
 de_PREP_+_PREP
-este_PROSUB_O_PROADJ
+este_PROSUB_O_PROSUB
 ._._O_.
 
 Assim_ADV_O_ADV
@@ -186209,7 +186209,7 @@ o_ART_O_ART
 odor_N_O_N
 não_ADV_O_ADV
 era_V_O_V
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 de_PREP_+_PREP
 os_ART_O_ART
 incensos_N_O_N
@@ -186271,7 +186271,7 @@ deserto_N_O_N
 
 Mas_KC_O_KC
 em_PREP_+_PREP
-um_PROSUB_O_ART
+um_PROSUB_O_PROSUB
 de_PREP_+_PREP
 os_ART_O_ART
 ensaios_N_O_N
@@ -186306,8 +186306,8 @@ elemento_N_O_N
 de_PREP_+_PREP
 a_ART_O_ART
 fidalguia_N_O_N
-o_PROSUB_O_PRO-KS-REL
-que_PRO-KS-REL_O_PRO-KS-REL
+o_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 mais_ADV_O_ADV
 me_PROPESS_O_PROPESS
 impressionou_V_O_V
@@ -186322,7 +186322,7 @@ me_PROPESS_O_PROPESS
 aventurei_V_O_V
 a_PREP_O_PREP
 usar_V_O_V
-está_V_O_V
+está_V_O_VAUX
 banida_PCP_O_PCP
 de_PREP_+_PREP
 o_ART_O_ART
@@ -186504,7 +186504,7 @@ umas_PROSUB_O_PROSUB
 com_PREP_O_PREP
 a_PREP_+_PREP
 as_ART_O_ART
-outras_PROSUB_O_PROADJ
+outras_PROSUB_O_PROSUB
 ._._O_.
 
 James_NPROP_O_NPROP
@@ -186721,7 +186721,7 @@ outra_PROSUB_O_PROSUB
 uma_ART_O_ART
 calamidade_N_O_N
 contra_PREP_O_PREP
-a_PRO-KS-REL_O_PREP
+a_PRO-KS-REL_O_PRO-KS-REL
 qual_PRO-KS-REL_O_PRO-KS-REL
 ele_PROPESS_O_PROPESS
 tem_VAUX_O_V
@@ -186794,7 +186794,7 @@ um_ART_O_ART
 gênio_N_O_N
 inflamado_PCP_O_PCP
 ,_,_O_,
-embora_KS_O_KS
+embora_KS_O_PRO-KS-REL
 por_ADV_O_PREP
 vezes_ADV_O_N
 excessivo_ADJ_O_ADJ
@@ -187026,7 +187026,7 @@ Jones_NPROP_O_NPROP
 ._._O_.
 
 "_"_O_"
-As_NPROP_O_ART
+As_NPROP_O_NPROP
 Viagens_NPROP_O_NPROP
 de_NPROP_O_NPROP
 Marco_NPROP_O_NPROP
@@ -187088,7 +187088,7 @@ mongólica_N_EST_NPROP
 "_"_O_"
 ,_,_O_,
 ou_PDEN_O_KC
-seja_PDEN_O_V
+seja_PDEN_O_PDEN
 ,_,_O_,
 a_ART_O_ART
 época_N_O_N
@@ -187153,7 +187153,7 @@ império_N_O_N
 ._._O_.
 
 "_"_O_"
-As_NPROP_O_ART
+As_NPROP_O_NPROP
 Viagens_NPROP_O_NPROP
 de_NPROP_O_NPROP
 Sir_NPROP_O_NPROP
@@ -187397,7 +187397,7 @@ Japão_NPROP_O_NPROP
 ._._O_.
 
 "_"_O_"
-Os_NPROP_O_ART
+Os_NPROP_O_NPROP
 Lusíadas_NPROP_O_NPROP
 "_"_O_"
 ,_,_O_,
@@ -187458,7 +187458,7 @@ percurso_N_O_N
 ._._O_.
 
 "_"_O_"
-História_NPROP_O_NPROP
+História_NPROP_O_PROADJ
 Verdadeira_NPROP_O_N
 da_NPROP_O_NPROP
 Conquista_NPROP_O_NPROP
@@ -187731,7 +187731,7 @@ inglês_N_O_N
 francês_N_O_N
 etc._PDEN_O_PDEN
 )_)_O_)
--_-_O_NPROP
+-_-_O_-
 ._._O_.
 
 Para_PREP_O_PREP
@@ -187856,7 +187856,7 @@ PáGINA_N_O_N
 :_:_O_:
 6-2_N_AP_N
 Tomada_N_O_,
-Agora_KS_O_ADV
+Agora_KS_O_KS
 que_KS_O_KS
 conseguiu_V_O_V
 superar_V_O_V
@@ -188469,7 +188469,7 @@ colocar_V_O_V
 em_PREP_+_PREP
 o_ART_O_ART
 papel_N_O_N
-tudo_PROADJ_O_PROSUB
+tudo_PROADJ_O_PROADJ
 o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 sabe_V_O_V
@@ -188760,7 +188760,7 @@ passado_PCP_O_PCP
 ,_,_O_,
 ele_PROPESS_O_PROPESS
 deu_V_O_V
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_O_PREP
 fã_N_O_N
 de_PREP_O_PREP
@@ -188822,7 +188822,7 @@ um_ART_O_ART
 fundo_N_O_N
 verídico_ADJ_O_ADJ
 ,_,_O_,
-já_KS_O_ADV
+já_KS_O_KS
 que_KS_O_KS
 se_PROPESS_O_PROPESS
 baseia_V_O_V
@@ -189068,7 +189068,7 @@ país_N_O_N
 ,_,_O_,
 de_PREP_O_PREP
 Florianópolis_NPROP_O_NPROP
-a_PREP_O_ART
+a_PREP_O_NPROP
 Cuiabá_NPROP_O_NPROP
 ,_,_O_,
 aplicando_V_O_V
@@ -189498,7 +189498,7 @@ certa_ADJ_O_ADJ
 mas_KC_O_KC
 para_PREP_O_PREP
 nós_PROPESS_O_PROPESS
-é_VAUX_O_V
+é_VAUX_O_VAUX
 errado_PCP_O_PCP
 ;_;_O_;
 você_PROPESS_O_PROPESS
@@ -189552,7 +189552,7 @@ de_PREP_O_PREP
 Pimpa_NPROP_O_NPROP
 "_"_O_"
 ,_,_O_,
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 histórias_N_O_N
@@ -189635,7 +189635,7 @@ linguagem_N_O_N
 mas_KC_O_KC
 isso_PROSUB_O_PROSUB
 não_ADV_O_ADV
-é_VAUX_O_V
+é_VAUX_O_VAUX
 dito_PCP_O_PCP
 a_PREP_+_PREP
 os_ART_O_ART
@@ -189770,8 +189770,8 @@ o_ART_O_ART
 pé_N_O_N
 não_ADV_O_ADV
 sabe_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 será_V_O_V
 quando_ADV-KS_O_KS
 crescer_V_O_V
@@ -189868,7 +189868,7 @@ quadro-negro_N_O_N
 e_KC_O_KC
 de_PREP_+_PREP
 elas_PROPESS_O_PROPESS
-são_VAUX_O_V
+são_VAUX_O_VAUX
 tirados_PCP_O_PCP
 os_ART_O_ART
 temas_N_O_N
@@ -189992,7 +189992,7 @@ mas_KC_O_KC
 para_PREP_O_PREP
 a_ART_O_ART
 gente_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 errado_PCP_O_PCP
 ._._O_.
 
@@ -190054,7 +190054,7 @@ descobria_V_O_PREP
 a_ART_O_ART
 razão_N_O_N
 por_PREP_O_PREP
-que_PRO-KS-REL_O_PRO-KS-REL
+que_PRO-KS-REL_O_KS
 não_ADV_O_ADV
 conseguia_V_O_V
 trabalhar_V_O_V
@@ -190182,7 +190182,7 @@ A_ART_O_ART
 professora_N_O_N
 pergunta_V_O_V
 se_KS_O_PROPESS
-alma_N_O_N
+alma_N_O_NUM
 tem_V_O_V
 corpo_N_O_N
 ._._O_.
@@ -190202,8 +190202,8 @@ não_ADV_O_ADV
 tem_V_O_V
 corpo_N_O_N
 ,_,_O_,
-o_PROSUB_O_PROSUB
-que_PROSUB_O_PRO-KS-REL
+o_PROSUB_O_PRO-KS
+que_PROSUB_O_PRO-KS
 pode_VAUX_O_VAUX
 fazer_V_O_V
 com_PREP_O_PREP
@@ -190298,7 +190298,7 @@ Crianças_N_O_N
 "_"_O_"
 O_ART_O_ART
 professor_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 treinado_PCP_O_PCP
 para_PREP_O_PREP
 desenvolver_V_O_V
@@ -190784,7 +190784,7 @@ ilumina_V_O_V
 e_KC_O_KC
 a_PROSUB_O_PREP
 que_PRO-KS-REL_O_PRO-KS-REL
-é_VAUX_O_V
+é_VAUX_O_VAUX
 dada_PCP_O_PCP
 a_PREP_O_PREP
 uma_ART_O_ART
@@ -190880,8 +190880,8 @@ turma_N_O_N
 ao_PREP_O_PREP
 ousar_V_O_V
 questionar_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 podia_VAUX_O_VAUX
 aparentemente_ADV_O_ADV
 ser_V_O_V
@@ -191413,7 +191413,7 @@ dêem_V_O_V
 as_ART_O_ART
 razões_N_O_N
 de_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 afirmam_V_O_V
 e_KC_O_KC
@@ -191779,8 +191779,8 @@ lidar_V_O_V
 mais_ADV_O_ADV
 com_PREP_O_PREP
 idéias_N_O_N
-do_KS_O_NPROP
-que_KS_O_PRO-KS-REL
+do_KS_O_KS
+que_KS_O_KS
 imaginamos_V_O_V
 De_PREP_+_PREP
 a_ART_O_ART
@@ -191864,7 +191864,7 @@ crianças_N_O_N
 ,_,_O_,
 que_PRO-KS-REL_O_PRO-KS-REL
 hoje_ADV_O_ADV
-é_VAUX_O_V
+é_VAUX_O_VAUX
 aplicado_PCP_O_PCP
 de_PREP_+_PREP
 a_ART_O_ART
@@ -191928,7 +191928,7 @@ todo_PROADJ_O_PROADJ
 o_ART_O_ART
 mundo_N_O_N
 ,_,_O_,
-é_VAUX_O_V
+é_VAUX_O_VAUX
 dirigido_PCP_O_PCP
 por_PREP_O_PREP
 Lipman_NPROP_O_N
@@ -192009,7 +192009,7 @@ cognitiva_ADJ_O_ADJ
 
 O_ART_O_ART
 Sr._N_O_N
-esteve_V_O_V
+esteve_V_O_VAUX
 associado_PCP_O_PCP
 a_PREP_+_PREP
 o_ART_O_ART
@@ -192104,7 +192104,7 @@ parecia_V_O_V
 muito_ADV_O_ADV
 semelhante_ADJ_O_ADJ
 a_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 ocorria_V_O_V
 em_PREP_O_PREP
@@ -192169,7 +192169,7 @@ método_N_O_N
 Acho_V_O_V
 que_KS_O_KS
 há_V_O_V
-muita_PROSUB_O_PROADJ
+muita_PROSUB_O_PROSUB
 ,_,_O_,
 mas_KC_O_KC
 não_ADV_O_ADV
@@ -192327,7 +192327,7 @@ a_ART_O_ART
 época_N_O_N
 insuficiente_ADJ_O_ADJ
 para_PREP_O_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 eu_PROPESS_O_PROPESS
 procurava_V_O_V
@@ -192438,7 +192438,7 @@ pensamento_N_O_N
 de_PREP_O_PREP
 crianças_N_O_N
 e_KC_O_KC
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 de_PREP_+_PREP
 os_ART_O_ART
 metafísicos_N_O_N
@@ -192517,8 +192517,8 @@ a_PREP_+_PREP
 as_ART_O_ART
 crianças_N_O_N
 modelos_N_O_N
-o_PROSUB_O_PRO-KS-REL
-que_PRO-KS-REL_O_PRO-KS-REL
+o_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 elas_PROPESS_O_PROPESS
 são_V_O_V
 através_PREP_O_PREP
@@ -192549,7 +192549,7 @@ elas_PROPESS_O_PROPESS
 não_ADV_O_ADV
 sabem_V_O_V
 de_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 estamos_VAUX_O_VAUX
 falando_V_O_V
@@ -192581,7 +192581,7 @@ falam_V_O_V
 umas_PROSUB_O_PROSUB
 com_PREP_O_PREP
 as_ART_O_ART
-outras_PROSUB_O_PROADJ
+outras_PROSUB_O_PROSUB
 ,_,_O_,
 como_ADV-KS_O_PREP
 discutem_V_O_V
@@ -192593,7 +192593,7 @@ respeitam_V_O_ART
 umas_PROSUB_O_PROSUB
 a_PREP_+_PREP
 as_ART_O_ART
-outras_PROSUB_O_PROADJ
+outras_PROSUB_O_PROSUB
 ._._O_.
 
 Você_PROPESS_O_PROPESS
@@ -192652,7 +192652,7 @@ de_PREP_+_PREP
 as_ART_O_ART
 semelhanças_N_O_N
 de_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 fazíamos_V_O_V
 ._._O_.
@@ -192762,7 +192762,7 @@ o_ART_O_ART
 método_N_O_N
 ,_,_O_,
 ele_PROPESS_O_PROPESS
-é_VAUX_O_V
+é_VAUX_O_VAUX
 usado_PCP_O_PCP
 para_PREP_O_PREP
 as_ART_O_ART
@@ -192816,7 +192816,7 @@ universais_ADJ_O_ADJ
 ._._O_.
 
 Praticamos_V_O_PREP
-o_PRO-KS_O_ART
+o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 chamamos_V_O_V
 de_PREP_O_PREP
@@ -193001,7 +193001,7 @@ Os_ART_O_ART
 temas_N_O_N
 que_PRO-KS-REL_O_PRO-KS-REL
 tratamos_V_O_V
-são_VAUX_O_V
+são_VAUX_O_VAUX
 reconhecidos_PCP_O_PCP
 por_PREP_+_PREP
 as_ART_O_ART
@@ -193124,7 +193124,7 @@ de_PREP_+_PREP
 as_ART_O_ART
 coisas_N_O_N
 sobre_PREP_O_PREP
-as_PRO-KS-REL_O_ART
+as_PRO-KS-REL_O_PROSUB
 quais_PRO-KS-REL_O_PRO-KS-REL
 falam_V_O_V
 os_ART_O_ART
@@ -193217,7 +193217,7 @@ série_N_O_N
 de_PREP_O_PREP
 idéias_N_O_N
 sobre_PREP_O_PREP
-as_PRO-KS-REL_O_ART
+as_PRO-KS-REL_O_PROSUB
 quais_PRO-KS-REL_O_PRO-KS-REL
 pensaram_V_O_V
 os_ART_O_ART
@@ -193261,8 +193261,8 @@ crianças_N_O_N
 estejam_VAUX_O_V
 apenas_PDEN_O_PDEN
 repetindo_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 ouvem_V_O_V
 em_PREP_O_PREP
 casa_N_O_N
@@ -193290,7 +193290,7 @@ há_V_O_V
 o_ART_O_ART
 risco_N_O_N
 de_PREP_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 ,_,_O_,
 em_PREP_O_PREP
 vez_PREP_O_N
@@ -193344,7 +193344,7 @@ pessoas_N_O_N
 ,_,_O_,
 sobretudo_ADV_O_ADV
 de_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 as_ART_O_ART
 crianças_N_O_N
@@ -193451,8 +193451,8 @@ coisa_N_O_N
 ela_PROPESS_O_PROPESS
 vai_VAUX_O_VAUX
 repetir_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 ouve_V_O_V
 em_PREP_O_PREP
 casa_N_O_N
@@ -193509,7 +193509,7 @@ vem_V_O_V
 de_PREP_O_PREP
 casa_N_O_N
 para_PREP_O_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 está_V_O_V
 por_ADV_O_PREP
@@ -193709,7 +193709,7 @@ medida_N_O_N
 ,_,_O_,
 cuja_PRO-KS-REL_O_PRO-KS-REL
 vigência_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 definida_PCP_O_PCP
 já_ADV_O_ADV
 para_PREP_O_PREP
@@ -193735,7 +193735,7 @@ se_PROPESS_O_PROPESS
 tornado_PCP_O_PCP
 matéria_N_O_N
 optativa_ADJ_O_PREP
-o_PRO-KS_O_ART
+o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 levou_V_O_V
 ,_,_O_,
@@ -193866,7 +193866,7 @@ o_ART_O_ART
 moderno_N_O_ADJ
 e_KC_O_KC
 o_ART_O_ART
-contemporâneo_N_O_ADJ
+contemporâneo_N_O_N
 ._._O_.
 
 A_PREP_O_PREP
@@ -194003,7 +194003,7 @@ e_KC_O_KC
 professores_N_O_N
 ,_,_O_,
 em_PREP_O_PREP
-cujas_PROADJ_O_PRO-KS-REL
+cujas_PROADJ_O_KS
 escolas_N_O_N
 tem_VAUX_O_VAUX
 havido_PCP_O_PCP
@@ -194050,7 +194050,7 @@ graus_N_O_N
 ,_,_O_,
 tanto_KC_[_KC
 em_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 se_PROPESS_O_PROPESS
 refere_V_O_V
@@ -194065,7 +194065,7 @@ e_KC_O_KC
 alunos_N_O_N
 quanto_KC_]_PREP
 em_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 se_PROPESS_O_PROPESS
 refere_V_O_V
@@ -194145,7 +194145,7 @@ os_ART_O_ART
 professores_N_O_N
 universitários_ADJ_O_ADJ
 com_PREP_O_PREP
-os_PROSUB_O_ART
+os_PROSUB_O_PROSUB
 de_PREP_+_PREP
 o_ART_O_ART
 1º_ADJ_O_N
@@ -194935,7 +194935,7 @@ de_PREP_O_PREP
 filosofia_N_O_N
 ,_,_O_,
 para_PREP_O_PREP
-os_PRO-KS-REL_O_ART
+os_PRO-KS-REL_O_PROSUB
 quais_PRO-KS-REL_O_PRO-KS-REL
 dei_V_O_V
 aulas_N_O_N
@@ -195032,7 +195032,7 @@ embrenhando_V_O_V
 em_PREP_O_PREP
 temas_N_O_N
 que_PRO-KS-REL_O_PRO-KS-REL
-eram_V_O_V
+eram_V_O_VAUX
 tocados_PCP_O_PCP
 superficialmente_ADV_O_ADV
 e_KC_O_KC
@@ -195077,7 +195077,7 @@ de_PREP_+_PREP
 o_ART_O_ART
 espinosismo_N_O_N
 (_(_O_(
-como_ADV-KS_O_PREP
+como_ADV-KS_O_KS
 foi_VAUX_O_VAUX
 instaurada_PCP_O_PCP
 uma_ART_O_ART
@@ -195242,7 +195242,7 @@ não_ADV_O_ADV
 sei_V_O_V
 ._._O_.
 
-Tenho_VAUX_O_V
+Tenho_VAUX_O_VAUX
 feito_PCP_O_PCP
 muitas_PROADJ_O_PROADJ
 pesquisas_N_O_N
@@ -195323,7 +195323,7 @@ política_N_O_N
 )_)_O_)
 ._._O_.
 
-Tenho_VAUX_O_V
+Tenho_VAUX_O_VAUX
 procurado_PCP_O_PCP
 trabalhar_V_O_V
 a_ART_O_ART
@@ -195563,7 +195563,7 @@ livro_N_O_N
 o_ART_O_ART
 fato_N_O_N
 de_PREP_O_PREP
-haver_VAUX_O_V
+haver_VAUX_O_VAUX
 evitado_PCP_O_PCP
 a_ART_O_PREP
 solução_N_O_N
@@ -195579,8 +195579,8 @@ e_KC_O_KC
 por_PREP_+_PREP
 a_ART_O_ART
 exposição_N_O_N
-do_KS_O_NPROP
-que_KS_O_PRO-KS-REL
+do_KS_O_KS
+que_KS_O_KS
 é_V_O_V
 a_ART_O_ART
 filosofia_N_O_N
@@ -195701,7 +195701,7 @@ Aristóteles_NPROP_O_NPROP
 ._._O_.
 
 Forma_N_O_ART
-clássica_ADJ_O_ADJ
+clássica_ADJ_O_N
 de_PREP_+_PREP
 os_ART_O_ART
 manuais_N_O_N
@@ -195724,7 +195724,7 @@ mais_ADV_O_ADV
 desde_KS_O_PREP
 Hegel_NPROP_O_NPROP
 ou_KC_O_KC
-mesmo_PDEN_O_PROADJ
+mesmo_PDEN_O_PROSUB
 Kant_NPROP_O_NPROP
 ._._O_.
 
@@ -196108,7 +196108,7 @@ terminal_N_O_N
 que_PRO-KS-REL_O_PRO-KS-REL
 é_V_O_V
 como_KS_O_PREP
-é_VAUX_O_V
+é_VAUX_O_VAUX
 chamado_PCP_O_PCP
 o_ART_O_ART
 último_ADJ_O_ADJ
@@ -196179,7 +196179,7 @@ A_N_AP_NPROP
 ,_,_O_,
 chamado_PCP_O_PCP
 de_PREP_O_PREP
-literário_N_O_ADJ
+literário_N_O_ADV
 ,_,_O_,
 a_ART_O_ART
 filosofia_N_O_N
@@ -196201,8 +196201,8 @@ curso_N_O_N
 B_N_AP_NPROP
 ,_,_O_,
 em_PREP_+_PREP
-o_PRO-KS-REL_O_ART
-qual_PRO-KS-REL_O_PROADJ
+o_PRO-KS-REL_O_PRO-KS-REL
+qual_PRO-KS-REL_O_PRO-KS-REL
 a_ART_O_ART
 matéria_N_O_N
 mais_ADV_O_ADV
@@ -196268,7 +196268,7 @@ desejar_V_O_V
 
 O_ART_O_ART
 programa_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 dividido_PCP_O_PCP
 em_PREP_O_PREP
 três_NUM_O_NUM
@@ -196351,9 +196351,9 @@ bibliográfica_ADJ_O_ADJ
 ,_,_O_,
 a_PREP_+_PREP
 partir_PREP_+_PREP
-de_PREP_+_PREP
-a_PREP_O_ART
-qual_PRO-KS-REL_O_PROADJ
+de_PREP_+_PRO-KS-REL
+a_PREP_O_PRO-KS-REL
+qual_PRO-KS-REL_O_PRO-KS-REL
 os_ART_O_ART
 professores_N_O_N
 escolhem_V_O_V
@@ -196455,7 +196455,7 @@ a_ART_O_ART
 carga_N_O_N
 horária_ADJ_O_ADJ
 de_PREP_O_PREP
-um_NUM_O_ART
+um_NUM_O_PROSUB
 para_PREP_O_PREP
 dois_NUM_O_NUM
 anos_N_O_N
@@ -196787,7 +196787,7 @@ quê?_NPROP_O_ART
 Adorno_NPROP_O_NPROP
 mostra_V_O_V
 de_PREP_O_PREP
-que_PRO-KS_O_PRO-KS-REL
+que_PRO-KS_O_KS
 maneira_N_O_N
 essa_PROADJ_O_PROADJ
 pergunta_N_O_N
@@ -196823,7 +196823,7 @@ a_PRO-KS-REL_O_ART
 qual_PRO-KS-REL_O_PROSUB
 ou_KC_O_KC
 sem_PREP_O_PREP
-a_PRO-KS-REL_O_PREP
+a_PRO-KS-REL_O_PRO-KS-REL
 qual_PRO-KS-REL_O_PRO-KS-REL
 se_PROPESS_O_PROPESS
 fica_V_O_V
@@ -196833,7 +196833,7 @@ fica_V_O_V
 Preconceito_N_O_ART
 simétrico_ADJ_O_N
 encontra_V_+_V
-se_PROPESS_O_KS
+se_PROPESS_O_PROPESS
 quando_KS_O_KS
 se_PROPESS_O_PROPESS
 diz_V_O_V
@@ -197077,8 +197077,8 @@ suas_PROADJ_O_PROADJ
 composições_N_O_N
 ,_,_O_,
 realizando_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 seria_V_O_V
 impossível_ADJ_O_ADJ
 encontrar_V_O_V
@@ -197109,8 +197109,8 @@ o_ART_O_ART
 trabalho_N_O_N
 é_V_O_V
 paciente_ADJ_O_N
-o_PRO-KS_O_PRO-KS-REL
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 propicia_V_O_V
 o_ART_O_ART
 desenvolvimento_N_O_N
@@ -197343,7 +197343,7 @@ Hegel_NPROP_O_NPROP
 ,_,_O_,
 pássaro_N_O_N
 crepuscular_ADJ_O_ADJ
-que_PRO-KS-REL_O_PRO-KS-REL
+que_PRO-KS-REL_O_KS
 alça_V_O_N
 vôo_N_O_N
 a_PREP_+_PREP
@@ -197471,7 +197471,7 @@ solitária_ADJ_O_ADJ
 a_ART_O_ART
 reparação_N_O_N
 que_PRO-KS-REL_O_PRO-KS-REL
-a_PROPESS_O_PREP
+a_PROPESS_O_PROPESS
 traz_V_O_V
 de_ADV_O_PREP
 volta_ADV_O_N
@@ -197731,7 +197731,7 @@ disponíveis_ADJ_O_ADJ
 Como_KS_O_PREP
 uma_ART_O_ART
 vaga_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 criada_PCP_O_PCP
 em_PREP_+_PREP
 uma_ART_O_ART
@@ -197882,7 +197882,7 @@ todo_PROADJ_O_PROADJ
 o_ART_O_ART
 país_N_O_N
 ,_,_O_,
-já_KS_O_ADV
+já_KS_O_KS
 que_KS_O_KS
 corremos_V_O_V
 o_ART_O_ART
@@ -197997,14 +197997,14 @@ forças_N_O_N
 
 E_KC_O_KC
 ,_,_O_,
-no_KC_O_NPROP
+no_KC_O_KC
 entanto_KC_O_KC
 ,_,_O_,
 eles_PROPESS_O_PROPESS
 persistem_V_O_V
 ._._O_.
 
-Têm_VAUX_O_V
+Têm_VAUX_O_VAUX
 resistido_PCP_O_PCP
 heroicamente_ADV_O_PREP
 em_PREP_+_PREP
@@ -198032,8 +198032,8 @@ hora_N_O_N
 de_PREP_+_PREP
 a_ART_O_ART
 decisão_N_O_N
-o_PROSUB_O_PRO-KS-REL
-que_PRO-KS-REL_O_PRO-KS-REL
+o_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 importa_V_O_V
 é_V_O_V
 entrar_V_O_V
@@ -198081,7 +198081,7 @@ grau_N_O_N
 nem_PDEN_O_KC
 mesmo_PDEN_O_PDEN
 de_PREP_+_PREP
-os_PROSUB_O_ART
+os_PROSUB_O_PROSUB
 de_PREP_O_PREP
 nível_N_O_N
 superior_ADJ_O_ADJ
@@ -198090,7 +198090,7 @@ superior_ADJ_O_ADJ
 Paradoxalmente_ADV_O_ADV
 ,_,_O_,
 por_PREP_O_PREP
-que_PROSUB_O_PRO-KS-REL
+que_PROSUB_O_KS
 não_ADV_O_ADV
 se_PROPESS_O_PROPESS
 exige_V_O_V
@@ -198187,7 +198187,7 @@ total_ADJ_O_ADJ
 seja_V_O_V
 por_PREP_+_PREP
 a_ART_O_ART
-parcial_ADJ_O_ADJ
+parcial_ADJ_O_N
 de_PREP_+_PREP
 o_ART_O_ART
 ensino_N_O_N
@@ -198210,7 +198210,7 @@ saber_V_O_V
 muito_ADV_O_ADV
 bem_ADV_O_ADV
 de_PREP_+_PREP
-o_PRO-KS_O_ART
+o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 estão_VAUX_O_V
 falando_V_O_V
@@ -198288,7 +198288,7 @@ cabeças_N_O_N
 ocas_ADJ_O_ADJ
 ._._O_.
 
-Tudo_PROADJ_O_PROSUB
+Tudo_PROADJ_O_PROADJ
 isso_PROSUB_O_PROSUB
 é_V_O_V
 compreensível_ADJ_O_ADJ
@@ -198365,7 +198365,7 @@ névoa_N_O_N
 de_PREP_+_PREP
 esses_PROADJ_O_PROADJ
 anos_N_O_N
-todos_PROADJ_O_PROSUB
+todos_PROADJ_O_PROADJ
 ,_,_O_,
 não_ADV_O_ADV
 é_V_O_V
@@ -199264,7 +199264,7 @@ central_ADJ_O_ADJ
 em_PREP_+_PREP
 torno_PREP_+_N
 de_PREP_+_PREP
-a_PRO-KS-REL_O_PREP
+a_PRO-KS-REL_O_PRO-KS-REL
 qual_PRO-KS-REL_O_PRO-KS-REL
 se_PROPESS_O_PROPESS
 desenvolveu_V_O_V
@@ -199277,7 +199277,7 @@ Ansart_NPROP_O_NPROP
 autor_N_O_N
 de_PREP_O_PREP
 "_"_O_"
-Os_NPROP_O_ART
+Os_NPROP_O_NPROP
 Excluídos_NPROP_O_NPROP
 da_NPROP_O_NPROP
 História:_NPROP_O_,
@@ -199395,7 +199395,7 @@ de_PREP_O_PREP
 emoção_N_O_N
 coletiva_ADJ_O_ADJ
 como_KS_O_PREP
-o_PRO-KS_O_ART
+o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 se_PROPESS_O_PROPESS
 pôde_VAUX_O_VAUX
@@ -199506,7 +199506,7 @@ Unidos_NPROP_O_NPROP
 virou_V_O_V
 moda_N_O_N
 :_:_O_:
-estão_V_O_V
+estão_V_O_VAUX
 preocupados_PCP_O_PCP
 com_PREP_O_PREP
 as_ART_O_ART
@@ -199980,8 +199980,8 @@ pessoais_ADJ_O_ADJ
 ._._O_.
 
 É_V_O_V
-isso_PROSUB_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+isso_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 está_VAUX_O_V
 explodindo_V_O_V
 hoje_ADV_O_ADV
@@ -199996,7 +199996,7 @@ a_ART_O_ART
 Iugoslávia_NPROP_O_NPROP
 ,_,_O_,
 nota_V_+_V
-se_PROPESS_O_KS
+se_PROPESS_O_PROPESS
 que_KS_O_KS
 as_ART_O_ART
 populações_N_O_N
@@ -200250,8 +200250,8 @@ de_PREP_+_PREP
 a_ART_O_ART
 população_N_O_N
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 é_V_O_V
 um_ART_O_ART
 sinal_N_O_N
@@ -200764,8 +200764,8 @@ de_PREP_+_PREP
 estes_PROADJ_O_PROADJ
 movimentos_N_O_N
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 os_PROPESS_O_PROPESS
 condena_V_O_V
 ,_,_O_,
@@ -201151,7 +201151,7 @@ a_ART_O_ART
 exclusão_N_O_N
 feminina_ADJ_O_ADJ
 e_KC_O_KC
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 de_PREP_+_PREP
 a_ART_O_ART
 participação_N_O_N
@@ -201439,7 +201439,7 @@ em_PREP_+_PREP
 um_ART_O_ART
 momento_N_O_N
 em_PREP_O_PREP
-que_PRO-KS-REL_O_PRO-KS-REL
+que_PRO-KS-REL_O_KS
 sequer_PDEN_O_PDEN
 tinham_V_O_V
 o_ART_O_ART
@@ -201685,7 +201685,7 @@ sós_ADJ_O_ADV
 necessário_ADJ_O_ADJ
 que_KS_O_PRO-KS-REL
 sejam_V_O_V
-muitas_PROSUB_O_PROADJ
+muitas_PROSUB_O_PROSUB
 ._._O_.
 
 Em_PREP_+_PREP
@@ -202041,7 +202041,7 @@ em_PREP_+_PREP
 a_ART_O_ART
 política_N_O_N
 ,_,_O_,
-tem_VAUX_O_V
+tem_VAUX_O_VAUX
 procurado_PCP_O_PCP
 seduzir_V_+_V
 las_PROPESS_O_PROPESS
@@ -202056,7 +202056,7 @@ organizações_N_O_N
 A_ART_O_ART
 sua_PROADJ_O_PROADJ
 obra_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 marcada_PCP_O_PCP
 por_PREP_+_PREP
 a_ART_O_ART
@@ -202160,7 +202160,7 @@ estava_V_O_V
 muito_ADV_O_ADV
 interessada_PCP_O_PCP
 por_PREP_O_PREP
-tudo_PROADJ_O_PROSUB
+tudo_PROADJ_O_PROADJ
 isso_PROSUB_O_PROSUB
 ._._O_.
 
@@ -202408,7 +202408,7 @@ onde_ADV-KS-REL_O_ADV-KS-REL
 a_ART_O_ART
 classe_N_O_N
 operária_ADJ_O_ADJ
-sempre_ADV_O_ADV
+sempre_ADV_O_PROADJ
 razão_N_O_N
 ,_,_O_,
 onde_ADV-KS-REL_O_ADV-KS-REL
@@ -202515,7 +202515,7 @@ eram_V_O_V
 sempre_ADV_O_ADV
 secundárias_ADJ_O_V
 em_PREP_+_PREP
-o_PRO-KS_O_ART
+o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 acontecia_V_O_V
 ._._O_.
@@ -202740,7 +202740,7 @@ não_ADV_O_ADV
 se_PROPESS_O_PROPESS
 diferencia_V_O_V
 de_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 eu_PROPESS_O_PROPESS
 fazia_V_O_V
@@ -202819,7 +202819,7 @@ a_ART_O_ART
 história_N_O_N
 ,_,_O_,
 mas_KC_O_KC
-menos_ADV_O_ADV
+menos_ADV_O_KS
 do_KS_O_KS
 que_KS_O_KS
 as_ART_O_ART
@@ -203409,7 +203409,7 @@ Ondaatje_NPROP_O_NPROP
 ganhador_N_O_N
 de_PREP_+_PREP
 o_ART_O_ART
-prestigioso_ADJ_O_ADJ
+prestigioso_ADJ_O_N
 Bookers_NPROP_O_PREP
 Prize_NPROP_O_NPROP
 ,_,_O_,
@@ -203519,7 +203519,7 @@ servia_V_O_V
 de_PREP_O_PREP
 hospital_N_O_N
 ,_,_O_,
-é_VAUX_O_V
+é_VAUX_O_VAUX
 abandonada_PCP_O_PCP
 ,_,_O_,
 ela_PROPESS_O_PROPESS
@@ -203713,7 +203713,7 @@ físicos_ADJ_O_ADJ
 
 Kip_NPROP_O_NPROP
 ,_,_O_,
-no_KC_O_NPROP
+no_KC_O_KC
 entanto_KC_O_KC
 ,_,_O_,
 parece_V_O_V
@@ -203775,7 +203775,7 @@ de_PREP_+_PREP
 as_ART_O_ART
 igrejas_N_O_N
 por_PREP_+_PREP
-as_PRO-KS-REL_O_ART
+as_PRO-KS-REL_O_PROSUB
 quais_PRO-KS-REL_O_PRO-KS-REL
 passou_V_O_V
 com_PREP_O_PREP
@@ -203827,7 +203827,7 @@ não_ADV_O_ADV
 conhecem_V_O_V
 a_PREP_O_PREP
 si_PROPESS_O_PROPESS
-mesmos_PROADJ_O_PROADJ
+mesmos_PROADJ_O_PROSUB
 ou_KC_O_KC
 ,_,_O_,
 afogados_PCP_O_PCP
@@ -203997,7 +203997,7 @@ a_ART_O_ART
 realidade_N_O_N
 ,_,_O_,
 percorre_V_O_V
-vários_PROSUB_O_PROADJ
+vários_PROSUB_O_PROSUB
 com_PREP_O_PREP
 virtuosismo_N_O_N
 ,_,_O_,
@@ -204065,7 +204065,7 @@ as_ART_O_ART
 quatro_NUM_O_NUM
 cabeças_N_O_N
 se_PROPESS_O_PROPESS
-delineia_V_O_V
+delineia_V_O_VAUX
 determinado_PCP_O_PCP
 episódio_N_O_N
 ou_KC_O_KC
@@ -204112,14 +204112,14 @@ desconexos_ADJ_O_ADJ
 se_PROPESS_O_PROPESS
 acumulam_V_O_V
 até_KS_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 ,_,_O_,
 em_PREP_+_PREP
 um_ART_O_ART
 momento_N_O_N
 imperceptível_ADJ_O_ADJ
 ,_,_O_,
-tudo_PROADJ_O_PROSUB
+tudo_PROADJ_O_PROADJ
 o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 foi_VAUX_O_VAUX
@@ -204761,7 +204761,7 @@ em_PREP_+_PREP
 a_ART_O_ART
 mesma_PROADJ_O_PROADJ
 velocidade_N_O_N
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 seus_PROADJ_O_PROADJ
 parcos_ADJ_O_ADJ
 pertences_N_O_N
@@ -204788,7 +204788,7 @@ de_PREP_O_PREP
 Dalton_NPROP_O_NPROP
 Trevisan_NPROP_O_NPROP
 ,_,_O_,
-embora_KS_O_KS
+embora_KS_O_PRO-KS-REL
 sem_PREP_O_PREP
 a_ART_O_ART
 concisão_N_O_N
@@ -204975,7 +204975,7 @@ problemáticas_ADJ_O_N
 ,_,_O_,
 mas_KC_O_KC
 desde_KS_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 não_ADV_O_ADV
 estejam_V_O_VAUX
 deslocadas_PCP_O_PCP
@@ -205068,7 +205068,7 @@ sustentaria_V_O_V
 melhor_ADV_O_ADJ
 sem_PREP_O_PREP
 elas_PROPESS_O_PROPESS
-até_PDEN_O_PDEN
+até_PDEN_O_PROADJ
 ,_,_O_,
 mais_ADV_O_ADV
 enxuto_PCP_O_PCP
@@ -205358,7 +205358,7 @@ Rocco_NPROP_O_NPROP
 URVs_N_O_N
 Menina_N_O_N
 negra_ADJ_O_ADJ
-é_VAUX_O_V
+é_VAUX_O_VAUX
 espancada_PCP_O_PCP
 e_KC_O_KC
 estuprada_PCP_O_PCP
@@ -205920,9 +205920,9 @@ dá_V_O_V
 novo_ADJ_O_ADJ
 relevo_N_O_N
 a_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
-era_V_O_V
+era_V_O_VAUX
 conhecido_PCP_O_PCP
 por_PREP_+_PREP
 a_ART_O_ART
@@ -205947,7 +205947,7 @@ pederastia_N_O_N
 "_"_O_"
 ,_,_O_,
 ou_PDEN_O_KC
-seja_PDEN_O_V
+seja_PDEN_O_PDEN
 ,_,_O_,
 a_ART_O_ART
 relação_N_O_N
@@ -205973,7 +205973,7 @@ o_ART_O_ART
 erômenos_N_EST_NPROP
 "_"_O_"
 ,_,_O_,
-era_V_O_V
+era_V_O_VAUX
 aprovada_PCP_O_PCP
 ,_,_O_,
 incentivada_PCP_O_PCP
@@ -206028,8 +206028,8 @@ existiam_V_O_V
 palavras_N_O_N
 para_PREP_O_PREP
 designar_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 chamamos_V_O_V
 de_PREP_O_PREP
 "_"_O_"
@@ -206162,7 +206162,7 @@ Entretanto_KC_O_KC
 inventada_PCP_O_PCP
 justamente_ADV_O_ADV
 porque_KS_O_KS
-era_V_O_V
+era_V_O_VAUX
 dirigida_PCP_O_PCP
 para_PREP_O_PREP
 a_ART_O_ART
@@ -206202,7 +206202,7 @@ passividade_N_O_N
 e_KC_O_KC
 excesso_N_O_N
 ,_,_O_,
-era_VAUX_O_V
+era_VAUX_O_VAUX
 considerada_PCP_O_PCP
 indigna_ADJ_O_V
 ._._O_.
@@ -206366,7 +206366,7 @@ pederastia_N_O_N
 "_"_O_"
 ;_;_O_;
 por_PREP_O_PREP
-que_PRO-KS_O_PRO-KS-REL
+que_PRO-KS_O_KS
 ,_,_O_,
 então_ADV_O_ADV
 ,_,_O_,
@@ -206504,9 +206504,9 @@ atitudes_N_O_N
 morais_ADJ_O_ADJ
 diante_PREP_+_PREP
 de_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
-é_VAUX_O_V
+é_VAUX_O_VAUX
 permitido_PCP_O_PCP
 ,_,_O_,
 proibido_PCP_O_PCP
@@ -206547,8 +206547,8 @@ sentido_N_O_N
 quanto_KS_O_PREP
 alguém_PROSUB_O_PROSUB
 perguntar_V_O_V
-o_PRO-KS_O_ART
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 é_V_O_V
 ou_KC_O_KC
 onde_ADV-KS_O_ADV
@@ -206912,7 +206912,7 @@ a_ART_O_ART
 esmagadora_ADJ_O_N
 maioria_N_O_N
 de_PREP_+_PREP
-os_PROSUB_O_ART
+os_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 sentem_V_O_V
 tal_PROADJ_O_PROADJ
@@ -206985,7 +206985,7 @@ Duvido_V_O_N
 Uma_ART_O_ART
 frase_N_O_N
 como_PREP_O_PREP
-esta_PROSUB_O_PROADJ
+esta_PROSUB_O_PROSUB
 não_ADV_O_ADV
 resistiria_V_O_V
 minimamente_ADV_O_ADV
@@ -207036,7 +207036,7 @@ o_ART_O_ART
 problema_N_O_N
 de_PREP_+_PREP
 o_ART_O_ART
-referente_N_O_ADJ
+referente_N_O_N
 sem_PREP_O_PREP
 realidade_N_O_N
 ,_,_O_,
@@ -207085,9 +207085,9 @@ a_ART_O_ART
 "_"_O_"
 homossexualidade_N_O_N
 "_"_O_"
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 ,_,_O_,
-no_KC_O_NPROP
+no_KC_O_KC
 entanto_KC_O_KC
 ,_,_O_,
 só_PDEN_O_PDEN
@@ -207797,8 +207797,8 @@ págs_N_O_N
 
 30_NUM_O_NUM
 URVs_N_O_N
-Guia_N_O_NPROP
-que_PRO-KS-REL_O_PRO-KS-REL
+Guia_N_O_KS
+que_PRO-KS-REL_O_KS
 decifra_V_O_V
 a_ART_O_ART
 linguagem_N_O_N
@@ -208620,7 +208620,7 @@ os_ART_O_ART
 votos_N_O_N
 em_PREP_+_PREP
 as_ART_O_ART
-legislativas_N_O_ADJ
+legislativas_N_O_N
 de_PREP_O_PREP
 93_N_O_N
 ._._O_.
@@ -208685,7 +208685,7 @@ ela_PROPESS_O_PROPESS
 própria_PROADJ_O_ADJ
 ,_,_O_,
 uma_ART_O_ART
-estrangeira_N_O_ADJ
+estrangeira_N_O_N
 ._._O_.
 
 Emigrou_V_O_N
@@ -208815,8 +208815,8 @@ institucionalizou_V_O_V
 a_ART_O_ART
 mentira_N_O_N
 segundo_PREP_O_PREP
-a_PRO-KS-REL_O_ART
-qual_PRO-KS-REL_O_PROADJ
+a_PRO-KS-REL_O_PRO-KS-REL
+qual_PRO-KS-REL_O_PRO-KS-REL
 os_ART_O_ART
 dominados_N_O_N
 são_V_O_V
@@ -208825,10 +208825,10 @@ qualidade_N_O_N
 étnica_ADJ_O_ADJ
 inferior_ADJ_O_ADJ
 a_PREP_+_PREP
-a_PROSUB_O_ART
+a_PROSUB_O_PROSUB
 de_PREP_+_PREP
 os_ART_O_ART
-dominantes_N_O_ADJ
+dominantes_N_O_N
 ._._O_.
 
 Uma_ART_O_ART
@@ -208954,7 +208954,7 @@ Kant_NPROP_O_NPROP
 Assim_ADV_O_ADV
 e_KC_O_KC
 por_PREP_O_PREP
-que_PROSUB_O_PRO-KS-REL
+que_PROSUB_O_KS
 não_ADV_O_ADV
 ?_?_O_?
 
@@ -208988,7 +208988,7 @@ de_PREP_O_PREP
 impossível_ADJ_O_ADJ
 solução_N_O_N
 ,_,_O_,
-já_KS_O_ADV
+já_KS_O_KS
 que_KS_O_KS
 "_"_O_"
 o_ART_O_ART
@@ -209148,7 +209148,7 @@ a_ART_O_ART
 crítica_N_O_N
 literária_ADJ_O_ADJ
 ,_,_O_,
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 por_PREP_O_PREP
 sua_PROADJ_O_PROADJ
 vez_N_O_N
@@ -209230,7 +209230,7 @@ e_KC_O_KC
 fundamental_ADJ_O_ADJ
 :_:_O_:
 até_PREP_O_PREP
-que_PROADJ_O_PRO-KS-REL
+que_PROADJ_O_KS
 ponto_N_O_N
 a_ART_O_PREP
 diluição_N_O_N
@@ -209358,11 +209358,11 @@ Estado-nação_N_O_N
 A_ART_O_ART
 aporia_N_O_N
 não_ADV_O_ADV
-é_VAUX_O_V
+é_VAUX_O_VAUX
 resolvida_PCP_O_PCP
 ,_,_O_,
-o_PRO-KS-REL_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+o_PRO-KS-REL_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 a_ADV_O_ART
 rigor_ADV_O_N
 não_ADV_O_ADV
@@ -209625,7 +209625,7 @@ história_N_O_N
 familiar_ADJ_O_ADJ
 ,_,_O_,
 a_ART_O_ART
-várias_PROSUB_O_PROADJ
+várias_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 lutas_N_O_N
@@ -209762,7 +209762,7 @@ ceticismo_N_O_N
 boa_ADJ_O_ADJ
 parte_N_O_N
 de_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 se_PROPESS_O_PROPESS
 costuma_VAUX_O_VAUX
@@ -209888,7 +209888,7 @@ conflito_N_O_N
 segundo_PREP_O_PREP
 Ignatieff_NPROP_O_N
 ,_,_O_,
-é_VAUX_O_V
+é_VAUX_O_VAUX
 movido_PCP_O_PCP
 por_PREP_+_PREP
 o_PROSUB_O_ART
@@ -209988,7 +209988,7 @@ sombrio_ADJ_O_N
 :_:_O_:
 Ignatieff_NPROP_O_NPROP
 nota_V_O_V
-que_KS_O_KS
+que_KS_O_PROPESS
 embora_KS_O_KS
 antigamente_ADV_O_ADV
 acreditasse_V_O_V
@@ -210049,7 +210049,7 @@ livro_N_O_N
 apresenta_V_O_V
 evidência_N_O_N
 de_PREP_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 não_ADV_O_ADV
 existe_V_O_V
 um_ART_O_ART
@@ -210157,7 +210157,7 @@ mesmo_PDEN_O_PDEN
 os_ART_O_ART
 liberais_N_O_N
 ,_,_O_,
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 em_PREP_+_PREP
 os_ART_O_ART
 últimos_ADJ_O_ADJ
@@ -210590,8 +210590,8 @@ a_ART_O_ART
 força_N_O_N
 -_-_O_-
 é_V_O_V
-algo_PROSUB_O_PROSUB
-que_PRO-KS-REL_O_PRO-KS-REL
+algo_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 se_PROPESS_O_PROPESS
 opõe_V_O_V
 a_PREP_+_PREP
@@ -210600,7 +210600,7 @@ natureza_N_O_N
 humana_ADJ_O_ADJ
 e_KC_O_KC
 só_PDEN_O_PDEN
-é_VAUX_O_V
+é_VAUX_O_VAUX
 mantido_PCP_O_PCP
 através_PREP_O_PREP
 de_PREP_O_PREP
@@ -210730,7 +210730,7 @@ luta_N_O_N
 sendo_VAUX_O_VAUX
 travada_PCP_O_PCP
 entre_PREP_O_PREP
-os_PROSUB_O_ART
+os_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 crêem_V_O_V
 que_KS_O_KS
@@ -210739,7 +210739,7 @@ nação_N_O_N
 deva_VAUX_O_VAUX
 abrigar_V_O_V
 a_PREP_O_ART
-todos_PROSUB_O_PROADJ
+todos_PROSUB_O_PROSUB
 e_KC_O_KC
 que_KS_O_KS
 a_ART_O_ART
@@ -210765,7 +210765,7 @@ abrigue_V_O_,
 apenas_PDEN_O_PDEN
 a_PREP_+_PREP
 os_ART_O_ART
-seus_PROSUB_O_PROADJ
+seus_PROSUB_O_PROSUB
 ._._O_.
 
 É_V_O_V
@@ -210784,7 +210784,7 @@ nação_N_O_N
 Eu_PROPESS_O_PROPESS
 sei_V_O_V
 de_PREP_O_PREP
-que_PRO-KS_O_PRO-KS-REL
+que_PRO-KS_O_KS
 lado_N_O_N
 estou_V_O_V
 ._._O_.
@@ -210921,7 +210921,7 @@ policial-alfarrabista_N_O_N
 Janeway_NPROP_O_,
 é_V_O_V
 mais_PROADJ_O_PREP
-um_PROSUB_O_ART
+um_PROSUB_O_PROSUB
 em_PREP_+_PREP
 a_ART_O_ART
 enorme_ADJ_O_ADJ
@@ -211090,9 +211090,9 @@ de_PREP_+_PREP
 o_ART_O_ART
 charme_N_O_N
 de_PREP_O_PREP
-um_PROSUB_O_ART
+um_PROSUB_O_PROSUB
 de_PREP_+_PREP
-esses_PROSUB_O_PROADJ
+esses_PROSUB_O_PROSUB
 ._._O_.
 
 Tenta_V_O_V
@@ -211150,7 +211150,7 @@ a_ART_O_ART
 história_N_O_N
 seria_V_O_V
 a_ART_O_ART
-mesma_PROSUB_O_PROADJ
+mesma_PROSUB_O_PROSUB
 ._._O_.
 
 Em_PREP_O_PREP
@@ -211162,7 +211162,7 @@ de_PREP_+_PREP
 o_ART_O_ART
 mundo_N_O_N
 de_PREP_+_PREP
-os_PROSUB_O_ART
+os_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 vendem_V_O_V
 e_KC_O_KC
@@ -211792,7 +211792,7 @@ poder_VAUX_O_VAUX
 comer_V_O_V
 terra_N_O_N
 ,_,_O_,
-já_KS_O_ADV
+já_KS_O_KS
 que_KS_O_KS
 ele_PROPESS_O_PROPESS
 não_ADV_O_ADV
@@ -212295,8 +212295,8 @@ Evolução_N_O_NPROP
 -_-_O_NPROP
 Processo_N_O_NPROP
 por_PREP_+_PREP
-o_PRO-KS-REL_O_ART
-qual_PRO-KS-REL_O_PROADJ
+o_PRO-KS-REL_O_PRO-KS-REL
+qual_PRO-KS-REL_O_PRO-KS-REL
 os_ART_O_ART
 seres_N_O_N
 vivos_ADJ_O_ADJ
@@ -212622,8 +212622,8 @@ melhor_ADV_O_ADJ
 para_PREP_O_PREP
 os_ART_O_ART
 ossos_N_O_N
-do_KS_O_NPROP
-que_KS_O_PRO-KS-REL
+do_KS_O_KS
+que_KS_O_KS
 correr_V_O_V
 ,_,_O_,
 dizem_V_O_V
@@ -213014,7 +213014,7 @@ grupo_N_O_N
 Hanta_NPROP_O_ADJ
 ,_,_O_,
 de_PREP_+_PREP
-o_PRO-KS-REL_O_ART
+o_PRO-KS-REL_O_PROSUB
 qual_PRO-KS-REL_O_PRO-KS-REL
 são_V_O_V
 reservatórios_N_O_N
@@ -213141,7 +213141,7 @@ e_KC_O_KC
 seu_PROADJ_O_PROADJ
 material_N_O_N
 genético_ADJ_O_ADJ
-é_VAUX_O_V
+é_VAUX_O_VAUX
 constituído_PCP_O_PCP
 de_PREP_O_PREP
 RNA_N_O_NPROP
@@ -213528,7 +213528,7 @@ doença_N_O_N
 ,_,_O_,
 que_PRO-KS-REL_O_PRO-KS-REL
 não_ADV_O_ADV
-é_VAUX_O_V
+é_VAUX_O_VAUX
 transmitida_PCP_O_PCP
 por_PREP_+_PREP
 o_ART_O_ART
@@ -213739,7 +213739,7 @@ traz_V_O_V
 a_ART_O_ART
 notícia_N_O_N
 de_PREP_O_PREP
-que_PRO-KS-REL_O_PRO-KS-REL
+que_PRO-KS-REL_O_KS
 arqueólogos_N_O_N
 finalmente_ADV_O_ADV
 decifraram_V_O_ADJ
@@ -213911,7 +213911,7 @@ citações_N_O_N
 científicas_ADJ_O_ADJ
 ,_,_O_,
 convenciona_V_+_V
-se_PROPESS_O_KS
+se_PROPESS_O_PROPESS
 que_KS_O_KS
 o_ART_O_ART
 primeiro_ADJ_O_ADJ
@@ -214071,7 +214071,7 @@ anos_N_O_N
 a_PREP_+_PREP
 partir_PREP_+_PREP
 de_PREP_+_PREP
-o_PRO-KS-REL_O_ART
+o_PRO-KS-REL_O_PROSUB
 qual_PRO-KS-REL_O_PRO-KS-REL
 se_PROPESS_O_PROPESS
 recomenda_V_O_V
@@ -214446,7 +214446,7 @@ o_ART_O_ART
 material_N_O_N
 de_PREP_O_PREP
 que_PRO-KS-REL_O_PRO-KS-REL
-é_VAUX_O_V
+é_VAUX_O_VAUX
 feita_PCP_O_PCP
 a_ART_O_PREP
 prótese_N_O_N
@@ -214460,7 +214460,7 @@ ouvido_N_O_N
 em_PREP_O_PREP
 que_PRO-KS-REL_O_PRO-KS-REL
 ela_PROPESS_O_PROPESS
-é_VAUX_O_V
+é_VAUX_O_VAUX
 implantada_PCP_O_PCP
 e_KC_O_KC
 a_ART_O_ART
@@ -214913,8 +214913,8 @@ que_KS_O_KS
 a_ART_O_ART
 aparência_N_O_N
 é_V_O_V
-o_PROSUB_O_ART
-que_PRO-KS-REL_O_PRO-KS-REL
+o_PROSUB_O_PRO-KS
+que_PRO-KS-REL_O_PRO-KS
 mais_ADV_O_ADV
 vale_V_O_V
 em_PREP_+_PREP
@@ -215695,7 +215695,7 @@ invasão_N_O_N
 de_PREP_+_PREP
 a_ART_O_ART
 Venezuela_NPROP_O_NPROP
-ela_PROPESS_O_PROPESS
+ela_PROPESS_O_KS
 se_PROPESS_O_PROPESS
 deu_V_O_V
 por_PREP_O_PREP
@@ -215998,7 +215998,7 @@ em_PREP_O_PREP
 Estados_NPROP_O_N
 soberanos_N_O_ADJ
 desde_KS_O_PREP
-que_KS_O_PRO-KS-REL
+que_KS_O_KS
 ,_,_O_,
 comprovadamente_ADV_O_ADV
 ,_,_O_,
@@ -216115,7 +216115,7 @@ convenção_N_O_N
 internacional_ADJ_O_ADJ
 -_-_O_-
 que_PRO-KS-REL_O_PRO-KS-REL
-ficou_V_O_V
+ficou_V_O_VAUX
 caracterizado_PCP_O_PCP
 em_PREP_+_PREP
 o_ART_O_ART
@@ -216326,9 +216326,9 @@ o_ART_O_ART
 massacre_N_O_N
 ,_,_O_,
 de_PREP_+_PREP
-entre_PREP_O_PREP
-os_PRO-KS-REL_O_ART
-quais_PRO-KS-REL_O_PROADJ
+entre_PREP_O_PRO-KS-REL
+os_PRO-KS-REL_O_PRO-KS-REL
+quais_PRO-KS-REL_O_PRO-KS-REL
 uma_ART_O_ART
 criança_N_O_N
 de_PREP_O_PREP
@@ -216498,7 +216498,7 @@ duvidar_V_O_V
 ,_,_O_,
 conforme_KS_O_PREP
 ele_PROPESS_O_PROPESS
-próprio_PROADJ_O_ADJ
+próprio_PROADJ_O_PROADJ
 declarou_V_O_V
 em_PREP_+_PREP
 o_ART_O_ART
@@ -216644,7 +216644,7 @@ atearam_V_O_PREP
 fogo_N_O_N
 em_PREP_+_PREP
 as_ART_O_ART
-mesmas_PROSUB_O_PROADJ
+mesmas_PROSUB_O_PROSUB
 ,_,_O_,
 antes_ADV_O_ADV
 porém_KC_O_KC
@@ -216740,7 +216740,7 @@ qual_PRO-KS-REL_O_PROSUB
 dentro_PREP_O_PREP
 de_PREP_O_PREP
 um_ART_O_ART
-auto_N_O_ADJ
+auto_N_O_N
 de_PREP_O_PREP
 constatação_N_O_N
 ,_,_O_,
@@ -216867,7 +216867,7 @@ de_PREP_+_PREP
 a_ART_O_ART
 República_NPROP_O_N
 e_KC_O_KC
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 de_PREP_O_PREP
 genocídio_N_O_N
 ,_,_O_,
@@ -217066,7 +217066,7 @@ em_PREP_+_PREP
 elas_PROPESS_O_N
 existentes_ADJ_O_ADJ
 ,_,_O_,
-já_KS_O_ADV
+já_KS_O_KS
 que_KS_O_KS
 o_ART_O_ART
 domínio_N_O_N
@@ -217244,7 +217244,7 @@ o_ART_O_ART
 país_N_O_N
 ,_,_O_,
 seria_V_O_V
-o_ART_O_ART
+o_ART_O_ADV
 não_ADV_O_ADV
 cumprimento_V_O_N
 de_PREP_+_PREP
@@ -217325,7 +217325,7 @@ azuis_ADJ_O_ADJ
 a_PREP_O_ART
 exemplo_N_O_N
 de_PREP_+_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 hoje_ADV_O_ADV
 acontece_V_O_V
@@ -217684,7 +217684,7 @@ para_PREP_O_PREP
 a_ART_O_ART
 opinião_N_O_N
 de_PREP_O_PREP
-que_PRO-KS-REL_O_PRO-KS-REL
+que_PRO-KS-REL_O_KS
 filosofia_N_O_N
 é_V_O_V
 conversa_N_O_N
@@ -217784,7 +217784,7 @@ a_ART_O_ART
 USP_NPROP_O_NPROP
 Existem_V_O_V
 a_PREP_O_ART
-meu_PROADJ_O_PROADJ
+meu_PROADJ_O_PROSUB
 ver_N_O_V
 três_NUM_O_NUM
 argumentos_N_O_N
@@ -217896,7 +217896,7 @@ de_PREP_+_PREP
 as_ART_O_ART
 ciências_N_O_N
 a_PREP_+_PREP
-as_ART_O_ART
+as_ART_O_PROSUB
 quais_PRO-KS-REL_O_PRO-KS-REL
 eles_PROPESS_O_PROPESS
 são_VAUX_O_V
@@ -218051,13 +218051,13 @@ críticas_ADJ_O_N
 mais_ADV_O_PREP
 radicais_ADJ_O_N
 ,_,_O_,
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 em_PREP_+_PREP
 o_ART_O_ART
 seu_PROADJ_O_PROADJ
 entender_N_O_N
 danificaram_V_O_PREP
-o_PRO-KS_O_ART
+o_PRO-KS_O_PROSUB
 que_PRO-KS_O_PRO-KS-REL
 realmente_ADV_O_ADV
 importa_V_O_V
@@ -218540,7 +218540,7 @@ liberal_ADJ_O_ADJ
 que_PRO-KS-REL_O_PRO-KS-REL
 vê_V_O_V
 como_PREP_O_PREP
-vitoriosa_ADJ_O_ADJ
+vitoriosa_ADJ_O_ADV
 ,_,_O_,
 saberá_V_O_V
 "_"_O_"
@@ -218607,7 +218607,7 @@ debate_N_O_N
 Sartori_NPROP_O_NPROP
 distingue_V_O_V
 entre_PREP_O_PREP
-o_PROSUB_O_ART
+o_PROSUB_O_PROSUB
 que_PRO-KS-REL_O_PRO-KS-REL
 é_V_O_V
 formal_ADJ_O_ADJ
@@ -218669,7 +218669,7 @@ normas_N_O_N
 que_PRO-KS-REL_O_PRO-KS-REL
 obrigam_V_O_V
 a_PREP_O_ART
-todos_PROSUB_O_PROADJ
+todos_PROSUB_O_PROSUB
 )_)_O_)
 é_V_O_V
 a_ART_O_ART
@@ -218807,7 +218807,7 @@ Sartori_NPROP_O_NPROP
 como_ADV_O_PREP
 e_KC_O_NPROP
 em_PREP_O_PREP
-que_PROADJ_O_PRO-KS-REL
+que_PROADJ_O_KS
 medida_N_O_N
 ideais_ADJ_O_N
 são_V_O_VAUX
@@ -218883,7 +218883,7 @@ contexto_N_O_N
 Sartori_NPROP_O_NPROP
 define_V_O_V
 como_PREP_O_PREP
-a_PROSUB_O_ART
+a_PROSUB_O_PROSUB
 de_PREP_+_PREP
 a_ART_O_ART
 "_"_O_"
@@ -218977,7 +218977,7 @@ confronto_N_O_N
 com_PREP_O_PREP
 todas_PROADJ_O_PROADJ
 as_ART_O_ART
-outras_PROSUB_O_PROADJ
+outras_PROSUB_O_PROSUB
 ,_,_O_,
 começando_V_O_V
 por_PREP_+_PREP
@@ -219147,7 +219147,7 @@ de_PREP_O_PREP
 um_ART_O_ART
 Bobio_NPROP_O_N
 ,_,_O_,
-é_VAUX_O_V
+é_VAUX_O_VAUX
 substituída_PCP_O_PCP
 por_PREP_+_PREP
 a_ART_O_ART
@@ -219552,7 +219552,7 @@ levantaram_V_O_V
 barricadas_N_O_N
 e_KC_O_KC
 apedrejaram_V_O_PREP
-o_ART_O_ART
+o_ART_O_PROSUB
 de_PREP_+_PREP
 a_ART_O_ART
 ONU_NPROP_O_NPROP
@@ -220191,7 +220191,7 @@ afirmou_V_O_V
 "_"_O_"
 Os_ART_O_ART
 corpos_N_O_N
-ficaram_V_O_V
+ficaram_V_O_VAUX
 espalhados_PCP_O_PCP
 em_PREP_+_PREP
 um_ART_O_ART
@@ -220616,7 +220616,7 @@ Nacional_NPROP_O_NPROP
 EZLN_NPROP_O_NPROP
 )_)_O_)
 ,_,_O_,
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 em_PREP_+_PREP
 o_ART_O_ART
 último_ADJ_O_ADJ
@@ -220964,7 +220964,7 @@ ocorreram_V_O_V
 em_PREP_O_PREP
 Ocosingo_NPROP_O_N
 ,_,_O_,
-uma_PROSUB_O_ART
+uma_PROSUB_O_PROSUB
 de_PREP_+_PREP
 as_ART_O_ART
 cinco_NUM_O_NUM
@@ -221064,7 +221064,7 @@ los_PROPESS_O_PROPESS
 ._._O_.
 
 Castellanos_NPROP_O_NPROP
-é_VAUX_O_V
+é_VAUX_O_VAUX
 acusado_PCP_O_PCP
 por_PREP_+_PREP
 a_ART_O_ART
@@ -221266,7 +221266,7 @@ viveram_V_O_V
 em_PREP_O_PREP
 guerra_N_O_N
 ,_,_O_,
-porque_KS_O_KS
+porque_KS_O_PRO-KS-REL
 até_PREP_O_PREP
 hoje_ADV_O_ADV
 as_ART_O_ART
@@ -221355,7 +221355,7 @@ Livre_NPROP_O_NPROP
 Comércio_NPROP_O_NPROP
 )_)_O_)
 ,_,_O_,
-que_PRO-KS_O_KS
+que_PRO-KS_O_PRO-KS-REL
 para_PREP_O_PREP
 os_ART_O_ART
 índios_N_O_N
@@ -221400,8 +221400,8 @@ país_N_O_N
 ;_;_O_;
 agora_KC_O_ADV
 ,_,_O_,
-o_PRO-KS_O_PROSUB
-que_PRO-KS_O_PRO-KS-REL
+o_PRO-KS_O_PRO-KS
+que_PRO-KS_O_PRO-KS
 podem_VAUX_O_VAUX
 pensar_V_O_V
 de_PREP_O_PREP
@@ -221708,7 +221708,7 @@ Dois_NUM_O_NUM
 episódios_N_O_N
 recentes_ADJ_O_ADJ
 ,_,_O_,
-no_KC_O_NPROP
+no_KC_O_KC
 entanto_KC_O_KC
 ,_,_O_,
 contrariaram_V_O_V
@@ -221797,7 +221797,7 @@ jesuíta_ADJ_O_N
 Mardonio_NPROP_O_PREP
 Morales_NPROP_O_NPROP
 ,_,_O_,
-que_PRO-KS-REL_O_KS
+que_PRO-KS-REL_O_PRO-KS-REL
 durante_PREP_O_PREP
 30_NUM_O_NUM
 anos_N_O_N
@@ -221973,7 +221973,7 @@ da_NPROP_O_NPROP
 Guatemala_NPROP_O_NPROP
 ,_,_O_,
 de_PREP_+_PREP
-as_PRO-KS-REL_O_ART
+as_PRO-KS-REL_O_PROSUB
 quais_PRO-KS-REL_O_PRO-KS-REL
 resultou_V_O_V
 o_ART_O_ART
@@ -222066,7 +222066,7 @@ almofada_N_O_N
 que_PRO-KS-REL_O_PRO-KS-REL
 é_V_O_V
 a_ART_O_ART
-mesma_PROSUB_O_PROADJ
+mesma_PROSUB_O_PROSUB
 há_V_O_V
 143_NUM_O_NUM
 anos_N_O_N
@@ -222329,7 +222329,7 @@ Unido_NPROP_O_NPROP
 De_PREP_+_PREP
 esta_PROADJ_O_PROADJ
 vez_N_O_N
-o_ART_O_ART
+o_ART_O_PROSUB
 envolvido_PCP_O_PCP
 é_V_O_V
 o_ART_O_ART
@@ -222427,7 +222427,7 @@ partido_N_O_N
 
 O_ART_O_ART
 ministro_N_O_N
-é_VAUX_O_V
+é_VAUX_O_VAUX
 casado_PCP_O_PCP
 e_KC_O_KC
 tem_V_O_V
@@ -222538,7 +222538,7 @@ solteiras_ADJ_O_ADJ
 ,_,_O_,
 muitas_PROSUB_O_PROSUB
 de_PREP_+_PREP
-as_PRO-KS-REL_O_ART
+as_PRO-KS-REL_O_PROSUB
 quais_PRO-KS-REL_O_PRO-KS-REL
 teriam_V_O_V
 filhos_N_O_N
@@ -222713,7 +222713,7 @@ abalou_V_O_V
 o_ART_O_ART
 país_N_O_N
 ,_,_O_,
-no_KC_O_NPROP
+no_KC_O_KC
 entanto_KC_O_KC
 ,_,_O_,
 foi_V_O_V

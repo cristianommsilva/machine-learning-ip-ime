@@ -13,8 +13,8 @@
 	<File name="classificador\classificadortbl.h" open="1" top="0" tabpos="2">
 		<Cursor position="445" topLine="0" />
 	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="4002" topLine="92" />
+	<File name="main.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="3134" topLine="101" />
 	</File>
 	<File name="treinador\hmm.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="656" topLine="15" />
@@ -25,7 +25,7 @@
 	<File name="treinador\maisprovavel.h" open="0" top="0" tabpos="0">
 		<Cursor position="101" topLine="0" />
 	</File>
-	<File name="treinador\tbl.cpp" open="1" top="1" tabpos="3">
+	<File name="treinador\tbl.cpp" open="1" top="0" tabpos="3">
 		<Cursor position="11463" topLine="234" />
 	</File>
 	<File name="treinador\tbl.h" open="0" top="0" tabpos="0">
