@@ -95,8 +95,8 @@ int main()
     objCorpus.criarAtributo( "pos", "N" );
 
     Classificador *objClassInicial;
-    MaisProvavel objMProv( "word", LIM_FREQ_UNKNOWN );
-    objClassInicial = objMProv.executarTreinamento( objCorpus, ATRBT_ANALISADO );
+    HMM objHMM( "word" );
+    objClassInicial = objHMM.executarTreinamento( objCorpus, ATRBT_ANALISADO );
 
     Classificador *objClass;
     TBL objTBL( objClassInicial, "inputs/molde.txt", "pos", 2 );
