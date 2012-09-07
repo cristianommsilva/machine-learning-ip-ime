@@ -73,7 +73,7 @@
       </font>
      </property>
      <property name="title">
-      <string>Relatório geral</string>
+      <string>Corpus</string>
      </property>
      <property name="flat">
       <bool>false</bool>
@@ -90,7 +90,7 @@
          </font>
         </property>
         <property name="text">
-         <string>  Relatório:</string>
+         <string>       Nome:</string>
         </property>
        </widget>
       </item>
@@ -490,6 +490,11 @@
      <layout class="QGridLayout" name="gridLayout_3">
       <item row="0" column="0">
        <widget class="QTableWidget" name="tableWidget_atributos">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <property name="layoutDirection">
          <enum>Qt::LeftToRight</enum>
         </property>
@@ -522,6 +527,9 @@
         </attribute>
         <attribute name="verticalHeaderVisible">
          <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderDefaultSectionSize">
+         <number>17</number>
         </attribute>
         <column/>
         <column/>

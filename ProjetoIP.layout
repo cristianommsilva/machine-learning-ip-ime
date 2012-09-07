@@ -13,8 +13,20 @@
 	<File name="classificador\classificadortbl.h" open="1" top="0" tabpos="2">
 		<Cursor position="445" topLine="0" />
 	</File>
+	<File name="corpus\corpus.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="305" topLine="6" />
+	</File>
+	<File name="corpus\corpus.h" open="1" top="0" tabpos="4">
+		<Cursor position="251" topLine="4" />
+	</File>
+	<File name="corpus\corpusmatriz.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="358" topLine="144" />
+	</File>
+	<File name="corpus\corpusmatriz.h" open="1" top="0" tabpos="6">
+		<Cursor position="419" topLine="0" />
+	</File>
 	<File name="main.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="3134" topLine="101" />
+		<Cursor position="4432" topLine="114" />
 	</File>
 	<File name="treinador\hmm.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="656" topLine="15" />
@@ -36,5 +48,8 @@
 	</File>
 	<File name="validador\validador.h" open="0" top="0" tabpos="0">
 		<Cursor position="135" topLine="0" />
+	</File>
+	<File name="validador\validadorkdobras.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1000" topLine="19" />
 	</File>
 </CodeBlocks_layout_file>
