@@ -30,8 +30,7 @@ private:
     Corpus *corpus;
     int indexCorpus;
     QString s;
-    Param ct;
-    ModeloParam model;
+    Param popUp;
 
 public slots:
     void abrirArquivo();

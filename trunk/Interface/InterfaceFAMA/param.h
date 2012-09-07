@@ -3,7 +3,9 @@
 
 #include <QDialog>
 #include <QAbstractItemModel>
+#include <QSpinBox>
 #include <vector>
+#include <sstream>
 #include "modeloparam.h"
 
 namespace Ui {
@@ -17,14 +19,23 @@ class Param : public QDialog
 public:
     explicit Param(QWidget *parent = 0);
     ~Param();
-    void ajustaModelo( QAbstractItemModel &m );
+    void ajustarModelo( QAbstractItemModel &m );
+    void iniciarDialog();
+    std::string pegarString( int row );
+    QWidget *pegarWidget( int row );
 
-    std::vector< std::vector< std::string > > parametros;
+    std::vector< std::pair< std::string, QWidget* > > parametros;
 private:
     Ui::Param *ui;
     QTableView* pegarView();
 
     friend class ModeloParam;
+
+public slots:
+    void accept();
+    void reject();
+    void escolherAtributos( bool state );
+    void redimensionarAtributos( int tam );
 };
 
 #endif // PARAM_H

@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'modeloparam.h'
 **
-** Created: Sun 26. Aug 23:08:51 2012
+** Created: Thu 6. Sep 21:53:33 2012
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
