@@ -45,7 +45,7 @@ bool ModeloParam::setData(const QModelIndex & index, const QVariant & value, int
     if( role == Qt::EditRole )
     {
         Dados[index.row()][index.column()].second = value.toString().toStdString();
-        //emit dataChanged();
+        emit dataChanged(index, index);
     }
     return true;
 }
@@ -56,25 +56,55 @@ Qt::ItemFlags ModeloParam::flags(const QModelIndex &index) const
             return Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsEditable;
 }
 
-void ModeloParam::inserirDados( int row, int column, std::string v )
+void ModeloParam::inserirDados( int row, int column, std::string v, const QModelIndex &parent )
 {
-    if( Dados.size() <= row )
+    if( (int)Dados.size() <= row )
     {
+        beginInsertRows( parent, row, row);
         Dados.resize( row+1 );
         Dados[row].resize( 2 );
+        Dados[row][column].first = false;
+        Dados[row][column].second = v;
+        endInsertRows();
     }
-    Dados[row][column].first = false;
-    Dados[row][column].second = v;
+    else
+    {
+        Dados[row][column].first = false;
+        Dados[row][column].second = v;
+    }
 }
 
-void ModeloParam::inserirDados( int row, int column, Param &ct, QWidget *x, std::string aux )
+void ModeloParam::inserirDados( int row, int column, Param &ct, QWidget *x, std::string aux, const QModelIndex &parent )
 {
-    if( Dados.size() <= row )
+    if( (int)Dados.size() <= row )
     {
+        beginInsertRows( parent, row, row);
         Dados.resize( row+1 );
         Dados[row].resize( 2 );
+        Dados[row][column].first = true;
+        Dados[row][column].second = aux;
+        ct.pegarView()->setIndexWidget( index( row, column ), x );
+        endInsertRows();
     }
-    Dados[row][column].first = true;
-    Dados[row][column].second = aux;
-    ct.pegarView()->setIndexWidget( index( row, column ), x );
+    else
+    {
+        Dados[row][column].first = true;
+        Dados[row][column].second = aux;
+        ct.pegarView()->setIndexWidget( index( row, column ), x );
+    }
+}
+
+bool ModeloParam::isWidget( int row, int column )
+{
+    return Dados[row][column].first;
+}
+
+bool ModeloParam::removeRows(int row, int count, const QModelIndex &parent )
+{
+    beginRemoveRows( parent, row, row + count - 1 );
+
+    for( int i = 0; i < count; ++i ) Dados.erase( Dados.begin() + row + i + 1 );
+
+    endRemoveRows();
+    return true;
 }
