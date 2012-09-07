@@ -20,7 +20,7 @@ public:
     explicit Param(QWidget *parent = 0);
     ~Param();
     void ajustarModelo( QAbstractItemModel &m );
-    void iniciarDialog();
+    int iniciarDialog();
     std::string pegarString( int row );
     QWidget *pegarWidget( int row );
 
@@ -33,7 +33,6 @@ private:
 
 public slots:
     void accept();
-    void reject();
     void escolherAtributos( bool state );
     void redimensionarAtributos( int tam );
 };

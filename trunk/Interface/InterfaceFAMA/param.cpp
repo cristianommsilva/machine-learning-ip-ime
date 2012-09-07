@@ -19,7 +19,7 @@ void Param::ajustarModelo( QAbstractItemModel &m )
     ui->tableView->show();
 }
 
-void Param::iniciarDialog()
+int Param::iniciarDialog()
 {
     ModeloParam *m = ( ModeloParam* )ui->tableView->model();
     int i, tam = m->rowCount();
@@ -29,7 +29,7 @@ void Param::iniciarDialog()
             parametros[i].second = ui->tableView->indexWidget( m->index(i,1) );
         else
             parametros[i].first = m->data( m->index(i,1) ).toString().toStdString();
-    exec();
+    return exec();
 }
 
 std::string Param::pegarString( int row )
@@ -72,12 +72,6 @@ void Param::accept()
     QDialog::accept();
 }
 
-void Param::reject()
-{
-    (( QCheckBox* )ui->tableView->indexWidget( ui->tableView->model()->index(2,1) ))->setChecked( true );
-    QDialog::reject();
-}
-
 void Param::escolherAtributos( bool state )
 {
     if( state )
@@ -90,10 +84,15 @@ void Param::escolherAtributos( bool state )
     }
     else
     {
-        int aux;
         ModeloParam *m = ( ModeloParam* )ui->tableView->model();
-        m->inserirDados( aux = m->rowCount(), 0, "Atributo1" );
-        m->inserirDados( aux, 1, "1" );
+        int i, tab = m->rowCount(), aux = ( ( QSpinBox* )ui->tableView->indexWidget( m->index(3,1) ))->value();
+        std::string num;
+        for( i = 0; i < aux; ++i )
+        {
+            num = QVariant( i + 1 ).toString().toStdString();
+            m->inserirDados( tab + i, 0, "Atributo" + num );
+            m->inserirDados( tab + i, 1, num );
+        }
         ui->tableView->indexWidget( m->index(3,1) )->setEnabled( true );
     }
 }
@@ -101,13 +100,14 @@ void Param::escolherAtributos( bool state )
 void Param::redimensionarAtributos( int tam )
 {
     ModeloParam *m = ( ModeloParam* )ui->tableView->model();
-    int aux = m->rowCount();
-    if( tam > aux - 4 )
-    {
-        std::string num = QVariant( m->rowCount() - 3 ).toString().toStdString();
-        m->inserirDados( aux, 0, "Atributo" + num );
-        m->inserirDados( aux, 1, num );
-    }
+    int tab = m->rowCount(), aux;
+    if( ( aux = tam - tab + 4 ) > 0 )
+        for( int i = 0; i < aux; ++i )
+        {
+            std::string num = QVariant( m->rowCount() - 3 ).toString().toStdString();
+            m->inserirDados( tab+i, 0, "Atributo" + num );
+            m->inserirDados( tab+i, 1, num );
+        }
     else
-        m->removeRows( aux-1, 1 );
+        m->removeRows( tab-1, -aux );
 }

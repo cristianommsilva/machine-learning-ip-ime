@@ -8,16 +8,9 @@ Janela::Janela(QWidget *parent) :
     ui->setupUi(this);
     corpus = NULL;
 
-    //ui->comboBox_corpus->addItem( "Escolha o Corpus" );
     ui->comboBox_corpus->addItem( "CorpusMatriz" );
 
-    //ui->tableWidget_atributos->setColumnCount( 2 );
-    //ui->tableWidget_atributos->setColumnWidth(1,5);
-    ui->tableWidget_atributos->setHorizontalHeaderLabels( QStringList() << "No." << "Nome" );
-    //ui->tableWidget_atributos->verticalHeader()->setVisible( false ); // Deixa invisível o cabeçalho vertical
-    //ui->tableWidget_atributos->horizontalHeader()->setStretchLastSection(true); // Alarga a última coluna conforme o tamanho do TableView
-    //ui->tableWidget_atributos->setSelectionBehavior(QAbstractItemView::SelectRows);  // Seleciona toda a linha quando um item da linha é ativado
-    //ui->tableWidget_atributos->setSelectionMode(QAbstractItemView::SingleSelection); // Permite selecionar apenas um item por vez
+    ui->tableWidget_atributos->setHorizontalHeaderLabels( QStringList() << "Ordem" << "Nome" );
 }
 
 Janela::~Janela()
@@ -102,8 +95,8 @@ void Janela::definirParametros()
     switch( indexCorpus )
     {
         case 1 :
-            delete corpus;
             ModeloParam model;
+            int ok;
             //coluna 0 é de nomes e coluna 1 de valores ou widgets
 
             //inserção de textos
@@ -127,13 +120,6 @@ void Janela::definirParametros()
             sbox->setMinimum( 1 );
             sbox->setEnabled( false );
             model.inserirDados(3,1,popUp,sbox);
-            //QTableWidget *tw = new QTableWidget();
-            //tw->setColumnCount( 1 );
-            //tw->setRowCount( 3 );
-            //tw->setEnabled( true );
-            //tw->setEditTriggers( QAbstractItemView::AllEditTriggers );
-            //tw->horizontalHeader()->setStretchLastSection( true );
-            //model.inserirDados( 4, 1, popUp, tw );
 
             //inserção de Evento(slot deve estar no Widget ou na class Param
             QObject::connect( cbox2, SIGNAL( clicked(bool) ), &popUp, SLOT( escolherAtributos(bool) ) );
@@ -141,26 +127,26 @@ void Janela::definirParametros()
             QMetaObject::connectSlotsByName( &popUp );
 
             //inicia Dialog
-            popUp.iniciarDialog();
+            ok = popUp.iniciarDialog();
 
-            QCheckBox *geral;
-            bool dividirExemplos;
-            dividirExemplos = (( QCheckBox* )popUp.pegarWidget( 1 ))->isChecked();
-            geral = ( QCheckBox* )popUp.pegarWidget( 2 );
-            if( geral->isChecked() )
-                corpus = new CorpusMatriz( vector<string>(), popUp.pegarString(0)[0], dividirExemplos );
-            else
+            if( ok )
             {
-                int i, tam;
-                vector< string > atributos( tam = (( QSpinBox* )popUp.pegarWidget( 3 ))->value() );
-                for( i = 0; i < tam; ++i ) atributos[i] = popUp.pegarString(i+4);
-                corpus = new CorpusMatriz( atributos, popUp.pegarString(0)[0], dividirExemplos );
+                delete corpus;
+                QCheckBox *geral;
+                bool dividirExemplos;
+                dividirExemplos = (( QCheckBox* )popUp.pegarWidget( 1 ))->isChecked();
+                geral = ( QCheckBox* )popUp.pegarWidget( 2 );
+                if( geral->isChecked() )
+                    corpus = new CorpusMatriz( vector<string>(), popUp.pegarString(0)[0], dividirExemplos );
+                else
+                {
+                    int i, tam;
+                    vector< string > atributos( tam = (( QSpinBox* )popUp.pegarWidget( 3 ))->value() );
+                    for( i = 0; i < tam; ++i ) atributos[i] = popUp.pegarString(i+4);
+                    corpus = new CorpusMatriz( atributos, popUp.pegarString(0)[0], dividirExemplos );
+                }
+                if( s != "" ) abrirArquivo();
             }
-
-            //ParamCorpus construtor;
-            //construtor.exec();
-            //corpus = new CorpusMatriz( construtor.atributos, construtor.separador, construtor.dividirExemplos );
             break;
     }
-    if( s != "" ) abrirArquivo();
 }

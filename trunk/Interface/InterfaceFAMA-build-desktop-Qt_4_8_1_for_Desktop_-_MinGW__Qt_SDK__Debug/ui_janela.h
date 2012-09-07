@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'janela.ui'
 **
-** Created: Thu 6. Sep 15:10:51 2012
+** Created: Fri 7. Sep 18:14:05 2012
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -220,6 +220,9 @@ public:
         if (tableWidget_atributos->columnCount() < 2)
             tableWidget_atributos->setColumnCount(2);
         tableWidget_atributos->setObjectName(QString::fromUtf8("tableWidget_atributos"));
+        QFont font3;
+        font3.setPointSize(8);
+        tableWidget_atributos->setFont(font3);
         tableWidget_atributos->setLayoutDirection(Qt::LeftToRight);
         tableWidget_atributos->setEditTriggers(QAbstractItemView::NoEditTriggers);
         tableWidget_atributos->setTabKeyNavigation(false);
@@ -231,6 +234,7 @@ public:
         tableWidget_atributos->setColumnCount(2);
         tableWidget_atributos->horizontalHeader()->setStretchLastSection(true);
         tableWidget_atributos->verticalHeader()->setVisible(false);
+        tableWidget_atributos->verticalHeader()->setDefaultSectionSize(17);
 
         gridLayout_3->addWidget(tableWidget_atributos, 0, 0, 1, 1);
 
@@ -243,11 +247,11 @@ public:
         pushButton_abrir->setEnabled(false);
         pushButton_abrir->setGeometry(QRect(10, 10, 92, 21));
         pushButton_abrir->setMaximumSize(QSize(101, 21));
-        QFont font3;
-        font3.setItalic(false);
-        font3.setUnderline(false);
-        font3.setStrikeOut(false);
-        pushButton_abrir->setFont(font3);
+        QFont font4;
+        font4.setItalic(false);
+        font4.setUnderline(false);
+        font4.setStrikeOut(false);
+        pushButton_abrir->setFont(font4);
         pushButton_abrir->setCursor(QCursor(Qt::ArrowCursor));
         pushButton_abrir->setLayoutDirection(Qt::LeftToRight);
         pushButton_abrir->setAutoFillBackground(false);
@@ -278,8 +282,8 @@ public:
         comboBox_corpus->insertItems(0, QStringList()
          << QApplication::translate("Janela", "Escolha o Corpus", 0, QApplication::UnicodeUTF8)
         );
-        groupBox_relatorioGeral->setTitle(QApplication::translate("Janela", "Relat\303\263rio geral", 0, QApplication::UnicodeUTF8));
-        label_relatorio->setText(QApplication::translate("Janela", "  Relat\303\263rio:", 0, QApplication::UnicodeUTF8));
+        groupBox_relatorioGeral->setTitle(QApplication::translate("Janela", "Corpus", 0, QApplication::UnicodeUTF8));
+        label_relatorio->setText(QApplication::translate("Janela", "       Nome:", 0, QApplication::UnicodeUTF8));
         lineEdit_relatorio->setText(QApplication::translate("Janela", "Nenhum", 0, QApplication::UnicodeUTF8));
         label_instancias->setText(QApplication::translate("Janela", "  Inst\303\242ncias:", 0, QApplication::UnicodeUTF8));
         lineEdit_instancias->setText(QApplication::translate("Janela", "Nenhum", 0, QApplication::UnicodeUTF8));

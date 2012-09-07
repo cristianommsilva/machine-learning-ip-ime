@@ -10,7 +10,6 @@
 #include <cstdlib>
 #include "param.h"
 #include "modeloparam.h"
-#include "paramcorpus.h"
 #include "../../corpus/corpusmatriz.h"
 
 namespace Ui {
