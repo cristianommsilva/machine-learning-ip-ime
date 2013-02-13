@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'janela.h'
 **
-** Created: Fri 7. Sep 17:26:56 2012
+** Created: Wed 13. Feb 01:05:59 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
