@@ -30,6 +30,7 @@ private:
     int indexCorpus;
     QString s;
     Param popUp;
+    void logicaDeAbertura();
 
 public slots:
     void abrirArquivo();
