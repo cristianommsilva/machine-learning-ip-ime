@@ -64,7 +64,6 @@ void Janela::logicaDeAbertura()
 void Janela::habilitarBotao(int index)
 {
     if( corpus != NULL ) delete corpus;
-    indexCorpus = index;
     if( !index )
     {
         ui->pushButton_abrir->setEnabled( false );

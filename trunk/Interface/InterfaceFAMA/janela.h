@@ -1,15 +1,9 @@
 #ifndef JANELA_H
 #define JANELA_H
 
-#include <QWidget>
+
 #include <QFileDialog>
-#include <QTableWidgetItem>
-#include <QStandardItem>
-#include <QSpinBox>
-#include <sstream>
-#include <cstdlib>
 #include "param.h"
-#include "modeloparam.h"
 #include "../../corpus/corpusmatriz.h"
 
 namespace Ui {
@@ -27,7 +21,6 @@ public:
 private:
     Ui::Janela *ui;
     Corpus *corpus;
-    int indexCorpus;
     QString s;
     Param popUp;
     void logicaDeAbertura();
