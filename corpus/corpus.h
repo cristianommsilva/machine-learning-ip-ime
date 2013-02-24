@@ -6,6 +6,7 @@
 #include <map>
 #include <cstdio>
 #include <cstdlib>
+#include <QCheckBox>
 #include <QWidget>
 #include "../Interface/InterfaceFAMA/modeloparam.h"
 #include "../Interface/InterfaceFAMA/param.h"
