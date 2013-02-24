@@ -29,6 +29,7 @@ class Corpus
         int pegarValor( int sentenca, int token, int atributo );
         int pegarQtdSentencas();
         int pegarQtdConjExemplos(){return pegarQtdSentencas();}
+        int pegarQtdTotalExemplos();
         int pegarQtdAtributos();
         int pegarQtdTokens( int i );
         int pegarQtdExemplos(int i){return pegarQtdTokens(i);}
@@ -39,6 +40,7 @@ class Corpus
         vector<string> pegarAtributos();
         vector< Corpus* > splitCorpus( vector< bool > vetMascara );
         vector< Corpus* > splitCorpus( vector< int > vetMascara, int nCorpus );
+        Corpus* gerarSubCorpus( vector< vector< bool > > vetMascara );
     protected:
         map<string,int> posAtributos;
         vector<string> atributos;
