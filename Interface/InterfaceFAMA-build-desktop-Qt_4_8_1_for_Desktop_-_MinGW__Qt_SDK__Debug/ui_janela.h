@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'janela.ui'
 **
-** Created: Fri 7. Sep 18:14:05 2012
+** Created: Sun 24. Feb 19:10:14 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -99,16 +99,14 @@ public:
         lineEdit_relatorio->setObjectName(QString::fromUtf8("lineEdit_relatorio"));
         lineEdit_relatorio->setEnabled(false);
         QFont font2;
-        font2.setBold(false);
-        font2.setWeight(50);
-        font2.setStrikeOut(false);
-        font2.setKerning(true);
-        font2.setStyleStrategy(QFont::PreferDefault);
+        font2.setFamily(QString::fromUtf8("Arial"));
+        font2.setBold(true);
+        font2.setWeight(75);
         lineEdit_relatorio->setFont(font2);
         lineEdit_relatorio->setCursor(QCursor(Qt::ArrowCursor));
         lineEdit_relatorio->setFrame(false);
 
-        gridLayout->addWidget(lineEdit_relatorio, 0, 1, 1, 1);
+        gridLayout->addWidget(lineEdit_relatorio, 0, 1, 1, 3);
 
         label_instancias = new QLabel(groupBox_relatorioGeral);
         label_instancias->setObjectName(QString::fromUtf8("label_instancias"));
@@ -119,6 +117,7 @@ public:
         lineEdit_instancias = new QLineEdit(groupBox_relatorioGeral);
         lineEdit_instancias->setObjectName(QString::fromUtf8("lineEdit_instancias"));
         lineEdit_instancias->setEnabled(false);
+        lineEdit_instancias->setFont(font2);
         lineEdit_instancias->setCursor(QCursor(Qt::ArrowCursor));
         lineEdit_instancias->setFrame(false);
 
@@ -133,6 +132,7 @@ public:
         lineEdit_atributos = new QLineEdit(groupBox_relatorioGeral);
         lineEdit_atributos->setObjectName(QString::fromUtf8("lineEdit_atributos"));
         lineEdit_atributos->setEnabled(false);
+        lineEdit_atributos->setFont(font2);
         lineEdit_atributos->setCursor(QCursor(Qt::ArrowCursor));
         lineEdit_atributos->setFrame(false);
 
@@ -154,7 +154,14 @@ public:
         lineEdit_nome->setEnabled(false);
         lineEdit_nome->setGeometry(QRect(75, 25, 73, 16));
         lineEdit_nome->setMaximumSize(QSize(16777215, 16));
-        lineEdit_nome->setFont(font2);
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("Arial"));
+        font3.setBold(true);
+        font3.setWeight(75);
+        font3.setStrikeOut(false);
+        font3.setKerning(true);
+        font3.setStyleStrategy(QFont::PreferDefault);
+        lineEdit_nome->setFont(font3);
         lineEdit_nome->setCursor(QCursor(Qt::ArrowCursor));
         lineEdit_nome->setFrame(false);
         label_tipo = new QLabel(groupBox_atributoSelecionado);
@@ -167,7 +174,7 @@ public:
         lineEdit_tipo->setEnabled(false);
         lineEdit_tipo->setGeometry(QRect(199, 25, 73, 16));
         lineEdit_tipo->setMaximumSize(QSize(16777215, 16));
-        lineEdit_tipo->setFont(font2);
+        lineEdit_tipo->setFont(font3);
         lineEdit_tipo->setCursor(QCursor(Qt::ArrowCursor));
         lineEdit_tipo->setFrame(false);
         label_distintos = new QLabel(groupBox_atributoSelecionado);
@@ -180,6 +187,7 @@ public:
         lineEdit_distintos->setEnabled(false);
         lineEdit_distintos->setGeometry(QRect(75, 47, 73, 16));
         lineEdit_distintos->setMaximumSize(QSize(16777215, 16));
+        lineEdit_distintos->setFont(font2);
         lineEdit_distintos->setCursor(QCursor(Qt::ArrowCursor));
         lineEdit_distintos->setFrame(false);
         label_unicos = new QLabel(groupBox_atributoSelecionado);
@@ -192,9 +200,12 @@ public:
         lineEdit_unicos->setEnabled(false);
         lineEdit_unicos->setGeometry(QRect(199, 47, 73, 16));
         lineEdit_unicos->setMaximumSize(QSize(16777215, 16));
+        lineEdit_unicos->setFont(font2);
         lineEdit_unicos->setCursor(QCursor(Qt::ArrowCursor));
         lineEdit_unicos->setFrame(false);
         tableWidget_estatistica = new QTableWidget(groupBox_atributoSelecionado);
+        if (tableWidget_estatistica->columnCount() < 2)
+            tableWidget_estatistica->setColumnCount(2);
         tableWidget_estatistica->setObjectName(QString::fromUtf8("tableWidget_estatistica"));
         tableWidget_estatistica->setGeometry(QRect(11, 69, 261, 185));
         tableWidget_estatistica->setEditTriggers(QAbstractItemView::NoEditTriggers);
@@ -204,10 +215,15 @@ public:
         tableWidget_estatistica->setSelectionBehavior(QAbstractItemView::SelectRows);
         tableWidget_estatistica->setShowGrid(false);
         tableWidget_estatistica->setSortingEnabled(true);
+        tableWidget_estatistica->setColumnCount(2);
         tableWidget_estatistica->horizontalHeader()->setCascadingSectionResizes(false);
+        tableWidget_estatistica->horizontalHeader()->setDefaultSectionSize(130);
+        tableWidget_estatistica->horizontalHeader()->setMinimumSectionSize(26);
         tableWidget_estatistica->horizontalHeader()->setProperty("showSortIndicator", QVariant(true));
         tableWidget_estatistica->horizontalHeader()->setStretchLastSection(true);
         tableWidget_estatistica->verticalHeader()->setVisible(false);
+        tableWidget_estatistica->verticalHeader()->setDefaultSectionSize(17);
+        tableWidget_estatistica->verticalHeader()->setMinimumSectionSize(17);
         groupBox_atributos = new QGroupBox(tab_preProcess);
         groupBox_atributos->setObjectName(QString::fromUtf8("groupBox_atributos"));
         groupBox_atributos->setGeometry(QRect(9, 113, 296, 215));
@@ -220,9 +236,9 @@ public:
         if (tableWidget_atributos->columnCount() < 2)
             tableWidget_atributos->setColumnCount(2);
         tableWidget_atributos->setObjectName(QString::fromUtf8("tableWidget_atributos"));
-        QFont font3;
-        font3.setPointSize(8);
-        tableWidget_atributos->setFont(font3);
+        QFont font4;
+        font4.setPointSize(8);
+        tableWidget_atributos->setFont(font4);
         tableWidget_atributos->setLayoutDirection(Qt::LeftToRight);
         tableWidget_atributos->setEditTriggers(QAbstractItemView::NoEditTriggers);
         tableWidget_atributos->setTabKeyNavigation(false);
@@ -232,6 +248,8 @@ public:
         tableWidget_atributos->setShowGrid(false);
         tableWidget_atributos->setSortingEnabled(true);
         tableWidget_atributos->setColumnCount(2);
+        tableWidget_atributos->horizontalHeader()->setVisible(true);
+        tableWidget_atributos->horizontalHeader()->setDefaultSectionSize(50);
         tableWidget_atributos->horizontalHeader()->setStretchLastSection(true);
         tableWidget_atributos->verticalHeader()->setVisible(false);
         tableWidget_atributos->verticalHeader()->setDefaultSectionSize(17);
@@ -247,11 +265,11 @@ public:
         pushButton_abrir->setEnabled(false);
         pushButton_abrir->setGeometry(QRect(10, 10, 92, 21));
         pushButton_abrir->setMaximumSize(QSize(101, 21));
-        QFont font4;
-        font4.setItalic(false);
-        font4.setUnderline(false);
-        font4.setStrikeOut(false);
-        pushButton_abrir->setFont(font4);
+        QFont font5;
+        font5.setItalic(false);
+        font5.setUnderline(false);
+        font5.setStrikeOut(false);
+        pushButton_abrir->setFont(font5);
         pushButton_abrir->setCursor(QCursor(Qt::ArrowCursor));
         pushButton_abrir->setLayoutDirection(Qt::LeftToRight);
         pushButton_abrir->setAutoFillBackground(false);
