@@ -11,6 +11,7 @@ class HMM : public Treinador
         HMM( string atributoBase = "word" );
         virtual ~HMM();
         virtual Classificador *executarTreinamento( Corpus &corpus, int atributo );
+        //virtual Treinador* construirJanela( Param &popUp );
 };
 
 #endif // HMM_H

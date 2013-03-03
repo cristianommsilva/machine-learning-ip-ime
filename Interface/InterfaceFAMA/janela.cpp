@@ -7,6 +7,7 @@ Janela::Janela(QWidget *parent) :
 {
     ui->setupUi(this);
     corpus = NULL;
+    treinador = NULL;
 
     //a adição de novos tipos de Corpus deve ser feita identicamente ao modelo abaixo
     ui->comboBox_corpus->addItem( "CorpusMatriz" );
@@ -86,7 +87,7 @@ void Janela::habilitarBotao(int index)
             corpus = NULL;
             break;
         case 1 :
-            corpus = new CorpusMatriz();
+            corpus = new CorpusMatrizUI();
             break;
     }
 }
@@ -141,7 +142,7 @@ void Janela::atributoSelecionado( int row, int column )
 void Janela::definirParametros()
 {
     //Janela construida na classe Corpus por um método virtual
-    Corpus *temp = &( corpus->construirJanela( popUp ) );
+    Corpus *temp = corpus->construirJanela( &popUp );
     if( temp != corpus )
     {
         delete corpus;
@@ -153,7 +154,7 @@ void Janela::definirParametros()
 void Janela::definirParametrosTreinador()
 {
     //Janela construida na classe Treinador por um método virtual
-    Treinador *temp = &( treinador->construirJanela( popUp ) );
+    Treinador *temp = treinador->construirJanela( popUp );
     if( temp != treinador )
     {
         delete treinador;
@@ -166,6 +167,9 @@ void Janela::escolherClassificador( int index )
     if( treinador != NULL ) delete treinador;
     switch( index )
     {
+        case 0 :
+            treinador = NULL;
+            break;
         case 1 :
             treinador = new MaisProvavel();
             break;

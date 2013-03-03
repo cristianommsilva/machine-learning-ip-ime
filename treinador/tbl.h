@@ -18,6 +18,7 @@ class TBL : public Treinador
         TBL( Classificador* classInicial = NULL, string arqMoldeRegras = "", string atributoChute = "tpos", int toleranciaScore = 5 );
         virtual ~TBL();
         virtual Classificador *executarTreinamento( Corpus &corpus, int atributo );
+        //virtual Treinador* construirJanela( Param &popUp );
 };
 
 #endif // TBL_H
