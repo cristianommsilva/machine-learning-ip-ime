@@ -11,6 +11,11 @@ Janela::Janela(QWidget *parent) :
     //a adição de novos tipos de Corpus deve ser feita identicamente ao modelo abaixo
     ui->comboBox_corpus->addItem( "CorpusMatriz" );
 
+    //a adição de novos tipos de Classificadores deve ser feita identicamente ao modelo abaixo
+    ui->comboBox_classificador->addItem( "Mais Provavel" );
+    ui->comboBox_classificador->addItem( "Hidden Markov Model - HMM" );
+    ui->comboBox_classificador->addItem( "Transformation Based Learning - TBL" );
+
     ui->tableWidget_atributos->setHorizontalHeaderLabels( QStringList() << "Ordem" << "Nome" );
 }
 
@@ -18,6 +23,7 @@ Janela::~Janela()
 {
     delete ui;
     if( corpus != NULL ) delete corpus;
+    if( treinador != NULL ) delete treinador;
 }
 
 void Janela::abrirArquivo()
@@ -129,6 +135,7 @@ void Janela::atributoSelecionado( int row, int column )
         item = new QTableWidgetItem( QString( "%1" ).arg( estatistica[indices[i]] ) );
         ui->tableWidget_estatistica->setItem( i, 1, item );
     }
+
 }
 
 void Janela::definirParametros()
@@ -141,4 +148,33 @@ void Janela::definirParametros()
         corpus = temp;
         if( s != "" ) logicaDeAbertura();
     }
+}
+
+void Janela::definirParametrosTreinador()
+{
+    //Janela construida na classe Treinador por um método virtual
+    Treinador *temp = &( treinador->construirJanela( popUp ) );
+    if( temp != treinador )
+    {
+        delete treinador;
+        treinador = temp;
+    }
+}
+
+void Janela::escolherClassificador( int index )
+{
+    if( treinador != NULL ) delete treinador;
+    switch( index )
+    {
+        case 1 :
+            treinador = new MaisProvavel();
+            break;
+        case 2 :
+            treinador = new HMM();
+            break;
+        case 3 :
+            treinador = new TBL();
+            break;
+    }
+    definirParametrosTreinador();
 }

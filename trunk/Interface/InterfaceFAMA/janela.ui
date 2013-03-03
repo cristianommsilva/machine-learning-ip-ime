@@ -16,8 +16,8 @@
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>9</x>
-     <y>9</y>
+     <x>10</x>
+     <y>10</y>
      <width>607</width>
      <height>361</height>
     </rect>
@@ -28,7 +28,7 @@
     </font>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab_preProcess">
     <attribute name="title">
@@ -568,7 +568,7 @@
          <number>2</number>
         </property>
         <attribute name="horizontalHeaderVisible">
-         <bool>true</bool>
+         <bool>false</bool>
         </attribute>
         <attribute name="horizontalHeaderDefaultSectionSize">
          <number>50</number>
@@ -652,10 +652,204 @@
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="tab_2">
+   <widget class="QWidget" name="tab_validacao">
     <attribute name="title">
-     <string>Tab 2</string>
+     <string>Classificação</string>
     </attribute>
+    <widget class="QComboBox" name="comboBox_classificador">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>261</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="insertPolicy">
+      <enum>QComboBox::InsertAlphabetically</enum>
+     </property>
+     <item>
+      <property name="text">
+       <string>Escolha o Método</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_opcoesTeste">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>261</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Opções de Teste</string>
+     </property>
+     <widget class="QRadioButton" name="radioButton_treino">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>171</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Utilizar conjunto de treino</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_teste">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>181</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Fornecer conjunto de teste</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_teste">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>50</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Abrir</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_kDobras">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>121</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Validação cruzada</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_kDobras">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>70</y>
+        <width>46</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Dobras</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_kDobras">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>70</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="inputMask">
+       <string/>
+      </property>
+      <property name="maxLength">
+       <number>3</number>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="cursorPosition">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_divisao">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>161</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Porcentagem de divisão</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_divisao">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>90</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="inputMask">
+       <string/>
+      </property>
+      <property name="maxLength">
+       <number>2</number>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_kDobras_2">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>90</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>%</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>231</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Opções</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>200</y>
+       <width>181</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Start</string>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>
@@ -726,11 +920,28 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>comboBox_classificador</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>Janela</receiver>
+   <slot>escolherClassificador(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>162</x>
+     <y>51</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>190</x>
+     <y>5</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>abrirArquivo()</slot>
   <slot>habilitarBotao(int)</slot>
   <slot>atributoSelecionado(int,int)</slot>
   <slot>definirParametros()</slot>
+  <slot>escolherClassificador(int)</slot>
  </slots>
 </ui>

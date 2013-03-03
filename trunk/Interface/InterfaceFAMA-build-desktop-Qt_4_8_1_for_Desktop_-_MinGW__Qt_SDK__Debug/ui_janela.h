@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'janela.ui'
 **
-** Created: Sun 24. Feb 19:10:14 2013
+** Created: Sat 2. Mar 22:13:29 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -21,6 +21,7 @@
 #include <QtGui/QLabel>
 #include <QtGui/QLineEdit>
 #include <QtGui/QPushButton>
+#include <QtGui/QRadioButton>
 #include <QtGui/QTabWidget>
 #include <QtGui/QTableWidget>
 #include <QtGui/QToolButton>
@@ -57,7 +58,20 @@ public:
     QTableWidget *tableWidget_atributos;
     QToolButton *toolButton_construtor;
     QPushButton *pushButton_abrir;
-    QWidget *tab_2;
+    QWidget *tab_validacao;
+    QComboBox *comboBox_classificador;
+    QGroupBox *groupBox_opcoesTeste;
+    QRadioButton *radioButton_treino;
+    QRadioButton *radioButton_teste;
+    QPushButton *pushButton_teste;
+    QRadioButton *radioButton_kDobras;
+    QLabel *label_kDobras;
+    QLineEdit *lineEdit_kDobras;
+    QRadioButton *radioButton_divisao;
+    QLineEdit *lineEdit_divisao;
+    QLabel *label_kDobras_2;
+    QPushButton *pushButton_2;
+    QPushButton *pushButton;
 
     void setupUi(QWidget *Janela)
     {
@@ -66,7 +80,7 @@ public:
         Janela->resize(625, 379);
         tabWidget = new QTabWidget(Janela);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tabWidget->setGeometry(QRect(9, 9, 607, 361));
+        tabWidget->setGeometry(QRect(10, 10, 607, 361));
         QFont font;
         font.setPointSize(9);
         tabWidget->setFont(font);
@@ -248,7 +262,7 @@ public:
         tableWidget_atributos->setShowGrid(false);
         tableWidget_atributos->setSortingEnabled(true);
         tableWidget_atributos->setColumnCount(2);
-        tableWidget_atributos->horizontalHeader()->setVisible(true);
+        tableWidget_atributos->horizontalHeader()->setVisible(false);
         tableWidget_atributos->horizontalHeader()->setDefaultSectionSize(50);
         tableWidget_atributos->horizontalHeader()->setStretchLastSection(true);
         tableWidget_atributos->verticalHeader()->setVisible(false);
@@ -277,17 +291,64 @@ public:
         pushButton_abrir->setDefault(false);
         pushButton_abrir->setFlat(false);
         tabWidget->addTab(tab_preProcess, QString());
-        tab_2 = new QWidget();
-        tab_2->setObjectName(QString::fromUtf8("tab_2"));
-        tabWidget->addTab(tab_2, QString());
+        tab_validacao = new QWidget();
+        tab_validacao->setObjectName(QString::fromUtf8("tab_validacao"));
+        comboBox_classificador = new QComboBox(tab_validacao);
+        comboBox_classificador->setObjectName(QString::fromUtf8("comboBox_classificador"));
+        comboBox_classificador->setGeometry(QRect(20, 10, 261, 20));
+        comboBox_classificador->setInsertPolicy(QComboBox::InsertAlphabetically);
+        groupBox_opcoesTeste = new QGroupBox(tab_validacao);
+        groupBox_opcoesTeste->setObjectName(QString::fromUtf8("groupBox_opcoesTeste"));
+        groupBox_opcoesTeste->setGeometry(QRect(10, 40, 261, 141));
+        radioButton_treino = new QRadioButton(groupBox_opcoesTeste);
+        radioButton_treino->setObjectName(QString::fromUtf8("radioButton_treino"));
+        radioButton_treino->setGeometry(QRect(10, 30, 171, 17));
+        radioButton_teste = new QRadioButton(groupBox_opcoesTeste);
+        radioButton_teste->setObjectName(QString::fromUtf8("radioButton_teste"));
+        radioButton_teste->setGeometry(QRect(10, 50, 181, 16));
+        pushButton_teste = new QPushButton(groupBox_opcoesTeste);
+        pushButton_teste->setObjectName(QString::fromUtf8("pushButton_teste"));
+        pushButton_teste->setGeometry(QRect(190, 50, 51, 16));
+        pushButton_teste->setFont(font4);
+        radioButton_kDobras = new QRadioButton(groupBox_opcoesTeste);
+        radioButton_kDobras->setObjectName(QString::fromUtf8("radioButton_kDobras"));
+        radioButton_kDobras->setGeometry(QRect(10, 70, 121, 17));
+        label_kDobras = new QLabel(groupBox_opcoesTeste);
+        label_kDobras->setObjectName(QString::fromUtf8("label_kDobras"));
+        label_kDobras->setGeometry(QRect(140, 70, 46, 16));
+        lineEdit_kDobras = new QLineEdit(groupBox_opcoesTeste);
+        lineEdit_kDobras->setObjectName(QString::fromUtf8("lineEdit_kDobras"));
+        lineEdit_kDobras->setGeometry(QRect(190, 70, 51, 16));
+        lineEdit_kDobras->setMaxLength(3);
+        lineEdit_kDobras->setFrame(true);
+        lineEdit_kDobras->setCursorPosition(0);
+        radioButton_divisao = new QRadioButton(groupBox_opcoesTeste);
+        radioButton_divisao->setObjectName(QString::fromUtf8("radioButton_divisao"));
+        radioButton_divisao->setGeometry(QRect(10, 90, 161, 17));
+        lineEdit_divisao = new QLineEdit(groupBox_opcoesTeste);
+        lineEdit_divisao->setObjectName(QString::fromUtf8("lineEdit_divisao"));
+        lineEdit_divisao->setGeometry(QRect(190, 90, 51, 16));
+        lineEdit_divisao->setMaxLength(2);
+        lineEdit_divisao->setFrame(true);
+        label_kDobras_2 = new QLabel(groupBox_opcoesTeste);
+        label_kDobras_2->setObjectName(QString::fromUtf8("label_kDobras_2"));
+        label_kDobras_2->setGeometry(QRect(170, 90, 16, 16));
+        pushButton_2 = new QPushButton(groupBox_opcoesTeste);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setGeometry(QRect(10, 110, 231, 21));
+        pushButton = new QPushButton(tab_validacao);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(50, 200, 181, 21));
+        tabWidget->addTab(tab_validacao, QString());
 
         retranslateUi(Janela);
         QObject::connect(tableWidget_atributos, SIGNAL(cellClicked(int,int)), Janela, SLOT(atributoSelecionado(int,int)));
         QObject::connect(comboBox_corpus, SIGNAL(activated(int)), Janela, SLOT(habilitarBotao(int)));
         QObject::connect(toolButton_construtor, SIGNAL(clicked()), Janela, SLOT(definirParametros()));
         QObject::connect(pushButton_abrir, SIGNAL(clicked()), Janela, SLOT(abrirArquivo()));
+        QObject::connect(comboBox_classificador, SIGNAL(currentIndexChanged(int)), Janela, SLOT(escolherClassificador(int)));
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(Janela);
@@ -320,7 +381,23 @@ public:
         toolButton_construtor->setText(QApplication::translate("Janela", "...", 0, QApplication::UnicodeUTF8));
         pushButton_abrir->setText(QApplication::translate("Janela", "Abrir arquivo...", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_preProcess), QApplication::translate("Janela", "Pr\303\251-processamento", 0, QApplication::UnicodeUTF8));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("Janela", "Tab 2", 0, QApplication::UnicodeUTF8));
+        comboBox_classificador->clear();
+        comboBox_classificador->insertItems(0, QStringList()
+         << QApplication::translate("Janela", "Escolha o M\303\251todo", 0, QApplication::UnicodeUTF8)
+        );
+        groupBox_opcoesTeste->setTitle(QApplication::translate("Janela", "Op\303\247\303\265es de Teste", 0, QApplication::UnicodeUTF8));
+        radioButton_treino->setText(QApplication::translate("Janela", "Utilizar conjunto de treino", 0, QApplication::UnicodeUTF8));
+        radioButton_teste->setText(QApplication::translate("Janela", "Fornecer conjunto de teste", 0, QApplication::UnicodeUTF8));
+        pushButton_teste->setText(QApplication::translate("Janela", "Abrir", 0, QApplication::UnicodeUTF8));
+        radioButton_kDobras->setText(QApplication::translate("Janela", "Valida\303\247\303\243o cruzada", 0, QApplication::UnicodeUTF8));
+        label_kDobras->setText(QApplication::translate("Janela", "Dobras", 0, QApplication::UnicodeUTF8));
+        lineEdit_kDobras->setInputMask(QString());
+        radioButton_divisao->setText(QApplication::translate("Janela", "Porcentagem de divis\303\243o", 0, QApplication::UnicodeUTF8));
+        lineEdit_divisao->setInputMask(QString());
+        label_kDobras_2->setText(QApplication::translate("Janela", "%", 0, QApplication::UnicodeUTF8));
+        pushButton_2->setText(QApplication::translate("Janela", "Op\303\247\303\265es", 0, QApplication::UnicodeUTF8));
+        pushButton->setText(QApplication::translate("Janela", "Start", 0, QApplication::UnicodeUTF8));
+        tabWidget->setTabText(tabWidget->indexOf(tab_validacao), QApplication::translate("Janela", "Classifica\303\247\303\243o", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

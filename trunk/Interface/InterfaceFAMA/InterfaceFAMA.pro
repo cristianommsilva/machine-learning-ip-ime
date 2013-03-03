@@ -15,13 +15,31 @@ SOURCES += main.cpp\
     ../../corpus/corpusmatriz.cpp \
     ../../corpus/corpus.cpp \
     param.cpp \
-    modeloparam.cpp
+    modeloparam.cpp \
+    ../../classificador/classificadortbl.cpp \
+    ../../classificador/classificadorhmm.cpp \
+    ../../classificador/classificador_maisprovavel.cpp \
+    ../../classificador/classificador.cpp \
+    ../../treinador/treinador.cpp \
+    ../../treinador/tbl.cpp \
+    ../../treinador/maisprovavel.cpp \
+    ../../treinador/hmm.cpp \
+    ../../outros/regra.cpp
 
 HEADERS  += janela.h \
     ../../corpus/corpusmatriz.h \
     ../../corpus/corpus.h \
     param.h \
-    modeloparam.h
+    modeloparam.h \
+    ../../classificador/classificadortbl.h \
+    ../../classificador/classificadorhmm.h \
+    ../../classificador/classificador_maisprovavel.h \
+    ../../classificador/classificador.h \
+    ../../treinador/treinador.h \
+    ../../treinador/tbl.h \
+    ../../treinador/maisprovavel.h \
+    ../../treinador/hmm.h \
+    ../../outros/regra.h
 
 FORMS    += janela.ui \
     param.ui
