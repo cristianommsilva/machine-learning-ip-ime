@@ -152,7 +152,7 @@ Classificador *MaisProvavel::executarTreinamento( Corpus &corpus, int atributo )
 //    }
 }
 
-Treinador& MaisProvavel::construirJanela( Param &popUp )
+Treinador* MaisProvavel::construirJanela( Param &popUp )
 {
     ModeloParam model;
     int ok;

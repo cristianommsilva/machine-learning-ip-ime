@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'janela.ui'
 **
-** Created: Sat 2. Mar 22:13:29 2013
+** Created: Sun 3. Mar 19:53:43 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -348,7 +348,7 @@ public:
         QObject::connect(pushButton_abrir, SIGNAL(clicked()), Janela, SLOT(abrirArquivo()));
         QObject::connect(comboBox_classificador, SIGNAL(currentIndexChanged(int)), Janela, SLOT(escolherClassificador(int)));
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(Janela);

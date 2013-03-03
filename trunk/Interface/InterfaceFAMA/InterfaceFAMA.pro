@@ -24,7 +24,8 @@ SOURCES += main.cpp\
     ../../treinador/tbl.cpp \
     ../../treinador/maisprovavel.cpp \
     ../../treinador/hmm.cpp \
-    ../../outros/regra.cpp
+    ../../outros/regra.cpp \
+    ../../corpus/corpusmatrizui.cpp
 
 HEADERS  += janela.h \
     ../../corpus/corpusmatriz.h \
@@ -39,7 +40,8 @@ HEADERS  += janela.h \
     ../../treinador/tbl.h \
     ../../treinador/maisprovavel.h \
     ../../treinador/hmm.h \
-    ../../outros/regra.h
+    ../../outros/regra.h \
+    ../../corpus/corpusmatrizui.h
 
 FORMS    += janela.ui \
     param.ui

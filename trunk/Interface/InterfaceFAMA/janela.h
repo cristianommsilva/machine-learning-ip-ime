@@ -4,7 +4,7 @@
 
 #include <QFileDialog>
 #include "param.h"
-#include "../../corpus/corpusmatriz.h"
+#include "../../corpus/corpusmatrizui.h"
 #include "../../classificador/classificador_maisprovavel.h"
 #include "../../classificador/classificadorhmm.h"
 #include "../../classificador/classificadortbl.h"
