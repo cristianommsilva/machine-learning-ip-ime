@@ -10,7 +10,7 @@ Treinador::~Treinador()
     //dtor
 }
 
-Treinador* Treinador::construirJanela( Param &popUp )
+Treinador* Treinador::construirJanela( void *popUp, Corpus &corpus )
 {
     ostringstream erro;
     erro << "Construtor de janela nao definido\n";

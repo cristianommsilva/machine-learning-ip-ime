@@ -6,6 +6,7 @@
 #include <map>
 #include <cstdio>
 #include <cstdlib>
+#include <sstream>
 
 using namespace std;
 

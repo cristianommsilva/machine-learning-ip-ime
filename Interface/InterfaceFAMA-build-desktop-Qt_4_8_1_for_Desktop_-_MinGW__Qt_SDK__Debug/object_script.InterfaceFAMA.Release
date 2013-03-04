@@ -15,6 +15,7 @@ INPUT(
 ./release\hmm.o
 ./release\regra.o
 ./release\corpusmatrizui.o
+./release\maisprovavelui.o
 ./release\moc_janela.o
 ./release\moc_param.o
 ./release\moc_modeloparam.o

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'janela.ui'
 **
-** Created: Sun 3. Mar 19:53:43 2013
+** Created: Sun 3. Mar 21:56:10 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -59,7 +59,7 @@ public:
     QToolButton *toolButton_construtor;
     QPushButton *pushButton_abrir;
     QWidget *tab_validacao;
-    QComboBox *comboBox_classificador;
+    QComboBox *comboBox_metodo;
     QGroupBox *groupBox_opcoesTeste;
     QRadioButton *radioButton_treino;
     QRadioButton *radioButton_teste;
@@ -70,8 +70,8 @@ public:
     QRadioButton *radioButton_divisao;
     QLineEdit *lineEdit_divisao;
     QLabel *label_kDobras_2;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton;
+    QPushButton *pushButton_opcoes;
+    QPushButton *pushButton_start;
 
     void setupUi(QWidget *Janela)
     {
@@ -293,10 +293,11 @@ public:
         tabWidget->addTab(tab_preProcess, QString());
         tab_validacao = new QWidget();
         tab_validacao->setObjectName(QString::fromUtf8("tab_validacao"));
-        comboBox_classificador = new QComboBox(tab_validacao);
-        comboBox_classificador->setObjectName(QString::fromUtf8("comboBox_classificador"));
-        comboBox_classificador->setGeometry(QRect(20, 10, 261, 20));
-        comboBox_classificador->setInsertPolicy(QComboBox::InsertAlphabetically);
+        comboBox_metodo = new QComboBox(tab_validacao);
+        comboBox_metodo->setObjectName(QString::fromUtf8("comboBox_metodo"));
+        comboBox_metodo->setEnabled(false);
+        comboBox_metodo->setGeometry(QRect(20, 10, 261, 20));
+        comboBox_metodo->setInsertPolicy(QComboBox::InsertAlphabetically);
         groupBox_opcoesTeste = new QGroupBox(tab_validacao);
         groupBox_opcoesTeste->setObjectName(QString::fromUtf8("groupBox_opcoesTeste"));
         groupBox_opcoesTeste->setGeometry(QRect(10, 40, 261, 141));
@@ -333,12 +334,13 @@ public:
         label_kDobras_2 = new QLabel(groupBox_opcoesTeste);
         label_kDobras_2->setObjectName(QString::fromUtf8("label_kDobras_2"));
         label_kDobras_2->setGeometry(QRect(170, 90, 16, 16));
-        pushButton_2 = new QPushButton(groupBox_opcoesTeste);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(10, 110, 231, 21));
-        pushButton = new QPushButton(tab_validacao);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(50, 200, 181, 21));
+        pushButton_opcoes = new QPushButton(groupBox_opcoesTeste);
+        pushButton_opcoes->setObjectName(QString::fromUtf8("pushButton_opcoes"));
+        pushButton_opcoes->setGeometry(QRect(10, 110, 231, 21));
+        pushButton_start = new QPushButton(tab_validacao);
+        pushButton_start->setObjectName(QString::fromUtf8("pushButton_start"));
+        pushButton_start->setEnabled(false);
+        pushButton_start->setGeometry(QRect(50, 200, 181, 21));
         tabWidget->addTab(tab_validacao, QString());
 
         retranslateUi(Janela);
@@ -346,7 +348,7 @@ public:
         QObject::connect(comboBox_corpus, SIGNAL(activated(int)), Janela, SLOT(habilitarBotao(int)));
         QObject::connect(toolButton_construtor, SIGNAL(clicked()), Janela, SLOT(definirParametros()));
         QObject::connect(pushButton_abrir, SIGNAL(clicked()), Janela, SLOT(abrirArquivo()));
-        QObject::connect(comboBox_classificador, SIGNAL(currentIndexChanged(int)), Janela, SLOT(escolherClassificador(int)));
+        QObject::connect(comboBox_metodo, SIGNAL(currentIndexChanged(int)), Janela, SLOT(escolherClassificador(int)));
 
         tabWidget->setCurrentIndex(0);
 
@@ -381,8 +383,8 @@ public:
         toolButton_construtor->setText(QApplication::translate("Janela", "...", 0, QApplication::UnicodeUTF8));
         pushButton_abrir->setText(QApplication::translate("Janela", "Abrir arquivo...", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_preProcess), QApplication::translate("Janela", "Pr\303\251-processamento", 0, QApplication::UnicodeUTF8));
-        comboBox_classificador->clear();
-        comboBox_classificador->insertItems(0, QStringList()
+        comboBox_metodo->clear();
+        comboBox_metodo->insertItems(0, QStringList()
          << QApplication::translate("Janela", "Escolha o M\303\251todo", 0, QApplication::UnicodeUTF8)
         );
         groupBox_opcoesTeste->setTitle(QApplication::translate("Janela", "Op\303\247\303\265es de Teste", 0, QApplication::UnicodeUTF8));
@@ -395,8 +397,8 @@ public:
         radioButton_divisao->setText(QApplication::translate("Janela", "Porcentagem de divis\303\243o", 0, QApplication::UnicodeUTF8));
         lineEdit_divisao->setInputMask(QString());
         label_kDobras_2->setText(QApplication::translate("Janela", "%", 0, QApplication::UnicodeUTF8));
-        pushButton_2->setText(QApplication::translate("Janela", "Op\303\247\303\265es", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("Janela", "Start", 0, QApplication::UnicodeUTF8));
+        pushButton_opcoes->setText(QApplication::translate("Janela", "Op\303\247\303\265es", 0, QApplication::UnicodeUTF8));
+        pushButton_start->setText(QApplication::translate("Janela", "Start", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_validacao), QApplication::translate("Janela", "Classifica\303\247\303\243o", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 

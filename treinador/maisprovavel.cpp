@@ -151,16 +151,3 @@ Classificador *MaisProvavel::executarTreinamento( Corpus &corpus, int atributo )
 //        }
 //    }
 }
-
-Treinador* MaisProvavel::construirJanela( Param &popUp )
-{
-    ModeloParam model;
-    int ok;
-
-    model.inserirDados(0,0,"Atributo base:");
-    model.inserirDados(1,0,"Tolerancia desconhecido:");
-
-    popUp.ajustarModelo( model );
-
-
-}

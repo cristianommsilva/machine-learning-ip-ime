@@ -13,9 +13,9 @@ Janela::Janela(QWidget *parent) :
     ui->comboBox_corpus->addItem( "CorpusMatriz" );
 
     //a adição de novos tipos de Classificadores deve ser feita identicamente ao modelo abaixo
-    ui->comboBox_classificador->addItem( "Mais Provavel" );
-    ui->comboBox_classificador->addItem( "Hidden Markov Model - HMM" );
-    ui->comboBox_classificador->addItem( "Transformation Based Learning - TBL" );
+    ui->comboBox_metodo->addItem( "Mais Provavel" );
+    ui->comboBox_metodo->addItem( "Hidden Markov Model - HMM" );
+    ui->comboBox_metodo->addItem( "Transformation Based Learning - TBL" );
 
     ui->tableWidget_atributos->setHorizontalHeaderLabels( QStringList() << "Ordem" << "Nome" );
 }
@@ -30,7 +30,10 @@ Janela::~Janela()
 void Janela::abrirArquivo()
 {
     if( ( s = QFileDialog::getOpenFileName( this, "Abrir","","Documentos de texto (*.txt);;Todos os arquivos (*.*)" ) ) != "" )
+    {
         logicaDeAbertura();
+        ui->comboBox_metodo->setEnabled( true );
+    }
 }
 
 void Janela::logicaDeAbertura()
@@ -51,11 +54,7 @@ void Janela::logicaDeAbertura()
     ui->lineEdit_instancias->setText( QString::fromStdString( st.str() ) );
 
     //limpador da janela de atributos
-    for( int i = 0; i < ui->tableWidget_atributos->rowCount(); ++i )
-    {
-        delete ui->tableWidget_atributos->item( i, 0 );
-        delete ui->tableWidget_atributos->item( i, 1 );
-    }
+    ui->tableWidget_atributos->clearContents();
 
     ui->tableWidget_atributos->setRowCount( n );
     QTableWidgetItem *item;
@@ -70,7 +69,29 @@ void Janela::logicaDeAbertura()
 
 void Janela::habilitarBotao(int index)
 {
-    if( corpus != NULL ) delete corpus;
+    if( corpus != NULL )
+    {
+        delete corpus;
+
+        ui->lineEdit_relatorio->setText( "Nenhum" );
+        ui->lineEdit_atributos->setText( "Nenhum" );
+        ui->lineEdit_instancias->setText( "Nenhum" );
+        ui->lineEdit_nome->setText( "Nenhum" );
+        ui->lineEdit_tipo->setText( "Nenhum" );
+        ui->lineEdit_distintos->setText( "Nenhum" );
+
+        //limpador da janela de atributos
+        ui->tableWidget_atributos->clearContents();
+        ui->tableWidget_atributos->setRowCount( 0 );
+
+        //limpador da janela de estatistica
+        ui->tableWidget_estatistica->clearContents();
+        ui->tableWidget_estatistica->setRowCount( 0 );
+
+        ui->comboBox_metodo->setEnabled( false );
+        ui->pushButton_start->setEnabled( false );
+
+    }
     if( !index )
     {
         ui->pushButton_abrir->setEnabled( false );
@@ -121,13 +142,9 @@ void Janela::atributoSelecionado( int row, int column )
     if( aux == "Nominal" ) ui->tableWidget_estatistica->setHorizontalHeaderLabels( QStringList() << "Label" << "Quantidade" );
 
     //limpador da janela de estatistica
-    for( int i = 0; i < ui->tableWidget_estatistica->rowCount(); ++i )
-    {
-        delete ui->tableWidget_estatistica->item( i, 0 );
-        delete ui->tableWidget_estatistica->item( i, 1 );
-    }
+    ui->tableWidget_estatistica->clearContents();
 
-    ui->tableWidget_estatistica->setRowCount( distintos );
+    ui->tableWidget_estatistica->setRowCount( distintos );   
     QTableWidgetItem *item;
     for( i = 0; i < distintos; ++i )
     {
@@ -154,7 +171,7 @@ void Janela::definirParametros()
 void Janela::definirParametrosTreinador()
 {
     //Janela construida na classe Treinador por um método virtual
-    Treinador *temp = treinador->construirJanela( popUp );
+    Treinador *temp = treinador->construirJanela( &popUp, *corpus );
     if( temp != treinador )
     {
         delete treinador;

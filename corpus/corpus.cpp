@@ -1,5 +1,4 @@
 #include "corpus.h"
-#include <sstream>
 
 Corpus::Corpus( vector<string> atributos )
     : atributos( atributos )

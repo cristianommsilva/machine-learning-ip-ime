@@ -3,7 +3,6 @@
 
 #include "corpusmatriz.h"
 #include <QCheckBox>
-#include <QWidget>
 #include "../Interface/InterfaceFAMA/modeloparam.h"
 #include "../Interface/InterfaceFAMA/param.h"
 

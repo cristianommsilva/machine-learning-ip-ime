@@ -15,6 +15,7 @@ INPUT(
 ./debug\hmm.o
 ./debug\regra.o
 ./debug\corpusmatrizui.o
+./debug\maisprovavelui.o
 ./debug\moc_janela.o
 ./debug\moc_param.o
 ./debug\moc_modeloparam.o
