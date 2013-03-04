@@ -1,5 +1,4 @@
 #include "corpusmatriz.h"
-#include <sstream>
 
 void aparar(string &str){
     string::size_type pos = str.find_last_not_of(' ');

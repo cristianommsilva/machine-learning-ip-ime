@@ -20,7 +20,6 @@ class CorpusMatriz : public Corpus
         bool carregarArquivo( string arquivo );
         bool gravarArquivo( string arquivo );
         virtual Corpus* clone();
-        //virtual Corpus* construirJanela( void *popUp );
 };
 
 #endif // CORPUSMATRIZ_H

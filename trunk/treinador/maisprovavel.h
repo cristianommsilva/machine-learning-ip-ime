@@ -13,7 +13,6 @@ class MaisProvavel : public Treinador
         MaisProvavel( string atributoBase = "word", int toleranciaUnknow = 2 );
         virtual ~MaisProvavel();
         virtual Classificador *executarTreinamento( Corpus &corpus, int atributo );
-        virtual Treinador* construirJanela( Param &popUp );
 };
 
 #endif // MAISPROVAVEL_H
