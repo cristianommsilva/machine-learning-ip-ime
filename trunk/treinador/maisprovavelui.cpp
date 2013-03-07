@@ -22,4 +22,20 @@ Treinador* MaisProvavelUI::construirJanela( void *popUp, Corpus &corpus )
     QComboBox *comboBox = new QComboBox();
     for( register int i = 0; i < qtdAtributos; ++i ) sList << QString::fromStdString( atributos[i] );
     comboBox->insertItems( 0, sList );
+    model.inserirDados( 0, 1, *popUpPointer, comboBox );
+
+    QSpinBox *sbox = new QSpinBox();
+    sbox->setValue( 1 );
+    sbox->setMinimum( 0 );
+    model.inserirDados( 1, 1, *popUpPointer, sbox );
+
+    ok = popUpPointer->iniciarDialog();
+
+
+    if( ok )
+    {
+        Treinador *treinador = new MaisProvavelUI( comboBox->currentText().toStdString(), sbox->value() );
+        return treinador;
+    }
+    return this;
 }

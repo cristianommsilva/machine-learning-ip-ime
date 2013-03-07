@@ -92,25 +92,19 @@ void Janela::habilitarBotao(int index)
         ui->pushButton_start->setEnabled( false );
 
     }
-    if( !index )
-    {
-        ui->pushButton_abrir->setEnabled( false );
-        ui->toolButton_construtor->setEnabled( false );
-    }
-    else
-    {
-        ui->pushButton_abrir->setEnabled( true );
-        ui->toolButton_construtor->setEnabled( true );
-    }
     switch( index )
     {
         case 0 :
             corpus = NULL;
-            break;
+            ui->pushButton_abrir->setEnabled( false );
+            ui->toolButton_construtor->setEnabled( false );
+            return;
         case 1 :
             corpus = new CorpusMatrizUI();
             break;
     }
+    ui->pushButton_abrir->setEnabled( true );
+    ui->toolButton_construtor->setEnabled( true );
 }
 
 void Janela::atributoSelecionado( int row, int column )
@@ -186,17 +180,21 @@ void Janela::escolherClassificador( int index )
     {
         case 0 :
             treinador = NULL;
-            break;
+            ui->toolButton_treinador->setEnabled( false );
+            ui->pushButton_start->setEnabled( false );
+            return;
         case 1 :
-            treinador = new MaisProvavel();
+            treinador = new MaisProvavelUI();
             break;
         case 2 :
-            treinador = new HMM();
+            treinador = new HMMUI();
             break;
         case 3 :
             treinador = new TBL();
             break;
     }
+    ui->toolButton_treinador->setEnabled( true );
+    ui->pushButton_start->setEnabled( true );
     definirParametrosTreinador();
 }
 
