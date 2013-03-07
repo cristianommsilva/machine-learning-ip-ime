@@ -38,7 +38,7 @@
      <property name="geometry">
       <rect>
        <x>107</x>
-       <y>9</y>
+       <y>10</y>
        <width>171</width>
        <height>20</height>
       </rect>
@@ -597,7 +597,7 @@
        <x>280</x>
        <y>10</y>
        <width>25</width>
-       <height>19</height>
+       <height>21</height>
       </rect>
      </property>
      <property name="text">
@@ -700,6 +700,9 @@
       </property>
       <property name="text">
        <string>Utilizar conjunto de treino</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QRadioButton" name="radioButton_teste">
@@ -847,12 +850,44 @@
       <string>Start</string>
      </property>
     </widget>
+    <widget class="QToolButton" name="toolButton_treinador">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>11</y>
+       <width>25</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections>
+  <connection>
+   <sender>tableWidget_atributos</sender>
+   <signal>cellClicked(int,int)</signal>
+   <receiver>Janela</receiver>
+   <slot>atributoSelecionado(int,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>269</x>
+     <y>231</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>327</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
   <connection>
    <sender>comboBox_corpus</sender>
    <signal>activated(int)</signal>
@@ -918,17 +953,17 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_start</sender>
+   <sender>toolButton_treinador</sender>
    <signal>clicked()</signal>
    <receiver>Janela</receiver>
-   <slot>executarValidacao()</slot>
+   <slot>definirParametrosTreinador()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>231</x>
-     <y>243</y>
+     <x>317</x>
+     <y>50</y>
     </hint>
     <hint type="destinationlabel">
-     <x>401</x>
+     <x>344</x>
      <y>8</y>
     </hint>
    </hints>
@@ -940,6 +975,5 @@
   <slot>atributoSelecionado(int,int)</slot>
   <slot>definirParametros()</slot>
   <slot>escolherClassificador(int)</slot>
-  <slot>executarValidacao()</slot>
  </slots>
 </ui>

@@ -46,11 +46,12 @@ Corpus* CorpusMatrizUI::construirJanela( void *popUp )
     if( ok )
     {
         Corpus *corpus;
-        QCheckBox *geral;
+        //QCheckBox *geral;
         bool dividirExemplos;
-        dividirExemplos = (( QCheckBox* )popUpPointer->pegarWidget( 1 ))->isChecked();
-        geral = ( QCheckBox* )popUpPointer->pegarWidget( 2 );
-        if( geral->isChecked() )
+        //dividirExemplos = (( QCheckBox* )popUpPointer->pegarWidget( 1 ))->isChecked();
+        //geral = ( QCheckBox* )popUpPointer->pegarWidget( 2 );
+        dividirExemplos = cbox->isChecked();
+        if( cbox2->isChecked() )
             corpus = new CorpusMatrizUI( vector<string>(), popUpPointer->pegarString(0)[0], dividirExemplos );
         else
         {
@@ -61,7 +62,6 @@ Corpus* CorpusMatrizUI::construirJanela( void *popUp )
         }
         return corpus;
     }
-
     return this;
 }
 

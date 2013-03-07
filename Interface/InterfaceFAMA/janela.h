@@ -5,8 +5,8 @@
 #include <QFileDialog>
 #include "param.h"
 #include "../../corpus/corpusmatrizui.h"
-#include "../../treinador/maisprovavel.h"
-#include "../../treinador/hmm.h"
+#include "../../treinador/maisprovavelui.h"
+#include "../../treinador/hmmui.h"
 #include "../../treinador/tbl.h"
 #include "../../validador/validadorteste.h"
 #include "../../validador/validadortreino.h"
