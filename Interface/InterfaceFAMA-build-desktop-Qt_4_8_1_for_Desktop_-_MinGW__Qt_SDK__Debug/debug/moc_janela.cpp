@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'janela.h'
 **
-** Created: Sun 3. Mar 21:09:47 2013
+** Created: Wed 6. Mar 08:59:35 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_Janela[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -37,6 +37,7 @@ static const uint qt_meta_data_Janela[] = {
       89,    7,    7,    7, 0x0a,
      109,   23,    7,    7, 0x0a,
      136,    7,    7,    7, 0x0a,
+     165,    7,    7,    7, 0x0a,
 
        0        // eod
 };
@@ -47,6 +48,7 @@ static const char qt_meta_stringdata_Janela[] = {
     "atributoSelecionado(int,int)\0"
     "definirParametros()\0escolherClassificador(int)\0"
     "definirParametrosTreinador()\0"
+    "executarValidacao()\0"
 };
 
 void Janela::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -61,6 +63,7 @@ void Janela::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 3: _t->definirParametros(); break;
         case 4: _t->escolherClassificador((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 5: _t->definirParametrosTreinador(); break;
+        case 6: _t->executarValidacao(); break;
         default: ;
         }
     }
@@ -98,9 +101,9 @@ int Janela::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 7;
     }
     return _id;
 }

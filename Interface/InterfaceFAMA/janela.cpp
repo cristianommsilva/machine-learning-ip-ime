@@ -199,3 +199,26 @@ void Janela::escolherClassificador( int index )
     }
     definirParametrosTreinador();
 }
+
+void Janela::executarValidacao()
+{
+    Validador *validador;
+    Avaliador *avaliador = new AvaliadorAcuracia();
+    int numeroIteracoes = 1;
+    if(ui->radioButton_teste->isChecked())
+    {
+        validador = new ValidadorTeste(*avaliador, *corpus);
+    }
+    else if(ui->radioButton_treino->isChecked())
+    {
+        validador = new ValidadorTreino(*avaliador);
+    }
+    else if(ui->radioButton_kDobras->isChecked())
+    {
+        validador = new ValidadorKDobras(*avaliador, ui->spinBox_kDobras->value());
+    }
+    else if(ui->radioButton_divisao->isChecked())
+    {
+        validador = new ValidadorDivisao(*avaliador, numeroIteracoes, (float)ui->doubleSpinBox_divisao->value());
+    }
+}

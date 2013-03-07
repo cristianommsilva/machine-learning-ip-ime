@@ -26,7 +26,14 @@ SOURCES += main.cpp\
     ../../treinador/hmm.cpp \
     ../../outros/regra.cpp \
     ../../corpus/corpusmatrizui.cpp \
-    ../../treinador/maisprovavelui.cpp
+    ../../treinador/maisprovavelui.cpp \
+    ../../validador/validadortreino.cpp \
+    ../../validador/validadorteste.cpp \
+    ../../validador/validadorkdobras.cpp \
+    ../../validador/validadordivisao.cpp \
+    ../../validador/validador.cpp \
+    ../../avaliador/avaliador_acuracia.cpp \
+    ../../avaliador/Avaliador.cpp
 
 HEADERS  += janela.h \
     ../../corpus/corpusmatriz.h \
@@ -43,7 +50,14 @@ HEADERS  += janela.h \
     ../../treinador/hmm.h \
     ../../outros/regra.h \
     ../../corpus/corpusmatrizui.h \
-    ../../treinador/maisprovavelui.h
+    ../../treinador/maisprovavelui.h \
+    ../../validador/validadortreino.h \
+    ../../validador/validadorteste.h \
+    ../../validador/validadorkdobras.h \
+    ../../validador/validadordivisao.h \
+    ../../validador/validador.h \
+    ../../avaliador/avaliador_acuracia.h \
+    ../../avaliador/Avaliador.h
 
 FORMS    += janela.ui \
     param.ui
