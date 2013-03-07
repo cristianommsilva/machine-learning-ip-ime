@@ -759,28 +759,6 @@
        <string>Dobras</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_kDobras">
-      <property name="geometry">
-       <rect>
-        <x>190</x>
-        <y>70</y>
-        <width>51</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="inputMask">
-       <string/>
-      </property>
-      <property name="maxLength">
-       <number>3</number>
-      </property>
-      <property name="frame">
-       <bool>true</bool>
-      </property>
-      <property name="cursorPosition">
-       <number>0</number>
-      </property>
-     </widget>
      <widget class="QRadioButton" name="radioButton_divisao">
       <property name="geometry">
        <rect>
@@ -792,25 +770,6 @@
       </property>
       <property name="text">
        <string>Porcentagem de divisão</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_divisao">
-      <property name="geometry">
-       <rect>
-        <x>190</x>
-        <y>90</y>
-        <width>51</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="inputMask">
-       <string/>
-      </property>
-      <property name="maxLength">
-       <number>2</number>
-      </property>
-      <property name="frame">
-       <bool>true</bool>
       </property>
      </widget>
      <widget class="QLabel" name="label_kDobras_2">
@@ -839,6 +798,38 @@
        <string>Opções</string>
       </property>
      </widget>
+     <widget class="QSpinBox" name="spinBox_kDobras">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>70</y>
+        <width>42</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>999</number>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="doubleSpinBox_divisao">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>90</y>
+        <width>62</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <double>0.010000000000000</double>
+      </property>
+      <property name="value">
+       <double>30.000000000000000</double>
+      </property>
+     </widget>
     </widget>
     <widget class="QPushButton" name="pushButton_start">
      <property name="enabled">
@@ -862,22 +853,6 @@
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections>
-  <connection>
-   <sender>tableWidget_atributos</sender>
-   <signal>cellClicked(int,int)</signal>
-   <receiver>Janela</receiver>
-   <slot>atributoSelecionado(int,int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>269</x>
-     <y>231</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>327</x>
-     <y>0</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>comboBox_corpus</sender>
    <signal>activated(int)</signal>
@@ -942,6 +917,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_start</sender>
+   <signal>clicked()</signal>
+   <receiver>Janela</receiver>
+   <slot>executarValidacao()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>231</x>
+     <y>243</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>401</x>
+     <y>8</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>abrirArquivo()</slot>
@@ -949,5 +940,6 @@
   <slot>atributoSelecionado(int,int)</slot>
   <slot>definirParametros()</slot>
   <slot>escolherClassificador(int)</slot>
+  <slot>executarValidacao()</slot>
  </slots>
 </ui>

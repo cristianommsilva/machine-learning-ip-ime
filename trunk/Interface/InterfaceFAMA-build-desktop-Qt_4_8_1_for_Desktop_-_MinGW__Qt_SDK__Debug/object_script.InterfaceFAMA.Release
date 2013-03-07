@@ -16,6 +16,13 @@ INPUT(
 ./release\regra.o
 ./release\corpusmatrizui.o
 ./release\maisprovavelui.o
+./release\validadortreino.o
+./release\validadorteste.o
+./release\validadorkdobras.o
+./release\validadordivisao.o
+./release\validador.o
+./release\avaliador_acuracia.o
+./release\Avaliador.o
 ./release\moc_janela.o
 ./release\moc_param.o
 ./release\moc_modeloparam.o

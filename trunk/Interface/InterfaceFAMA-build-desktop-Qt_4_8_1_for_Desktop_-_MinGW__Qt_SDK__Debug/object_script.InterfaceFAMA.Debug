@@ -16,6 +16,13 @@ INPUT(
 ./debug\regra.o
 ./debug\corpusmatrizui.o
 ./debug\maisprovavelui.o
+./debug\validadortreino.o
+./debug\validadorteste.o
+./debug\validadorkdobras.o
+./debug\validadordivisao.o
+./debug\validador.o
+./debug\avaliador_acuracia.o
+./debug\Avaliador.o
 ./debug\moc_janela.o
 ./debug\moc_param.o
 ./debug\moc_modeloparam.o

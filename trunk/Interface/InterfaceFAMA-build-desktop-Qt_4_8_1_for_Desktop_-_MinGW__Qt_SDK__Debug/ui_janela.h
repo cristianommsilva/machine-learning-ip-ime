@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'janela.ui'
 **
-** Created: Sun 3. Mar 21:56:10 2013
+** Created: Thu 7. Mar 11:20:53 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -15,6 +15,7 @@
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
 #include <QtGui/QComboBox>
+#include <QtGui/QDoubleSpinBox>
 #include <QtGui/QGridLayout>
 #include <QtGui/QGroupBox>
 #include <QtGui/QHeaderView>
@@ -22,6 +23,7 @@
 #include <QtGui/QLineEdit>
 #include <QtGui/QPushButton>
 #include <QtGui/QRadioButton>
+#include <QtGui/QSpinBox>
 #include <QtGui/QTabWidget>
 #include <QtGui/QTableWidget>
 #include <QtGui/QToolButton>
@@ -66,11 +68,11 @@ public:
     QPushButton *pushButton_teste;
     QRadioButton *radioButton_kDobras;
     QLabel *label_kDobras;
-    QLineEdit *lineEdit_kDobras;
     QRadioButton *radioButton_divisao;
-    QLineEdit *lineEdit_divisao;
     QLabel *label_kDobras_2;
     QPushButton *pushButton_opcoes;
+    QSpinBox *spinBox_kDobras;
+    QDoubleSpinBox *doubleSpinBox_divisao;
     QPushButton *pushButton_start;
 
     void setupUi(QWidget *Janela)
@@ -317,26 +319,25 @@ public:
         label_kDobras = new QLabel(groupBox_opcoesTeste);
         label_kDobras->setObjectName(QString::fromUtf8("label_kDobras"));
         label_kDobras->setGeometry(QRect(140, 70, 46, 16));
-        lineEdit_kDobras = new QLineEdit(groupBox_opcoesTeste);
-        lineEdit_kDobras->setObjectName(QString::fromUtf8("lineEdit_kDobras"));
-        lineEdit_kDobras->setGeometry(QRect(190, 70, 51, 16));
-        lineEdit_kDobras->setMaxLength(3);
-        lineEdit_kDobras->setFrame(true);
-        lineEdit_kDobras->setCursorPosition(0);
         radioButton_divisao = new QRadioButton(groupBox_opcoesTeste);
         radioButton_divisao->setObjectName(QString::fromUtf8("radioButton_divisao"));
         radioButton_divisao->setGeometry(QRect(10, 90, 161, 17));
-        lineEdit_divisao = new QLineEdit(groupBox_opcoesTeste);
-        lineEdit_divisao->setObjectName(QString::fromUtf8("lineEdit_divisao"));
-        lineEdit_divisao->setGeometry(QRect(190, 90, 51, 16));
-        lineEdit_divisao->setMaxLength(2);
-        lineEdit_divisao->setFrame(true);
         label_kDobras_2 = new QLabel(groupBox_opcoesTeste);
         label_kDobras_2->setObjectName(QString::fromUtf8("label_kDobras_2"));
         label_kDobras_2->setGeometry(QRect(170, 90, 16, 16));
         pushButton_opcoes = new QPushButton(groupBox_opcoesTeste);
         pushButton_opcoes->setObjectName(QString::fromUtf8("pushButton_opcoes"));
         pushButton_opcoes->setGeometry(QRect(10, 110, 231, 21));
+        spinBox_kDobras = new QSpinBox(groupBox_opcoesTeste);
+        spinBox_kDobras->setObjectName(QString::fromUtf8("spinBox_kDobras"));
+        spinBox_kDobras->setGeometry(QRect(190, 70, 42, 16));
+        spinBox_kDobras->setMinimum(1);
+        spinBox_kDobras->setMaximum(999);
+        doubleSpinBox_divisao = new QDoubleSpinBox(groupBox_opcoesTeste);
+        doubleSpinBox_divisao->setObjectName(QString::fromUtf8("doubleSpinBox_divisao"));
+        doubleSpinBox_divisao->setGeometry(QRect(190, 90, 62, 16));
+        doubleSpinBox_divisao->setMinimum(0.01);
+        doubleSpinBox_divisao->setValue(30);
         pushButton_start = new QPushButton(tab_validacao);
         pushButton_start->setObjectName(QString::fromUtf8("pushButton_start"));
         pushButton_start->setEnabled(false);
@@ -344,11 +345,11 @@ public:
         tabWidget->addTab(tab_validacao, QString());
 
         retranslateUi(Janela);
-        QObject::connect(tableWidget_atributos, SIGNAL(cellClicked(int,int)), Janela, SLOT(atributoSelecionado(int,int)));
         QObject::connect(comboBox_corpus, SIGNAL(activated(int)), Janela, SLOT(habilitarBotao(int)));
         QObject::connect(toolButton_construtor, SIGNAL(clicked()), Janela, SLOT(definirParametros()));
         QObject::connect(pushButton_abrir, SIGNAL(clicked()), Janela, SLOT(abrirArquivo()));
         QObject::connect(comboBox_metodo, SIGNAL(currentIndexChanged(int)), Janela, SLOT(escolherClassificador(int)));
+        QObject::connect(pushButton_start, SIGNAL(clicked()), Janela, SLOT(executarValidacao()));
 
         tabWidget->setCurrentIndex(0);
 
@@ -393,9 +394,7 @@ public:
         pushButton_teste->setText(QApplication::translate("Janela", "Abrir", 0, QApplication::UnicodeUTF8));
         radioButton_kDobras->setText(QApplication::translate("Janela", "Valida\303\247\303\243o cruzada", 0, QApplication::UnicodeUTF8));
         label_kDobras->setText(QApplication::translate("Janela", "Dobras", 0, QApplication::UnicodeUTF8));
-        lineEdit_kDobras->setInputMask(QString());
         radioButton_divisao->setText(QApplication::translate("Janela", "Porcentagem de divis\303\243o", 0, QApplication::UnicodeUTF8));
-        lineEdit_divisao->setInputMask(QString());
         label_kDobras_2->setText(QApplication::translate("Janela", "%", 0, QApplication::UnicodeUTF8));
         pushButton_opcoes->setText(QApplication::translate("Janela", "Op\303\247\303\265es", 0, QApplication::UnicodeUTF8));
         pushButton_start->setText(QApplication::translate("Janela", "Start", 0, QApplication::UnicodeUTF8));

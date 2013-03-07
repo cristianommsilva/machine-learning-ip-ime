@@ -5,12 +5,15 @@
 #include <QFileDialog>
 #include "param.h"
 #include "../../corpus/corpusmatrizui.h"
-#include "../../classificador/classificador_maisprovavel.h"
-#include "../../classificador/classificadorhmm.h"
-#include "../../classificador/classificadortbl.h"
 #include "../../treinador/maisprovavel.h"
 #include "../../treinador/hmm.h"
 #include "../../treinador/tbl.h"
+#include "../../validador/validadorteste.h"
+#include "../../validador/validadortreino.h"
+#include "../../validador/validadorkdobras.h"
+#include "../../validador/validadordivisao.h"
+#include "../../avaliador/avaliador_acuracia.h"
+
 
 namespace Ui {
 class Janela;
@@ -39,6 +42,7 @@ public slots:
     void definirParametros();
     void escolherClassificador( int index );
     void definirParametrosTreinador();
+    void executarValidacao();
 };
 
 #endif // JANELA_H
