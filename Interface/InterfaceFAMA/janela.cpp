@@ -8,6 +8,8 @@ Janela::Janela(QWidget *parent) :
     ui->setupUi(this);
     corpus = NULL;
     treinador = NULL;
+    avaliador = new AvaliadorAcuracia();
+    corpusTeste = NULL;
 
     //a adição de novos tipos de Corpus deve ser feita identicamente ao modelo abaixo
     ui->comboBox_corpus->addItem( "CorpusMatriz" );
@@ -17,6 +19,11 @@ Janela::Janela(QWidget *parent) :
     ui->comboBox_metodo->addItem( "Hidden Markov Model - HMM" );
     ui->comboBox_metodo->addItem( "Transformation Based Learning - TBL" );
 
+    //a adição de novos tipos de Avaliadores deve ser feita identicamente ao modelo abaixo
+    ui->comboBox_avaliador->addItem( "Acurácia" );
+
+    //todas as inicializações feitas nos tópicos anteriores devem ter atualizações nos switches de incialização abaixo
+
     ui->tableWidget_atributos->setHorizontalHeaderLabels( QStringList() << "Ordem" << "Nome" );
 }
 
@@ -25,6 +32,8 @@ Janela::~Janela()
     delete ui;
     if( corpus != NULL ) delete corpus;
     if( treinador != NULL ) delete treinador;
+    if( avaliador != NULL ) delete avaliador;
+    if( corpusTeste != NULL ) delete corpusTeste;
 }
 
 void Janela::abrirArquivo()
@@ -38,6 +47,10 @@ void Janela::abrirArquivo()
 
 void Janela::logicaDeAbertura()
 {
+    //coloca seta do mouse em espera
+    QApplication::setOverrideCursor( QCursor( Qt::WaitCursor ) );
+
+    QString aux;
     string a = s.toStdString();
     stringstream ss, st;
     int n, posBarra;
@@ -55,6 +68,7 @@ void Janela::logicaDeAbertura()
 
     //limpador da janela de atributos
     ui->tableWidget_atributos->clearContents();
+    ui->comboBox_atributoTreino->clear();
 
     ui->tableWidget_atributos->setRowCount( n );
     QTableWidgetItem *item;
@@ -62,9 +76,13 @@ void Janela::logicaDeAbertura()
     {
         item = new QTableWidgetItem( QString( "%1" ).arg( i ) );
         ui->tableWidget_atributos->setItem( i, 0, item );
-        item = new QTableWidgetItem( QString( "%1" ).arg( QString::fromStdString(corpus->pegarAtributo(i)) ) );
+        item = new QTableWidgetItem( aux = QString( "%1" ).arg( QString::fromStdString(corpus->pegarAtributo(i)) ) );
         ui->tableWidget_atributos->setItem( i, 1, item );
+        ui->comboBox_atributoTreino->insertItem( i, aux );
     }
+
+    //retorna seta normal do mouse
+    QApplication::restoreOverrideCursor();
 }
 
 void Janela::habilitarBotao(int index)
@@ -109,6 +127,9 @@ void Janela::habilitarBotao(int index)
 
 void Janela::atributoSelecionado( int row, int column )
 {
+    //coloca seta do mouse em espera
+    QApplication::setOverrideCursor( QCursor( Qt::WaitCursor ) );
+
     int atributo = ui->tableWidget_atributos->item( row, 0 )->text().toInt();
     int i, j, distintos, conjEx = corpus->pegarQtdConjExemplos(), qtdEx, totalSimbolos = corpus->pegarQtdSimbolos();
     string aux = "Nominal";
@@ -148,6 +169,8 @@ void Janela::atributoSelecionado( int row, int column )
         ui->tableWidget_estatistica->setItem( i, 1, item );
     }
 
+    //retorna seta normal do mouse
+    QApplication::restoreOverrideCursor();
 }
 
 void Janela::definirParametros()
@@ -190,7 +213,7 @@ void Janela::escolherClassificador( int index )
             treinador = new HMMUI();
             break;
         case 3 :
-            treinador = new TBL();
+            treinador = new TBLUI();
             break;
     }
     ui->toolButton_treinador->setEnabled( true );
@@ -198,25 +221,86 @@ void Janela::escolherClassificador( int index )
     definirParametrosTreinador();
 }
 
+void Janela::escolherAvaliador( int index )
+{
+    if( avaliador != NULL ) delete avaliador;
+    switch( index )
+    {
+        case 0 :
+            avaliador = new AvaliadorAcuracia();
+            break;
+    }
+}
+
 void Janela::executarValidacao()
 {
+    //coloca seta do mouse em espera
+    QApplication::setOverrideCursor( QCursor( Qt::WaitCursor ) );
+
     Validador *validador;
-    Avaliador *avaliador = new AvaliadorAcuracia();
-    int numeroIteracoes = 1;
-    if(ui->radioButton_teste->isChecked())
-    {
-        validador = new ValidadorTeste(*avaliador, *corpus);
-    }
-    else if(ui->radioButton_treino->isChecked())
+    if(ui->radioButton_treino->isChecked())
     {
         validador = new ValidadorTreino(*avaliador);
+        validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpus->criarAtributo( ui->lineEdit_novoAtributo->text().toStdString() ) );
+    }
+    else if(ui->radioButton_teste->isChecked())
+    {
+        if( corpusTeste == NULL ) return;
+        validador = new ValidadorTeste( *avaliador, *corpusTeste );
+        validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpusTeste->criarAtributo( ui->lineEdit_novoAtributo->text().toStdString() ) );
     }
     else if(ui->radioButton_kDobras->isChecked())
     {
         validador = new ValidadorKDobras(*avaliador, ui->spinBox_kDobras->value());
+        validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpus->criarAtributo( ui->lineEdit_novoAtributo->text().toStdString() ) );
     }
     else if(ui->radioButton_divisao->isChecked())
     {
-        validador = new ValidadorDivisao(*avaliador, numeroIteracoes, (float)ui->doubleSpinBox_divisao->value());
+        //começo da criação da interface de pop Up para definir numero de Iterações do método
+        ModeloParam model;
+        int ok;
+        model.inserirDados( 0, 0, "Número de Iterações:" );
+        popUp.ajustarModelo( model );
+
+        QSpinBox *sbox = new QSpinBox();
+        sbox->setMinimum( 1 );
+        model.inserirDados( 0, 1, popUp, sbox );
+
+        ok = popUp.iniciarDialog();
+        if( !ok ) return;
+        //fim da interface
+
+        validador = new ValidadorDivisao(*avaliador, sbox->value(), (float)ui->doubleSpinBox_divisao->value());
+        validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpus->criarAtributo( ui->lineEdit_novoAtributo->text().toStdString() ) );
     }
+
+    delete validador;
+
+    //retorna seta normal do mouse
+    QApplication::restoreOverrideCursor();
+}
+
+void Janela::abrirArquivoTeste()
+{
+    if( !ui->radioButton_teste->isChecked() ) return;
+
+    string t;
+    if( ( t = QFileDialog::getOpenFileName( this, "Abrir","","Documentos de texto (*.txt);;Todos os arquivos (*.*)" ).toStdString() ) == "" )
+    {
+        ui->radioButton_treino->setChecked( true );
+        return;
+    }
+
+    //gera uma pop Up para configuração do Corpus
+    corpusTeste = corpus->construirJanela( &popUp );
+    if( corpusTeste == corpus )
+    {
+        corpusTeste = NULL;
+        ui->radioButton_treino->setChecked( true );
+        return;
+    }
+
+    QApplication::setOverrideCursor( QCursor( Qt::WaitCursor ) );
+    corpusTeste->carregarArquivo( t );
+    QApplication::restoreOverrideCursor();
 }

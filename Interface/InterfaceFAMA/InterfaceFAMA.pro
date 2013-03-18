@@ -34,7 +34,8 @@ SOURCES += main.cpp\
     ../../validador/validador.cpp \
     ../../avaliador/avaliador_acuracia.cpp \
     ../../avaliador/Avaliador.cpp \
-    ../../treinador/hmmui.cpp
+    ../../treinador/hmmui.cpp \
+    ../../treinador/tblui.cpp
 
 HEADERS  += janela.h \
     ../../corpus/corpusmatriz.h \
@@ -59,7 +60,8 @@ HEADERS  += janela.h \
     ../../validador/validador.h \
     ../../avaliador/avaliador_acuracia.h \
     ../../avaliador/Avaliador.h \
-    ../../treinador/hmmui.h
+    ../../treinador/hmmui.h \
+    ../../treinador/tblui.h
 
 FORMS    += janela.ui \
     param.ui
