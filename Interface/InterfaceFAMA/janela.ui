@@ -168,8 +168,58 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="1" colspan="3">
+          <item row="0" column="1">
            <widget class="QLineEdit" name="lineEdit_nome">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <weight>75</weight>
+              <bold>true</bold>
+              <strikeout>false</strikeout>
+              <stylestrategy>PreferDefault</stylestrategy>
+              <kerning>true</kerning>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>ArrowCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>Nenhum</string>
+            </property>
+            <property name="frame">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_tipo">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>   Tipo:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="lineEdit_tipo">
             <property name="enabled">
              <bool>false</bool>
             </property>
@@ -248,25 +298,14 @@
            </widget>
           </item>
           <item row="1" column="2">
-           <widget class="QLabel" name="label_tipo">
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>16</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>9</pointsize>
-             </font>
-            </property>
+           <widget class="QLabel" name="label_unicos">
             <property name="text">
-             <string>Tipo:</string>
+             <string>Únicos:</string>
             </property>
            </widget>
           </item>
           <item row="1" column="3">
-           <widget class="QLineEdit" name="lineEdit_tipo">
+           <widget class="QLineEdit" name="lineEdit_unicos">
             <property name="enabled">
              <bool>false</bool>
             </property>
@@ -573,33 +612,12 @@
       <attribute name="title">
        <string>Classificação</string>
       </attribute>
-      <widget class="QComboBox" name="comboBox_metodo">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>10</y>
-         <width>231</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="insertPolicy">
-        <enum>QComboBox::InsertAlphabetically</enum>
-       </property>
-       <item>
-        <property name="text">
-         <string>Escolha o Classificador</string>
-        </property>
-       </item>
-      </widget>
       <widget class="QGroupBox" name="groupBox_opcoesTeste">
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>40</y>
-         <width>251</width>
+         <y>70</y>
+         <width>261</width>
          <height>121</height>
         </rect>
        </property>
@@ -751,9 +769,9 @@
        </property>
        <property name="geometry">
         <rect>
-         <x>40</x>
-         <y>300</y>
-         <width>181</width>
+         <x>10</x>
+         <y>340</y>
+         <width>261</width>
          <height>21</height>
         </rect>
        </property>
@@ -761,28 +779,12 @@
         <string>Start</string>
        </property>
       </widget>
-      <widget class="QToolButton" name="toolButton_treinador">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="geometry">
-        <rect>
-         <x>240</x>
-         <y>10</y>
-         <width>25</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>...</string>
-       </property>
-      </widget>
-      <widget class="QGroupBox" name="groupBox">
+      <widget class="QGroupBox" name="groupBox_opcoesClassificacao">
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>170</y>
-         <width>251</width>
+         <y>200</y>
+         <width>261</width>
          <height>111</height>
         </rect>
        </property>
@@ -861,6 +863,69 @@
          <string>novo</string>
         </property>
        </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_escolhaClassificador">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>261</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Classificador</string>
+       </property>
+       <widget class="QComboBox" name="comboBox_metodo">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>221</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="insertPolicy">
+         <enum>QComboBox::InsertAlphabetically</enum>
+        </property>
+        <item>
+         <property name="text">
+          <string>Escolha o Classificador</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QToolButton" name="toolButton_treinador">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>20</y>
+          <width>25</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_resultadosValidacao">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>10</y>
+         <width>311</width>
+         <height>361</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Resultados</string>
+       </property>
       </widget>
      </widget>
     </widget>
