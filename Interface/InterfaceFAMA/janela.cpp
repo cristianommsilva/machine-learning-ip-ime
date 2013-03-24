@@ -25,6 +25,7 @@ Janela::Janela(QWidget *parent) :
     //todas as inicializações feitas nos tópicos anteriores devem ter atualizações nos switches de incialização das funções abaixo
 
     ui->tableWidget_atributos->setHorizontalHeaderLabels( QStringList() << "Ordem" << "Nome" );
+    ui->tableWidget_resultadosValidacao->setHorizontalHeaderLabels( QStringList() << "Experimento" << "Resultado" );
 }
 
 Janela::~Janela()
@@ -371,7 +372,23 @@ void Janela::executarValidacao()
         //fim da interface
 
         validador = new ValidadorDivisao(*avaliador, sbox->value(), (float)ui->doubleSpinBox_divisao->value());
-        validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpus->criarAtributo( ui->lineEdit_novoAtributo->text().toStdString() ) );
+        resultados = validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpus->criarAtributo( ui->lineEdit_novoAtributo->text().toStdString() ) );
+    }
+
+    QTableWidgetItem *item;
+    int i, tam_resultados = resultados.size();
+
+    //limpa tabela de resultados
+    ui->tableWidget_resultadosValidacao->clearContents();
+
+    ui->tableWidget_resultadosValidacao->setRowCount( tam_resultados );
+
+    for( i = 0; i < tam_resultados; ++i )
+    {
+        item = new QTableWidgetItem( QString( "%1" ).arg( i + 1 ) );
+        ui->tableWidget_resultadosValidacao->setItem( i, 0, item );
+        item = new QTableWidgetItem( QString( "%1" ).arg( resultados[i][0] ) );
+        ui->tableWidget_resultadosValidacao->setItem( i, 1, item );
     }
 
     delete validador;
