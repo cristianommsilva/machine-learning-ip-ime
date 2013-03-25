@@ -53,7 +53,7 @@ void Janela::logicaDeAbertura()
 
     QString aux;
     string a = s.toStdString();
-    int i, n, posBarra, somadorExemplos = 0, conjEx;
+    int n, posBarra;
 
     corpus->carregarArquivo( a );
 
@@ -62,10 +62,7 @@ void Janela::logicaDeAbertura()
 
     ui->lineEdit_relatorio->setText( QString::fromStdString( a ) );
     ui->lineEdit_atributos->setText( QString( "%1" ).arg( n = corpus->pegarQtdAtributos() ) );
-    conjEx = corpus->pegarQtdConjExemplos();
-    for( i = 0; i < conjEx; ++i )
-        somadorExemplos += corpus->pegarQtdExemplos( i );
-    ui->lineEdit_instancias->setText( QString( "%1" ).arg( somadorExemplos ) );
+    ui->lineEdit_instancias->setText( QString( "%1" ).arg( corpus->pegarQtdTotalExemplos() ) );
 
     //limpador da janela de atributos
     ui->tableWidget_atributos->clearContents();
