@@ -54,6 +54,7 @@ public slots:
     void carregarConhecimento();
     void treinar();
     void classificar();
+    void gravarCorpus();
 };
 
 #endif // JANELA_H

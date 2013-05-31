@@ -505,10 +505,29 @@ void Janela::classificar()
     //coloca seta do mouse em espera
     QApplication::setOverrideCursor( QCursor( Qt::WaitCursor ) );
 
+    clock_t t0 = clock();
+
     classificador->executarClassificacao( *corpus, corpus->criarAtributo( ui->lineEdit_novoAtributo->text().toStdString(), "" ) );
+    ui->pushButton_gravarCorpus->setEnabled( true );
+
+    ui->lineEdit_tempoClassificacao->setText( QString( "%1" ).arg( ( ( double )( clock() - t0 )/(double)CLOCKS_PER_SEC )/corpus->pegarQtdTotalExemplos()*1000 ) + " ms/exemplo" );
 
     //retorna seta normal do mouse
     QApplication::restoreOverrideCursor();
+}
+
+void Janela::gravarCorpus()
+{
+    if( ( s = QFileDialog::getOpenFileName( this, "Gravar Corpus","","Documentos de texto (*.txt);;Todos os arquivos (*.*)" ) ) != "" )
+    {
+        //coloca seta do mouse em espera
+        QApplication::setOverrideCursor( QCursor( Qt::WaitCursor ) );
+
+        corpus->gravarArquivo( s.toStdString() );
+
+        //retorna seta normal do mouse
+        QApplication::restoreOverrideCursor();
+    }
 }
 
 void Janela::guardarConhecimento()

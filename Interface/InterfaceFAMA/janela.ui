@@ -1135,7 +1135,7 @@
          <x>320</x>
          <y>10</y>
          <width>271</width>
-         <height>231</height>
+         <height>271</height>
         </rect>
        </property>
        <property name="minimumSize">
@@ -1284,7 +1284,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>200</y>
+          <y>240</y>
           <width>81</width>
           <height>21</height>
          </rect>
@@ -1300,7 +1300,7 @@
         <property name="geometry">
          <rect>
           <x>90</x>
-          <y>200</y>
+          <y>240</y>
           <width>171</width>
           <height>21</height>
          </rect>
@@ -1320,6 +1320,39 @@
         </property>
         <property name="frame">
          <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_gravarCorpus">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>200</y>
+          <width>71</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../imagens/save.png</normaloff>../imagens/save.png</iconset>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_gravarCorpus">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>200</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Gravar Corpus:</string>
         </property>
        </widget>
       </widget>
@@ -1587,6 +1620,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_gravarCorpus</sender>
+   <signal>clicked()</signal>
+   <receiver>Janela</receiver>
+   <slot>gravarCorpus()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>469</x>
+     <y>245</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>493</x>
+     <y>8</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>abrirArquivo()</slot>
@@ -1604,5 +1653,6 @@
   <slot>escolherMetodoClassificacao(int)</slot>
   <slot>carregarConhecimento()</slot>
   <slot>classificar()</slot>
+  <slot>gravarCorpus()</slot>
  </slots>
 </ui>
