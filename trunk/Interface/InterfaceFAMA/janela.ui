@@ -637,7 +637,7 @@
           </size>
          </property>
          <property name="title">
-          <string>Classificador</string>
+          <string>Treinador</string>
          </property>
          <widget class="QComboBox" name="comboBox_metodo">
           <property name="enabled">
@@ -656,7 +656,7 @@
           </property>
           <item>
            <property name="text">
-            <string>Escolha o Classificador</string>
+            <string>Escolha o Treinador</string>
            </property>
           </item>
          </widget>
@@ -686,6 +686,9 @@
          <layout class="QGridLayout" name="gridLayout_6">
           <item row="0" column="0">
            <widget class="QTableWidget" name="tableWidget_resultadosValidacao">
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
             <property name="alternatingRowColors">
              <bool>true</bool>
             </property>
@@ -702,7 +705,10 @@
              <bool>false</bool>
             </attribute>
             <attribute name="horizontalHeaderDefaultSectionSize">
-             <number>144</number>
+             <number>147</number>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>26</number>
             </attribute>
             <attribute name="horizontalHeaderStretchLastSection">
              <bool>true</bool>
@@ -827,7 +833,7 @@
          <property name="minimumSize">
           <size>
            <width>261</width>
-           <height>111</height>
+           <height>80</height>
           </size>
          </property>
          <property name="maximumSize">
@@ -875,19 +881,6 @@
            <string>Atributo de treino:</string>
           </property>
          </widget>
-         <widget class="QLabel" name="label_novoAtributo">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>80</y>
-            <width>81</width>
-            <height>20</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Novo atributo:</string>
-          </property>
-         </widget>
          <widget class="QComboBox" name="comboBox_atributoTreino">
           <property name="geometry">
            <rect>
@@ -896,19 +889,6 @@
             <width>131</width>
             <height>20</height>
            </rect>
-          </property>
-         </widget>
-         <widget class="QLineEdit" name="lineEdit_novoAtributo">
-          <property name="geometry">
-           <rect>
-            <x>120</x>
-            <y>80</y>
-            <width>131</width>
-            <height>20</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>novo</string>
           </property>
          </widget>
         </widget>
@@ -948,7 +928,7 @@
          <x>10</x>
          <y>10</y>
          <width>271</width>
-         <height>191</height>
+         <height>231</height>
         </rect>
        </property>
        <property name="minimumSize">
@@ -1106,6 +1086,48 @@
          </rect>
         </property>
        </widget>
+       <widget class="QLabel" name="label_tempoTreino">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>200</y>
+          <width>81</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Tempo Total:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_tempoTreino">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>200</y>
+          <width>171</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>ArrowCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>0.00 ms/exemplo</string>
+        </property>
+        <property name="frame">
+         <bool>false</bool>
+        </property>
+       </widget>
       </widget>
       <widget class="QGroupBox" name="groupBox_escolhaClassificador2">
        <property name="geometry">
@@ -1113,7 +1135,7 @@
          <x>320</x>
          <y>10</y>
          <width>271</width>
-         <height>191</height>
+         <height>231</height>
         </rect>
        </property>
        <property name="minimumSize">
@@ -1232,7 +1254,7 @@
          <string>Classificar</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_novoAtributo2">
+       <widget class="QLabel" name="label_novoAtributo">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -1245,7 +1267,7 @@
          <string>Novo atributo:</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_novoAtributo2">
+       <widget class="QLineEdit" name="lineEdit_novoAtributo">
         <property name="geometry">
          <rect>
           <x>100</x>
@@ -1256,6 +1278,48 @@
         </property>
         <property name="text">
          <string>novo</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_tempoClassificacao">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>200</y>
+          <width>81</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Tempo Total:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_tempoClassificacao">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>200</y>
+          <width>171</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>ArrowCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>0.00 ms/exemplo</string>
+        </property>
+        <property name="frame">
+         <bool>false</bool>
         </property>
        </widget>
       </widget>

@@ -11,6 +11,7 @@ Janela::Janela(QWidget *parent) :
     avaliador = new AvaliadorAcuracia();
     corpusTeste = NULL;
     classificador = NULL;
+    numExperimento = 0;
 
     //a adição de novos tipos de Corpus deve ser feita identicamente ao modelo abaixo
     ui->comboBox_corpus->addItem( "CorpusMatriz" );
@@ -33,7 +34,7 @@ Janela::Janela(QWidget *parent) :
     //todas as inicializações feitas nos tópicos anteriores devem ter atualizações nos switches de incialização das funções abaixo
 
     ui->tableWidget_atributos->setHorizontalHeaderLabels( QStringList() << "Ordem" << "Nome" );
-    ui->tableWidget_resultadosValidacao->setHorizontalHeaderLabels( QStringList() << "Experimento" << "Resultado" );
+    ui->tableWidget_resultadosValidacao->setHorizontalHeaderLabels( QStringList() << "Experimento" << "Tempo/Resultado" );
 }
 
 Janela::~Janela()
@@ -384,24 +385,29 @@ void Janela::executarValidacao()
     //coloca seta do mouse em espera
     QApplication::setOverrideCursor( QCursor( Qt::WaitCursor ) );
 
+    clock_t t0;
+
     Validador *validador;
     vector< vector< float > > resultados;
 
     if(ui->radioButton_treino->isChecked())
     {
         validador = new ValidadorTreino(*avaliador);
-        resultados = validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpus->criarAtributo( ui->lineEdit_novoAtributo->text().toStdString() ) );
+        t0 = clock();
+        resultados = validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpus->criarAtributo( __TIME__ ) );
     }
     else if(ui->radioButton_teste->isChecked())
     {
         if( corpusTeste == NULL ) return;
         validador = new ValidadorTeste( *avaliador, *corpusTeste );
-        resultados = validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpusTeste->criarAtributo( ui->lineEdit_novoAtributo->text().toStdString() ) );
+        t0 = clock();
+        resultados = validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpusTeste->criarAtributo( __TIME__ ) );
     }
     else if(ui->radioButton_kDobras->isChecked())
     {
         validador = new ValidadorKDobras(*avaliador, ui->spinBox_kDobras->value());
-        resultados = validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpus->criarAtributo( ui->lineEdit_novoAtributo->text().toStdString() ) );
+        t0 = clock();
+        resultados = validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpus->criarAtributo( __TIME__ ) );
     }
     else if(ui->radioButton_divisao->isChecked())
     {
@@ -420,23 +426,31 @@ void Janela::executarValidacao()
         //fim da interface
 
         validador = new ValidadorDivisao(*avaliador, sbox->value(), (float)ui->doubleSpinBox_divisao->value());
-        resultados = validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpus->criarAtributo( ui->lineEdit_novoAtributo->text().toStdString() ) );
+        t0 = clock();
+        resultados = validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpus->criarAtributo( __TIME__ ) );
     }
 
     QTableWidgetItem *item;
-    int i, tam_resultados = resultados.size();
+    int i, tam_resultados = resultados.size(), antigoTam = ui->tableWidget_resultadosValidacao->rowCount();
 
     //limpa tabela de resultados
-    ui->tableWidget_resultadosValidacao->clearContents();
+    //ui->tableWidget_resultadosValidacao->clearContents();
 
-    ui->tableWidget_resultadosValidacao->setRowCount( tam_resultados );
+    ui->tableWidget_resultadosValidacao->setRowCount( antigoTam + tam_resultados + 1 );
+
+    item = new QTableWidgetItem( QString( "Experimento %1" ).arg( ++numExperimento ) );
+    item->setBackgroundColor( QColor( "green" ) );
+    ui->tableWidget_resultadosValidacao->setItem( antigoTam, 0, item );
+    item = new QTableWidgetItem( QString( "%1" ).arg( ( ( double )( clock() - t0 )/(double)CLOCKS_PER_SEC ) ) + " s" );
+    item->setBackgroundColor( QColor( "green" ) );
+    ui->tableWidget_resultadosValidacao->setItem( antigoTam, 1, item );
 
     for( i = 0; i < tam_resultados; ++i )
     {
-        item = new QTableWidgetItem( QString( "%1" ).arg( i + 1 ) );
-        ui->tableWidget_resultadosValidacao->setItem( i, 0, item );
-        item = new QTableWidgetItem( QString( "%1" ).arg( resultados[i][0] ) );
-        ui->tableWidget_resultadosValidacao->setItem( i, 1, item );
+        item = new QTableWidgetItem( QString( "Resultado %1" ).arg( i + 1 ) );
+        ui->tableWidget_resultadosValidacao->setItem( antigoTam + i + 1, 0, item );
+        item = new QTableWidgetItem( QString( "%1%" ).arg( resultados[i][0] ) );
+        ui->tableWidget_resultadosValidacao->setItem( antigoTam + i + 1, 1, item );
     }
 
     delete validador;
@@ -472,11 +486,15 @@ void Janela::abrirArquivoTeste()
 
 void Janela::treinar()
 {
-    //coloca seta do mouse em espera
+     //coloca seta do mouse em espera
     QApplication::setOverrideCursor( QCursor( Qt::WaitCursor ) );
+
+    clock_t t0 = clock();
 
     classificador = treinador->executarTreinamento( *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino2->currentText().toStdString() ) );
     ui->pushButton_guardarConhecimento->setEnabled( true );
+
+    ui->lineEdit_tempoTreino->setText( QString( "%1" ).arg( ( ( double )( clock() - t0 )/(double)CLOCKS_PER_SEC )/corpus->pegarQtdTotalExemplos()*1000 ) + " ms/exemplo" );
 
     //retorna seta normal do mouse
     QApplication::restoreOverrideCursor();
@@ -487,7 +505,7 @@ void Janela::classificar()
     //coloca seta do mouse em espera
     QApplication::setOverrideCursor( QCursor( Qt::WaitCursor ) );
 
-    classificador->executarClassificacao( *corpus, corpus->criarAtributo( ui->lineEdit_novoAtributo2->text().toStdString(), "" ) );
+    classificador->executarClassificacao( *corpus, corpus->criarAtributo( ui->lineEdit_novoAtributo->text().toStdString(), "" ) );
 
     //retorna seta normal do mouse
     QApplication::restoreOverrideCursor();

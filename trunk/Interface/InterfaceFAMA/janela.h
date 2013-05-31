@@ -35,6 +35,7 @@ private:
     Avaliador *avaliador;
     QString s;
     Param popUp;
+    int numExperimento;
     void logicaDeAbertura();
 
 public slots:
