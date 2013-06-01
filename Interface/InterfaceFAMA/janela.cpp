@@ -463,7 +463,7 @@ void Janela::executarValidacao()
     {
         item = new QTableWidgetItem( QString( "Resultado %1" ).arg( i + 1 ) );
         ui->tableWidget_resultadosValidacao->setItem( antigoTam + i + 1, 0, item );
-        item = new QTableWidgetItem( QString( "%1%" ).arg( resultados[i][0] ) );
+        item = new QTableWidgetItem( QString( "%1%" ).arg( resultados[i][0]*100 ) );
         ui->tableWidget_resultadosValidacao->setItem( antigoTam + i + 1, 1, item );
     }
 
