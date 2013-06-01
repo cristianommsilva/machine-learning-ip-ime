@@ -587,12 +587,19 @@ void Janela::carregarConhecimento()
 
 void Janela::exportarDados()
 {
-    dados.definirDados( treinador, ui->comboBox_metodo->currentText() );
+    int validacao;
+
+    if(ui->radioButton_treino->isChecked()) validacao = 0;
+    else if(ui->radioButton_teste->isChecked()) validacao = 1;
+    else if(ui->radioButton_kDobras->isChecked()) validacao = 2;
+    else if(ui->radioButton_divisao->isChecked()) validacao = 3;
+
+    dados.definirDados( treinador, ui->comboBox_metodo->currentText(), validacao, avaliador, ui->comboBox_avaliador->currentText(), ui->comboBox_atributoTreino->currentText() );
 
     dados.show();
 }
 
 void Janela::importarDados()
 {
-
+    dados.close();
 }
