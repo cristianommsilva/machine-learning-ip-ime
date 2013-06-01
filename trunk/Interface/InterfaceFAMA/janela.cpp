@@ -314,6 +314,7 @@ void Janela::escolherClassificador( int index )
             treinador = NULL;
             ui->toolButton_treinador->setEnabled( false );
             ui->pushButton_start->setEnabled( false );
+            ui->pushButton_exportarDados->setEnabled( false );
             return;
         case 1 :
             treinador = new MaisProvavelUI();
@@ -327,6 +328,7 @@ void Janela::escolherClassificador( int index )
     }
     ui->toolButton_treinador->setEnabled( true );
     ui->pushButton_start->setEnabled( true );
+    ui->pushButton_exportarDados->setEnabled( true );
     definirParametrosTreinador();
 }
 
@@ -385,7 +387,12 @@ void Janela::executarValidacao()
     //coloca seta do mouse em espera
     QApplication::setOverrideCursor( QCursor( Qt::WaitCursor ) );
 
+    //inicialização do temporizador
     clock_t t0;
+
+    //tempo local para nome do atributo classificado (unico)
+    time_t tempoLocal;
+    time( &tempoLocal );
 
     Validador *validador;
     vector< vector< float > > resultados;
@@ -394,20 +401,27 @@ void Janela::executarValidacao()
     {
         validador = new ValidadorTreino(*avaliador);
         t0 = clock();
-        resultados = validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpus->criarAtributo( __TIME__ ) );
+        resultados = validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpus->criarAtributo( ctime( &tempoLocal ) ) );
     }
     else if(ui->radioButton_teste->isChecked())
     {
-        if( corpusTeste == NULL ) return;
+        if( corpusTeste == NULL )
+        {
+            //retorna seta normal do mouse
+            QApplication::restoreOverrideCursor();
+
+            return;
+        }
         validador = new ValidadorTeste( *avaliador, *corpusTeste );
+
         t0 = clock();
-        resultados = validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpusTeste->criarAtributo( __TIME__ ) );
+        resultados = validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpusTeste->criarAtributo( ctime( &tempoLocal ) ) );
     }
     else if(ui->radioButton_kDobras->isChecked())
     {
         validador = new ValidadorKDobras(*avaliador, ui->spinBox_kDobras->value());
         t0 = clock();
-        resultados = validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpus->criarAtributo( __TIME__ ) );
+        resultados = validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpus->criarAtributo( ctime( &tempoLocal ) ) );
     }
     else if(ui->radioButton_divisao->isChecked())
     {
@@ -425,9 +439,9 @@ void Janela::executarValidacao()
         if( !ok ) return;
         //fim da interface
 
-        validador = new ValidadorDivisao(*avaliador, sbox->value(), (float)ui->doubleSpinBox_divisao->value());
+        validador = new ValidadorDivisao(*avaliador, sbox->value(), (float)ui->doubleSpinBox_divisao->value()/100);
         t0 = clock();
-        resultados = validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpus->criarAtributo( __TIME__ ) );
+        resultados = validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpus->criarAtributo( ctime( &tempoLocal ) ) );
     }
 
     QTableWidgetItem *item;
@@ -464,7 +478,7 @@ void Janela::abrirArquivoTeste()
     if( !ui->radioButton_teste->isChecked() ) return;
 
     string t;
-    if( ( t = QFileDialog::getOpenFileName( this, "Abrir","","Documentos de texto (*.txt);;Todos os arquivos (*.*)" ).toStdString() ) == "" )
+    if( ( t = QFileDialog::getOpenFileName( this, "Abrir Corpus de Teste","","Documentos de texto (*.txt);;Todos os arquivos (*.*)" ).toStdString() ) == "" )
     {
         ui->radioButton_treino->setChecked( true );
         return;
@@ -569,4 +583,16 @@ void Janela::carregarConhecimento()
         //retorna seta normal do mouse
         QApplication::restoreOverrideCursor();
     }
+}
+
+void Janela::exportarDados()
+{
+    dados.definirDados( treinador, ui->comboBox_metodo->currentText() );
+
+    dados.show();
+}
+
+void Janela::importarDados()
+{
+
 }

@@ -622,7 +622,7 @@
        <string>Validação</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_7">
-       <item row="0" column="0">
+       <item row="0" column="0" colspan="2">
         <widget class="QGroupBox" name="groupBox_escolhaClassificador">
          <property name="minimumSize">
           <size>
@@ -678,7 +678,7 @@
          </widget>
         </widget>
        </item>
-       <item row="0" column="1" rowspan="5">
+       <item row="0" column="2" rowspan="6">
         <widget class="QGroupBox" name="groupBox_resultadosValidacao">
          <property name="title">
           <string>Resultados</string>
@@ -723,7 +723,7 @@
          </layout>
         </widget>
        </item>
-       <item row="1" column="0">
+       <item row="1" column="0" colspan="2">
         <widget class="QGroupBox" name="groupBox_opcoesTeste">
          <property name="minimumSize">
           <size>
@@ -828,7 +828,7 @@
          </layout>
         </widget>
        </item>
-       <item row="2" column="0">
+       <item row="2" column="0" colspan="2">
         <widget class="QGroupBox" name="groupBox_opcoesClassificacao">
          <property name="minimumSize">
           <size>
@@ -894,6 +894,31 @@
         </widget>
        </item>
        <item row="3" column="0">
+        <widget class="QPushButton" name="pushButton_exportarDados">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Exportar Dados</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../imagens/flecha.png</normaloff>../imagens/flecha.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Importar Dados</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../imagens/flecha2.png</normaloff>../imagens/flecha2.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0" colspan="2">
         <spacer name="verticalSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -906,13 +931,13 @@
          </property>
         </spacer>
        </item>
-       <item row="4" column="0">
+       <item row="5" column="0" colspan="2">
         <widget class="QPushButton" name="pushButton_start">
          <property name="enabled">
           <bool>false</bool>
          </property>
          <property name="text">
-          <string>Start</string>
+          <string>Começar</string>
          </property>
         </widget>
        </item>
@@ -1636,6 +1661,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_exportarDados</sender>
+   <signal>clicked()</signal>
+   <receiver>Janela</receiver>
+   <slot>exportarDados()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>106</x>
+     <y>328</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>84</x>
+     <y>418</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>abrirArquivo()</slot>
@@ -1654,5 +1695,6 @@
   <slot>carregarConhecimento()</slot>
   <slot>classificar()</slot>
   <slot>gravarCorpus()</slot>
+  <slot>exportarDados()</slot>
  </slots>
 </ui>

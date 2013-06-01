@@ -4,6 +4,7 @@
 
 #include <QFileDialog>
 #include "param.h"
+#include "dados.h"
 #include "../../corpus/corpusmatrizui.h"
 #include "../../treinador/maisprovavelui.h"
 #include "../../treinador/hmmui.h"
@@ -29,6 +30,7 @@ public:
 
 private:
     Ui::Janela *ui;
+    Dados dados;
     Corpus *corpus, *corpusTeste;
     Treinador *treinador;
     Classificador *classificador;
@@ -55,6 +57,8 @@ public slots:
     void treinar();
     void classificar();
     void gravarCorpus();
+    void exportarDados();
+    void importarDados();
 };
 
 #endif // JANELA_H
