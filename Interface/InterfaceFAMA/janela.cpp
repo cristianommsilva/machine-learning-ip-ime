@@ -12,6 +12,7 @@ Janela::Janela(QWidget *parent) :
     corpusTeste = NULL;
     classificador = NULL;
     numExperimento = 0;
+    importado = false;
 
     //a adição de novos tipos de Corpus deve ser feita identicamente ao modelo abaixo
     ui->comboBox_corpus->addItem( "CorpusMatriz" );
@@ -305,7 +306,7 @@ void Janela::definirParametrosTreinador()
     }
 }
 
-void Janela::escolherClassificador( int index )
+void Janela::escolherMetodo( int index )
 {
     if( treinador != NULL ) delete treinador;
     switch( index )
@@ -329,7 +330,8 @@ void Janela::escolherClassificador( int index )
     ui->toolButton_treinador->setEnabled( true );
     ui->pushButton_start->setEnabled( true );
     ui->pushButton_exportarDados->setEnabled( true );
-    definirParametrosTreinador();
+    if( !importado ) definirParametrosTreinador();
+    importado = false;
 }
 
 void Janela::escolherTreinador( int index )
@@ -358,7 +360,7 @@ void Janela::escolherTreinador( int index )
     definirParametrosTreinador();
 }
 
-void Janela::escolherMetodoClassificacao( int index )
+void Janela::escolherClassificador( int index )
 {
     if( classificador != NULL ) delete classificador;
     if( !index )
@@ -384,9 +386,6 @@ void Janela::escolherAvaliador( int index )
 
 void Janela::executarValidacao()
 {
-    //coloca seta do mouse em espera
-    QApplication::setOverrideCursor( QCursor( Qt::WaitCursor ) );
-
     //inicialização do temporizador
     clock_t t0;
 
@@ -399,19 +398,20 @@ void Janela::executarValidacao()
 
     if(ui->radioButton_treino->isChecked())
     {
+        //coloca seta do mouse em espera
+        QApplication::setOverrideCursor( QCursor( Qt::WaitCursor ) );
+
         validador = new ValidadorTreino(*avaliador);
         t0 = clock();
         resultados = validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpus->criarAtributo( ctime( &tempoLocal ) ) );
     }
     else if(ui->radioButton_teste->isChecked())
     {
-        if( corpusTeste == NULL )
-        {
-            //retorna seta normal do mouse
-            QApplication::restoreOverrideCursor();
+        if( corpusTeste == NULL ) return;
 
-            return;
-        }
+        //coloca seta do mouse em espera
+        QApplication::setOverrideCursor( QCursor( Qt::WaitCursor ) );
+
         validador = new ValidadorTeste( *avaliador, *corpusTeste );
 
         t0 = clock();
@@ -419,6 +419,9 @@ void Janela::executarValidacao()
     }
     else if(ui->radioButton_kDobras->isChecked())
     {
+        //coloca seta do mouse em espera
+        QApplication::setOverrideCursor( QCursor( Qt::WaitCursor ) );
+
         validador = new ValidadorKDobras(*avaliador, ui->spinBox_kDobras->value());
         t0 = clock();
         resultados = validador->executarExperimento( *treinador, *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino->currentText().toStdString() ), corpus->criarAtributo( ctime( &tempoLocal ) ) );
@@ -438,6 +441,9 @@ void Janela::executarValidacao()
         ok = popUp.iniciarDialog();
         if( !ok ) return;
         //fim da interface
+
+        //coloca seta do mouse em espera
+        QApplication::setOverrideCursor( QCursor( Qt::WaitCursor ) );
 
         validador = new ValidadorDivisao(*avaliador, sbox->value(), (float)ui->doubleSpinBox_divisao->value()/100);
         t0 = clock();
@@ -587,19 +593,47 @@ void Janela::carregarConhecimento()
 
 void Janela::exportarDados()
 {
-    int validacao;
-
-    if(ui->radioButton_treino->isChecked()) validacao = 0;
-    else if(ui->radioButton_teste->isChecked()) validacao = 1;
-    else if(ui->radioButton_kDobras->isChecked()) validacao = 2;
-    else if(ui->radioButton_divisao->isChecked()) validacao = 3;
-
-    dados.definirDados( treinador, ui->comboBox_metodo->currentText(), validacao, avaliador, ui->comboBox_avaliador->currentText(), ui->comboBox_atributoTreino->currentText() );
+    if(ui->radioButton_treino->isChecked())
+        dados.definirDados( treinador, ui->comboBox_metodo->currentText(), 0, -1, avaliador, ui->comboBox_avaliador->currentText(), ui->comboBox_atributoTreino->currentText() );
+    else if(ui->radioButton_teste->isChecked())
+        dados.definirDados( treinador, ui->comboBox_metodo->currentText(), 1, -1, avaliador, ui->comboBox_avaliador->currentText(), ui->comboBox_atributoTreino->currentText() );
+    else if(ui->radioButton_kDobras->isChecked())
+        dados.definirDados( treinador, ui->comboBox_metodo->currentText(), 2, ui->spinBox_kDobras->value(), avaliador, ui->comboBox_avaliador->currentText(), ui->comboBox_atributoTreino->currentText() );
+    else if(ui->radioButton_divisao->isChecked())
+        dados.definirDados( treinador, ui->comboBox_metodo->currentText(), 3, ui->doubleSpinBox_divisao->value(), avaliador, ui->comboBox_avaliador->currentText(), ui->comboBox_atributoTreino->currentText() );
 
     dados.show();
 }
 
 void Janela::importarDados()
 {
+    importado = true;
+
+    switch( dados.restaurarValidador() )
+    {
+        case 0 :
+            ui->radioButton_treino->setChecked( true );
+            break;
+        case 1 :
+            ui->radioButton_teste->setChecked( true );
+            break;
+        case 2 :
+            ui->radioButton_kDobras->setChecked( true );
+            ui->spinBox_kDobras->setValue( ( int )dados.restaurarExtra() );
+            break;
+        case 3 :
+            ui->radioButton_divisao->setChecked( true );
+            ui->doubleSpinBox_divisao->setValue( dados.restaurarExtra() );
+    }
+
+    ui->comboBox_metodo->setCurrentIndex( ui->comboBox_metodo->findText( dados.restaurarNomeTr() ) );
+    ui->comboBox_avaliador->setCurrentIndex( ui->comboBox_avaliador->findText( dados.restaurarNomeAv() ) );
+    ui->comboBox_atributoTreino->setCurrentIndex( ui->comboBox_atributoTreino->findText( dados.restaurarAtrbTr() ) );
+
+    if( treinador != NULL ) delete treinador;
+    if( avaliador != NULL ) delete avaliador;
+    treinador = dados.restaurarTreinador();
+    avaliador = dados.restaurarAvaliador();
+
     dados.close();
 }

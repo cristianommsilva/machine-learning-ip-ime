@@ -39,6 +39,7 @@ private:
     Param popUp;
     int numExperimento;
     void logicaDeAbertura();
+    bool importado; //variavel auxiliar que descreve quando um dado é importado
 
 public slots:
     void abrirArquivo();
@@ -46,9 +47,9 @@ public slots:
     void habilitarBotao( int index );
     void atributoSelecionado( int row, int column );
     void definirParametros();
-    void escolherClassificador( int index );
+    void escolherMetodo( int index );
     void escolherTreinador( int index );
-    void escolherMetodoClassificacao( int index );
+    void escolherClassificador( int index );
     void escolherAvaliador( int index );
     void definirParametrosTreinador();
     void executarValidacao();
