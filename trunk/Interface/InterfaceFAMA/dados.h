@@ -16,14 +16,19 @@ class Dados : public QWidget
 public:
     explicit Dados(QWidget *parent = 0);
     ~Dados();
-    void definirDados( Treinador *tr, QString nomeTr, int nv, Avaliador *av, QString nomeAv, QString atrbTreino );
+    void definirDados( Treinador *tr, QString nomeTr, int numVal, double infoExtra, Avaliador *av, QString nomeAv, QString atrbTr );
+    Treinador* restaurarTreinador();
+    Avaliador* restaurarAvaliador();
+    int restaurarValidador();
+    double restaurarExtra();
+    QString restaurarNomeTr();
+    QString restaurarNomeAv();
+    QString restaurarAtrbTr();
     
 private:
     Ui::Dados *ui;
     Treinador *treinador;
     Avaliador *avaliador;
-    int numValidacao;
-    QString atributoTreino;
 };
 
 #endif // DADOS_H

@@ -87,7 +87,7 @@
     <rect>
      <x>90</x>
      <y>60</y>
-     <width>111</width>
+     <width>101</width>
      <height>21</height>
     </rect>
    </property>
@@ -214,6 +214,40 @@
    </property>
    <property name="frame">
     <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="doubleSpinBox_extra">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>60</y>
+     <width>62</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="decimals">
+    <number>1</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_extra">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>60</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Extra :</string>
    </property>
   </widget>
  </widget>

@@ -811,7 +811,10 @@
              <number>1</number>
             </property>
             <property name="minimum">
-             <double>0.000000000000000</double>
+             <double>1.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>99.000000000000000</double>
             </property>
             <property name="value">
              <double>30.000000000000000</double>
@@ -1454,22 +1457,6 @@
    </hints>
   </connection>
   <connection>
-   <sender>comboBox_metodo</sender>
-   <signal>currentIndexChanged(int)</signal>
-   <receiver>Janela</receiver>
-   <slot>escolherClassificador(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>173</x>
-     <y>79</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>190</x>
-     <y>5</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>toolButton_treinador</sender>
    <signal>clicked()</signal>
    <receiver>Janela</receiver>
@@ -1601,7 +1588,7 @@
    <sender>comboBox_metodoClassificador</sender>
    <signal>currentIndexChanged(int)</signal>
    <receiver>Janela</receiver>
-   <slot>escolherMetodoClassificacao(int)</slot>
+   <slot>escolherClassificador(int)</slot>
    <hints>
     <hint type="sourcelabel">
      <x>460</x>
@@ -1693,6 +1680,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>comboBox_metodo</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>Janela</receiver>
+   <slot>escolherMetodo(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>218</x>
+     <y>67</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>260</x>
+     <y>6</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>abrirArquivo()</slot>
@@ -1707,7 +1710,7 @@
   <slot>definirParametrosTreinador()</slot>
   <slot>treinar()</slot>
   <slot>guardarConhecimento()</slot>
-  <slot>escolherMetodoClassificacao(int)</slot>
+  <slot>escolherMetodo(int)</slot>
   <slot>carregarConhecimento()</slot>
   <slot>classificar()</slot>
   <slot>gravarCorpus()</slot>
