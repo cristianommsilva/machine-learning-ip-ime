@@ -61,6 +61,7 @@ public slots:
     void gravarCorpus();
     void exportarDados();
     void importarDados();
+    void importarDadosAba3();
 };
 
 #endif // JANELA_H

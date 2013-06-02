@@ -370,7 +370,8 @@ void Janela::escolherTreinador( int index )
     }
     ui->toolButton_treinador2->setEnabled( true );
     ui->pushButton_treinar->setEnabled( true );
-    definirParametrosTreinadorAba3();
+    if( !importado )definirParametrosTreinadorAba3();
+    importado = false;
 }
 
 void Janela::escolherClassificador( int index )
@@ -624,6 +625,7 @@ void Janela::exportarDados()
         dados.definirDados( treinador, ui->comboBox_metodo->currentText(), 3, ui->doubleSpinBox_divisao->value(), avaliador, ui->comboBox_avaliador->currentText(), ui->comboBox_atributoTreino->currentText() );
 
     ui->pushButton_importarDados->setEnabled( true );
+    ui->pushButton_importarDadosAba3->setEnabled( true );
 
     dados.show();
 }
@@ -667,4 +669,25 @@ void Janela::importarDados()
     dados.close();
 
     ui->pushButton_importarDados->setEnabled( false );
+    ui->pushButton_importarDadosAba3->setEnabled( false );
+}
+
+void Janela::importarDadosAba3()
+{
+    int index;
+
+    //seta importado como true somente quando tiver certeza que o slot currentIndexChanged será executado
+    if( ui->comboBox_metodoTreinador->currentIndex() != ( index = ui->comboBox_metodoTreinador->findText( dados.restaurarNomeTr() ) ) )
+        importado = true;
+
+    ui->comboBox_metodoTreinador->setCurrentIndex( index );
+    ui->comboBox_atributoTreino2->setCurrentIndex( ui->comboBox_atributoTreino2->findText( dados.restaurarAtrbTr() ) );
+
+    if( treinadorAba3 != NULL ) delete treinadorAba3;
+    treinadorAba3 = dados.restaurarTreinador();
+
+    dados.close();
+
+    ui->pushButton_importarDados->setEnabled( false );
+    ui->pushButton_importarDadosAba3->setEnabled( false );
 }
