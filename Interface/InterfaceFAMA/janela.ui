@@ -956,460 +956,634 @@
       <attribute name="title">
        <string>Treinamento/Classificação</string>
       </attribute>
-      <widget class="QGroupBox" name="groupBox_escolhaTreinador">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>10</y>
-         <width>271</width>
-         <height>271</height>
-        </rect>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>261</width>
-         <height>51</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>99999</height>
-        </size>
-       </property>
-       <property name="title">
-        <string>Treinamento</string>
-       </property>
-       <widget class="QComboBox" name="comboBox_metodoTreinador">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>20</y>
-          <width>221</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="insertPolicy">
-         <enum>QComboBox::InsertAlphabetically</enum>
-        </property>
-        <item>
-         <property name="text">
-          <string>Escolha o Treinador</string>
+      <layout class="QGridLayout" name="gridLayout_9">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBox_escolhaTreinador">
+         <property name="minimumSize">
+          <size>
+           <width>261</width>
+           <height>51</height>
+          </size>
          </property>
-        </item>
-       </widget>
-       <widget class="QToolButton" name="toolButton_treinador2">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>230</x>
-          <y>20</y>
-          <width>25</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>...</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_guardarConhecimento">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>160</y>
-          <width>131</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Guardar Conhecimento:</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_guardarConhecimento">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>150</x>
-          <y>160</y>
-          <width>71</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>101</width>
-          <height>21</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <italic>false</italic>
-          <underline>false</underline>
-          <strikeout>false</strikeout>
-         </font>
-        </property>
-        <property name="cursor">
-         <cursorShape>ArrowCursor</cursorShape>
-        </property>
-        <property name="layoutDirection">
-         <enum>Qt::LeftToRight</enum>
-        </property>
-        <property name="autoFillBackground">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../imagens/save.png</normaloff>../imagens/save.png</iconset>
-        </property>
-        <property name="autoDefault">
-         <bool>true</bool>
-        </property>
-        <property name="default">
-         <bool>false</bool>
-        </property>
-        <property name="flat">
-         <bool>false</bool>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_treinar">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>60</x>
-          <y>110</y>
-          <width>151</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Treinar</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_atributoTreino2">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>60</y>
-          <width>101</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Atributo de treino:</string>
-        </property>
-       </widget>
-       <widget class="QComboBox" name="comboBox_atributoTreino2">
-        <property name="geometry">
-         <rect>
-          <x>120</x>
-          <y>60</y>
-          <width>141</width>
-          <height>21</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_tempoTreino">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>240</y>
-          <width>81</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Tempo Total:</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_tempoTreino">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>90</x>
-          <y>240</y>
-          <width>171</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="cursor">
-         <cursorShape>ArrowCursor</cursorShape>
-        </property>
-        <property name="text">
-         <string>0.00 ms/exemplo</string>
-        </property>
-        <property name="frame">
-         <bool>false</bool>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_importarDadosAba3">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>200</y>
-          <width>127</width>
-          <height>26</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Importar Dados</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../imagens/flecha2.png</normaloff>../imagens/flecha2.png</iconset>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QGroupBox" name="groupBox_escolhaClassificador2">
-       <property name="geometry">
-        <rect>
-         <x>320</x>
-         <y>10</y>
-         <width>271</width>
-         <height>271</height>
-        </rect>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>261</width>
-         <height>51</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>99999</height>
-        </size>
-       </property>
-       <property name="title">
-        <string>Classificação</string>
-       </property>
-       <widget class="QComboBox" name="comboBox_metodoClassificador">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>20</y>
-          <width>251</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="insertPolicy">
-         <enum>QComboBox::InsertAlphabetically</enum>
-        </property>
-        <item>
-         <property name="text">
-          <string>Escolha o Classificador</string>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>99999</height>
+          </size>
          </property>
-        </item>
-       </widget>
-       <widget class="QLabel" name="label_carregarConhecimento">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>60</y>
-          <width>131</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Carregar Conhecimento:</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_carregarConhecimento">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>150</x>
-          <y>60</y>
-          <width>71</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>101</width>
-          <height>21</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <italic>false</italic>
-          <underline>false</underline>
-          <strikeout>false</strikeout>
-         </font>
-        </property>
-        <property name="cursor">
-         <cursorShape>ArrowCursor</cursorShape>
-        </property>
-        <property name="layoutDirection">
-         <enum>Qt::LeftToRight</enum>
-        </property>
-        <property name="autoFillBackground">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../imagens/folder_open.png</normaloff>../imagens/folder_open.png</iconset>
-        </property>
-        <property name="autoDefault">
-         <bool>true</bool>
-        </property>
-        <property name="default">
-         <bool>false</bool>
-        </property>
-        <property name="flat">
-         <bool>false</bool>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_classificar">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>60</x>
-          <y>150</y>
-          <width>151</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Classificar</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_novoAtributo">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>100</y>
-          <width>81</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Novo atributo:</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_novoAtributo">
-        <property name="geometry">
-         <rect>
-          <x>100</x>
-          <y>100</y>
-          <width>131</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>novo</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_tempoClassificacao">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>240</y>
-          <width>81</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Tempo Total:</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_tempoClassificacao">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>90</x>
-          <y>240</y>
-          <width>171</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="cursor">
-         <cursorShape>ArrowCursor</cursorShape>
-        </property>
-        <property name="text">
-         <string>0.00 ms/exemplo</string>
-        </property>
-        <property name="frame">
-         <bool>false</bool>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_gravarCorpus">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>200</y>
-          <width>71</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../imagens/save.png</normaloff>../imagens/save.png</iconset>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_gravarCorpus">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>200</y>
-          <width>91</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Gravar Corpus:</string>
-        </property>
-       </widget>
-      </widget>
+         <property name="title">
+          <string>Treinamento</string>
+         </property>
+         <widget class="QComboBox" name="comboBox_metodoTreinador">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>11</x>
+            <y>25</y>
+            <width>231</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="insertPolicy">
+           <enum>QComboBox::InsertAlphabetically</enum>
+          </property>
+          <item>
+           <property name="text">
+            <string>Escolha o Treinador</string>
+           </property>
+          </item>
+         </widget>
+         <widget class="QToolButton" name="toolButton_treinador2">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>247</x>
+            <y>25</y>
+            <width>27</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>31</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>...</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_guardarConhecimento">
+          <property name="geometry">
+           <rect>
+            <x>11</x>
+            <y>205</y>
+            <width>127</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>131</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Guardar Conhecimento:</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_treinar">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>140</y>
+            <width>141</width>
+            <height>26</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>26</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>26</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Treinar</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_atributoTreino2">
+          <property name="geometry">
+           <rect>
+            <x>11</x>
+            <y>81</y>
+            <width>131</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>99999</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>      Atributo de treino:</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="comboBox_atributoTreino2">
+          <property name="geometry">
+           <rect>
+            <x>147</x>
+            <y>81</y>
+            <width>131</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>21</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_tempoTreino">
+          <property name="geometry">
+           <rect>
+            <x>11</x>
+            <y>330</y>
+            <width>70</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>81</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Tempo Total:</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_tempoTreino">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>87</x>
+            <y>330</y>
+            <width>191</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>ArrowCursor</cursorShape>
+          </property>
+          <property name="text">
+           <string>0.00 ms/exemplo</string>
+          </property>
+          <property name="frame">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_importarDadosAba3">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>260</y>
+            <width>141</width>
+            <height>26</height>
+           </rect>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>26</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Importar Dados</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../imagens/flecha2.png</normaloff>../imagens/flecha2.png</iconset>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_guardarConhecimento">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>205</y>
+            <width>72</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>81</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <italic>false</italic>
+            <underline>false</underline>
+            <strikeout>false</strikeout>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>ArrowCursor</cursorShape>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../imagens/save.png</normaloff>../imagens/save.png</iconset>
+          </property>
+          <property name="autoDefault">
+           <bool>true</bool>
+          </property>
+          <property name="default">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <zorder>comboBox_metodoTreinador</zorder>
+         <zorder>toolButton_treinador2</zorder>
+         <zorder>label_guardarConhecimento</zorder>
+         <zorder>pushButton_treinar</zorder>
+         <zorder>label_atributoTreino2</zorder>
+         <zorder>comboBox_atributoTreino2</zorder>
+         <zorder>label_tempoTreino</zorder>
+         <zorder>lineEdit_tempoTreino</zorder>
+         <zorder>pushButton_importarDadosAba3</zorder>
+         <zorder>pushButton_guardarConhecimento</zorder>
+         <zorder>groupBox_escolhaClassificador2</zorder>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QGroupBox" name="groupBox_escolhaClassificador2">
+         <property name="minimumSize">
+          <size>
+           <width>261</width>
+           <height>51</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>99999</height>
+          </size>
+         </property>
+         <property name="title">
+          <string>Classificação</string>
+         </property>
+         <widget class="QComboBox" name="comboBox_metodoClassificador">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>11</x>
+            <y>25</y>
+            <width>261</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="insertPolicy">
+           <enum>QComboBox::InsertAlphabetically</enum>
+          </property>
+          <item>
+           <property name="text">
+            <string>Escolha o Classificador</string>
+           </property>
+          </item>
+         </widget>
+         <widget class="QLabel" name="label_carregarConhecimento">
+          <property name="geometry">
+           <rect>
+            <x>11</x>
+            <y>81</y>
+            <width>129</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Carregar Conhecimento:</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_classificar">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>202</y>
+            <width>141</width>
+            <height>26</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>26</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>26</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Classificar</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_novoAtributo">
+          <property name="geometry">
+           <rect>
+            <x>11</x>
+            <y>145</y>
+            <width>130</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>             Novo atributo:</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_novoAtributo">
+          <property name="geometry">
+           <rect>
+            <x>159</x>
+            <y>145</y>
+            <width>121</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>novo</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_tempoClassificacao">
+          <property name="geometry">
+           <rect>
+            <x>11</x>
+            <y>330</y>
+            <width>70</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>81</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Tempo Total:</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_tempoClassificacao">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>89</x>
+            <y>330</y>
+            <width>191</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>ArrowCursor</cursorShape>
+          </property>
+          <property name="text">
+           <string>0.00 ms/exemplo</string>
+          </property>
+          <property name="frame">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_gravarCorpus">
+          <property name="geometry">
+           <rect>
+            <x>11</x>
+            <y>265</y>
+            <width>141</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>9999</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>             Gravar Corpus:</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_gravarCorpus">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>265</y>
+            <width>72</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>81</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../imagens/save.png</normaloff>../imagens/save.png</iconset>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_carregarConhecimento">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>81</y>
+            <width>72</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>81</width>
+            <height>21</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <italic>false</italic>
+            <underline>false</underline>
+            <strikeout>false</strikeout>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>ArrowCursor</cursorShape>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../imagens/folder_open.png</normaloff>../imagens/folder_open.png</iconset>
+          </property>
+          <property name="autoDefault">
+           <bool>true</bool>
+          </property>
+          <property name="default">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <zorder>comboBox_metodoClassificador</zorder>
+         <zorder>label_carregarConhecimento</zorder>
+         <zorder>pushButton_classificar</zorder>
+         <zorder>label_novoAtributo</zorder>
+         <zorder>lineEdit_novoAtributo</zorder>
+         <zorder>label_tempoClassificacao</zorder>
+         <zorder>lineEdit_tempoClassificacao</zorder>
+         <zorder>label_gravarCorpus</zorder>
+         <zorder>groupBox_escolhaTreinador</zorder>
+         <zorder>pushButton_gravarCorpus</zorder>
+         <zorder>pushButton_carregarConhecimento</zorder>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
    </item>
