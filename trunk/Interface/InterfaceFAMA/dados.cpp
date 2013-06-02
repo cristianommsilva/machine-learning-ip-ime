@@ -6,6 +6,9 @@ Dados::Dados(QWidget *parent) :
     ui(new Ui::Dados)
 {
     ui->setupUi(this);
+
+    treinador = NULL;
+    avaliador = NULL;
 }
 
 Dados::~Dados()
