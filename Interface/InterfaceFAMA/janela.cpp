@@ -303,7 +303,7 @@ void Janela::definirParametrosTreinador()
     Treinador *temp = treinador->construirJanela( &popUp, *corpus );
     if( temp != treinador )
     {
-        if( treinador != dados.restaurarTreinador() )delete treinador; //verifica se treinador nao foi exportado
+        if( treinador != dados.restaurarTreinador() && treinador != treinadorAba3 ) delete treinador; //verifica se treinador nao foi exportado
         treinador = temp;
     }
 }
@@ -314,14 +314,14 @@ void Janela::definirParametrosTreinadorAba3()
     Treinador *temp = treinadorAba3->construirJanela( &popUp, *corpus );
     if( temp != treinadorAba3 )
     {
-        delete treinadorAba3;
+        if( treinadorAba3 != dados.restaurarTreinador() && treinadorAba3 != treinador )delete treinadorAba3;
         treinadorAba3 = temp;
     }
 }
 
 void Janela::escolherMetodo( int index )
 {
-    if( treinador != NULL && treinador != dados.restaurarTreinador() ) delete treinador; //verifica se treinador nao foi exportado
+    if( treinador != NULL && treinador != dados.restaurarTreinador() && treinador != treinadorAba3 ) delete treinador; //verifica se treinador nao foi exportado
     switch( index )
     {
         case 0 :
@@ -349,7 +349,7 @@ void Janela::escolherMetodo( int index )
 
 void Janela::escolherTreinador( int index )
 {
-    if( treinadorAba3 != NULL ) delete treinadorAba3;
+    if( treinadorAba3 != NULL && treinadorAba3 != treinador && treinadorAba3 != dados.restaurarTreinador() ) delete treinadorAba3;
     switch( index )
     {
         case 0 :
@@ -525,7 +525,7 @@ void Janela::treinar()
 
     clock_t t0 = clock();
 
-    classificador = treinador->executarTreinamento( *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino2->currentText().toStdString() ) );
+    classificador = treinadorAba3->executarTreinamento( *corpus, corpus->pegarPosAtributo( ui->comboBox_atributoTreino2->currentText().toStdString() ) );
     ui->pushButton_guardarConhecimento->setEnabled( true );
 
     ui->lineEdit_tempoTreino->setText( QString( "%1" ).arg( ( ( double )( clock() - t0 )/(double)CLOCKS_PER_SEC )/corpus->pegarQtdTotalExemplos()*1000 ) + " ms/exemplo" );
@@ -611,7 +611,7 @@ void Janela::exportarDados()
     Avaliador *avaliadorTemp = dados.restaurarAvaliador();
 
     //delete do treinador e avaliador exportados antigamente
-    if( treinadorTemp != NULL && treinadorTemp != treinador ) delete treinadorTemp;
+    if( treinadorTemp != NULL && treinadorTemp != treinador && treinadorTemp != treinadorAba3 ) delete treinadorTemp;
     if( avaliadorTemp != NULL && avaliadorTemp != avaliador ) delete avaliadorTemp;
 
 
@@ -661,8 +661,8 @@ void Janela::importarDados()
     ui->comboBox_avaliador->setCurrentIndex( ui->comboBox_avaliador->findText( dados.restaurarNomeAv() ) );
     ui->comboBox_atributoTreino->setCurrentIndex( ui->comboBox_atributoTreino->findText( dados.restaurarAtrbTr() ) );
 
-    if( treinador != NULL && treinador != ( treinadorTemp = dados.restaurarTreinador() ) ) delete treinador;
-    if( avaliador != NULL && avaliador != ( avaliadorTemp = dados.restaurarAvaliador() ) ) delete avaliador;
+    if( treinador != ( treinadorTemp = dados.restaurarTreinador() ) && treinador != treinadorAba3 && treinador != NULL ) delete treinador;
+    if( avaliador != ( avaliadorTemp = dados.restaurarAvaliador() ) && avaliador != NULL ) delete avaliador;
     treinador = treinadorTemp;
     avaliador = avaliadorTemp;
 
@@ -683,7 +683,7 @@ void Janela::importarDadosAba3()
     ui->comboBox_metodoTreinador->setCurrentIndex( index );
     ui->comboBox_atributoTreino2->setCurrentIndex( ui->comboBox_atributoTreino2->findText( dados.restaurarAtrbTr() ) );
 
-    if( treinadorAba3 != NULL ) delete treinadorAba3;
+    if( treinadorAba3 != NULL && treinadorAba3 != dados.restaurarTreinador() && treinadorAba3 != treinador ) delete treinadorAba3;
     treinadorAba3 = dados.restaurarTreinador();
 
     dados.close();
