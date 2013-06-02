@@ -784,10 +784,13 @@
           <item row="2" column="3">
            <widget class="QSpinBox" name="spinBox_kDobras">
             <property name="minimum">
-             <number>1</number>
+             <number>2</number>
             </property>
             <property name="maximum">
              <number>999</number>
+            </property>
+            <property name="value">
+             <number>2</number>
             </property>
            </widget>
           </item>
@@ -959,7 +962,7 @@
          <x>10</x>
          <y>10</y>
          <width>271</width>
-         <height>231</height>
+         <height>271</height>
         </rect>
        </property>
        <property name="minimumSize">
@@ -1121,7 +1124,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>200</y>
+          <y>240</y>
           <width>81</width>
           <height>21</height>
          </rect>
@@ -1137,7 +1140,7 @@
         <property name="geometry">
          <rect>
           <x>90</x>
-          <y>200</y>
+          <y>240</y>
           <width>171</width>
           <height>21</height>
          </rect>
@@ -1157,6 +1160,26 @@
         </property>
         <property name="frame">
          <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_importarDadosAba3">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>200</y>
+          <width>127</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Importar Dados</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../imagens/flecha2.png</normaloff>../imagens/flecha2.png</iconset>
         </property>
        </widget>
       </widget>
@@ -1699,6 +1722,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_importarDadosAba3</sender>
+   <signal>clicked()</signal>
+   <receiver>Janela</receiver>
+   <slot>importarDadosAba3()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>164</x>
+     <y>252</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>175</x>
+     <y>418</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>abrirArquivo()</slot>
@@ -1720,5 +1759,6 @@
   <slot>exportarDados()</slot>
   <slot>importarDados()</slot>
   <slot>definirParametrosTreinadorAba3()</slot>
+  <slot>importarDadosAba3()</slot>
  </slots>
 </ui>
