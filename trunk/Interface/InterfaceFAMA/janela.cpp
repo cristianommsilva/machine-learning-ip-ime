@@ -632,8 +632,7 @@ void Janela::importarDados()
 {
     Treinador *treinadorTemp;
     Avaliador *avaliadorTemp;
-
-    importado = true;
+    int index;
 
     switch( dados.restaurarValidador() )
     {
@@ -652,7 +651,11 @@ void Janela::importarDados()
             ui->doubleSpinBox_divisao->setValue( dados.restaurarExtra() );
     }
 
-    ui->comboBox_metodo->setCurrentIndex( ui->comboBox_metodo->findText( dados.restaurarNomeTr() ) );
+    //seta importado como true somente quando tiver certeza que o slot currentIndexChanged será executado
+    if( ui->comboBox_metodo->currentIndex() != ( index = ui->comboBox_metodo->findText( dados.restaurarNomeTr() ) ) )
+        importado = true;
+
+    ui->comboBox_metodo->setCurrentIndex( index );
     ui->comboBox_avaliador->setCurrentIndex( ui->comboBox_avaliador->findText( dados.restaurarNomeAv() ) );
     ui->comboBox_atributoTreino->setCurrentIndex( ui->comboBox_atributoTreino->findText( dados.restaurarAtrbTr() ) );
 
