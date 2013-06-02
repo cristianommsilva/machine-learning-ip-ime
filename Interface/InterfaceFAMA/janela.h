@@ -32,7 +32,7 @@ private:
     Ui::Janela *ui;
     Dados dados;
     Corpus *corpus, *corpusTeste;
-    Treinador *treinador;
+    Treinador *treinador, *treinadorAba3;
     Classificador *classificador;
     Avaliador *avaliador;
     QString s;
@@ -52,6 +52,7 @@ public slots:
     void escolherClassificador( int index );
     void escolherAvaliador( int index );
     void definirParametrosTreinador();
+    void definirParametrosTreinadorAba3();
     void executarValidacao();
     void guardarConhecimento();
     void carregarConhecimento();

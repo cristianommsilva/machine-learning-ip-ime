@@ -8,6 +8,7 @@ Janela::Janela(QWidget *parent) :
     ui->setupUi(this);
     corpus = NULL;
     treinador = NULL;
+    treinadorAba3 = NULL;
     avaliador = new AvaliadorAcuracia();
     corpusTeste = NULL;
     classificador = NULL;
@@ -43,6 +44,7 @@ Janela::~Janela()
     delete ui;
     if( corpus != NULL ) delete corpus;
     if( treinador != NULL ) delete treinador;
+    if( treinadorAba3 != NULL ) delete treinadorAba3;
     if( avaliador != NULL ) delete avaliador;
     if( corpusTeste != NULL ) delete corpusTeste;
 }
@@ -301,14 +303,25 @@ void Janela::definirParametrosTreinador()
     Treinador *temp = treinador->construirJanela( &popUp, *corpus );
     if( temp != treinador )
     {
-        delete treinador;
+        if( treinador != dados.restaurarTreinador() )delete treinador; //verifica se treinador nao foi exportado
         treinador = temp;
+    }
+}
+
+void Janela::definirParametrosTreinadorAba3()
+{
+    //Janela construida na classe Treinador por um método virtual
+    Treinador *temp = treinadorAba3->construirJanela( &popUp, *corpus );
+    if( temp != treinadorAba3 )
+    {
+        delete treinadorAba3;
+        treinadorAba3 = temp;
     }
 }
 
 void Janela::escolherMetodo( int index )
 {
-    if( treinador != NULL ) delete treinador;
+    if( treinador != NULL && treinador != dados.restaurarTreinador() ) delete treinador; //verifica se treinador nao foi exportado
     switch( index )
     {
         case 0 :
@@ -336,28 +349,28 @@ void Janela::escolherMetodo( int index )
 
 void Janela::escolherTreinador( int index )
 {
-    if( treinador != NULL ) delete treinador;
+    if( treinadorAba3 != NULL ) delete treinadorAba3;
     switch( index )
     {
         case 0 :
-            treinador = NULL;
+            treinadorAba3 = NULL;
             ui->toolButton_treinador2->setEnabled( false );
             ui->pushButton_guardarConhecimento->setEnabled( false );
             ui->pushButton_treinar->setEnabled( false );
             return;
         case 1 :
-            treinador = new MaisProvavelUI();
+            treinadorAba3 = new MaisProvavelUI();
             break;
         case 2 :
-            treinador = new HMMUI();
+            treinadorAba3 = new HMMUI();
             break;
         case 3 :
-            treinador = new TBLUI();
+            treinadorAba3 = new TBLUI();
             break;
     }
     ui->toolButton_treinador2->setEnabled( true );
     ui->pushButton_treinar->setEnabled( true );
-    definirParametrosTreinador();
+    definirParametrosTreinadorAba3();
 }
 
 void Janela::escolherClassificador( int index )
@@ -375,7 +388,7 @@ void Janela::escolherClassificador( int index )
 
 void Janela::escolherAvaliador( int index )
 {
-    if( avaliador != NULL ) delete avaliador;
+    if( avaliador != NULL && avaliador != dados.restaurarAvaliador() ) delete avaliador; //verifica se avaliador nao foi exportado
     switch( index )
     {
         case 0 :
@@ -593,6 +606,14 @@ void Janela::carregarConhecimento()
 
 void Janela::exportarDados()
 {
+    Treinador *treinadorTemp = dados.restaurarTreinador();
+    Avaliador *avaliadorTemp = dados.restaurarAvaliador();
+
+    //delete do treinador e avaliador exportados antigamente
+    if( treinadorTemp != NULL && treinadorTemp != treinador ) delete treinadorTemp;
+    if( avaliadorTemp != NULL && avaliadorTemp != avaliador ) delete avaliadorTemp;
+
+
     if(ui->radioButton_treino->isChecked())
         dados.definirDados( treinador, ui->comboBox_metodo->currentText(), 0, -1, avaliador, ui->comboBox_avaliador->currentText(), ui->comboBox_atributoTreino->currentText() );
     else if(ui->radioButton_teste->isChecked())
@@ -602,11 +623,16 @@ void Janela::exportarDados()
     else if(ui->radioButton_divisao->isChecked())
         dados.definirDados( treinador, ui->comboBox_metodo->currentText(), 3, ui->doubleSpinBox_divisao->value(), avaliador, ui->comboBox_avaliador->currentText(), ui->comboBox_atributoTreino->currentText() );
 
+    ui->pushButton_importarDados->setEnabled( true );
+
     dados.show();
 }
 
 void Janela::importarDados()
 {
+    Treinador *treinadorTemp;
+    Avaliador *avaliadorTemp;
+
     importado = true;
 
     switch( dados.restaurarValidador() )
@@ -630,10 +656,12 @@ void Janela::importarDados()
     ui->comboBox_avaliador->setCurrentIndex( ui->comboBox_avaliador->findText( dados.restaurarNomeAv() ) );
     ui->comboBox_atributoTreino->setCurrentIndex( ui->comboBox_atributoTreino->findText( dados.restaurarAtrbTr() ) );
 
-    if( treinador != NULL ) delete treinador;
-    if( avaliador != NULL ) delete avaliador;
-    treinador = dados.restaurarTreinador();
-    avaliador = dados.restaurarAvaliador();
+    if( treinador != NULL && treinador != ( treinadorTemp = dados.restaurarTreinador() ) ) delete treinador;
+    if( avaliador != NULL && avaliador != ( avaliadorTemp = dados.restaurarAvaliador() ) ) delete avaliador;
+    treinador = treinadorTemp;
+    avaliador = avaliadorTemp;
 
     dados.close();
+
+    ui->pushButton_importarDados->setEnabled( false );
 }

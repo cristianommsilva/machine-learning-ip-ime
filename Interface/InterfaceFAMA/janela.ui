@@ -911,7 +911,10 @@
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="pushButton_importarDados">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>Importar Dados</string>
          </property>
@@ -1537,22 +1540,6 @@
    </hints>
   </connection>
   <connection>
-   <sender>toolButton_treinador2</sender>
-   <signal>clicked()</signal>
-   <receiver>Janela</receiver>
-   <slot>definirParametrosTreinador()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>264</x>
-     <y>69</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>397</x>
-     <y>-9</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>pushButton_treinar</sender>
    <signal>clicked()</signal>
    <receiver>Janela</receiver>
@@ -1665,7 +1652,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton</sender>
+   <sender>pushButton_importarDados</sender>
    <signal>clicked()</signal>
    <receiver>Janela</receiver>
    <slot>importarDados()</slot>
@@ -1696,6 +1683,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>toolButton_treinador2</sender>
+   <signal>clicked()</signal>
+   <receiver>Janela</receiver>
+   <slot>definirParametrosTreinadorAba3()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>267</x>
+     <y>69</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>395</x>
+     <y>-11</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>abrirArquivo()</slot>
@@ -1716,5 +1719,6 @@
   <slot>gravarCorpus()</slot>
   <slot>exportarDados()</slot>
   <slot>importarDados()</slot>
+  <slot>definirParametrosTreinadorAba3()</slot>
  </slots>
 </ui>
