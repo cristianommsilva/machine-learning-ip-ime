@@ -1266,17 +1266,6 @@
            <bool>false</bool>
           </property>
          </widget>
-         <zorder>comboBox_metodoTreinador</zorder>
-         <zorder>toolButton_treinador2</zorder>
-         <zorder>label_guardarConhecimento</zorder>
-         <zorder>pushButton_treinar</zorder>
-         <zorder>label_atributoTreino2</zorder>
-         <zorder>comboBox_atributoTreino2</zorder>
-         <zorder>label_tempoTreino</zorder>
-         <zorder>lineEdit_tempoTreino</zorder>
-         <zorder>pushButton_importarDadosAba3</zorder>
-         <zorder>pushButton_guardarConhecimento</zorder>
-         <zorder>groupBox_escolhaClassificador2</zorder>
         </widget>
        </item>
        <item row="0" column="1">
@@ -1570,17 +1559,6 @@
            <bool>false</bool>
           </property>
          </widget>
-         <zorder>comboBox_metodoClassificador</zorder>
-         <zorder>label_carregarConhecimento</zorder>
-         <zorder>pushButton_classificar</zorder>
-         <zorder>label_novoAtributo</zorder>
-         <zorder>lineEdit_novoAtributo</zorder>
-         <zorder>label_tempoClassificacao</zorder>
-         <zorder>lineEdit_tempoClassificacao</zorder>
-         <zorder>label_gravarCorpus</zorder>
-         <zorder>groupBox_escolhaTreinador</zorder>
-         <zorder>pushButton_gravarCorpus</zorder>
-         <zorder>pushButton_carregarConhecimento</zorder>
         </widget>
        </item>
       </layout>
@@ -1743,8 +1721,8 @@
    <slot>treinar()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>182</x>
-     <y>162</y>
+     <x>193</x>
+     <y>193</y>
     </hint>
     <hint type="destinationlabel">
      <x>316</x>
@@ -1759,8 +1737,8 @@
    <slot>guardarConhecimento()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>214</x>
-     <y>207</y>
+     <x>225</x>
+     <y>245</y>
     </hint>
     <hint type="destinationlabel">
      <x>259</x>
@@ -1791,8 +1769,8 @@
    <slot>carregarConhecimento()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>503</x>
-     <y>108</y>
+     <x>546</x>
+     <y>139</y>
     </hint>
     <hint type="destinationlabel">
      <x>552</x>
@@ -1807,8 +1785,8 @@
    <slot>classificar()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>421</x>
-     <y>203</y>
+     <x>545</x>
+     <y>242</y>
     </hint>
     <hint type="destinationlabel">
      <x>456</x>
@@ -1823,8 +1801,8 @@
    <slot>gravarCorpus()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>469</x>
-     <y>245</y>
+     <x>546</x>
+     <y>305</y>
     </hint>
     <hint type="destinationlabel">
      <x>493</x>
@@ -1903,8 +1881,8 @@
    <slot>importarDadosAba3()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>164</x>
-     <y>252</y>
+     <x>175</x>
+     <y>300</y>
     </hint>
     <hint type="destinationlabel">
      <x>175</x>
