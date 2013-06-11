@@ -41,7 +41,7 @@ Janela::Janela(QWidget *parent) :
     //eventos do menu de botão direito do mouse em validação
     connect( ui->tableWidget_resultadosValidacao, SIGNAL( sendImportarDados(int) ), this, SLOT( importarDados( int ) ) );
     connect( ui->tableWidget_resultadosValidacao, SIGNAL( sendImportarDadosAba3(int) ), this, SLOT( importarDadosAba3( int ) ) );
-    connect( ui->tableWidget_resultadosValidacao, SIGNAL( sendLimparExperimento(int) ), this, SLOT( limparExperimento( int ) ) );
+    //connect( ui->tableWidget_resultadosValidacao, SIGNAL( sendLimparExperimento(int) ), this, SLOT( limparExperimento( int ) ) );
 }
 
 Janela::~Janela()
@@ -713,8 +713,8 @@ void Janela::limparValidacao()
     ui->tableWidget_resultadosValidacao->clear( treinador, treinadorAba3, avaliador );
 }
 
-void Janela::limparExperimento(int index)
+/*void Janela::limparExperimento(int index)
 {
     int indiceExperimento = upper_bound( vetExperimentos.begin(), vetExperimentos.end(), index ) - vetExperimentos.begin();
     --indiceExperimento;
-}
+}*/

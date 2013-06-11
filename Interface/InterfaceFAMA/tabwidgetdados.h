@@ -29,12 +29,12 @@ public:
 signals:
     void sendImportarDados( int index );
     void sendImportarDadosAba3( int index );
-    void sendLimparExperimento( int index );
+    //void sendLimparExperimento( int index );
     
 public slots:
     void exportarDadosValidacao();
     void exportarDadosTreinamento();
-    void apagarExperimentoAtual();
+    //void apagarExperimentoAtual();
 
 private:
     vector< Treinador* > vetTreinador;

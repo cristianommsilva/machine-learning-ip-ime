@@ -62,7 +62,7 @@ public slots:
     void importarDados( int index );
     void importarDadosAba3( int index );
     void limparValidacao();
-    void limparExperimento(int index);
+    //void limparExperimento(int index);
 };
 
 #endif // JANELA_H

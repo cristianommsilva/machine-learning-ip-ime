@@ -6,12 +6,12 @@ TabWidgetDados::TabWidgetDados(QWidget *parent) :
     //criação dos itens que estarão no menu do botão direito na tabela de resultados da validação
     exportarValidacao = new QAction( "Validação", this );
     exportarTreinamento = new QAction( "Treinamento", this );
-    apagarExperimento = new QAction( "Apagar Experimento", this );
+    //apagarExperimento = new QAction( "Apagar Experimento", this );
 
     //alocação de eventos
     connect( exportarValidacao, SIGNAL( triggered() ), this, SLOT( exportarDadosValidacao() ) );
     connect( exportarTreinamento, SIGNAL( triggered() ), this, SLOT( exportarDadosTreinamento() ) );
-    connect( apagarExperimento, SIGNAL( triggered() ), this, SLOT( apagarExperimentoAtual() ) );
+    //connect( apagarExperimento, SIGNAL( triggered() ), this, SLOT( apagarExperimentoAtual() ) );
 }
 
 void TabWidgetDados::definirDados( Treinador *tr, QString nomeTr, int numVal, Avaliador *av, QString nomeAv, QString atrbTr, double infoExtra )
@@ -108,8 +108,8 @@ void TabWidgetDados::contextMenuEvent( QContextMenuEvent * event )
     subMenuExportar = menu.addMenu( "Exportar Dados" );
     subMenuExportar->addAction( exportarValidacao );
     subMenuExportar->addAction( exportarTreinamento );
-    menu.addSeparator();
-    menu.addAction( apagarExperimento );
+    //menu.addSeparator();
+    //menu.addAction( apagarExperimento );
     menu.exec( event->globalPos() );
 }
 
@@ -123,7 +123,7 @@ void TabWidgetDados::exportarDadosTreinamento()
     sendImportarDadosAba3( currentRow() );
 }
 
-void TabWidgetDados::apagarExperimentoAtual()
+/*void TabWidgetDados::apagarExperimentoAtual()
 {
     sendLimparExperimento( currentRow() );
-}
+}*/
