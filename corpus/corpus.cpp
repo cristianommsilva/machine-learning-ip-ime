@@ -54,15 +54,18 @@ int Corpus::pegarIndice( string simbolo )
 int Corpus::criarAtributo( string atributo, string valorAtributo )
 {
     /**
-    *   Verifica se o atributo já existe.
+    *   Verifica se o atributo já existe. Em caso afirmativo, retorna a posição do atributo.
     *   Se não existe cria-se um novo atributo.
     */
-    if( posAtributos.find( atributo ) != posAtributos.end() )
+    map< string, int >:: iterator it;
+
+    if( ( it = posAtributos.find( atributo ) ) != posAtributos.end() )
     {
-        ostringstream erro;
+        /*ostringstream erro;
         erro << "Erro: criarAtributo!\nAtributo ja existe ( "
          << atributo << " / " << pegarPosAtributo(atributo) << " )!";
-        throw erro.str();
+        throw erro.str();*/
+        return it->second;
     }
 
     atributos.push_back( atributo );
@@ -157,6 +160,10 @@ int Corpus::pegarValor( int sentenca, int token, int atributo )
     }
 
     return frases[sentenca][token][atributo];
+}
+
+string Corpus::operator()(int sentenca, int token, int atributo){
+    return pegarSimbolo(pegarValor(sentenca,token,atributo));
 }
 
 int Corpus::pegarQtdSentencas()
